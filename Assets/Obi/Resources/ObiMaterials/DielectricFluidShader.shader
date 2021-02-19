@@ -4,6 +4,7 @@ Shader "Obi/Fluid/DielectricFluid"
 	Properties
 	{
 		_MainTex ("Texture", 2D) = "white" {}
+	    _Transparency("Transparency", Range(0.0,0.5)) = 0.25
 		_Smoothness ("Smoothness", Range (0, 1)) = 0.8
 		_ThicknessScale ("ThicknessScale", Range (0, 30)) = 5
 		_RefractionCoeff ("Refraction", Range (-0.1, 0.1)) = 0.05
@@ -22,12 +23,13 @@ Shader "Obi/Fluid/DielectricFluid"
 
 			CGPROGRAM
 			#pragma vertex vert
-			#pragma fragment frag
 			#pragma target 3.0
+			#pragma fragment frag
 			
 			#include "ObiFluids.cginc"
 			#include "UnityStandardBRDF.cginc"
 			#include "UnityImageBasedLighting.cginc"
+			#include "UnityCG.cginc"
 
 			struct vin
 			{
@@ -58,13 +60,14 @@ Shader "Obi/Fluid/DielectricFluid"
 			float _Smoothness;
 			float _Cloudiness;
 			half4 _CloudinessColor;
+			float _Transparency;
 
 			UNITY_DECLARE_SHADOWMAP(_MyShadowMap);
 
 			fout frag (v2f i)
 			{
 				fout fo;
-				fo.color = fixed4(0,0,0,1);
+				fo.color = fixed4(0,0,0, _Transparency);
 
 				float3 eyePos,eyeNormal, worldPos, worldNormal, worldView;
 				float thickness = SetupEyeSpaceFragment(i.uv,eyePos,eyeNormal);

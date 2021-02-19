@@ -64,6 +64,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\3DPart\GradientSky\Scripts\Common\GradientSkyCommon.cs" />
+    <Compile Include="Assets\3DPart\GradientSky\Scripts\GradientSkyCamera.cs" />
+    <Compile Include="Assets\3DPart\GradientSky\Scripts\GradientSkyObject.cs" />
     <Compile Include="Assets\3DPart\Liquid-Simulation-master\Liquid-Simulation-master\Assets\Scripts\BlurController.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ActorSpawner.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\AddRandomVelocity.cs" />
@@ -96,6 +99,7 @@
     <None Include="Assets\Obi\Resources\ObiMaterials\ParticleShader.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\FluidThickness.shader" />
     <None Include="Assets\Obi\Plugins\libOni.bundle\Contents\Resources\CMakeLists.txt" />
+    <None Include="Assets\3DPart\GradientSky\Shaders\VertexColorCamera.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\DistanceFieldSlice.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\ObiParticles.cginc" />
     <None Include="Assets\3DPart\Liquid-Simulation-master\Liquid-Simulation-master\ProjectSettings\ProjectVersion.txt" />
@@ -107,6 +111,7 @@
     <None Include="Assets\Obi\CHANGELOG_fluid.txt" />
     <None Include="Assets\Obi\Resources\ObiMaterials\NormalReconstruction.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\ScreenSpaceCurvatureFlow.shader" />
+    <None Include="Assets\3DPart\GradientSky\Shaders\VertexColorObject.shader" />
     <None Include="Assets\3DPart\Liquid-Simulation-master\Liquid-Simulation-master\Assets\Shaders\UnlitTransparent.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\FluidColorsBlend.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\FluidColorsOpaque.shader" />

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7780256b85144478aa1084fae803791, type: 3}
-  m_Name: Water
+  m_Name: StaticFluid
   m_EditorClassIdentifier: 
   m_Empty: 0
   m_ActiveParticleCount: 0
@@ -25056,9 +25056,9 @@ MonoBehaviour:
   resolution: 0.5
   restDensity: 5
   smoothing: 3
-  viscosity: 0.3
-  surfaceTension: 2
-  buoyancy: -1
+  viscosity: 0.6
+  surfaceTension: 6
+  buoyancy: -0.5
   atmosphericDrag: 0
   atmosphericPressure: 0
   vorticity: 0

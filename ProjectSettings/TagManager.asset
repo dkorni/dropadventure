@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Drop
   - Connectable
+  - GameOverTrigger
   layers:
   - Default
   - TransparentFX
