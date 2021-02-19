@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using Obi;
 using UnityEngine;
 
@@ -14,11 +12,9 @@ public class DropletController : MonoBehaviour
 
     [SerializeField] private Component _deathCollider;
 
-    [SerializeField] private ObiFluidRenderer _mainRenderer;
-
-    [SerializeField] private ObiFluidRenderer _connectableRenderer;
-
     [SerializeField] private int _diedCount = 0;
+
+    [SerializeField] private SolverStore _solverStore;
 
     // Start is called before the first frame update
     void Start()
@@ -41,40 +37,20 @@ public class DropletController : MonoBehaviour
                 {
                     if (collider.tag == "GameOverTrigger")
                     {
-                       // _diedCount++;
+                        var emitter = (ObiEmitter)solver.particleToActor[contact.particle].actor;
+                        emitter.life[solver.particleToActor[contact.particle].indexInActor] = 0;
+
+                        if (_solverStore.IsAllPlayerPuddlesDied())
+                            Debug.Log("Game Over");
                     }
 
                     if (collider.tag == "Connectable")
                     {
-                        collider.GetComponent<ObiEmitter>().collisionMaterial = _obiEmitter.collisionMaterial;
-                        collider.GetComponent<ObiEmitter>().emitterBlueprint = _obiEmitter.emitterBlueprint;
-                        collider.transform.parent = transform;
-
-                        var particleRenderer = collider.GetComponent<ObiParticleRenderer>();
-
-                        var connectableParticleRendList = _connectableRenderer.particleRenderers.ToList();
-                        connectableParticleRendList.Remove(particleRenderer);
-                        _connectableRenderer.particleRenderers = connectableParticleRendList.ToArray();
-
-                        var mainParticleRendList = _mainRenderer.particleRenderers.ToList();
-                        mainParticleRendList.Add(particleRenderer);
-                        _mainRenderer.particleRenderers = mainParticleRendList.ToArray();
-
-                        collider.tag = "Untagged";
+                        var puddle = collider.GetComponent<Puddle>();
+                        puddle.Join(_obiEmitter);
                     }
-
-                    // do something with the collider.
                 }
             }
         }
-
-
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

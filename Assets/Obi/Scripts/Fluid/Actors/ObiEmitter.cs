@@ -17,6 +17,8 @@ namespace Obi
         public event EmitterParticleCallback OnEmitParticle;
         public event EmitterParticleCallback OnKillParticle;
 
+        private bool isKilled;
+
         public enum EmissionMethod
         {
             STREAM,     /**< continously emits particles until there are no particles left to emit.*/
@@ -91,6 +93,7 @@ namespace Obi
         public override void LoadBlueprint(ObiSolver solver)
         {
             base.LoadBlueprint(solver);
+            OnKillParticle += (o,e) => isKilled = true;
 
             //Copy local arrays:
             life = new float[particleCount];
@@ -390,7 +393,7 @@ namespace Obi
                 else
                 { // burst emission:
 
-                    if (activeParticleCount == 0)
+                    if (activeParticleCount == 0 && !isKilled)
                     {
                         for (int i = 0; i < emissionPoints; ++i)
                         {
