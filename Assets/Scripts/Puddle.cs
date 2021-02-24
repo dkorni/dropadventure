@@ -19,7 +19,6 @@ public class Puddle : MonoBehaviour
         _emitter.emitterBlueprint = toOther.emitterBlueprint;
         transform.parent = toOther.transform.parent;
         _obiCollider.enabled = false;
-       // _disk.enabled = false;
 
         // update player particle count
         _solverStore.UpdatePlayerPuddles(_emitter);

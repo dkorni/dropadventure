@@ -1,9 +1,14 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Obi;
 using UnityEngine;
 
 public class DropletController : MonoBehaviour
 {
+    public event Action OnDied;
+
+    [SerializeField] private AudioSource _source;
+
     [SerializeField]
     private ObiSolver _obiSolver;
 
@@ -41,13 +46,14 @@ public class DropletController : MonoBehaviour
                         emitter.life[solver.particleToActor[contact.particle].indexInActor] = 0;
 
                         if (_solverStore.IsAllPlayerPuddlesDied())
-                            Debug.Log("Game Over");
+                            OnDied?.Invoke();
                     }
 
                     if (collider.tag == "Connectable")
                     {
                         var puddle = collider.GetComponent<Puddle>();
                         puddle.Join(_obiEmitter);
+                        _source.PlayOneShot(_source.clip);
                     }
                 }
             }

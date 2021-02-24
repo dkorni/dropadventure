@@ -95,9 +95,12 @@
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\WaveGenerator.cs" />
     <Compile Include="Assets\PlaneController.cs" />
     <Compile Include="Assets\Scripts\DropletController.cs" />
+    <Compile Include="Assets\Scripts\Game.cs" />
+    <Compile Include="Assets\Scripts\GameOverPanel.cs" />
     <Compile Include="Assets\Scripts\Puddle.cs" />
     <Compile Include="Assets\Scripts\Render.cs" />
     <Compile Include="Assets\Scripts\SolverStore.cs" />
+    <Compile Include="Assets\Scripts\WinController.cs" />
     <None Include="Assets\Obi\Samples\Fluid\SampleResources\Materials\StandardPerInstanceColor.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\ParticleShader.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\FluidThickness.shader" />
@@ -300,20 +303,20 @@
     <Reference Include="UnityEditor">
       <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
-      <HintPath>D:/My_files/Projects/DropAdventure/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
-    </Reference>
     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
       <HintPath>D:/My_files/Projects/DropAdventure/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
     </Reference>
-    <Reference Include="Zenject-usage">
-      <HintPath>D:/My_files/Projects/DropAdventure/Assets/Plugins/Zenject/Source/Usage/Zenject-usage.dll</HintPath>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
+      <HintPath>D:/My_files/Projects/DropAdventure/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
     </Reference>
     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
       <HintPath>D:/My_files/Projects/DropAdventure/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
     </Reference>
     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
       <HintPath>D:/My_files/Projects/DropAdventure/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject-usage">
+      <HintPath>D:/My_files/Projects/DropAdventure/Assets/Plugins/Zenject/Source/Usage/Zenject-usage.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>D:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -696,15 +699,24 @@
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/My_files/Projects/DropAdventure/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Recorder.Editor">
+      <HintPath>D:/My_files/Projects/DropAdventure/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Recorder">
+      <HintPath>D:/My_files/Projects/DropAdventure/Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Recorder.Base">
+      <HintPath>D:/My_files/Projects/DropAdventure/Library/ScriptAssemblies/Unity.Recorder.Base.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Obi.csproj">
-      <Project>{05B38466-62B1-6CE2-C125-DAD722BE970D}</Project>
-      <Name>Obi</Name>
-    </ProjectReference>
     <ProjectReference Include="Zenject-Editor.csproj">
       <Project>{FFFA244B-4F26-6DE3-665C-41643E3E4CBC}</Project>
       <Name>Zenject-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Obi.csproj">
+      <Project>{05B38466-62B1-6CE2-C125-DAD722BE970D}</Project>
+      <Name>Obi</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
       <Project>{2794FABB-29C3-395B-5492-C789ABA57F71}</Project>

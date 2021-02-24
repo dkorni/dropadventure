@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Zenject;
 
 public class SolverStore : MonoBehaviour
 {
+    [Inject] private Game game;
+
     [SerializeField] private List<ObiEmitter> _playerPuddles;
 
     [SerializeField] private ObiEmitter[] _puddles;
@@ -26,10 +29,17 @@ public class SolverStore : MonoBehaviour
     public void UpdatePlayerPuddles(ObiEmitter newPlayerPart)
     {
         _playerPuddles.Add(newPlayerPart);
+
+        if (_playerPuddles.Count == _puddles.Length + 1)
+        {
+            // win
+            game.OnStateChanged.Invoke(this, GameStates.Win);
+        }
     }
 
     public bool IsAllPlayerPuddlesDied()
     {
+        // todo optimize count only when update
         return _playerPuddles.Sum(p => p.activeParticleCount) == 0;
     }
 }
