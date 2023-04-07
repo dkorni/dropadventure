@@ -1,4 +1,5 @@
-﻿using Obi;
+﻿using System;
+using Obi;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -24,6 +25,7 @@ public class SolverStore : MonoBehaviour
         _count += _playerPuddles.Sum(e => e.activeParticleCount);
         _onlyPuddlesCount = _puddles.Sum(e => e.activeParticleCount);
         _count += _onlyPuddlesCount;
+        
     }
 
     public void UpdatePlayerPuddles(ObiEmitter newPlayerPart)
@@ -41,5 +43,15 @@ public class SolverStore : MonoBehaviour
     {
         // todo optimize count only when update
         return _playerPuddles.Sum(p => p.activeParticleCount) == 0;
+    }
+    
+    public int GetAllDropCount()
+    {
+        return _puddles.Sum(p => p.particleCount);
+    }
+    
+    public int GetPlayerDropCount()
+    {
+        return _playerPuddles.Sum(p => p.particleCount);
     }
 }

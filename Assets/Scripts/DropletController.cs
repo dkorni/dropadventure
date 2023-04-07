@@ -3,35 +3,51 @@ using System.Linq;
 using Obi;
 using UnityEngine;
 
-public class DropletController : MonoBehaviour
+public class DropletController : Puddle
 {
     public event Action OnDied;
+    public Action<int> OnMaxHealthUpdate;
+    public Action<int> OnHealthUpdate;
 
     [SerializeField] private AudioSource _source;
 
     [SerializeField]
     private ObiSolver _obiSolver;
 
-    [SerializeField]
-    private ObiEmitter _obiEmitter;
-
-    [SerializeField] private Component _deathCollider;
-
-    [SerializeField] private int _diedCount = 0;
-
     [SerializeField] private SolverStore _solverStore;
+
+    private int health;
+
+    private int MaxHealth;
 
     // Start is called before the first frame update
     void Start()
     {
-        _obiSolver.OnCollision += ObiSolverOnOnCollision;
+       _obiSolver.OnCollision += ObiSolverOnOnCollision;
+       _emitter.OnEmitParticle += (e,i) =>
+       {
+           UpdateHealth(1);
+           UpdateMaxHealth(1);
+       };
+       _emitter.OnKillParticle += (obiEmitter, index) => UpdateHealth(-1); 
+
+       var emitters = FindObjectsOfType<ObiEmitter>();
+       foreach (var emitter in emitters)
+       {
+           if(emitter == _emitter)
+               continue;
+           
+           emitter.OnKillParticle += (obiEmitter, index) => UpdateHealth(-1); 
+           
+           emitter.OnEmitParticle += (e, i) =>
+           {
+               UpdateMaxHealth(1);
+           };
+       }
     }
 
     private void ObiSolverOnOnCollision(ObiSolver solver, ObiSolver.ObiCollisionEventArgs contacts)
     {
-     //   var contact = contacts.contacts[0];
-
-
         foreach (var contact in contacts.contacts)
         {
             // this one is an actual collision:
@@ -42,21 +58,39 @@ public class DropletController : MonoBehaviour
                 {
                     if (collider.tag == "GameOverTrigger")
                     {
+                        // kill particle
                         var emitter = (ObiEmitter)solver.particleToActor[contact.particle].actor;
                         emitter.life[solver.particleToActor[contact.particle].indexInActor] = 0;
-
-                        if (_solverStore.IsAllPlayerPuddlesDied())
+                        
+                        if (IsDied)
                             OnDied?.Invoke();
                     }
 
                     if (collider.tag == "Connectable")
                     {
                         var puddle = collider.GetComponent<Puddle>();
-                        puddle.Join(_obiEmitter);
+                        puddle.Join(_emitter);
                         _source.PlayOneShot(_source.clip);
+                        
+                        //puddle.OnKillParticle += (e, l) => OnPlayerPuddleParticleCountChanged?.Invoke(GetPlayerDropCount());
+
                     }
                 }
             }
         }
     }
+
+    private void UpdateHealth(int healthToAdd)
+    {
+        health += healthToAdd;
+        OnHealthUpdate?.Invoke(health);
+    }
+    
+    private void UpdateMaxHealth(int healthToAdd)
+    {
+        MaxHealth += healthToAdd;
+        OnMaxHealthUpdate?.Invoke(MaxHealth);
+    }
+
+    private bool IsDied => health <= 0;
 }

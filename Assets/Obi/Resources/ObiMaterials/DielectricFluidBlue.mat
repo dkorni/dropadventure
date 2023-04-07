@@ -68,17 +68,17 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RefractionCoeff: 0.03
-    - _Smoothness: 0.73
+    - _RefractionCoeff: 0.025
+    - _Smoothness: 0.672
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _ThicknessScale: 3.2
+    - _ThicknessScale: 16.1
     - _Transparency: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _CloudinessColor: {r: 0.2775454, g: 0.6713955, b: 0.9339623, a: 1}
+    - _CloudinessColor: {r: 0.090872645, g: 1, b: 0, a: 1}
     - _Color: {r: 0, g: 0.6275863, b: 1, a: 1}
     - _Color2: {r: 0.4009434, g: 0.42780674, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

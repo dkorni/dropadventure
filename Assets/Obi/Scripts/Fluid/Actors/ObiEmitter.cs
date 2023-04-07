@@ -310,7 +310,7 @@ namespace Obi
         /**
 		 * Asks the emiter to kill a particle. Returns whether it was succesful.
 		 */
-        private bool KillParticle(int index)
+        public bool KillParticle(int index)
         {
 
             // reduce amount of active particles:
