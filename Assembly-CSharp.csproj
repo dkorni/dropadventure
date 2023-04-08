@@ -85,6 +85,15 @@
      <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\ViscositySurfTensionToUserData.cs" />
      <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\WaveGenerator.cs" />
      <Compile Include="Assets\PlaneController.cs" />
+     <Compile Include="Assets\Scripts\CSJ\CSG.cs" />
+     <Compile Include="Assets\Scripts\CSJ\Classes\Model.cs" />
+     <Compile Include="Assets\Scripts\CSJ\Classes\Node.cs" />
+     <Compile Include="Assets\Scripts\CSJ\Classes\Plane.cs" />
+     <Compile Include="Assets\Scripts\CSJ\Classes\Polygon.cs" />
+     <Compile Include="Assets\Scripts\CSJ\Classes\Vertex.cs" />
+     <Compile Include="Assets\Scripts\CSJ\Classes\VertexAttributes.cs" />
+     <Compile Include="Assets\Scripts\CSJ\Classes\VertexUtility.cs" />
+     <Compile Include="Assets\Scripts\CompositeObject.cs" />
      <Compile Include="Assets\Scripts\DropletController.cs" />
      <Compile Include="Assets\Scripts\Game.cs" />
      <Compile Include="Assets\Scripts\GameOverPanel.cs" />

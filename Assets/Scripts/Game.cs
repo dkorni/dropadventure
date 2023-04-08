@@ -22,6 +22,8 @@ public class Game : MonoBehaviour
 
     public EventHandler<GameStates> OnStateChanged;
 
+    [SerializeField] GameObject sink;
+
     private int maxDrops;
     private int joinedDrops;
 
@@ -55,6 +57,7 @@ public class Game : MonoBehaviour
 
     private void SpawnSink()
     {
+        sink.SetActive(true);
         Debug.Log("Sink spawned");
     }
 }
