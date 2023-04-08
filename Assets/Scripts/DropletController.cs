@@ -14,8 +14,6 @@ public class DropletController : Puddle
     [SerializeField]
     private ObiSolver _obiSolver;
 
-    [SerializeField] private SolverStore _solverStore;
-
     private int health;
 
     private int MaxHealth;
@@ -71,9 +69,6 @@ public class DropletController : Puddle
                         var puddle = collider.GetComponent<Puddle>();
                         puddle.Join(_emitter);
                         _source.PlayOneShot(_source.clip);
-                        
-                        //puddle.OnKillParticle += (e, l) => OnPlayerPuddleParticleCountChanged?.Invoke(GetPlayerDropCount());
-
                     }
                 }
             }
