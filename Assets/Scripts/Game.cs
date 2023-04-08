@@ -22,10 +22,15 @@ public class Game : MonoBehaviour
 
     public EventHandler<GameStates> OnStateChanged;
 
+    private int maxDrops;
+    private int joinedDrops;
+
     // Start is called before the first frame update
     void Start()
     {
+        _dropletController.OnJoin += IncreementDrops;
         _dropletController.OnDied += () => OnStateChanged?.Invoke(this, GameStates.GameOver);
+        maxDrops = FindObjectsOfType<Puddle>().Length;
     }
 
     public void Retry()
@@ -37,5 +42,19 @@ public class Game : MonoBehaviour
     {
         currentScene++;
         SceneManager.LoadScene(currentScene);
+    }
+
+    private void IncreementDrops()
+    {
+        joinedDrops++;
+        if(joinedDrops == maxDrops)
+        {
+            SpawnSink();
+        }
+    }
+
+    private void SpawnSink()
+    {
+        Debug.Log("Sink spawned");
     }
 }

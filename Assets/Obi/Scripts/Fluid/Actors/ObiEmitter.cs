@@ -332,7 +332,7 @@ namespace Obi
             }
         }
 
-        private int GetDistributionPointsCount()
+        public int GetDistributionPointsCount()
         {
             int size = 0;
             for (int i = 0; i < emitterShapes.Count; ++i)

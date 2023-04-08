@@ -27,12 +27,4 @@ public class Puddle : MonoBehaviour
 
         tag = "Untagged";
     }
-
-    private void Awake()
-    {
-        _emitter.OnKillParticle += (e, p_index) =>
-        {
-            Debug.Log($"Particle killed {p_index}");
-        };
-    }
 }

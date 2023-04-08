@@ -3,12 +3,14 @@ using System.Linq;
 using Obi;
 using UnityEngine;
 
-public class DropletController : Puddle
+public class DropletController : MonoBehaviour
 {
     public event Action OnDied;
+    public event Action OnJoin;
     public Action<int> OnMaxHealthUpdate;
     public Action<int> OnHealthUpdate;
 
+    [SerializeField] protected ObiEmitter _emitter;
     [SerializeField] private AudioSource _source;
 
     [SerializeField]
@@ -22,11 +24,9 @@ public class DropletController : Puddle
     void Start()
     {
        _obiSolver.OnCollision += ObiSolverOnOnCollision;
-       _emitter.OnEmitParticle += (e,i) =>
-       {
-           UpdateHealth(1);
-           UpdateMaxHealth(1);
-       };
+        var health = _emitter.GetDistributionPointsCount();
+        var maxHealth = health;
+     
        _emitter.OnKillParticle += (obiEmitter, index) => UpdateHealth(-1); 
 
        var emitters = FindObjectsOfType<ObiEmitter>();
@@ -34,14 +34,13 @@ public class DropletController : Puddle
        {
            if(emitter == _emitter)
                continue;
-           
-           emitter.OnKillParticle += (obiEmitter, index) => UpdateHealth(-1); 
-           
-           emitter.OnEmitParticle += (e, i) =>
-           {
-               UpdateMaxHealth(1);
-           };
+
+           maxHealth += emitter.GetDistributionPointsCount();
+           emitter.OnKillParticle += (obiEmitter, index) => UpdateHealth(-1);
        }
+
+        UpdateMaxHealth(maxHealth);
+        UpdateHealth(health);
     }
 
     private void ObiSolverOnOnCollision(ObiSolver solver, ObiSolver.ObiCollisionEventArgs contacts)
@@ -67,8 +66,11 @@ public class DropletController : Puddle
                     if (collider.tag == "Connectable")
                     {
                         var puddle = collider.GetComponent<Puddle>();
+                        var activeCount = puddle.GetComponent<ObiEmitter>().activeParticleCount;
+                        UpdateHealth(activeCount);
                         puddle.Join(_emitter);
                         _source.PlayOneShot(_source.clip);
+                        OnJoin?.Invoke();
                     }
                 }
             }

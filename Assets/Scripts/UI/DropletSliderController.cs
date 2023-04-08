@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Obi;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,11 +9,13 @@ using Zenject;
 public class DropletSliderController : MonoBehaviour
 {
     [SerializeField] private Slider slider;
-    [Inject] private DropletController dropletController;
-    
+    private DropletController dropletController;
+
     // Start is called before the first frame update
-    void Start()
+    [Inject]
+    void Inject(DropletController dropletController)
     {
+        this.dropletController = dropletController;
         dropletController.OnMaxHealthUpdate += UpdateMax;
         dropletController.OnHealthUpdate += UpdateSlider;
     }
