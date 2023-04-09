@@ -19,95 +19,30 @@ public class CompositeObject : MonoBehaviour
     /// </summary>
     public GameObject[] rightMultipleObjects;
 
-    private GameObject composite;
-    private static GameObject editor_composite;
-    [SerializeField] private bool showInInspector = true;
+    public Action OnFinished;
 
     void Start()
     {
-        InitializeInPlayMode();
-    }
-
-    private void InitializeInPlayMode()
-    {
-        var alreadyCreatedComposite = GetAlreadyCreatedComposite();
-        if(enabled && alreadyCreatedComposite == null)
-            composite = Initialize();
-    }
-
-    //private void OnValidate()
-    //{
-    //    InitializeEditor();
-    //}
-
-    public void RebuildComposite()
-    {
-        var child = GetAlreadyCreatedComposite();
-#if UNITY_EDITOR
-       if(child != null)
-        GameObject.DestroyImmediate(child);
-
-        child = Initialize();
-        child.name = left.name + "(editor clone)";
-#endif
-    }
-
-    private void InitializeEditor()
-    {
-        editor_composite = GetAlreadyCreatedComposite();
-
-        if (editor_composite != null)
-        {
-            if (!showInInspector)
-            {
-#if UNITY_EDITOR
-                UnityEditor.EditorApplication.delayCall += () =>
-                {
-                    DestroyImmediate( editor_composite);
-                }; 
-#endif
-            }
-        }
-        
-        if (editor_composite == null && enabled && !Application.isPlaying && showInInspector)
-        {
-            editor_composite = Initialize();
-            editor_composite.name = left.name + "(editor clone)";
-        }
-        
-        
-    }
-
-    private GameObject GetAlreadyCreatedComposite()
-    {
-        if (transform.childCount == 1)
-        {
-            var compositeChild = transform.GetChild(0);
-            if (compositeChild.tag == "composite")
-            {
-                return compositeChild.gameObject;
-            }
-        }
-
-        return null;
+        Initialize();
     }
     
-    public GameObject Initialize()
+    public void Initialize()
     {
         if (left == null)
-            return null;
+            return;
         
         if (right != null)
         {
-            return Substruct(left, right);
+            Substruct(left, right);
         }
 
         if (rightMultipleObjects.Length > 0)
         {
-            return Substruct(left, rightMultipleObjects);
+            Substruct(left, rightMultipleObjects);
         }
 
-        return null;
+        OnFinished?.Invoke();
+        return;
     }
 
     private GameObject Substruct(GameObject lg, GameObject rg)
@@ -140,7 +75,6 @@ public class CompositeObject : MonoBehaviour
         mesh.subMeshCount = result.mesh.subMeshCount;
         mesh.tangents = TransformDirections(result.mesh.tangents,go.transform);
 
-        lg.transform.localScale = Vector3.one;
         lg.GetComponent<MeshFilter>().sharedMesh = result.mesh;
         var newMeshCollider = lg.AddComponent<MeshCollider>();
         newMeshCollider.sharedMesh = result.mesh;
@@ -148,11 +82,7 @@ public class CompositeObject : MonoBehaviour
         obiCollider.SourceCollider = newMeshCollider;
         lg.GetComponent<MeshRenderer>().sharedMaterials = result.materials.ToArray();
 
-        //go.AddComponent<MeshFilter>().sharedMesh = mesh;
-        //go.AddComponent<MeshRenderer>().sharedMaterials = result.materials.ToArray();
-
         Destroy(go);
-        //go.tag = "composite";
 
         // cleaning
         if (!Application.isPlaying)
@@ -171,8 +101,6 @@ public class CompositeObject : MonoBehaviour
             Destroy(rightDuplicate);
         }
         
-       
-       // lg.SetActive(false);
         rg.SetActive(false);
 
         return go;
@@ -302,13 +230,5 @@ public class CompositeObject : MonoBehaviour
         }
     
         return newVertices;
-    }
-    
-    void OnDrawGizmosSelected()
-    {
-        var leftMeshFilter = left.GetComponent<MeshFilter>();
-        var leftCenter = leftMeshFilter.sharedMesh.bounds.center;
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(leftCenter, 1f);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Zenject;
@@ -9,6 +10,7 @@ public enum GameStates
 {
     Preparing,
     Match,
+    Flush,
     GameOver,
     Win
 }
@@ -22,16 +24,23 @@ public class Game : MonoBehaviour
 
     public EventHandler<GameStates> OnStateChanged;
 
-    [SerializeField] GameObject sink;
+    [SerializeField] GameStates _currentState;
+
+    [SerializeField] PlaneController _beginPlatform;
+    [SerializeField] PlaneController _endPlatform;
+
+    [SerializeField] CompositeObject[] composites;
 
     private int maxDrops;
     private int joinedDrops;
+    private int processedComposites;
 
     // Start is called before the first frame update
     void Start()
     {
+       PrepareScene();
         _dropletController.OnJoin += IncreementDrops;
-        _dropletController.OnDied += () => OnStateChanged?.Invoke(this, GameStates.GameOver);
+        _dropletController.OnDied += GameOver;
         maxDrops = FindObjectsOfType<Puddle>().Length;
     }
 
@@ -51,13 +60,60 @@ public class Game : MonoBehaviour
         joinedDrops++;
         if(joinedDrops == maxDrops)
         {
-            SpawnSink();
+            StartFlushStep();
+        }
+    }
+    
+    private void PrepareScene()
+    {
+        UpdateStatus(GameStates.Preparing);
+        foreach (var c in composites)
+            c.OnFinished += OnCompositeFinished;
+
+        _beginPlatform.gameObject.SetActive(true);
+        _endPlatform.gameObject.SetActive(true);
+    }
+
+    private void OnCompositeFinished()
+    {
+        processedComposites++;
+        if(processedComposites == composites.Length)
+        {
+            StartMatch();
         }
     }
 
-    private void SpawnSink()
+    private void StartMatch()
     {
-        sink.SetActive(true);
-        Debug.Log("Sink spawned");
+        _endPlatform.gameObject.SetActive(false);
+        UpdateStatus(GameStates.Match);
+        _beginPlatform.gameObject.SetActive(true);
+    }
+
+    private void StartFlushStep()
+    {
+        UpdateStatus(GameStates.Flush);
+        _beginPlatform.gameObject.SetActive(false);
+        _endPlatform.gameObject.SetActive(true);
+    }
+
+    private void GameOver()
+    {
+        UpdateStatus(GameStates.GameOver);
+    }
+
+    private void UpdateStatus(GameStates newState)
+    {
+        _currentState = newState;
+        OnStateChanged?.Invoke(this, newState);
+    }
+
+    void OnDisable()
+    {
+        _dropletController.OnJoin -= IncreementDrops;
+        _dropletController.OnDied -= GameOver;
+
+        foreach (var c in composites)
+            c.OnFinished -= OnCompositeFinished;
     }
 }
