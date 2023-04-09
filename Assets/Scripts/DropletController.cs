@@ -9,6 +9,7 @@ public class DropletController : MonoBehaviour
     public event Action OnJoin;
     public Action<int> OnMaxHealthUpdate;
     public Action<int> OnHealthUpdate;
+    public Action<Vector3> OnFlush;
 
     [SerializeField] protected ObiEmitter _emitter;
     [SerializeField] private AudioSource _source;
@@ -71,6 +72,14 @@ public class DropletController : MonoBehaviour
                         puddle.Join(_emitter);
                         _source.PlayOneShot(_source.clip);
                         OnJoin?.Invoke();
+                    }
+
+                    if(collider.tag == "FlushTrigger")
+                    {
+                        // kill particle
+                        var emitter = (ObiEmitter)solver.particleToActor[contact.particle].actor;
+                        emitter.life[solver.particleToActor[contact.particle].indexInActor] = 0;
+                        OnFlush?.Invoke(contact.point);
                     }
                 }
             }

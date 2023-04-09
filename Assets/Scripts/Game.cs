@@ -30,6 +30,7 @@ public class Game : MonoBehaviour
     [SerializeField] PlaneController _endPlatform;
 
     [SerializeField] CompositeObject[] composites;
+    [SerializeField] GameObject _coinPrefab;
 
     private int maxDrops;
     private int joinedDrops;
@@ -40,6 +41,7 @@ public class Game : MonoBehaviour
     {
        PrepareScene();
         _dropletController.OnJoin += IncreementDrops;
+        _dropletController.OnFlush += OnFlush;
         _dropletController.OnDied += GameOver;
         maxDrops = FindObjectsOfType<Puddle>().Length;
     }
@@ -62,6 +64,11 @@ public class Game : MonoBehaviour
         {
             StartFlushStep();
         }
+    }
+
+    private void OnFlush(Vector3 point)
+    {
+        Instantiate(_coinPrefab, point, Quaternion.identity);
     }
     
     private void PrepareScene()
@@ -107,6 +114,7 @@ public class Game : MonoBehaviour
         _currentState = newState;
         OnStateChanged?.Invoke(this, newState);
     }
+
 
     void OnDisable()
     {
