@@ -7,6 +7,7 @@ public class DropletController : MonoBehaviour
 {
     public event Action OnDied;
     public event Action OnJoin;
+    public event Action OnWashedAway;
     public Action<int> OnMaxHealthUpdate;
     public Action<int> OnHealthUpdate;
     public Action<Vector3> OnFlush;
@@ -87,6 +88,9 @@ public class DropletController : MonoBehaviour
                             if(i == solver.particleToActor[contact.particle].indexInActor)
                                 OnFlush?.Invoke(contact.point);
                         };
+
+                        if (IsDied)
+                            OnWashedAway?.Invoke();
                     }
                 }
             }

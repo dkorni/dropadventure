@@ -33,6 +33,7 @@ public class Game : MonoBehaviour
 
     [SerializeField] CompositeObject[] composites;
     [SerializeField] GameObject _coinPrefab;
+    [SerializeField] GameObject firework;
 
     Obi.ObiSolver _solver;
 
@@ -46,6 +47,7 @@ public class Game : MonoBehaviour
         _dropletController.OnJoin += IncreementDrops;
         _dropletController.OnFlush += OnFlush;
         _dropletController.OnDied += GameOver;
+        _dropletController.OnWashedAway += Win;
         maxDrops = FindObjectsOfType<Puddle>().Length;
         PrepareScene();
     }
@@ -72,7 +74,6 @@ public class Game : MonoBehaviour
 
     private void OnFlush(Vector3 point)
     {
-        Debug.Log("Zaebtsa");
         CoinBank.Withdraw(point);
     }
     
@@ -116,6 +117,12 @@ public class Game : MonoBehaviour
         UpdateStatus(GameStates.GameOver);
     }
 
+    private void Win()
+    {
+        UpdateStatus(GameStates.Win);
+        firework.SetActive(true);
+    }
+
     private void UpdateStatus(GameStates newState)
     {
         _currentState = newState;
@@ -127,6 +134,7 @@ public class Game : MonoBehaviour
     {
         _dropletController.OnJoin -= IncreementDrops;
         _dropletController.OnDied -= GameOver;
+        _dropletController.OnDied -= Win;
 
         foreach (var c in composites)
             c.OnFinished -= OnCompositeFinished;

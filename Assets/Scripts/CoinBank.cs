@@ -13,7 +13,7 @@ public class CoinBank : MonoBehaviour
     private float withdrawDelay = 1.2f;
 
     private Queue<GameObject> coins = new Queue<GameObject>();
-    private int amount;
+    public int Amount;
 
     public Action<int> OnBalanceUpdated;
 
@@ -24,7 +24,7 @@ public class CoinBank : MonoBehaviour
     private void Start()
     {
         if (PlayerPrefs.HasKey("balance"))
-            amount = PlayerPrefs.GetInt("balance");
+            Amount = PlayerPrefs.GetInt("balance");
     }
 
     public void InitializeCoins(int count)
@@ -47,8 +47,8 @@ public class CoinBank : MonoBehaviour
 
     private void UpdateBalance(int amount)
     {
-        this.amount += amount;
-        PlayerPrefs.SetInt("balance", this.amount);
+        this.Amount += amount;
+        PlayerPrefs.SetInt("balance", this.Amount);
     }
 
     private IEnumerator WithdrawCoroutine(Vector3 position)
@@ -60,8 +60,8 @@ public class CoinBank : MonoBehaviour
             var coin = coins.Dequeue();
             coin.SetActive(true);
             coin.transform.position = position;
-            UpdateBalance(amount);
-            OnBalanceUpdated?.Invoke(amount);
+            UpdateBalance(1);
+            OnBalanceUpdated?.Invoke(Amount);
         }
     }
 }
