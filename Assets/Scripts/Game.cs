@@ -22,6 +22,8 @@ public class Game : MonoBehaviour
     [Inject]
     private DropletController _dropletController;
 
+    [Inject] CoinBank CoinBank;
+
     public EventHandler<GameStates> OnStateChanged;
 
     [SerializeField] GameStates _currentState;
@@ -32,6 +34,8 @@ public class Game : MonoBehaviour
     [SerializeField] CompositeObject[] composites;
     [SerializeField] GameObject _coinPrefab;
 
+    Obi.ObiSolver _solver;
+
     private int maxDrops;
     private int joinedDrops;
     private int processedComposites;
@@ -39,11 +43,11 @@ public class Game : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       PrepareScene();
         _dropletController.OnJoin += IncreementDrops;
         _dropletController.OnFlush += OnFlush;
         _dropletController.OnDied += GameOver;
         maxDrops = FindObjectsOfType<Puddle>().Length;
+        PrepareScene();
     }
 
     public void Retry()
@@ -68,7 +72,8 @@ public class Game : MonoBehaviour
 
     private void OnFlush(Vector3 point)
     {
-        Instantiate(_coinPrefab, point, Quaternion.identity);
+        Debug.Log("Zaebtsa");
+        CoinBank.Withdraw(point);
     }
     
     private void PrepareScene()
@@ -79,6 +84,7 @@ public class Game : MonoBehaviour
 
         _beginPlatform.gameObject.SetActive(true);
         _endPlatform.gameObject.SetActive(true);
+        CoinBank.InitializeCoins(_dropletController.MaxHealth);
     }
 
     private void OnCompositeFinished()
@@ -100,6 +106,7 @@ public class Game : MonoBehaviour
     private void StartFlushStep()
     {
         UpdateStatus(GameStates.Flush);
+        _endPlatform.transform.rotation = _beginPlatform.transform.rotation;
         _beginPlatform.gameObject.SetActive(false);
         _endPlatform.gameObject.SetActive(true);
     }

@@ -19,7 +19,7 @@ public class DropletController : MonoBehaviour
 
     private int health;
 
-    private int MaxHealth;
+    public int MaxHealth;
 
     // Start is called before the first frame update
     void Start()
@@ -76,10 +76,17 @@ public class DropletController : MonoBehaviour
 
                     if(collider.tag == "FlushTrigger")
                     {
-                        // kill particle
                         var emitter = (ObiEmitter)solver.particleToActor[contact.particle].actor;
+                        if (emitter.life[solver.particleToActor[contact.particle].indexInActor] == 0)
+                            continue;
+                       
                         emitter.life[solver.particleToActor[contact.particle].indexInActor] = 0;
-                        OnFlush?.Invoke(contact.point);
+
+                        emitter.OnKillParticle += (e, i) =>
+                        {
+                            if(i == solver.particleToActor[contact.particle].indexInActor)
+                                OnFlush?.Invoke(contact.point);
+                        };
                     }
                 }
             }

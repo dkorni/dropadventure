@@ -94,6 +94,7 @@
      <Compile Include="Assets\Scripts\CSJ\Classes\VertexAttributes.cs" />
      <Compile Include="Assets\Scripts\CSJ\Classes\VertexUtility.cs" />
      <Compile Include="Assets\Scripts\Coin.cs" />
+     <Compile Include="Assets\Scripts\CoinBank.cs" />
      <Compile Include="Assets\Scripts\CompositeObject.cs" />
      <Compile Include="Assets\Scripts\DropletController.cs" />
      <Compile Include="Assets\Scripts\Game.cs" />
