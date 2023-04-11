@@ -59,6 +59,13 @@
      <Compile Include="Assets\3DPart\GradientSky\Scripts\GradientSkyCamera.cs" />
      <Compile Include="Assets\3DPart\GradientSky\Scripts\GradientSkyObject.cs" />
      <Compile Include="Assets\3DPart\Liquid-Simulation-master\Liquid-Simulation-master\Assets\Scripts\BlurController.cs" />
+     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
+     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
+     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
+     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
+     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
+     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
+     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
      <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ActorSpawner.cs" />
      <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\AddRandomVelocity.cs" />
      <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\Blinker.cs" />

@@ -139,4 +139,9 @@ public class Game : MonoBehaviour
         foreach (var c in composites)
             c.OnFinished -= OnCompositeFinished;
     }
+
+    public void Restart()
+    {
+        Application.LoadLevel(0);
+    }
 }

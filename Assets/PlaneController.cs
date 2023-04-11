@@ -15,6 +15,7 @@ public class PlaneController : MonoBehaviour
     private float angleVelocity;
 
     [SerializeField] private Rigidbody _rigidbody;
+    [SerializeField] private DynamicJoystick dynamicJoystick;
 
     private float _horizontal;
     private float _vertical;
@@ -45,7 +46,9 @@ public class PlaneController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _horizontal = Input.GetAxis("Horizontal") * -1;
-        _vertical = Input.GetAxis("Vertical");
+        _horizontal = dynamicJoystick.Horizontal * -1;
+        _vertical = dynamicJoystick.Vertical;
+
+       
     }
 }
