@@ -54,8 +54,15 @@ namespace Obi{
             GameObject go = new GameObject("Image", typeof(ObiEmitterShapeImage));
             ObiEditorUtils.PlaceActorRoot(go, menuCommand);
         }
-	
-		ObiEmitterShape shape;
+
+        [MenuItem("GameObject/3D Object/Obi/Emitter Shapes/Mesh", false, 222)]
+        static void CreateObiEmitterShapeMesh(MenuCommand menuCommand)
+        {
+            GameObject go = new GameObject("Mesh", typeof(ObiEmitterShapeMesh));
+            ObiEditorUtils.PlaceActorRoot(go, menuCommand);
+        }
+
+        ObiEmitterShape shape;
 		
 		public void OnEnable(){
 			shape = (ObiEmitterShape)target;

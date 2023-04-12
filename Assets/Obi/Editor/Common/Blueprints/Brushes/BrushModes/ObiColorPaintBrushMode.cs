@@ -1,30 +1,36 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 namespace Obi
 {
-    public class ObiColorPaintBrushMode : ObiBrushMode
+    public class ObiColorPaintBrushMode : IObiBrushMode
     {
-        public ObiColorPaintBrushMode(ObiBlueprintColorProperty property) : base(property) { }
+        ObiBlueprintColorProperty property;
 
-        public override string name
+        public ObiColorPaintBrushMode(ObiBlueprintColorProperty property)
+        {
+            this.property = property;
+        }
+
+        public string name
         {
             get { return "Paint"; }
         }
 
-        public override void ApplyStamps(ObiBrushBase brush, bool modified)
+        public bool needsInputValue
         {
-            var colorProperty = (ObiBlueprintColorProperty)property;
+            get { return true; }
+        }
 
+        public void ApplyStamps(ObiBrushBase brush, bool modified)
+        {
             for (int i = 0; i < brush.weights.Length; ++i)
             {
                 if (!property.Masked(i) && brush.weights[i] > 0)
                 {
-                    Color currentValue = colorProperty.Get(i);
-                    Color delta = brush.weights[i] * brush.opacity * brush.speed * (colorProperty.GetDefault() - currentValue);
+                    Color currentValue = property.Get(i);
+                    Color delta = brush.weights[i] * brush.opacity * brush.speed * (property.GetDefault() - currentValue);
 
-                    colorProperty.Set(i, currentValue + delta * (modified ? -1 : 1));
+                    property.Set(i, currentValue + delta * (modified ? -1 : 1));
                 }
             }
         }

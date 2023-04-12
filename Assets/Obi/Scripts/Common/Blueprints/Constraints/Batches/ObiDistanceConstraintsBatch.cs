@@ -1,21 +1,38 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 namespace Obi
 {
-    [System.Serializable]
+    [Serializable]
     public class ObiDistanceConstraintsBatch : ObiConstraintsBatch, IStructuralConstraintBatch
     {
-        [HideInInspector] public ObiNativeFloatList restLengths = new ObiNativeFloatList();                /**< Rest distances.*/
-        [HideInInspector] public ObiNativeVector2List stiffnesses = new ObiNativeVector2List();              /**< Stiffnesses of distance constraits.*/
+        [NonSerialized] protected IDistanceConstraintsBatchImpl m_BatchImpl; 
+
+        /// <summary>
+        /// Rest distance for each individual constraint.
+        /// </summary>
+        [HideInInspector] public ObiNativeFloatList restLengths = new ObiNativeFloatList();
+
+        /// <summary>
+        /// 2 values for each constraint: compliance and slack.
+        /// </summary>
+        [HideInInspector] public ObiNativeVector2List stiffnesses = new ObiNativeVector2List();            
 
         public override Oni.ConstraintType constraintType
         {
             get { return Oni.ConstraintType.Distance; }
         }
 
-        public ObiDistanceConstraintsBatch(ObiDistanceConstraintsBatch source = null):base(source){}
+        public override IConstraintsBatchImpl implementation
+        {
+            get { return m_BatchImpl; }
+        }
+
+        public ObiDistanceConstraintsBatch(int a = 0) 
+        { 
+        }
 
         public void AddConstraint(Vector2Int indices, float restLength)
         {
@@ -30,7 +47,6 @@ namespace Obi
         public override void Clear()
         {
             base.Clear();
-            particleIndices.Clear();
             restLengths.Clear();
             stiffnesses.Clear();
         }
@@ -78,42 +94,49 @@ namespace Obi
             stiffnesses.Swap(sourceIndex, destIndex);
         }
 
-        public override IObiConstraintsBatch Clone()
+        public override void Merge(ObiActor actor, IObiConstraintsBatch other)
         {
-            var clone = new ObiDistanceConstraintsBatch(this);
+            var batch = other as ObiDistanceConstraintsBatch;
+            var user = actor as IDistanceConstraintsUser;
 
-            clone.particleIndices.ResizeUninitialized(particleIndices.count);
-            clone.restLengths.ResizeUninitialized(restLengths.count);
-            clone.stiffnesses.ResizeUninitialized(stiffnesses.count);
+            if (batch != null && user != null)
+            {
+                if (!user.distanceConstraintsEnabled)
+                    return;
 
-            clone.particleIndices.CopyFrom(particleIndices);
-            clone.restLengths.CopyFrom(restLengths);
-            clone.stiffnesses.CopyFrom(stiffnesses);
+                particleIndices.ResizeUninitialized((m_ActiveConstraintCount + batch.activeConstraintCount) * 2);
+                restLengths.ResizeUninitialized(m_ActiveConstraintCount + batch.activeConstraintCount);
+                stiffnesses.ResizeUninitialized(m_ActiveConstraintCount + batch.activeConstraintCount);
+                lambdas.ResizeInitialized(m_ActiveConstraintCount + batch.activeConstraintCount);
 
-            return clone;
+                for (int i = 0; i < batch.activeConstraintCount * 2; ++i)
+                    particleIndices[m_ActiveConstraintCount * 2 + i] = actor.solverIndices[batch.particleIndices[i]];
+
+                for (int i = 0; i < batch.activeConstraintCount; ++i)
+                {
+                    float restLength = batch.restLengths[i] * user.stretchingScale;
+                    restLengths[m_ActiveConstraintCount + i] = restLength; // TODO: use nativelist methods?
+                    stiffnesses[m_ActiveConstraintCount + i] = new Vector2(user.stretchCompliance, user.maxCompression * restLength);
+                }
+
+                base.Merge(actor, other);
+            }
         }
 
-        protected override void OnAddToSolver(IObiConstraints constraints)
+        public override void AddToSolver(ObiSolver solver)
         {
-            for (int i = 0; i < restLengths.count; i++)
-            {
-                particleIndices[i * 2] = constraints.GetActor().solverIndices[source.particleIndices[i * 2]];
-                particleIndices[i * 2 + 1] = constraints.GetActor().solverIndices[source.particleIndices[i * 2 + 1]];
-                stiffnesses[i] = new Vector2(0,restLengths[i]);
-            }
+            // Create distance constraints batch directly.
+            m_BatchImpl = solver.implementation.CreateConstraintsBatch(constraintType) as IDistanceConstraintsBatchImpl;
 
-            // pass constraint data arrays to the solver:
-            Oni.SetDistanceConstraints(batch, particleIndices.GetIntPtr(), restLengths.GetIntPtr(), stiffnesses.GetIntPtr(), m_ConstraintCount);
-            Oni.SetActiveConstraints(batch, m_ActiveConstraintCount);
+            if (m_BatchImpl != null)
+                m_BatchImpl.SetDistanceConstraints(particleIndices, restLengths, stiffnesses, lambdas, m_ActiveConstraintCount);
+            
         }
 
-        public void SetParameters(float compliance, float slack, float stretchingScale)
+        public override void RemoveFromSolver(ObiSolver solver)
         {
-            for (int i = 0; i < stiffnesses.count; i++)
-            {
-                restLengths[i] = ((ObiDistanceConstraintsBatch)source).restLengths[i] * stretchingScale;
-                stiffnesses[i] = new Vector2(compliance, slack * restLengths[i]);
-            }
+            //Remove batch:
+            solver.implementation.DestroyConstraintsBatch(m_BatchImpl as IConstraintsBatchImpl);
         }
 
     }

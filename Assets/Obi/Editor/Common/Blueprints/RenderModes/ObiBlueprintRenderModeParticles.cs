@@ -17,7 +17,7 @@ namespace Obi
         public ObiBlueprintRenderModeParticles(ObiActorBlueprintEditor editor) :base(editor)
         {
             impostorDrawer = new ParticleImpostorRendering();
-            impostorDrawer.UpdateMeshes(editor.Blueprint);
+            impostorDrawer.UpdateMeshes(editor.blueprint);
         }
 
         void CreateMaterialIfNeeded()
@@ -44,12 +44,12 @@ namespace Obi
         {
             CreateMaterialIfNeeded();
             foreach (Mesh mesh in impostorDrawer.Meshes)
-                Graphics.DrawMesh(mesh, Matrix4x4.identity, material, 0);
+                Graphics.DrawMesh(mesh, Matrix4x4.identity, material, 0, camera);
         }
 
         public override void Refresh()
         {
-            impostorDrawer.UpdateMeshes(editor.Blueprint);
+            impostorDrawer.UpdateMeshes(editor.blueprint, editor.visible, editor.tint);
         }
 
         public override void OnDestroy()

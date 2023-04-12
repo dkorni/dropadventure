@@ -8,6 +8,7 @@
 
 		Pass {
        
+            Offset 0, -50
 			Cull Back 
 			Fog { Mode Off }
 

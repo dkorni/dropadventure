@@ -52,14 +52,16 @@ public class DropletController : MonoBehaviour
             // this one is an actual collision:
             if (contact.distance < 0.01)
             {
-                ObiCollider.idToCollider.TryGetValue(contact.other, out var collider);
+                ObiColliderBase collider = ObiColliderWorld.GetInstance().colliderHandles[contact.bodyB].owner;
+                int particleIndex = solver.simplices[contact.bodyA];
+                ObiSolver.ParticleInActor pa = solver.particleToActor[particleIndex];
+                ObiEmitter emitter = pa.actor as ObiEmitter;
                 if (collider != null)
                 {
                     if (collider.tag == "GameOverTrigger")
                     {
                         // kill particle
-                        var emitter = (ObiEmitter)solver.particleToActor[contact.particle].actor;
-                        emitter.life[solver.particleToActor[contact.particle].indexInActor] = 0;
+                        emitter.life[pa.indexInActor] = 0;
                         
                         if (IsDied)
                             OnDied?.Invoke();
@@ -77,16 +79,12 @@ public class DropletController : MonoBehaviour
 
                     if(collider.tag == "FlushTrigger")
                     {
-                        var emitter = (ObiEmitter)solver.particleToActor[contact.particle].actor;
-                        if (emitter.life[solver.particleToActor[contact.particle].indexInActor] == 0)
-                            continue;
-                       
-                        emitter.life[solver.particleToActor[contact.particle].indexInActor] = 0;
+                        emitter.life[pa.indexInActor] = 0;
 
                         emitter.OnKillParticle += (e, i) =>
                         {
-                            if(i == solver.particleToActor[contact.particle].indexInActor)
-                                OnFlush?.Invoke(contact.point);
+                            if(i == particleIndex)
+                                OnFlush?.Invoke(contact.pointA);
                         };
 
                         if (IsDied)

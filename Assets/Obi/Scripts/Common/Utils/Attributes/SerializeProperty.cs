@@ -35,8 +35,8 @@ namespace Obi{
                 propertyFieldInfo = target.GetType().GetProperty(((SerializeProperty)attribute).PropertyName,
                                                      BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
  
-            if (propertyFieldInfo != null){
-
+            if (propertyFieldInfo != null)
+            {
   				// Retrieve the value using the property getter:
                 object value = propertyFieldInfo.GetValue(target,null);
  
@@ -46,23 +46,28 @@ namespace Obi{
 	            value = DrawProperty(position,property.propertyType,propertyFieldInfo.PropertyType,value,label);
 	 
 	            // If any changes were detected, call the property setter:
-	            if (EditorGUI.EndChangeCheck() && propertyFieldInfo != null){
+	            if (EditorGUI.EndChangeCheck() && propertyFieldInfo != null)
+                {
 	 
 	                // Record object state for undo:
 	                Undo.RecordObject(property.serializedObject.targetObject, "Inspector");
 	 
 	                // Call property setter:
 	                propertyFieldInfo.SetValue(target,value,null);
-	            }
+
+                    // Record prefab modification:
+                    PrefabUtility.RecordPrefabInstancePropertyModifications(property.serializedObject.targetObject);
+                }
 				EditorGUI.EndProperty();
 
-			}else{
+			}else
+            {
 				EditorGUI.LabelField(position,"Error: could not retrieve property.");
 			}
         }
 
-		private object GetSource(SerializedProperty property){
-
+		private object GetSource(SerializedProperty property)
+        {
 			object target = property.serializedObject.targetObject;
 			string[] data = property.propertyPath.Split('.');
 			
@@ -79,7 +84,8 @@ namespace Obi{
  
         private object DrawProperty(Rect position, SerializedPropertyType propertyType, Type type, object value, GUIContent label)
         {
-            switch (propertyType) {
+            switch (propertyType)
+            {
                 case SerializedPropertyType.Integer:
                     return EditorGUI.IntField(position,label,(int)value);
                 case SerializedPropertyType.Boolean:

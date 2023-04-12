@@ -10,7 +10,6 @@ namespace Obi
 	public abstract class ObiBaseFluidRenderer : MonoBehaviour{
 
 		public ObiParticleRenderer[] particleRenderers;
-		public bool autoupdate = true;
 		protected CommandBuffer renderFluid;
 		protected Camera currentCam;
 
@@ -18,7 +17,7 @@ namespace Obi
 			currentCam = GetComponent<Camera>();
 		}
 
-		public void OnEnable()
+        public void OnEnable()
 		{
 			GetComponent<Camera>().forceIntoRenderTexture = true;
 			DestroyCommandBuffer();
@@ -48,14 +47,17 @@ namespace Obi
 		 */
 		public abstract void UpdateFluidRenderingCommandBuffer();
 
-		private void DestroyCommandBuffer(){
-			if (renderFluid != null){
+		private void DestroyCommandBuffer()
+        {
+			if (renderFluid != null)
+            {
 				GetComponent<Camera>().RemoveCommandBuffer (CameraEvent.BeforeImageEffectsOpaque,renderFluid);
 				renderFluid = null;
 			}
 		}
 
-		private void OnPreRender(){
+		private void OnPreRender()
+        {
 
 			bool act = gameObject.activeInHierarchy && enabled;
 			if (!act || particleRenderers == null || particleRenderers.Length == 0)
@@ -69,16 +71,13 @@ namespace Obi
 	
 			if (renderFluid == null)
 			{
-
 				renderFluid = new CommandBuffer();
 				renderFluid.name = "Render fluid";
-				UpdateFluidRenderingCommandBuffer();
 				currentCam.AddCommandBuffer (CameraEvent.BeforeImageEffectsOpaque, renderFluid);
-
-			}else if (autoupdate){
-
+			}
+            else
+            {
 				UpdateFluidRenderingCommandBuffer();
-
 			}
 		}
 	}

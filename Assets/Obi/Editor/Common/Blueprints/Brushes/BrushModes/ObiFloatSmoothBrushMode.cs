@@ -1,24 +1,27 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 namespace Obi
 {
-    public class ObiFloatSmoothBrushMode : ObiBrushMode
+    public class ObiFloatSmoothBrushMode : IObiBrushMode
     {
-        public ObiFloatSmoothBrushMode(ObiBlueprintFloatProperty property) : base(property) { }
+        ObiBlueprintFloatProperty property;
 
-        public override string name
+        public ObiFloatSmoothBrushMode(ObiBlueprintFloatProperty property)
+        {
+            this.property = property;
+        }
+
+        public string name
         {
             get { return "Smooth"; }
         }
 
-        public override bool needsInputValue
+        public bool needsInputValue
         {
             get { return false; }
         }
 
-        public override void ApplyStamps(ObiBrushBase brush, bool modified)
+        public void ApplyStamps(ObiBrushBase brush, bool modified)
         {
             var floatProperty = (ObiBlueprintFloatProperty)property;
 

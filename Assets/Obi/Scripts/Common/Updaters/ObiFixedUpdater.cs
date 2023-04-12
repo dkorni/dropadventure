@@ -14,28 +14,20 @@ namespace Obi
     public class ObiFixedUpdater : ObiUpdater
     {
         /// <summary>
-        /// Enabling this will set Physics.autoSimulation to false, and allow the updater to update both Obi's and Unity's engines in sync. 
-        /// Can be left off if the amount of substeps is 1, should be enabled for any other substep count if your scene contains dynamic attachments or particle-rigidbody collisions.
-        /// </summary>
-        [Tooltip("Should be left enabled when using multiple substeps, if you scene contains two-way rigidbody coupling: dynamic constraints and/or rigidbody collisions. If only using 1 substep or no" +
-                 "rigidbody coupling, can be disabled.")]
-        public bool substepUnityPhysics = false;
-
-        /// <summary>
         /// Each FixedUpdate() call will be divided into several substeps. Performing more substeps will greatly improve the accuracy/convergence speed of the simulation. 
         /// Increasing the amount of substeps is more effective than increasing the amount of constraint iterations.
         /// </summary>
         [Tooltip("Amount of substeps performed per FixedUpdate. Increasing the amount of substeps greatly improves accuracy and convergence speed.")]
-        public int substeps = 1;
+        public int substeps = 4;
 
-        private float accumulatedTime;
+        [NonSerialized] private float accumulatedTime;
 
         private void OnValidate()
         {
             substeps = Mathf.Max(1, substeps);
         }
 
-        private void Awake()
+        private void OnEnable()
         {
             accumulatedTime = 0;
         }
@@ -49,7 +41,7 @@ namespace Obi
         {
             ObiProfiler.EnableProfiler();
 
-            Physics.autoSimulation = !substepUnityPhysics;
+            PrepareFrame();
 
             BeginStep(Time.fixedDeltaTime);
 
@@ -57,16 +49,9 @@ namespace Obi
 
             // Divide the step into multiple smaller substeps:
             for (int i = 0; i < substeps; ++i)
-            {
-                // Simulate Obi:
-                Substep(substepDelta);
+                Substep(Time.fixedDeltaTime, substepDelta, substeps-i);
 
-                // Simulate Unity physics:
-                if (substepUnityPhysics)
-                    Physics.Simulate(substepDelta);
-            }
-
-            EndStep();
+            EndStep(substepDelta);
 
             ObiProfiler.DisableProfiler();
 

@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 using Obi;
 
 [RequireComponent(typeof(ObiSolver))]
@@ -10,11 +8,11 @@ public class Melt : MonoBehaviour {
 	public float cooling = 0.1f;
 
  	ObiSolver solver;
-	public Collider hotCollider = null;
-	public Collider coldCollider = null;
+	public ObiCollider hotCollider = null;
+	public ObiCollider coldCollider = null;
 
 	void Awake(){
-		solver = GetComponent<Obi.ObiSolver>();
+		solver = GetComponent<ObiSolver>();
 	}
 
 	void OnEnable () {
@@ -25,23 +23,24 @@ public class Melt : MonoBehaviour {
 		solver.OnCollision -= Solver_OnCollision;
 	}
 	
-	void Solver_OnCollision (object sender, Obi.ObiSolver.ObiCollisionEventArgs e)
+	void Solver_OnCollision (object sender, ObiSolver.ObiCollisionEventArgs e)
 	{
-		for(int i = 0;  i < e.contacts.Count; ++i)
+        var colliderWorld = ObiColliderWorld.GetInstance();
+
+        for (int i = 0;  i < e.contacts.Count; ++i)
 		{
 			if (e.contacts.Data[i].distance < 0.001f)
 			{
-
-				Component collider;
-				if (ObiCollider.idToCollider.TryGetValue(e.contacts.Data[i].other,out collider)){
-
-					int k = e.contacts.Data[i].particle;
+                var col = colliderWorld.colliderHandles[e.contacts.Data[i].bodyB].owner;
+                if (col != null)
+                {
+                    int k = e.contacts.Data[i].bodyA;
 
 					Vector4 userData = solver.userData[k];
-					if (collider == hotCollider){
+					if (col == hotCollider){
 						userData[0] = Mathf.Max(0.05f,userData[0] - heat * Time.fixedDeltaTime);
 						userData[1] = Mathf.Max(0.5f,userData[1] - heat * Time.fixedDeltaTime);
-					}else if (collider == coldCollider){
+					}else if (col == coldCollider){
 						userData[0] = Mathf.Min(10,userData[0] + cooling * Time.fixedDeltaTime);
 						userData[1] = Mathf.Min(2,userData[1] + cooling * Time.fixedDeltaTime);
 					}

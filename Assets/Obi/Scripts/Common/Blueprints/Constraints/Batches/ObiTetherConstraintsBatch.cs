@@ -1,35 +1,37 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 namespace Obi
 {
-    [System.Serializable]
+    [Serializable]
     public class ObiTetherConstraintsBatch : ObiConstraintsBatch
     {
-        [HideInInspector] public ObiNativeVector2List maxLengthsScales = new ObiNativeVector2List();                /**< Rest distances.*/
-        [HideInInspector] public ObiNativeFloatList stiffnesses = new ObiNativeFloatList();              /**< Stiffnesses of distance constraits.*/
+        protected ITetherConstraintsBatchImpl m_BatchImpl;   
+
+        /// <summary>
+        /// 2 floats per constraint: maximum length and tether scale.
+        /// </summary>
+        [HideInInspector] public ObiNativeVector2List maxLengthsScales = new ObiNativeVector2List();    
+
+        /// <summary>
+        /// compliance value for each constraint.
+        /// </summary>
+        [HideInInspector] public ObiNativeFloatList stiffnesses = new ObiNativeFloatList();    
 
         public override Oni.ConstraintType constraintType
         {
             get { return Oni.ConstraintType.Tether; }
         }
 
-        public ObiTetherConstraintsBatch(ObiTetherConstraintsBatch source = null) : base(source) { }
-
-        public override IObiConstraintsBatch Clone()
+        public override IConstraintsBatchImpl implementation
         {
-            var clone = new ObiTetherConstraintsBatch(this);
+            get { return m_BatchImpl; }
+        }
 
-            clone.particleIndices.ResizeUninitialized(particleIndices.count);
-            clone.maxLengthsScales.ResizeUninitialized(maxLengthsScales.count);
-            clone.stiffnesses.ResizeUninitialized(stiffnesses.count);
-
-            clone.particleIndices.CopyFrom(particleIndices);
-            clone.maxLengthsScales.CopyFrom(maxLengthsScales);
-            clone.stiffnesses.CopyFrom(stiffnesses);
-
-            return clone;
+        public ObiTetherConstraintsBatch(ObiTetherConstraintsData constraints = null) : base()
+        {
         }
 
         public void AddConstraint(Vector2Int indices, float maxLength, float scale)
@@ -64,18 +66,77 @@ namespace Obi
             stiffnesses.Swap(sourceIndex, destIndex);
         }
 
-        protected override void OnAddToSolver(IObiConstraints constraints)
+        public override void Merge(ObiActor actor, IObiConstraintsBatch other)
         {
-            for (int i = 0; i < stiffnesses.count; i++)
+            var batch = other as ObiTetherConstraintsBatch;
+            var user = actor as ITetherConstraintsUser;
+
+            if (batch != null && user != null)
             {
-                particleIndices[i * 2] = constraints.GetActor().solverIndices[source.particleIndices[i * 2]];
-                particleIndices[i * 2 + 1] = constraints.GetActor().solverIndices[source.particleIndices[i * 2 + 1]];
+                if (!user.tetherConstraintsEnabled)
+                    return;
+
+                particleIndices.ResizeUninitialized((m_ActiveConstraintCount + batch.activeConstraintCount) * 2);
+                maxLengthsScales.ResizeUninitialized(m_ActiveConstraintCount + batch.activeConstraintCount);
+                stiffnesses.ResizeUninitialized(m_ActiveConstraintCount + batch.activeConstraintCount);
+                lambdas.ResizeInitialized(m_ActiveConstraintCount + batch.activeConstraintCount);
+
+                stiffnesses.CopyReplicate(user.tetherCompliance, m_ActiveConstraintCount, batch.activeConstraintCount);
+
+                for (int i = 0; i < batch.activeConstraintCount * 2; ++i)
+                    particleIndices[m_ActiveConstraintCount * 2 + i] = actor.solverIndices[batch.particleIndices[i]];
+
+                for (int i = 0; i < batch.activeConstraintCount; ++i)
+                    maxLengthsScales[m_ActiveConstraintCount + i] = new Vector2(batch.maxLengthsScales[i].x, user.tetherScale);
+
+                base.Merge(actor, other);
+            }
+        }
+
+        public override void AddToSolver(ObiSolver solver)
+        {
+            // Create distance constraints batch directly.
+            m_BatchImpl = solver.implementation.CreateConstraintsBatch(constraintType) as ITetherConstraintsBatchImpl;
+
+            if (m_BatchImpl != null)
+                m_BatchImpl.SetTetherConstraints(particleIndices, maxLengthsScales, stiffnesses, lambdas, m_ActiveConstraintCount);
+        }
+
+        public override void RemoveFromSolver(ObiSolver solver)
+        {
+            //Remove batch:
+            solver.implementation.DestroyConstraintsBatch(m_BatchImpl as IConstraintsBatchImpl);
+        }
+
+        /*public override void AddToSolver(ObiSolver solver)
+        {
+            // create and add the implementation:
+            if (m_Constraints != null && m_Constraints.implementation != null)
+            {
+                m_BatchImpl = m_Constraints.implementation.CreateConstraintsBatch();
             }
 
-            // pass constraint data arrays to the solver:
-            Oni.SetTetherConstraints(batch, particleIndices.GetIntPtr(), maxLengthsScales.GetIntPtr(), stiffnesses.GetIntPtr(), m_ConstraintCount);
-            Oni.SetActiveConstraints(batch, m_ActiveConstraintCount);
+            if (m_BatchImpl != null)
+            {
+                lambdas.Clear();
+                for (int i = 0; i < stiffnesses.count; i++)
+                {
+                    //particleIndices[i * 2] = constraints.GetActor().solverIndices[m_Source.particleIndices[i * 2]];
+                    //particleIndices[i * 2 + 1] = constraints.GetActor().solverIndices[m_Source.particleIndices[i * 2 + 1]];
+                    lambdas.Add(0);
+                }
+
+                m_BatchImpl.SetTetherConstraints(particleIndices, maxLengthsScales, stiffnesses, lambdas, m_ConstraintCount);
+                m_BatchImpl.SetActiveConstraints(m_ActiveConstraintCount);
+            }
+            
         }
+
+        public override void RemoveFromSolver(ObiSolver solver)
+        {
+            if (m_Constraints != null && m_Constraints.implementation != null)
+                m_Constraints.implementation.RemoveBatch(m_BatchImpl);
+        }*/
 
         public void SetParameters(float compliance, float scale)
         {

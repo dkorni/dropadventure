@@ -1,35 +1,69 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 namespace Obi
 {
-    [System.Serializable]
+    [Serializable]
     public class ObiBendConstraintsBatch : ObiConstraintsBatch
     {
-        [HideInInspector] public ObiNativeFloatList restBends = new ObiNativeFloatList();                 /**< Rest distances.*/
+        protected IBendConstraintsBatchImpl m_BatchImpl;   
+
+        /// <summary>
+        /// one float per constraint: the rest bend distance.
+        /// </summary>
+        [HideInInspector] public ObiNativeFloatList restBends = new ObiNativeFloatList();                
+
+        /// <summary>
+        /// two floats per constraint: max bending and compliance.
+        /// </summary>
         [HideInInspector] public ObiNativeVector2List bendingStiffnesses = new ObiNativeVector2List();
+
+        /// <summary>
+        /// two floats per constraint: plastic yield and creep.
+        /// </summary>
+        [HideInInspector] public ObiNativeVector2List plasticity = new ObiNativeVector2List();
 
         public override Oni.ConstraintType constraintType
         {
             get { return Oni.ConstraintType.Bending; }
         }
 
-        public ObiBendConstraintsBatch(ObiBendConstraintsBatch source = null) : base(source) { }
-
-        public override IObiConstraintsBatch Clone()
+        public override IConstraintsBatchImpl implementation
         {
-            var clone = new ObiBendConstraintsBatch(this);
+            get { return m_BatchImpl; }
+        }
 
-            clone.particleIndices.ResizeUninitialized(particleIndices.count);
-            clone.restBends.ResizeUninitialized(restBends.count);
-            clone.bendingStiffnesses.ResizeUninitialized(bendingStiffnesses.count);
+        public ObiBendConstraintsBatch(ObiBendConstraintsData constraints = null) : base()
+        {
+        }
 
-            clone.particleIndices.CopyFrom(particleIndices);
-            clone.restBends.CopyFrom(restBends);
-            clone.bendingStiffnesses.CopyFrom(bendingStiffnesses);
+        public override void Merge(ObiActor actor, IObiConstraintsBatch other)
+        {
+            var batch = other as ObiBendConstraintsBatch;
+            var user = actor as IBendConstraintsUser;
 
-            return clone;
+            if (batch != null && user != null)
+            {
+                if (!user.bendConstraintsEnabled)
+                    return;
+
+                particleIndices.ResizeUninitialized((m_ActiveConstraintCount + batch.activeConstraintCount) * 3);
+                restBends.ResizeUninitialized(m_ActiveConstraintCount + batch.activeConstraintCount);
+                bendingStiffnesses.ResizeUninitialized(m_ActiveConstraintCount + batch.activeConstraintCount);
+                plasticity.ResizeUninitialized(m_ActiveConstraintCount + batch.activeConstraintCount);
+                lambdas.ResizeInitialized(m_ActiveConstraintCount + batch.activeConstraintCount);
+
+                restBends.CopyFrom(batch.restBends, 0, m_ActiveConstraintCount, batch.activeConstraintCount);
+                bendingStiffnesses.CopyReplicate(new Vector2(user.maxBending, user.bendCompliance), m_ActiveConstraintCount, batch.activeConstraintCount);
+                plasticity.CopyReplicate(new Vector2(user.plasticYield, user.plasticCreep), m_ActiveConstraintCount, batch.activeConstraintCount);
+
+                for (int i = 0; i < batch.activeConstraintCount * 3; ++i)
+                    particleIndices[m_ActiveConstraintCount * 3 + i] = actor.solverIndices[batch.particleIndices[i]];
+
+                base.Merge(actor, other);
+            }
         }
 
         public void AddConstraint(Vector3Int indices, float restBend)
@@ -41,14 +75,15 @@ namespace Obi
             particleIndices.Add(indices[2]);
             restBends.Add(restBend);
             bendingStiffnesses.Add(Vector2.zero);
+            plasticity.Add(Vector2.zero);
         }
 
         public override void Clear()
         {
             base.Clear();
-            particleIndices.Clear();
             restBends.Clear();
             bendingStiffnesses.Clear();
+            plasticity.Clear();
         }
 
         public override void GetParticlesInvolved(int index, List<int> particles)
@@ -65,26 +100,23 @@ namespace Obi
             particleIndices.Swap(sourceIndex * 3 + 2, destIndex * 3 + 2);
             restBends.Swap(sourceIndex, destIndex);
             bendingStiffnesses.Swap(sourceIndex, destIndex);
+            plasticity.Swap(sourceIndex, destIndex);
         }
 
-        protected override void OnAddToSolver(IObiConstraints constraints)
+        public override void AddToSolver(ObiSolver solver)
         {
-            for (int i = 0; i < restBends.count; i++)
-            {
-                particleIndices[i * 3] = constraints.GetActor().solverIndices[source.particleIndices[i * 3]];
-                particleIndices[i * 3 + 1] = constraints.GetActor().solverIndices[source.particleIndices[i * 3 + 1]];
-                particleIndices[i * 3 + 2] = constraints.GetActor().solverIndices[source.particleIndices[i * 3 + 2]];
-            }
+            // Create distance constraints batch directly.
+            m_BatchImpl = solver.implementation.CreateConstraintsBatch(constraintType) as IBendConstraintsBatchImpl;
 
-            // pass constraint data arrays to the solver:
-            Oni.SetBendingConstraints(batch, particleIndices.GetIntPtr(), restBends.GetIntPtr(), bendingStiffnesses.GetIntPtr(), m_ConstraintCount);
-            Oni.SetActiveConstraints(batch, m_ActiveConstraintCount);
+            if (m_BatchImpl != null)
+                m_BatchImpl.SetBendConstraints(particleIndices, restBends, bendingStiffnesses, plasticity, lambdas, m_ActiveConstraintCount);
+            
         }
 
-        public void SetParameters(float compliance, float maxBending)
+        public override void RemoveFromSolver(ObiSolver solver)
         {
-            for (int i = 0; i < bendingStiffnesses.count; i++)
-                bendingStiffnesses[i] = new Vector2(maxBending, compliance);
+            //Remove batch:
+            solver.implementation.DestroyConstraintsBatch(m_BatchImpl as IConstraintsBatchImpl);
         }
     }
 }

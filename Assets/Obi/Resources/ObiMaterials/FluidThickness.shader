@@ -68,8 +68,8 @@
 
             float4 frag(v2f i) : SV_Target
             {
-                float sceneDepth = Z2EyeDepth (tex2Dproj(_CameraDepthTexture,
-                                                         UNITY_PROJ_COORD(i.projPos)).r);
+                float4 proj = UNITY_PROJ_COORD(i.projPos);
+                float sceneDepth = Z2EyeDepth (SAMPLE_TEXTURE2D(_CameraDepthTexture,sampler_CameraDepthTexture,proj.xy/proj.w).r);
 
                 // compare scene depth with particle depth:
                 if (sceneDepth < i.viewRay.w)
@@ -94,6 +94,8 @@
             #pragma vertex vert
             #pragma fragment frag
 
+            #include "ObiUtils.cginc"
+
             struct appdata
             {
                 float4 vertex : POSITION;
@@ -114,20 +116,21 @@
                 return o;
             }
 
-            sampler2D _MainTex;
+            TEXTURE2D_HALF(_MainTex);
+            SAMPLER(sampler_MainTex);
             float4 _MainTex_TexelSize;
 
-            float4 frag(v2f i) : SV_Target
+            half4 frag(v2f i) : SV_Target
             {
                 float2 offset = float2(_MainTex_TexelSize.x,0);
 
-                half4 sample1 = tex2D(_MainTex,i.uv+offset*3) * .006;
-                half4 sample2 = tex2D(_MainTex,i.uv+offset*2) * .061;
-                half4 sample3 = tex2D(_MainTex,i.uv+offset) * .242;
-                half4 sample4 = tex2D(_MainTex,i.uv) * .383;
-                half4 sample5 = tex2D(_MainTex,i.uv-offset) * .242;
-                half4 sample6 = tex2D(_MainTex,i.uv-offset*2) * .061;
-                half4 sample7 = tex2D(_MainTex,i.uv-offset*3) * .006;
+                half4 sample1 = SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,i.uv+offset*3) * .006;
+                half4 sample2 = SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,i.uv+offset*2) * .061;
+                half4 sample3 = SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,i.uv+offset) * .242;
+                half4 sample4 = SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,i.uv) * .383;
+                half4 sample5 = SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,i.uv-offset) * .242;
+                half4 sample6 = SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,i.uv-offset*2) * .061;
+                half4 sample7 = SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,i.uv-offset*3) * .006;
 
                 return sample1 + sample2 + sample3 + sample4 + sample5 + sample6 + sample7;
             }
@@ -146,6 +149,8 @@
             #pragma vertex vert
             #pragma fragment frag
 
+            #include "ObiUtils.cginc"
+
             struct appdata
             {
                 float4 vertex : POSITION;
@@ -158,7 +163,8 @@
                 float4 vertex : SV_POSITION;
             };
 
-            sampler2D _MainTex;
+            TEXTURE2D_HALF(_MainTex);
+            SAMPLER(sampler_MainTex);
             float4 _MainTex_TexelSize;  
 
             v2f vert (appdata v)
@@ -169,17 +175,17 @@
                 return o;
             }
 
-            float4 frag(v2f i) : SV_Target
+            half4 frag(v2f i) : SV_Target
             {
                 float2 offset = float2(0,_MainTex_TexelSize.y);
 
-                half4 sample1 = tex2D(_MainTex,i.uv+offset*3) * .006;
-                half4 sample2 = tex2D(_MainTex,i.uv+offset*2) * .061;
-                half4 sample3 = tex2D(_MainTex,i.uv+offset) * .242;
-                half4 sample4 = tex2D(_MainTex,i.uv) * .383;
-                half4 sample5 = tex2D(_MainTex,i.uv-offset) * .242;
-                half4 sample6 = tex2D(_MainTex,i.uv-offset*2) * .061;
-                half4 sample7 = tex2D(_MainTex,i.uv-offset*3) * .006;
+                half4 sample1 = SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,i.uv+offset*3) * .006;
+                half4 sample2 = SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,i.uv+offset*2) * .061;
+                half4 sample3 = SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,i.uv+offset) * .242;
+                half4 sample4 = SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,i.uv) * .383;
+                half4 sample5 = SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,i.uv-offset) * .242;
+                half4 sample6 = SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,i.uv-offset*2) * .061;
+                half4 sample7 = SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,i.uv-offset*3) * .006;
 
                 return sample1 + sample2 + sample3 + sample4 + sample5 + sample6 + sample7;
             }

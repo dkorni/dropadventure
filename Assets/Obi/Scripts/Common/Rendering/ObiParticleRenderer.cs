@@ -18,23 +18,26 @@ namespace Obi
         public Shader shader;
         public Color particleColor = Color.white;
         public float radiusScale = 1;
-
-        private Material material;
-        private ParticleImpostorRendering impostors;
+        private ParticleImpostorRendering m_Impostors;
 
         public IEnumerable<Mesh> ParticleMeshes
         {
             get { return impostors.Meshes; }
         }
 
-        public Material ParticleMaterial
+        public ParticleImpostorRendering impostors
         {
-            get { return material; }
+            get {
+                if (m_Impostors == null)
+                    m_Impostors = new ParticleImpostorRendering();
+                return m_Impostors;
+            }
         }
+
+        public Material ParticleMaterial { get; private set; }
 
         public void OnEnable()
         {
-            impostors = new ParticleImpostorRendering();
             GetComponent<ObiActor>().OnInterpolate += DrawParticles;
         }
 
@@ -42,9 +45,10 @@ namespace Obi
         {
             GetComponent<ObiActor>().OnInterpolate -= DrawParticles;
 
-            if (impostors != null)
-                impostors.ClearMeshes();
-            DestroyImmediate(material);
+            if (m_Impostors != null)
+                m_Impostors.ClearMeshes();
+
+            DestroyImmediate(ParticleMaterial);
         }
 
         void CreateMaterialIfNeeded()
@@ -52,15 +56,14 @@ namespace Obi
 
             if (shader != null)
             {
-
                 if (!shader.isSupported)
                     Debug.LogWarning("Particle rendering shader not suported.");
 
-                if (material == null || material.shader != shader)
+                if (ParticleMaterial == null || ParticleMaterial.shader != shader)
                 {
-                    DestroyImmediate(material);
-                    material = new Material(shader);
-                    material.hideFlags = HideFlags.HideAndDontSave;
+                    DestroyImmediate(ParticleMaterial);
+                    ParticleMaterial = new Material(shader);
+                    ParticleMaterial.hideFlags = HideFlags.HideAndDontSave;
                 }
             }
         }
@@ -85,17 +88,18 @@ namespace Obi
 
         private void DrawParticles()
         {
-            if (material != null)
+            if (ParticleMaterial != null)
             {
 
-                material.SetFloat("_RadiusScale", radiusScale);
-                material.SetColor("_Color", particleColor);
+                ParticleMaterial.SetFloat("_RadiusScale", radiusScale);
+                ParticleMaterial.SetColor("_Color", particleColor);
 
                 // Send the meshes to be drawn:
                 if (render)
                 {
-                    foreach (Mesh mesh in impostors.Meshes)
-                        Graphics.DrawMesh(mesh, Matrix4x4.identity, material, gameObject.layer);
+                    var meshes = ParticleMeshes;
+                    foreach (Mesh mesh in meshes)
+                        Graphics.DrawMesh(mesh, Matrix4x4.identity, ParticleMaterial, gameObject.layer);
                 }
             }
 

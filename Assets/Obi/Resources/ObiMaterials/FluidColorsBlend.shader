@@ -3,6 +3,10 @@
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
+
+        _BlendSrc ("BlendSrc", Float) = 0
+        _BlendDst ("BlendDst", Float) = 0
+        _ZWrite ("ZWrite", Float) = 0
     }
 
     SubShader { 
@@ -11,8 +15,13 @@
             Name "FluidColors"
             Tags {"Queue"="Geometry" "IgnoreProjector"="True"}
             
-            Blend DstColor Zero
-            ZWrite Off
+            //Blend DstColor Zero
+            //Blend SrcAlpha OneMinusSrcAlpha
+            //ZWrite Off
+            //ZWrite On
+
+            Blend [_BlendSrc] [_BlendDst]
+            ZWrite [_ZWrite]
             ColorMask RGB
 
             CGPROGRAM
@@ -45,6 +54,12 @@
                 float4 projPos : TEXCOORD2;
             };
 
+            struct fout 
+            {
+                half4 color : SV_Target;
+                float depth : SV_Depth;
+            };
+
             v2f vert(vin v)
             { 
                 float3x3 P, IP;
@@ -70,18 +85,17 @@
                 fout fo;
 
                 // discard fragment if occluded by the scene:
-                float sceneDepth = Z2EyeDepth (tex2Dproj(_CameraDepthTexture,
-                                                         UNITY_PROJ_COORD(i.projPos)).r);
+                float4 proj = UNITY_PROJ_COORD(i.projPos);
+                float sceneDepth = Z2EyeDepth (SAMPLE_TEXTURE2D(_CameraDepthTexture, sampler_CameraDepthTexture, proj.xy/proj.w).r);
 
                 if (sceneDepth < i.viewRay.w)
                     discard;
 
                 float3 p,n;
                 float thickness = IntersectEllipsoid(i.viewRay,i.mapping, float3(0,0,0),float3(0,0,0),p, n);
-
-                // blend between white and actual color using thickness. 
-                fo.color = lerp(half4(1,1,1,1),i.color,thickness); 
-                OutputFragmentDepth(p,fo);
+                
+                fo.color = i.color;//lerp(half4(1,1,1,1),i.color,thickness); 
+                fo.depth = OutputFragmentDepth(p);
 
                 return fo;
             }

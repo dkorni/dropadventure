@@ -12,6 +12,7 @@ namespace Obi
         [SerializeField] private Color m_BrushWireframe;
         [SerializeField] private Color m_Particle;
         [SerializeField] private Color m_SelectedParticle;
+        [SerializeField] private Color m_ActiveParticle;
         [SerializeField] private Gradient m_PropertyGradient;
 
         public Color brushColor
@@ -30,6 +31,10 @@ namespace Obi
         {
             get { return m_SelectedParticle; }
         }
+        public Color activeParticleColor
+        {
+            get { return m_ActiveParticle; }
+        }
         public Gradient propertyGradient
         {
             get { return m_PropertyGradient; }
@@ -43,8 +48,9 @@ namespace Obi
                 settings = ScriptableObject.CreateInstance<ObiEditorSettings>();
                 settings.m_ParticleBrush = new Color32(243, 77, 43, 255);
                 settings.m_BrushWireframe = new Color32(0, 0, 0, 128);
-                settings.m_Particle = new Color32(50, 50, 50, 255);
+                settings.m_Particle = new Color32(240, 240, 240, 255);
                 settings.m_SelectedParticle = new Color32(243, 77, 43, 255);
+                settings.m_ActiveParticle = new Color32(243, 243, 43, 255);
                 settings.m_PropertyGradient = new Gradient();
 
                 // Populate the color keys at the relative time 0 and 1 (0 and 100%)

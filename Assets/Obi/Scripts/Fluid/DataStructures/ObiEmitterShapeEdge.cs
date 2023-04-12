@@ -32,7 +32,7 @@ namespace Obi
 			{
 				Vector3 pos = new Vector3(i*separation - lenght*0.5f,0,0);
 				Vector3 vel = Quaternion.AngleAxis(i*radialVelocity,Vector3.right) * Vector3.forward;
-				distribution.Add(new ObiEmitterShape.DistributionPoint(pos,vel,color));
+				distribution.Add(new ObiEmitterShape.DistributionPoint(pos,vel));
 			}
 
 		}

@@ -1,41 +1,48 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 namespace Obi
 {
-    [System.Serializable]
+    [Serializable]
     public class ObiSkinConstraintsBatch : ObiConstraintsBatch
     {
-        [HideInInspector] public ObiNativeVector4List skinPoints = new ObiNativeVector4List();                /**< Skin constraint anchor points, in world space.*/
-        [HideInInspector] public ObiNativeVector4List skinNormals = new ObiNativeVector4List();               /**< Rest distances.*/
-        [HideInInspector] public ObiNativeFloatList skinRadiiBackstop = new ObiNativeFloatList();             /**< Rest distances.*/
-        [HideInInspector] public ObiNativeFloatList skinCompliance = new ObiNativeFloatList();               /**< Stiffnesses of distance constraits.*/
+        protected ISkinConstraintsBatchImpl m_BatchImpl;   
+
+
+        /// <summary>
+        /// skin constraint anchor points, in solver space.
+        /// </summary>
+        [HideInInspector] public ObiNativeVector4List skinPoints = new ObiNativeVector4List();             
+
+        /// <summary>
+        /// normal vector for each skin constraint, in solver space.
+        /// </summary>
+        [HideInInspector] public ObiNativeVector4List skinNormals = new ObiNativeVector4List();            
+
+        /// <summary>
+        ///  3 floats per constraint: skin radius, backstop sphere radius, and backstop sphere distance.
+        /// </summary>
+        [HideInInspector] public ObiNativeFloatList skinRadiiBackstop = new ObiNativeFloatList();          
+
+        /// <summary>
+        /// one compliance value per skin constraint.
+        /// </summary>
+        [HideInInspector] public ObiNativeFloatList skinCompliance = new ObiNativeFloatList();              
 
         public override Oni.ConstraintType constraintType
         {
             get { return Oni.ConstraintType.Skin; }
         }
 
-        public ObiSkinConstraintsBatch(ObiSkinConstraintsBatch source = null) : base(source) { }
-
-        public override IObiConstraintsBatch Clone()
+        public override IConstraintsBatchImpl implementation
         {
-            var clone = new ObiSkinConstraintsBatch(this);
+            get { return m_BatchImpl; }
+        }
 
-            clone.particleIndices.ResizeUninitialized(particleIndices.count);
-            clone.skinPoints.ResizeUninitialized(skinPoints.count);
-            clone.skinNormals.ResizeUninitialized(skinNormals.count);
-            clone.skinRadiiBackstop.ResizeUninitialized(skinRadiiBackstop.count);
-            clone.skinCompliance.ResizeUninitialized(skinCompliance.count);
-
-            clone.particleIndices.CopyFrom(particleIndices);
-            clone.skinPoints.CopyFrom(skinPoints);
-            clone.skinNormals.CopyFrom(skinNormals);
-            clone.skinRadiiBackstop.CopyFrom(skinRadiiBackstop);
-            clone.skinCompliance.CopyFrom(skinCompliance);
-
-            return clone;
+        public ObiSkinConstraintsBatch(ObiSkinConstraintsData constraints = null) : base()
+        {
         }
 
         public void AddConstraint(int index, Vector4 point, Vector4 normal, float radius, float collisionRadius, float backstop, float stiffness)
@@ -77,16 +84,55 @@ namespace Obi
             skinCompliance.Swap(sourceIndex, destIndex);
         }
 
-        protected override void OnAddToSolver(IObiConstraints constraints)
+        public override void Merge(ObiActor actor, IObiConstraintsBatch other)
         {
-            for (int i = 0; i < skinCompliance.count; i++)
-            {
-                particleIndices[i] = constraints.GetActor().solverIndices[source.particleIndices[i]];
-            }
+            var batch = other as ObiSkinConstraintsBatch;
+            var user = actor as ISkinConstraintsUser;
 
-            // pass constraint data arrays to the solver:
-            Oni.SetSkinConstraints(batch, particleIndices.GetIntPtr(), skinPoints.GetIntPtr(), skinNormals.GetIntPtr(), skinRadiiBackstop.GetIntPtr(), skinCompliance.GetIntPtr(), m_ConstraintCount);
-            Oni.SetActiveConstraints(batch, m_ActiveConstraintCount);
+            if (batch != null && user != null)
+            {
+                if (!user.skinConstraintsEnabled)
+                    return;
+
+                particleIndices.ResizeUninitialized(m_ActiveConstraintCount + batch.activeConstraintCount);
+                skinPoints.ResizeUninitialized(m_ActiveConstraintCount + batch.activeConstraintCount);
+                skinNormals.ResizeUninitialized(m_ActiveConstraintCount + batch.activeConstraintCount);
+                skinRadiiBackstop.ResizeUninitialized((m_ActiveConstraintCount + batch.activeConstraintCount) * 3);
+                skinCompliance.ResizeUninitialized(m_ActiveConstraintCount + batch.activeConstraintCount);
+                lambdas.ResizeInitialized(m_ActiveConstraintCount + batch.activeConstraintCount);
+
+                skinPoints.CopyFrom(batch.skinPoints, 0, m_ActiveConstraintCount, batch.activeConstraintCount);
+                skinNormals.CopyFrom(batch.skinNormals, 0, m_ActiveConstraintCount, batch.activeConstraintCount);
+
+                for (int i = 0; i < batch.activeConstraintCount; ++i)
+                {
+                    var radiiBackstop = user.GetSkinRadiiBackstop(batch, i);
+                    skinRadiiBackstop[(m_ActiveConstraintCount + i) * 3] = radiiBackstop.x;
+                    skinRadiiBackstop[(m_ActiveConstraintCount + i) * 3 + 1] = radiiBackstop.y;
+                    skinRadiiBackstop[(m_ActiveConstraintCount + i) * 3 + 2] = radiiBackstop.z;
+                    skinCompliance[m_ActiveConstraintCount + i] = user.GetSkinCompliance(batch, i);
+                }
+
+                for (int i = 0; i < batch.activeConstraintCount; ++i)
+                    particleIndices[m_ActiveConstraintCount + i] = actor.solverIndices[batch.particleIndices[i]];
+
+                base.Merge(actor, other);
+            }
+        }
+
+        public override void AddToSolver(ObiSolver solver)
+        {
+            // Create distance constraints batch directly.
+            m_BatchImpl = solver.implementation.CreateConstraintsBatch(constraintType) as ISkinConstraintsBatchImpl;
+
+            if (m_BatchImpl != null)
+                m_BatchImpl.SetSkinConstraints(particleIndices, skinPoints, skinNormals, skinRadiiBackstop, skinCompliance, lambdas, m_ActiveConstraintCount);
+        }
+
+        public override void RemoveFromSolver(ObiSolver solver)
+        {
+            //Remove batch:
+            solver.implementation.DestroyConstraintsBatch(m_BatchImpl as IConstraintsBatchImpl);
         }
 
     }

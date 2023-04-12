@@ -1,13 +1,12 @@
 using UnityEngine;
 using UnityEditor;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace Obi
 {
     public abstract class ObiBlueprintPropertyBase
     {
-        protected List<ObiBrushMode> brushModes = new List<ObiBrushMode>();
+        protected List<IObiBrushMode> brushModes = new List<IObiBrushMode>();
         private int selectedBrushMode;
 
         public abstract string name
@@ -31,21 +30,29 @@ namespace Obi
         public virtual void RecalculateMinMax() { }
         public virtual Color ToColor(int index) { return Color.white; }
 
-        public void OnSelect(ObiBrushBase paintBrush) 
+        protected void Initialize(ObiBrushBase paintBrush)
         {
-            // Initialize the brush:
-            if (brushModes.Count > 0)
-                paintBrush.brushMode = brushModes[0];
+            // Initialize the brush if there's no brush mode set:
+            if (paintBrush.brushMode == null && brushModes.Count > 0)
+            {
+                selectedBrushMode = 0;
+                paintBrush.brushMode = brushModes[selectedBrushMode];
+            }
+        }
+
+        public void OnSelect(ObiBrushBase paintBrush)
+        {
+            // Upon selecting the property, change to the last selected brush mode:
+            if (brushModes.Count > selectedBrushMode)
+                paintBrush.brushMode = brushModes[selectedBrushMode];
+
         }
 
         public void BrushModes(ObiBrushBase paintBrush)
         {
-            // Initialize the brush if there's no mode set:
-            if (paintBrush.brushMode == null && brushModes.Count > 0)
-                paintBrush.brushMode = brushModes[0];
+            Initialize(paintBrush);
 
             GUIContent[] contents = new GUIContent[brushModes.Count];
-
             for (int i = 0; i < brushModes.Count; ++i)
                 contents[i] = new GUIContent(brushModes[i].name);
 

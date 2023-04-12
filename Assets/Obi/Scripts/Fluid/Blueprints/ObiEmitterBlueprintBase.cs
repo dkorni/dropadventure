@@ -42,11 +42,8 @@ namespace Obi
             invMasses = new float[capacity];
             invRotationalMasses = new float[capacity];
             principalRadii = new Vector3[capacity];
-            phases = new int[capacity];
+            filters = new int[capacity];
             colors = new Color[capacity];
-
-            //float restDistance = (emitterMaterial != null) ? emitterMaterial.GetParticleSize(solver.parameters.mode) : 0.1f;
-            //float pmass = (emitterMaterial != null) ? emitterMaterial.GetParticleMass(solver.parameters.mode) : 0.1f;
 
             for (int i = 0; i < capacity; i++)
             {
@@ -56,7 +53,7 @@ namespace Obi
                 principalRadii[i] = Vector3.one;
 
                 colors[i] = Color.white;
-                phases[i] = Oni.MakePhase(1, Oni.ParticleFlags.SelfCollide | Oni.ParticleFlags.Fluid);
+                filters[i] = ObiUtils.MakeFilter(ObiUtils.CollideWithEverything, 1);
 
             }
 

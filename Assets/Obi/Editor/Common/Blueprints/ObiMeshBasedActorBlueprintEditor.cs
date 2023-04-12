@@ -1,7 +1,5 @@
 using UnityEngine;
 using UnityEditor;
-using System.Collections.Generic;
-using System.Collections;
 using System;
 using System.IO;
 
@@ -84,26 +82,32 @@ namespace Obi
                 Vector3[] meshNormals = sourceMesh.normals;
                 for (int i = 0; i < sourceMesh.vertexCount; i++)
                 {
-
                     int particle = VertexToParticle(i);
-                    Vector3 camToParticle = Camera.current.transform.position - blueprint.positions[particle];
 
-                    sqrDistanceToCamera[particle] = camToParticle.sqrMagnitude;
-
-                    switch (particleCulling)
+                    if (particle >= 0 && particle < blueprint.positions.Length)
                     {
-                        case ParticleCulling.Off:
-                            visible[particle] = true;
-                            break;
-                        case ParticleCulling.Back:
-                            visible[particle] = Vector3.Dot(meshNormals[i], camToParticle) > 0;
-                            break;
-                        case ParticleCulling.Front:
-                            visible[particle] = Vector3.Dot(meshNormals[i], camToParticle) <= 0;
-                            break;
+                        Vector3 camToParticle = Camera.current.transform.position - blueprint.positions[particle];
+
+                        sqrDistanceToCamera[particle] = camToParticle.sqrMagnitude;
+
+                        switch (particleCulling)
+                        {
+                            case ParticleCulling.Off:
+                                visible[particle] = true;
+                                break;
+                            case ParticleCulling.Back:
+                                visible[particle] = Vector3.Dot(meshNormals[i], camToParticle) > 0;
+                                break;
+                            case ParticleCulling.Front:
+                                visible[particle] = Vector3.Dot(meshNormals[i], camToParticle) <= 0;
+                                break;
+                        }
                     }
 
                 }
+
+                if ((renderModeFlags & 1) != 0)
+                    Refresh();
             }
 
         }
@@ -114,17 +118,22 @@ namespace Obi
 
             if (gradientMaterial.SetPass(0))
             {
-                var matrix = Matrix4x4.Scale((blueprint as ObiMeshBasedActorBlueprint).scale);
+                var matrix = Matrix4x4.TRS(Vector3.zero, (blueprint as ObiMeshBasedActorBlueprint).rotation, (blueprint as ObiMeshBasedActorBlueprint).scale);
 
                 Color[] colors = new Color[visualizationMesh.vertexCount];
                 for (int i = 0; i < colors.Length; i++)
                 {
                     int particle = VertexToParticle(i);
-                    float weight = 1;
-                    if (vertexWeights != null)
-                        weight = vertexWeights[particle];
+                    if (particle >= 0 && particle < blueprint.particleCount)
+                    {
+                        float weight = 1;
+                        if (vertexWeights != null)
+                            weight = vertexWeights[particle];
 
-                    colors[i] = weight * currentProperty.ToColor(particle);
+                        colors[i] = weight * currentProperty.ToColor(particle);
+                    }
+                    else
+                        colors[i] = Color.gray;
                 }
 
                 visualizationMesh.colors = colors;
@@ -136,10 +145,16 @@ namespace Obi
                 {
                     for (int i = 0; i < colors.Length; i++)
                     {
-                        if (wireframeWeights != null)
-                            colors[i] = wireColor * wireframeWeights[VertexToParticle(i)];
+                        int particle = VertexToParticle(i);
+                        if (particle >= 0 && particle < blueprint.particleCount)
+                        {
+                            if (wireframeWeights != null)
+                                colors[i] = wireColor * wireframeWeights[particle];
+                            else
+                                colors[i] = wireColor;
+                        }
                         else
-                            colors[i] = wireColor;
+                            colors[i] = Color.gray;
                     }
 
                     visualizationMesh.colors = colors;
