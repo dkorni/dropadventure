@@ -10,7 +10,7 @@ public class Puddle : MonoBehaviour
     [SerializeField] private ObiEmitterShapeDisk _disk;
     [SerializeField] private ObiParticleRenderer _renderer;
 
-    [Inject] private Render _render;
+    //[Inject] private Render _render;
     
     public event Action<int> OnPuddleParticleKill;
 
@@ -23,7 +23,7 @@ public class Puddle : MonoBehaviour
         _obiCollider.enabled = false;
 
         // update renderer
-        _render.UpdateRender(_renderer);
+        //_render.UpdateRender(_renderer);
 
         tag = "Untagged";
     }

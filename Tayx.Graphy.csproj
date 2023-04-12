@@ -330,7 +330,7 @@
      <HintPath>/Users/deniskornienko/Desktop/Projects/DropAdventure/dropadventure/Assets/Plugins/Zenject/Source/Usage/Zenject-usage.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Pdb">
-     <HintPath>/Users/deniskornienko/Desktop/Projects/DropAdventure/dropadventure/Library/PackageCache/com.unity.burst@1.8.2/Unity.Burst.CodeGen/Unity.Burst.Cecil.Pdb.dll</HintPath>
+     <HintPath>/Users/deniskornienko/Desktop/Projects/DropAdventure/dropadventure/Library/PackageCache/com.unity.burst@1.7.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Pdb.dll</HintPath>
      </Reference>
      <Reference Include="log4netPlastic">
      <HintPath>/Users/deniskornienko/Desktop/Projects/DropAdventure/dropadventure/Library/PackageCache/com.unity.collab-proxy@1.17.7/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
@@ -350,8 +350,11 @@
      <Reference Include="Unity.Plastic.Antlr3.Runtime">
      <HintPath>/Users/deniskornienko/Desktop/Projects/DropAdventure/dropadventure/Library/PackageCache/com.unity.collab-proxy@1.17.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Burst.Unsafe">
+     <HintPath>/Users/deniskornienko/Desktop/Projects/DropAdventure/dropadventure/Library/PackageCache/com.unity.burst@1.7.4/Unity.Burst.Unsafe.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Burst.Cecil.Mdb">
-     <HintPath>/Users/deniskornienko/Desktop/Projects/DropAdventure/dropadventure/Library/PackageCache/com.unity.burst@1.8.2/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll</HintPath>
+     <HintPath>/Users/deniskornienko/Desktop/Projects/DropAdventure/dropadventure/Library/PackageCache/com.unity.burst@1.7.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll</HintPath>
      </Reference>
      <Reference Include="unityplastic">
      <HintPath>/Users/deniskornienko/Desktop/Projects/DropAdventure/dropadventure/Library/PackageCache/com.unity.collab-proxy@1.17.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
@@ -360,10 +363,10 @@
      <HintPath>/Users/deniskornienko/Desktop/Projects/DropAdventure/dropadventure/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil">
-     <HintPath>/Users/deniskornienko/Desktop/Projects/DropAdventure/dropadventure/Library/PackageCache/com.unity.burst@1.8.2/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll</HintPath>
+     <HintPath>/Users/deniskornienko/Desktop/Projects/DropAdventure/dropadventure/Library/PackageCache/com.unity.burst@1.7.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Rocks">
-     <HintPath>/Users/deniskornienko/Desktop/Projects/DropAdventure/dropadventure/Library/PackageCache/com.unity.burst@1.8.2/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
+     <HintPath>/Users/deniskornienko/Desktop/Projects/DropAdventure/dropadventure/Library/PackageCache/com.unity.burst@1.7.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
      </Reference>
      <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
      <HintPath>/Users/deniskornienko/Desktop/Projects/DropAdventure/dropadventure/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
