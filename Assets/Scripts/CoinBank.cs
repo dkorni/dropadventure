@@ -53,6 +53,7 @@ public class CoinBank : MonoBehaviour
 
     private IEnumerator WithdrawCoroutine(Vector3 position)
     {
+        // if(coins )
         increement++;
         if (increement%devider == 0)
         {

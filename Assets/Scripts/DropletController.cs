@@ -22,6 +22,8 @@ public class DropletController : MonoBehaviour
 
     public int MaxHealth;
 
+    private bool[] diedParticles;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +45,7 @@ public class DropletController : MonoBehaviour
 
         UpdateMaxHealth(maxHealth);
         UpdateHealth(health);
+        diedParticles = new bool[maxHealth+1];
     }
 
     private void ObiSolverOnOnCollision(ObiSolver solver, ObiSolver.ObiCollisionEventArgs contacts)
@@ -52,7 +55,11 @@ public class DropletController : MonoBehaviour
             // this one is an actual collision:
             if (contact.distance < 0.01)
             {
-                ObiColliderBase collider = ObiColliderWorld.GetInstance().colliderHandles[contact.bodyB].owner;
+                var world = ObiColliderWorld.GetInstance();
+                if(!(world.colliderHandles.Count > contact.bodyB))
+                    return;
+                
+                ObiColliderBase collider = world.colliderHandles[contact.bodyB].owner;
                 int particleIndex = solver.simplices[contact.bodyA];
                 ObiSolver.ParticleInActor pa = solver.particleToActor[particleIndex];
                 ObiEmitter emitter = pa.actor as ObiEmitter;
@@ -83,8 +90,11 @@ public class DropletController : MonoBehaviour
 
                         emitter.OnKillParticle += (e, i) =>
                         {
-                            if(i == particleIndex)
+                            if (i == particleIndex && !diedParticles[particleIndex])
+                            {
+                                diedParticles[particleIndex] = true;
                                 OnFlush?.Invoke(contact.pointA);
+                            }
                         };
 
                         if (IsDied)
