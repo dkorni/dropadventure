@@ -25054,12 +25054,12 @@ MonoBehaviour:
     batches: []
   groups: []
   capacity: 1
-  resolution: 0.5
+  resolution: 0.1
   restDensity: 5
-  smoothing: 3
+  smoothing: 4
   viscosity: 0.6
-  surfaceTension: 2
-  buoyancy: -0.5
+  surfaceTension: 3
+  buoyancy: -0.51
   atmosphericDrag: 0
   atmosphericPressure: 0
   vorticity: 0

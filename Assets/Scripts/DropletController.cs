@@ -13,7 +13,9 @@ public class DropletController : MonoBehaviour
     public Action<Vector3> OnFlush;
 
     [SerializeField] protected ObiEmitter _emitter;
+    [SerializeField] protected ObiParticleRenderer _renderer;
     [SerializeField] private AudioSource _source;
+    [SerializeField] private ObiEmitterShapeDisk _disk;
 
     [SerializeField]
     private ObiSolver _obiSolver;
@@ -79,7 +81,7 @@ public class DropletController : MonoBehaviour
                         var puddle = collider.GetComponent<Puddle>();
                         var activeCount = puddle.GetComponent<ObiEmitter>().activeParticleCount;
                         UpdateHealth(activeCount);
-                        puddle.Join(_emitter);
+                        puddle.Join(_emitter, _renderer, _disk.particleSize);
                         _source.PlayOneShot(_source.clip);
                         OnJoin?.Invoke();
                     }
