@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Serialization;
 
 namespace Obi
 {
@@ -82,6 +83,10 @@ namespace Obi
         /// </summary>
         [Tooltip("Spawned particles are tinted by the corresponding emitter shape's color.")]
         public bool useShapeColor = true;
+        
+        [Tooltip("Spawn is enabled")]
+        public bool isRespawnable = true;
+
 
         [HideInInspector] [SerializeField] private List<ObiEmitterShape> emitterShapes = new List<ObiEmitterShape>();
         private IEnumerator<ObiEmitterShape.DistributionPoint> distEnumerator;
@@ -91,10 +96,7 @@ namespace Obi
         /// Per particle remaining life (in seconds).
         /// </summary>
         [HideInInspector] public float[] life;
-
-        public bool IsRespawnable;
-        private bool _wasSpawned;
-
+        
         private float unemittedBursts = 0;
         private bool m_IsEmitting = false;
 
@@ -494,7 +496,7 @@ namespace Obi
                 else
                 { // burst emission:
                     
-                    if (activeParticleCount == 0)
+                    if (activeParticleCount == 0 && isRespawnable)
                     {
                         for (int i = 0; i < emissionPoints; ++i)
                         {

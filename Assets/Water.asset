@@ -25055,9 +25055,9 @@ MonoBehaviour:
   groups: []
   capacity: 0
   resolution: 1
-  restDensity: 1
+  restDensity: 2
   smoothing: 2.5
-  viscosity: 2
+  viscosity: 4
   surfaceTension: 1
   buoyancy: -1
   atmosphericDrag: 0

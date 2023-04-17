@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Obi;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class DropletController : MonoBehaviour
     public event Action OnWashedAway;
     public Action<int> OnMaxHealthUpdate;
     public Action<int> OnHealthUpdate;
-    public Action<Vector3> OnFlush;
+    public Action OnFlush;
 
     [SerializeField] protected ObiEmitter _emitter;
     [SerializeField] protected ObiParticleRenderer _renderer;
@@ -23,8 +24,8 @@ public class DropletController : MonoBehaviour
     private int health;
 
     public int MaxHealth;
-
-    private bool[] diedParticles;
+    
+    private ObiEmitter[] emitters;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +36,7 @@ public class DropletController : MonoBehaviour
      
        _emitter.OnKillParticle += (obiEmitter, index) => UpdateHealth(-1); 
 
-       var emitters = FindObjectsOfType<ObiEmitter>();
+       emitters = FindObjectsOfType<ObiEmitter>();
        foreach (var emitter in emitters)
        {
            if(emitter == _emitter)
@@ -47,7 +48,6 @@ public class DropletController : MonoBehaviour
 
         UpdateMaxHealth(maxHealth);
         UpdateHealth(health);
-        diedParticles = new bool[maxHealth+1];
     }
 
     private void ObiSolverOnOnCollision(ObiSolver solver, ObiSolver.ObiCollisionEventArgs contacts)
@@ -89,18 +89,18 @@ public class DropletController : MonoBehaviour
                     if(collider.tag == "FlushTrigger")
                     {
                         emitter.life[pa.indexInActor] = 0;
-
                         emitter.OnKillParticle += (e, i) =>
                         {
-                            if (i == particleIndex && !diedParticles[particleIndex])
+                            OnFlush?.Invoke();
+                            
+                            if (e.activeParticleCount == 1)
+                                e.isRespawnable = false;
+                            
+                            if (IsDied)
                             {
-                                diedParticles[particleIndex] = true;
-                                OnFlush?.Invoke(contact.pointA);
+                                OnWashedAway?.Invoke();
                             }
                         };
-
-                        if (IsDied)
-                            OnWashedAway?.Invoke();
                     }
                 }
             }
