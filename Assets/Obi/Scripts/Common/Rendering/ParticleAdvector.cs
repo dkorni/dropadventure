@@ -53,7 +53,10 @@ public class ParticleAdvector : MonoBehaviour {
 			positions = new ObiNativeVector4List(ps.main.maxParticles);
 			velocities = new ObiNativeVector4List(ps.main.maxParticles);
 			neighbourCount = new ObiNativeIntList(ps.main.maxParticles);
-		}
+            positions.count = ps.main.maxParticles;
+            velocities.count = ps.main.maxParticles;
+            neighbourCount.count = ps.main.maxParticles;
+        }
 
 		alive = ps.GetParticles(particles);
 
@@ -69,15 +72,16 @@ public class ParticleAdvector : MonoBehaviour {
 		for (int i = 0; i < alive; ++i)
 			positions[i] = particles[i].position;
 
-		Oni.InterpolateDiffuseParticles(solver.OniSolver,solver.velocities.GetIntPtr(),positions.GetIntPtr(),velocities.GetIntPtr(),neighbourCount.GetIntPtr(),alive);
+        solver.implementation.InterpolateDiffuseProperties(solver.velocities, positions, velocities, neighbourCount, alive);
+        Matrix4x4 s2World = solver.transform.localToWorldMatrix;
 
-		for (int i = 0; i < alive; ++i){
-
+        for (int i = 0; i < alive; ++i)
+        {
 			// kill the particle if it has very few neighbors:
 			if (neighbourCount[i] < minNeighbors)
 				particles[i].remainingLifetime = 0;
 
-			particles[i].velocity = velocities[i];
+            particles[i].velocity = s2World.MultiplyVector(velocities[i]);
 		}
 
 		ps.SetParticles(particles, alive);

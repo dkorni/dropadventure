@@ -41,7 +41,7 @@ Shader "Hidden/ScreenSpaceCurvatureFlow"
 				return o;
 			}
 			
-			//sampler2D_float _MainTex;
+             UNITY_DECLARE_DEPTH_TEXTURE(_MainTex);
 			float4 _MainTex_TexelSize;
 			float _BlurScale;
 			float _BlurRadiusWorldspace;

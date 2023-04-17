@@ -79,7 +79,7 @@ public class CompositeObject : MonoBehaviour
         var newMeshCollider = lg.AddComponent<MeshCollider>();
         newMeshCollider.sharedMesh = result.mesh;
         var obiCollider = lg.GetComponent<ObiCollider>();
-        obiCollider.SourceCollider = newMeshCollider;
+        obiCollider.sourceCollider = newMeshCollider;
         lg.GetComponent<MeshRenderer>().sharedMaterials = result.materials.ToArray();
 
         Destroy(go);

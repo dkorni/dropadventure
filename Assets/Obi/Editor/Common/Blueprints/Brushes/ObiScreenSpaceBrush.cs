@@ -41,8 +41,9 @@ namespace Obi
             Camera cam = Camera.current;
             float depth = (cam.nearClipPlane + cam.farClipPlane) * 0.5f;
 
-            Vector2 mousePos = new Vector2(Event.current.mousePosition.x,
-                                           cam.pixelHeight - Event.current.mousePosition.y);
+            float ppp = EditorGUIUtility.pixelsPerPoint;
+            Vector2 mousePos = new Vector2(Event.current.mousePosition.x * ppp,
+                                           cam.pixelHeight - Event.current.mousePosition.y * ppp);
 
             Handles.color = ObiEditorSettings.GetOrCreateSettings().brushColor;
             Vector3 point = new Vector3(mousePos.x, mousePos.y, depth);

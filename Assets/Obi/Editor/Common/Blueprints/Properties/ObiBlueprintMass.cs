@@ -1,7 +1,3 @@
-using UnityEngine;
-using UnityEditor;
-using System.Collections;
-
 namespace Obi
 {
     public class ObiBlueprintMass : ObiBlueprintFloatProperty
@@ -10,7 +6,8 @@ namespace Obi
         public ObiBlueprintMass(ObiActorBlueprintEditor editor) : base(editor,0)
         {
             brushModes.Add(new ObiFloatPaintBrushMode(this)); 
-            brushModes.Add(new ObiFloatAddBrushMode(this)); 
+            brushModes.Add(new ObiFloatAddBrushMode(this));
+            brushModes.Add(new ObiFloatCopyBrushMode(this, this));
             brushModes.Add(new ObiFloatSmoothBrushMode(this)); 
         }
 
@@ -21,11 +18,11 @@ namespace Obi
 
         public override float Get(int index)
         {
-            return ObiUtils.InvMassToMass(editor.Blueprint.invMasses[index]);
+            return ObiUtils.InvMassToMass(editor.blueprint.invMasses[index]);
         }
         public override void Set(int index, float value)
         {
-            editor.Blueprint.invMasses[index] = ObiUtils.MassToInvMass(value);
+            editor.blueprint.invMasses[index] = ObiUtils.MassToInvMass(value);
         }
         public override bool Masked(int index)
         {

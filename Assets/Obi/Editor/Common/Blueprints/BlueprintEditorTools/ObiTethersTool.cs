@@ -21,7 +21,7 @@ namespace Obi
         {
             EditorGUILayout.LabelField("Tethers", EditorStyles.boldLabel);
 
-            var tethers = editor.Blueprint.GetConstraintsByType(Oni.ConstraintType.Tether);
+            var tethers = editor.blueprint.GetConstraintsByType(Oni.ConstraintType.Tether);
             int tetherCount = 0;
             if (tethers != null)
                 tetherCount = tethers.GetConstraintCount();
@@ -31,7 +31,7 @@ namespace Obi
             else
                 EditorGUILayout.LabelField("No tether constraints. Select at least one particle group in the dropdown, then click 'Generate Tethers'.", EditorStyles.helpBox);
 
-            Array.Resize(ref tetheredGroups, editor.Blueprint.groups.Count);
+            Array.Resize(ref tetheredGroups, editor.blueprint.groups.Count);
 
             // display the GenericMenu when pressing a button
             if (GUILayout.Button("Tethered groups", EditorStyles.popup))
@@ -40,9 +40,9 @@ namespace Obi
                 GenericMenu menu = new GenericMenu();
 
                 // forward slashes nest menu items under submenus
-                for (int i = 0; i < editor.Blueprint.groups.Count; ++i)
+                for (int i = 0; i < editor.blueprint.groups.Count; ++i)
                 {
-                    menu.AddItem(new GUIContent(editor.Blueprint.groups[i].name), tetheredGroups[i], OnTetherGroupSelected, i);
+                    menu.AddItem(new GUIContent(editor.blueprint.groups[i].name), tetheredGroups[i], OnTetherGroupSelected, i);
                 }
 
                 // display the menu
@@ -62,7 +62,7 @@ namespace Obi
                     editor.selectionStatus[i] = false;
                     for (int j = 0; j < tetheredGroups.Length; ++j)
                     {
-                        if (tetheredGroups[j] && editor.Blueprint.groups[j].ContainsParticle(i))
+                        if (tetheredGroups[j] && editor.blueprint.groups[j].ContainsParticle(i))
                         {
                             editor.selectionStatus[i] = true;
                             break;
@@ -70,13 +70,13 @@ namespace Obi
                     }
                 }
 
-                editor.Blueprint.GenerateTethers(editor.selectionStatus);
+                editor.blueprint.GenerateTethers(editor.selectionStatus);
                 editor.Refresh();
             }
 
             if (GUILayout.Button("Clear tethers",GUILayout.MinHeight(32)))
             {
-                editor.Blueprint.ClearTethers();
+                editor.blueprint.ClearTethers();
                 editor.Refresh();
             }
             EditorGUILayout.EndHorizontal();

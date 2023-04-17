@@ -8,7 +8,7 @@ namespace Obi
     {
         public override string name
         {
-            get { return "Shape matching constraints"; }
+            get { return "Shape matching clusters"; }
         }
 
         public ObiBlueprintRenderModeShapeMatchingConstraints(ObiActorBlueprintEditor editor) : base(editor)
@@ -20,7 +20,7 @@ namespace Obi
 
             using (new Handles.DrawingScope(Color.cyan, Matrix4x4.identity))
             {
-                var constraints = editor.Blueprint.GetConstraintsByType(Oni.ConstraintType.ShapeMatching) as ObiConstraints<ObiShapeMatchingConstraintsBatch>;
+                var constraints = editor.blueprint.GetConstraintsByType(Oni.ConstraintType.ShapeMatching) as ObiConstraints<ObiShapeMatchingConstraintsBatch>;
                 if (constraints != null)
                 {
                     List<Vector3> lines = new List<Vector3>();
@@ -30,13 +30,13 @@ namespace Obi
                         for (int i = 0; i < batch.activeConstraintCount; ++i)
                         {
                             int first = batch.firstIndex[i];
-                            Vector3 p1 = editor.Blueprint.GetParticlePosition(batch.particleIndices[first]);
+                            Vector3 p1 = editor.blueprint.GetParticlePosition(batch.particleIndices[first]);
 
                             for (int j = 1; j < batch.numIndices[i]; ++j)
                             {
 
                                 int index = first + j;
-                                Vector3 p2 = editor.Blueprint.GetParticlePosition(batch.particleIndices[index]);
+                                Vector3 p2 = editor.blueprint.GetParticlePosition(batch.particleIndices[index]);
 
                                 lines.Add(p1);
                                 lines.Add(p2);

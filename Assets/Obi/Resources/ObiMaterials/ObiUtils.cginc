@@ -1,26 +1,28 @@
 #ifndef OBIUTILS_INCLUDED
 #define OBIUTILS_INCLUDED
 
-#include "UnityCG.cginc"
-#include "UnityStandardUtils.cginc"
-#include "AutoLight.cginc"
-
 float4x4 _Camera_to_World;
 
-struct fout {
- 	half4 color : COLOR;
-	float depth : DEPTH;
-};
+// abstract texture declaration/sampling over built-in and SRPs:
+#ifndef TEXTURE2D
+#define TEXTURE2D(name) sampler2D name
+#endif
 
-half3 SampleSphereAmbient(float3 eyeNormal, float3 eyePos)
-{
-	#if UNITY_SHOULD_SAMPLE_SH
-		half3 worldNormal = mul(transpose((float3x3)UNITY_MATRIX_V),eyeNormal);  
-		half3 worldPos = mul(_Camera_to_World,half4(eyePos,1.0));  	
-		return ShadeSHPerPixel(half4(worldNormal, 1.0),half3(0,0,0),worldPos);
-	#else
-		return UNITY_LIGHTMODEL_AMBIENT;
-	#endif
-}
+#ifndef TEXTURE2D_HALF
+#define TEXTURE2D_HALF(name) sampler2D_half name
+#endif
+
+#ifndef TEXTURE2D_FLOAT
+#define TEXTURE2D_FLOAT(name) sampler2D_float name
+#endif
+
+#ifndef SAMPLE_TEXTURE2D
+#define SAMPLE_TEXTURE2D(textureName, samplerName, coord2) tex2D(textureName,coord2)
+#endif
+
+#ifndef SAMPLER
+#define SAMPLER(samplerName)
+#endif
+
 
 #endif

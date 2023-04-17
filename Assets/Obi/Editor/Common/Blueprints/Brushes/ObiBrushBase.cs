@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEditor;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 
 namespace Obi
 {
@@ -11,12 +9,12 @@ namespace Obi
     {
         static int particleBrushHash = "ObiBrushHash".GetHashCode();
 
-        public ObiBrushMode brushMode;
+        public IObiBrushMode brushMode;
         public float radius = 1;
         public float innerRadius = 0.5f;
         public float opacity = 1;
         public float[] weights = new float[0];
-
+        public bool drag = true;
         public float speed = 0.1f;
 
         protected int controlID;
@@ -26,7 +24,7 @@ namespace Obi
 
         public float SqrRadius
         {
-            get{ return radius* radius; }
+            get{ return radius * radius; }
         }
 
         public ObiBrushBase(Action onStrokeStart, Action onStrokeUpdate, Action onStrokeEnd)
@@ -77,7 +75,7 @@ namespace Obi
         protected virtual void OnMouseDrag(Vector3[] positions)
         {
 
-            if (GUIUtility.hotControl == controlID)
+            if (GUIUtility.hotControl == controlID && drag)
             {
 
                 GenerateWeights(positions);

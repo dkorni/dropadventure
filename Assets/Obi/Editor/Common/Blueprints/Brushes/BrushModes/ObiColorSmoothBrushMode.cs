@@ -1,27 +1,28 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 namespace Obi
 {
-    public class ObiColorSmoothBrushMode : ObiBrushMode
+    public class ObiColorSmoothBrushMode : IObiBrushMode
     {
-        public ObiColorSmoothBrushMode(ObiBlueprintColorProperty property) : base(property) { }
+        ObiBlueprintColorProperty property;
 
-        public override string name
+        public ObiColorSmoothBrushMode(ObiBlueprintColorProperty property)
+        {
+            this.property = property;
+        }
+
+        public string name
         {
             get { return "Smooth"; }
         }
 
-        public override bool needsInputValue
+        public bool needsInputValue
         {
             get { return false; }
         }
 
-        public override void ApplyStamps(ObiBrushBase brush, bool modified)
+        public void ApplyStamps(ObiBrushBase brush, bool modified)
         {
-            var colorProperty = (ObiBlueprintColorProperty)property;
-
             Color averageValue = Color.black;
             float totalWeight = 0;
 
@@ -29,7 +30,7 @@ namespace Obi
             {
                 if (!property.Masked(i) && brush.weights[i] > 0)
                 {
-                    averageValue += colorProperty.Get(i) * brush.weights[i];
+                    averageValue += property.Get(i) * brush.weights[i];
                     totalWeight += brush.weights[i];
                 }
 
@@ -40,10 +41,10 @@ namespace Obi
             {
                 if (!property.Masked(i) && brush.weights[i] > 0)
                 {
-                    Color currentValue = colorProperty.Get(i);
+                    Color currentValue = property.Get(i);
                     Color delta = brush.opacity * brush.speed * (Color.Lerp(currentValue, averageValue, brush.weights[i]) - currentValue);
 
-                    colorProperty.Set(i, currentValue + delta * (modified ? -1 : 1));
+                    property.Set(i, currentValue + delta * (modified ? -1 : 1));
                 }
             }
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Obi;
 using UnityEngine;
@@ -10,10 +11,12 @@ public class DropletController : MonoBehaviour
     public event Action OnWashedAway;
     public Action<int> OnMaxHealthUpdate;
     public Action<int> OnHealthUpdate;
-    public Action<Vector3> OnFlush;
+    public Action OnFlush;
 
     [SerializeField] protected ObiEmitter _emitter;
+    [SerializeField] protected ObiParticleRenderer _renderer;
     [SerializeField] private AudioSource _source;
+    [SerializeField] private ObiEmitterShapeDisk _disk;
 
     [SerializeField]
     private ObiSolver _obiSolver;
@@ -21,6 +24,8 @@ public class DropletController : MonoBehaviour
     private int health;
 
     public int MaxHealth;
+    
+    private ObiEmitter[] emitters;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +36,7 @@ public class DropletController : MonoBehaviour
      
        _emitter.OnKillParticle += (obiEmitter, index) => UpdateHealth(-1); 
 
-       var emitters = FindObjectsOfType<ObiEmitter>();
+       emitters = FindObjectsOfType<ObiEmitter>();
        foreach (var emitter in emitters)
        {
            if(emitter == _emitter)
@@ -52,14 +57,20 @@ public class DropletController : MonoBehaviour
             // this one is an actual collision:
             if (contact.distance < 0.01)
             {
-                ObiCollider.idToCollider.TryGetValue(contact.other, out var collider);
+                var world = ObiColliderWorld.GetInstance();
+                if(!(world.colliderHandles.Count > contact.bodyB))
+                    return;
+                
+                ObiColliderBase collider = world.colliderHandles[contact.bodyB].owner;
+                int particleIndex = solver.simplices[contact.bodyA];
+                ObiSolver.ParticleInActor pa = solver.particleToActor[particleIndex];
+                ObiEmitter emitter = pa.actor as ObiEmitter;
                 if (collider != null)
                 {
                     if (collider.tag == "GameOverTrigger")
                     {
                         // kill particle
-                        var emitter = (ObiEmitter)solver.particleToActor[contact.particle].actor;
-                        emitter.life[solver.particleToActor[contact.particle].indexInActor] = 0;
+                        emitter.life[pa.indexInActor] = 0;
                         
                         if (IsDied)
                             OnDied?.Invoke();
@@ -70,27 +81,26 @@ public class DropletController : MonoBehaviour
                         var puddle = collider.GetComponent<Puddle>();
                         var activeCount = puddle.GetComponent<ObiEmitter>().activeParticleCount;
                         UpdateHealth(activeCount);
-                        puddle.Join(_emitter);
+                        puddle.Join(_emitter, _renderer, _disk.particleSize);
                         _source.PlayOneShot(_source.clip);
                         OnJoin?.Invoke();
                     }
 
                     if(collider.tag == "FlushTrigger")
                     {
-                        var emitter = (ObiEmitter)solver.particleToActor[contact.particle].actor;
-                        if (emitter.life[solver.particleToActor[contact.particle].indexInActor] == 0)
-                            continue;
-                       
-                        emitter.life[solver.particleToActor[contact.particle].indexInActor] = 0;
-
+                        emitter.life[pa.indexInActor] = 0;
                         emitter.OnKillParticle += (e, i) =>
                         {
-                            if(i == solver.particleToActor[contact.particle].indexInActor)
-                                OnFlush?.Invoke(contact.point);
+                            OnFlush?.Invoke();
+                            
+                            if (e.activeParticleCount == 1)
+                                e.isRespawnable = false;
+                            
+                            if (IsDied)
+                            {
+                                OnWashedAway?.Invoke();
+                            }
                         };
-
-                        if (IsDied)
-                            OnWashedAway?.Invoke();
                     }
                 }
             }

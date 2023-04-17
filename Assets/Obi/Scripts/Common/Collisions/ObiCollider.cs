@@ -1,7 +1,5 @@
 using UnityEngine;
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.Serialization;
 
 namespace Obi
 {
@@ -14,10 +12,15 @@ namespace Obi
     public class ObiCollider : ObiColliderBase
     {
 
-        [SerializeProperty("SourceCollider")]
-        [SerializeField] private Collider sourceCollider;
+        [SerializeProperty("sourceCollider")]
+        [FormerlySerializedAs("SourceCollider")]
+        [SerializeField] private Collider m_SourceCollider;
 
-        public Collider SourceCollider
+        /// <summary>
+        /// The Unity collider that this ObiCollider should mimic.
+        /// </summary>
+        /// This is automatically set when you first create the ObiCollider component, but you can override it afterwards.
+        public Collider sourceCollider
         {
             set
             {
@@ -27,52 +30,35 @@ namespace Obi
                     return;
                 }
 
-                sourceCollider = value;
+                m_SourceCollider = value;
+
                 RemoveCollider();
                 AddCollider();
 
             }
-            get { return sourceCollider; }
+            get { return m_SourceCollider; }
         }
 
-        [SerializeProperty("AccurateContacts")]
-        [SerializeField] private bool accurateContacts;
+        [SerializeProperty("distanceField")]
+        [FormerlySerializedAs("distanceField")]
+        [SerializeField] private ObiDistanceField m_DistanceField;
 
-        public bool AccurateContacts
+        /// <summary>
+        /// The distance field used by this collider.
+        /// </summary>
+        /// Setting a distance field will cause the collider to ignore its <see cref="m_SourceCollider"/> and use the distance field instead.
+        public ObiDistanceField distanceField
         {
             set
             {
-                if (accurateContacts != value)
+                if (m_DistanceField != value)
                 {
-                    accurateContacts = value;
+                    m_DistanceField = value;
                     CreateTracker();
                 }
             }
-            get { return accurateContacts; }
+            get { return m_DistanceField; }
         }
-
-
-        [SerializeProperty("UseDistanceFields")]
-        [SerializeField] private bool useDistanceFields = false;
-
-        public bool UseDistanceFields
-        {
-            set
-            {
-                if (useDistanceFields != value)
-                {
-
-                    useDistanceFields = value;
-                    CreateTracker();
-
-                }
-            }
-            get { return useDistanceFields; }
-        }
-
-        [Indent]
-        [VisibleIf("useDistanceFields")]
-        public ObiDistanceField distanceField; /**< Distance field used by this collider.*/
 
         /**
 		 * Creates an OniColliderTracker of the appropiate type.
@@ -82,59 +68,47 @@ namespace Obi
 
             if (tracker != null)
             {
-                Oni.SetColliderShape(oniCollider, IntPtr.Zero);
                 tracker.Destroy();
                 tracker = null;
             }
 
-            if (useDistanceFields)
-                tracker = new ObiDistanceFieldShapeTracker(distanceField);
+            if (distanceField != null)
+                tracker = new ObiDistanceFieldShapeTracker(this, m_SourceCollider, distanceField);
             else
             {
 
-                if (sourceCollider is SphereCollider)
-                    tracker = new ObiSphereShapeTracker((SphereCollider)sourceCollider);
-                else if (sourceCollider is BoxCollider)
-                    tracker = new ObiBoxShapeTracker((BoxCollider)sourceCollider);
-                else if (sourceCollider is CapsuleCollider)
-                    tracker = new ObiCapsuleShapeTracker((CapsuleCollider)sourceCollider);
-                else if (sourceCollider is CharacterController)
-                    tracker = new ObiCapsuleShapeTracker((CharacterController)sourceCollider);
-                else if (sourceCollider is TerrainCollider)
-                    tracker = new ObiTerrainShapeTracker((TerrainCollider)sourceCollider, accurateContacts);
-                else if (sourceCollider is MeshCollider)
-                {
-                    tracker = new ObiMeshShapeTracker((MeshCollider)sourceCollider);
-                }
+                if (m_SourceCollider is SphereCollider)
+                    tracker = new ObiSphereShapeTracker(this, (SphereCollider)m_SourceCollider);
+                else if (m_SourceCollider is BoxCollider)
+                    tracker = new ObiBoxShapeTracker(this, (BoxCollider)m_SourceCollider);
+                else if (m_SourceCollider is CapsuleCollider)
+                    tracker = new ObiCapsuleShapeTracker(this, (CapsuleCollider)m_SourceCollider);
+                else if (m_SourceCollider is CharacterController)
+                    tracker = new ObiCharacterControllerShapeTracker(this, (CharacterController)m_SourceCollider);
+                else if (m_SourceCollider is TerrainCollider)
+                    tracker = new ObiTerrainShapeTracker(this, (TerrainCollider)m_SourceCollider);
+                else if (m_SourceCollider is MeshCollider)
+                    tracker = new ObiMeshShapeTracker(this,(MeshCollider)m_SourceCollider);
                 else
                     Debug.LogWarning("Collider type not supported by Obi.");
 
             }
-
-            if (tracker != null)
-                Oni.SetColliderShape(oniCollider, tracker.OniShape);
 
         }
 
         protected override Component GetUnityCollider(ref bool enabled)
         {
 
-            if (sourceCollider != null)
-                enabled = sourceCollider.enabled;
+            if (m_SourceCollider != null)
+                enabled = m_SourceCollider.enabled;
 
-            return sourceCollider;
-        }
-
-        protected override void UpdateAdaptor()
-        {
-            adaptor.Set(sourceCollider, Phase, Thickness);
-            Oni.UpdateCollider(oniCollider, ref adaptor);
+            return m_SourceCollider;
         }
 
         protected override void FindSourceCollider()
         {
-            if (SourceCollider == null)
-                SourceCollider = GetComponent<Collider>();
+            if (sourceCollider == null)
+                sourceCollider = GetComponent<Collider>();
             else
                 AddCollider();
         }

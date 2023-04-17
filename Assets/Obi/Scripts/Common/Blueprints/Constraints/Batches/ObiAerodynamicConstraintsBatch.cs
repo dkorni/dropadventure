@@ -1,32 +1,32 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 namespace Obi
 {
-    [System.Serializable]
+    [Serializable]
     public class ObiAerodynamicConstraintsBatch : ObiConstraintsBatch
     {
-        [HideInInspector] public ObiNativeFloatList aerodynamicCoeffs = new ObiNativeFloatList();  /**< Per-constraint aerodynamic coeffs, 3 per constraint*/
+        protected IAerodynamicConstraintsBatchImpl m_BatchImpl;
+
+        /// <summary>
+        /// 3 floats per constraint: surface area, drag and lift.
+        /// </summary>
+        [HideInInspector] public ObiNativeFloatList aerodynamicCoeffs = new ObiNativeFloatList();  
 
         public override Oni.ConstraintType constraintType 
         {
             get { return Oni.ConstraintType.Aerodynamics; }
         }
 
-        public ObiAerodynamicConstraintsBatch(ObiAerodynamicConstraintsBatch source = null) : base(source) { }
-
-        public override IObiConstraintsBatch Clone()
+        public override IConstraintsBatchImpl implementation
         {
-            var clone = new ObiAerodynamicConstraintsBatch(this);
+            get { return m_BatchImpl; }
+        }
 
-            clone.particleIndices.ResizeUninitialized(particleIndices.count);
-            clone.aerodynamicCoeffs.ResizeUninitialized(aerodynamicCoeffs.count);
-
-            clone.particleIndices.CopyFrom(particleIndices);
-            clone.aerodynamicCoeffs.CopyFrom(aerodynamicCoeffs);
-
-            return clone;
+        public ObiAerodynamicConstraintsBatch(ObiAerodynamicConstraintsData constraints = null) : base()
+        {
         }
 
         public void AddConstraint(int index, float area, float drag, float lift)
@@ -59,25 +59,45 @@ namespace Obi
             aerodynamicCoeffs.Swap(sourceIndex * 3 + 2, destIndex * 3 + 2);
         }
 
-        protected override void OnAddToSolver(IObiConstraints constraints)
+        public override void Merge(ObiActor actor, IObiConstraintsBatch other)
         {
-            for (int i = 0; i < particleIndices.count; i++)
-            {
-                particleIndices[i] = constraints.GetActor().solverIndices[source.particleIndices[i]];
-            }
+            var batch = other as ObiAerodynamicConstraintsBatch;
+            var user = actor as IAerodynamicConstraintsUser;
 
-            // pass constraint data arrays to the solver:
-            Oni.SetAerodynamicConstraints(batch, particleIndices.GetIntPtr(), aerodynamicCoeffs.GetIntPtr(), m_ConstraintCount);
-            Oni.SetActiveConstraints(batch, m_ActiveConstraintCount);
+            if (batch != null && user != null)
+            {
+                if (!user.aerodynamicsEnabled)
+                    return;
+
+                particleIndices.ResizeUninitialized(m_ActiveConstraintCount + batch.activeConstraintCount);
+                aerodynamicCoeffs.ResizeUninitialized((m_ActiveConstraintCount + batch.activeConstraintCount) * 3);
+
+                for (int i = 0; i < batch.activeConstraintCount; ++i)
+                {
+                    particleIndices[m_ActiveConstraintCount + i] = actor.solverIndices[batch.particleIndices[i]];
+                    aerodynamicCoeffs[(m_ActiveConstraintCount + i) * 3] = batch.aerodynamicCoeffs[i*3];
+                    aerodynamicCoeffs[(m_ActiveConstraintCount + i) * 3 + 1] = user.drag;
+                    aerodynamicCoeffs[(m_ActiveConstraintCount + i) * 3 + 2] = user.lift;
+                }
+
+                base.Merge(actor, other);
+            }
         }
 
-        public void SetParameters(float drag, float lift)
+        public override void AddToSolver(ObiSolver solver)
         {
-            for (int i = 0; i < particleIndices.count; i++)
-            {
-                aerodynamicCoeffs[i * 3 + 1] = drag;
-                aerodynamicCoeffs[i * 3 + 2] = lift;
-            }
+            // Create distance constraints batch directly.
+            m_BatchImpl = solver.implementation.CreateConstraintsBatch(constraintType) as IAerodynamicConstraintsBatchImpl;
+
+            if (m_BatchImpl != null)
+                m_BatchImpl.SetAerodynamicConstraints(particleIndices, aerodynamicCoeffs, m_ActiveConstraintCount);
+           
+        }
+
+        public override void RemoveFromSolver(ObiSolver solver)
+        {
+            //Remove batch:
+            solver.implementation.DestroyConstraintsBatch(m_BatchImpl as IConstraintsBatchImpl);
         }
     }
 }

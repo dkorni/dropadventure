@@ -1,30 +1,35 @@
-using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 namespace Obi
 {
-    public class ObiFloatPaintBrushMode : ObiBrushMode
+    public class ObiFloatPaintBrushMode : IObiBrushMode
     {
-        public ObiFloatPaintBrushMode(ObiBlueprintFloatProperty property) : base(property) { }
+        ObiBlueprintFloatProperty property;
 
-        public override string name
+        public ObiFloatPaintBrushMode(ObiBlueprintFloatProperty property)
+        {
+            this.property = property;
+        }
+
+        public string name
         {
             get { return "Paint"; }
         }
 
-        public override void ApplyStamps(ObiBrushBase brush, bool modified)
+        public bool needsInputValue
         {
-            var floatProperty = (ObiBlueprintFloatProperty) property;
+            get { return true; }
+        }
 
+        public void ApplyStamps(ObiBrushBase brush, bool modified)
+        {
             for (int i = 0; i < brush.weights.Length; ++i)
             {
                 if (!property.Masked(i) && brush.weights[i] > 0)
                 {
-                    float currentValue = floatProperty.Get(i);
-                    float delta = brush.weights[i] * brush.opacity * brush.speed * (floatProperty.GetDefault() - currentValue);
+                    float currentValue = property.Get(i);
+                    float delta = brush.weights[i] * brush.opacity * brush.speed * (property.GetDefault() - currentValue);
 
-                    floatProperty.Set(i, currentValue + delta * (modified ? -1 : 1));
+                    property.Set(i, currentValue + delta * (modified ? -1 : 1));
                 }
             }
         }

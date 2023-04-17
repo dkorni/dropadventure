@@ -6,6 +6,59 @@ namespace Obi
 {
     public static class FluidRenderingUtils
     {
+        [System.Serializable]
+        public class FluidRendererSettings
+        {
+            public BlendMode blendSource = BlendMode.SrcAlpha;
+            public BlendMode blendDestination = BlendMode.OneMinusSrcAlpha;
+
+            public BlendMode particleBlendSource = BlendMode.DstColor;
+            public BlendMode particleBlendDestination = BlendMode.Zero;
+            public bool particleZWrite = false;
+
+            [Range(0.01f, 5)]
+            public float thicknessCutoff = 1.2f;
+            [Range(1, 4)]
+            public int thicknessDownsample = 2;
+
+            // surface reconstruction (depth and normals)
+            public bool generateSurface = true;
+            [Range(0, 0.1f)]
+            public float blurRadius = 0.02f;
+            [Range(1, 4)]
+            public int surfaceDownsample = 1;
+
+            // lighting
+            public bool lighting = true;
+            [Range(0, 1)]
+            public float smoothness = 0.8f;
+            [Range(0, 1)]
+            public float metalness = 0;
+            [Range(0, 6)]
+            public float ambientMultiplier = 1;
+
+            // reflection
+            public bool generateReflection = true;
+            [Range(0, 1)]
+            public float reflection = 0.2f;
+
+            // refraction
+            public bool generateRefraction = true;
+            [Range(0, 1)]
+            public float transparency = 1;
+            [Range(0, 30)]
+            public float absorption = 5;
+            [Range(-0.1f, 0.1f)]
+            public float refraction = 0.01f;
+            [Range(1, 4)]
+            public int refractionDownsample = 1;
+
+            // foam
+            public bool generateFoam = true;
+            [Range(1, 4)]
+            public int foamDownsample = 1;
+        }
+
         public struct FluidRenderTargets
         {
             public int refraction;
@@ -17,7 +70,16 @@ namespace Obi
             public int normals;
         }
 
-        private static Color thicknessBufferClear = new Color(1, 1, 1, 0);
+        public static Color thicknessBufferClear = new Color(1, 1, 1, 0); /**< clears alpha to black (0 thickness) and color to white.*/
+
+        public static Material CreateMaterial(Shader shader)
+        {
+            if (!shader || !shader.isSupported)
+                return null;
+            Material m = new Material(shader);
+            m.hideFlags = HideFlags.HideAndDontSave;
+            return m;
+        }
 
         public static float SetupFluidCamera(Camera cam)
         {
@@ -34,22 +96,12 @@ namespace Obi
             return cam.orthographic ? 1 : cam.pixelWidth / cam.aspect * (1.0f / Mathf.Tan(fovY * Mathf.Deg2Rad * 0.5f));
         }
 
-        // Update is called once per frame
-        public static void SetupCommandBuffer(CommandBuffer cmd, RenderTargetIdentifier cameraTarget, FluidRenderTargets renderTargets,
-                                Material depth_BlurMaterial,
-                                Material normal_ReconstructMaterial,
-                                Material thickness_Material,
-                                Material colorMaterial,
-                                Material fluidMaterial,
-                                ObiParticleRenderer[] renderers)
+        public static void SurfaceReconstruction(CommandBuffer cmd,
+                                                 FluidRenderTargets renderTargets,
+                                                 Material depth_BlurMaterial,
+                                                 Material normal_ReconstructMaterial,
+                                                 ObiParticleRenderer[] renderers)
         {
-            // Copy screen contents to refract them later.
-            cmd.Blit(cameraTarget, renderTargets.refraction);
-
-            cmd.SetRenderTarget(renderTargets.depth); // fluid depth
-            cmd.ClearRenderTarget(true, true, Color.clear); //clear
-
-
             // draw fluid depth texture:
             foreach (ObiParticleRenderer renderer in renderers)
             {
@@ -63,10 +115,17 @@ namespace Obi
                 }
             }
 
-            // draw fluid thickness and color:
-            cmd.SetRenderTarget(renderTargets.thickness1);
-            cmd.ClearRenderTarget(true, true, thicknessBufferClear);
+            cmd.SetGlobalTexture("_FluidSurface", renderTargets.smoothDepth);
+            cmd.SetGlobalTexture("_Normals", renderTargets.normals);
+        }
 
+        public static void VolumeReconstruction(CommandBuffer cmd,
+                                                FluidRenderTargets renderTargets,
+                                                Material thickness_Material,
+                                                Material colorMaterial,
+                                                ObiParticleRenderer[] renderers)
+        {
+            // Draw fluid thickness and color:
             foreach (ObiParticleRenderer renderer in renderers)
             {
                 if (renderer != null)
@@ -82,14 +141,10 @@ namespace Obi
                     }
                 }
             }
+        }
 
-            // blur fluid thickness:
-            cmd.Blit(renderTargets.thickness1, renderTargets.thickness2, thickness_Material, 1);
-            cmd.Blit(renderTargets.thickness2, renderTargets.thickness1, thickness_Material, 2);
-
-            // draw foam: 
-            cmd.SetRenderTarget(renderTargets.foam);
-            cmd.ClearRenderTarget(true, true, Color.clear);
+        public static void Foam(CommandBuffer cmd, FluidRenderTargets renderTargets, ObiParticleRenderer[] renderers)
+        {
 
             foreach (ObiParticleRenderer renderer in renderers)
             {
@@ -105,20 +160,16 @@ namespace Obi
                 }
             }
 
-            // blur fluid surface:
-            cmd.Blit(renderTargets.depth, renderTargets.smoothDepth, depth_BlurMaterial);
-
-            // reconstruct normals from smoothed depth:
-            cmd.Blit(renderTargets.smoothDepth, renderTargets.normals, normal_ReconstructMaterial);
-
-            // render fluid:
-            cmd.SetGlobalTexture("_FluidDepth", renderTargets.depth);
             cmd.SetGlobalTexture("_Foam", renderTargets.foam);
-            cmd.SetGlobalTexture("_Refraction", renderTargets.refraction);
-            cmd.SetGlobalTexture("_Thickness", renderTargets.thickness1);
-            cmd.SetGlobalTexture("_Normals", renderTargets.normals);
-            cmd.Blit(renderTargets.smoothDepth, cameraTarget, fluidMaterial);
         }
+
+        // Only used in built-in pipeline:
+        public static void Refraction(CommandBuffer cmd, RenderTargetIdentifier cameraTarget, FluidRenderTargets renderTargets)
+        {
+            cmd.Blit(cameraTarget, renderTargets.refraction);
+            cmd.SetGlobalTexture("_CameraOpaqueTexture", renderTargets.refraction);
+        }
+
     }
 
 }

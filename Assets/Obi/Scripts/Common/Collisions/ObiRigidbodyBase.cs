@@ -12,68 +12,29 @@ namespace Obi{
 	[ExecuteInEditMode]
 	public abstract class ObiRigidbodyBase : MonoBehaviour
 	{
-        static ProfilerMarker m_UpdateRigidbodiesPerfMarker = new ProfilerMarker("UpdateRigidbodies");
-        static ProfilerMarker m_UpdateRigidbodyVelocitiesPerfMarker = new ProfilerMarker("UpdateRigidbodyVelocities");
 
         public bool kinematicForParticles = false;
 
-        private IntPtr oniRigidbody = IntPtr.Zero;
-		protected Oni.Rigidbody adaptor = new Oni.Rigidbody();
-		protected Oni.RigidbodyVelocities oniVelocities = new Oni.RigidbodyVelocities();
+        public ObiRigidbodyHandle handle;
 
-		protected Vector3 velocity, angularVelocity;
-
-        private delegate void RigidbodyUpdateCallback();
-        private static event RigidbodyUpdateCallback OnUpdateRigidbodies;
-        private static event RigidbodyUpdateCallback OnUpdateVelocities;
-
-		public IntPtr OniRigidbody {
-			get{
-                if (oniRigidbody == IntPtr.Zero)
-                    oniRigidbody = Oni.CreateRigidbody();
-                return oniRigidbody;
-            }
-		}
-
-		public virtual void Awake()
+        public virtual void OnEnable()
         {
-			UpdateIfNeeded();
-            ObiRigidbodyBase.OnUpdateRigidbodies += UpdateIfNeeded;
-            ObiRigidbodyBase.OnUpdateVelocities += UpdateVelocities;
-		}
-
-		public void OnDestroy()
-        {
-            ObiRigidbodyBase.OnUpdateRigidbodies -= UpdateIfNeeded;
-            ObiRigidbodyBase.OnUpdateVelocities -= UpdateVelocities;
-			Oni.DestroyRigidbody(oniRigidbody);
-			oniRigidbody = IntPtr.Zero;
-		}
-
-        public static void UpdateAllRigidbodies()
-        {
-            using (m_UpdateRigidbodiesPerfMarker.Auto())
-            {
-                if (OnUpdateRigidbodies != null)
-                    OnUpdateRigidbodies();
-            }
+            handle = ObiColliderWorld.GetInstance().CreateRigidbody();
+            handle.owner = this;
+            UpdateIfNeeded(1);
         }
 
-        public static void UpdateAllVelocities()
+		public void OnDisable()
         {
-            using (m_UpdateRigidbodyVelocitiesPerfMarker.Auto())
-            {
-                if (OnUpdateVelocities != null)
-                    OnUpdateVelocities();
-            }
+            ObiColliderWorld.GetInstance().DestroyRigidbody(handle);
         }
 
-		public abstract void UpdateIfNeeded();
+		public abstract void UpdateIfNeeded(float stepTime);
 
 		/**
 		 * Reads velocities back from the solver.
 		 */
-		public abstract void UpdateVelocities();
+		public abstract void UpdateVelocities(Vector3 linearDelta, Vector3 angularDelta);
 
 	}
 }

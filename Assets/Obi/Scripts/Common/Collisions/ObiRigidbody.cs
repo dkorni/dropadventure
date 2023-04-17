@@ -13,37 +13,57 @@ namespace Obi{
 	public class ObiRigidbody : ObiRigidbodyBase
 	{
 		private Rigidbody unityRigidbody;
+        private Quaternion prevRotation;
+        private Vector3 prevPosition;
 
-		public override void Awake(){
+        public override void OnEnable()
+        {
 			unityRigidbody = GetComponent<Rigidbody>();
-			base.Awake();
+            prevPosition = transform.position;
+            prevRotation = transform.rotation;
+            base.OnEnable();
 		}
 
-		public override void UpdateIfNeeded(){
+        private void UpdateKinematicVelocities(float stepTime)
+        {
+            // differentiate positions/orientations to get our own velocites for kinematic objects.
+            // when calling Physics.Simulate, MovePosition/Rotation do not work correctly. Also useful for animations.
+            if (unityRigidbody.isKinematic)
+            {
+                // differentiate positions to obtain linear velocity:
+                unityRigidbody.velocity = (transform.position - prevPosition) / stepTime;
 
-			velocity = unityRigidbody.velocity;
-			angularVelocity = unityRigidbody.angularVelocity;
+                // differentiate rotations to obtain angular velocity:
+                Quaternion delta = transform.rotation * Quaternion.Inverse(prevRotation);
+                unityRigidbody.angularVelocity = new Vector3(delta.x, delta.y, delta.z) * 2.0f / stepTime;
+            }
 
-			adaptor.Set(unityRigidbody,kinematicForParticles);
-			Oni.UpdateRigidbody(OniRigidbody,ref adaptor);
+            prevPosition = transform.position;
+            prevRotation = transform.rotation;
+        }
 
-		}
+		public override void UpdateIfNeeded(float stepTime)
+        {
+            UpdateKinematicVelocities(stepTime);
+
+            var rb = ObiColliderWorld.GetInstance().rigidbodies[handle.index];
+            rb.FromRigidbody(unityRigidbody, kinematicForParticles);
+            ObiColliderWorld.GetInstance().rigidbodies[handle.index] = rb;
+
+        }
 
 		/**
 		 * Reads velocities back from the solver.
 		 */
-		public override void UpdateVelocities()
+		public override void UpdateVelocities(Vector3 linearDelta, Vector3 angularDelta)
         {
-
 			// kinematic rigidbodies are passed to Obi with zero velocity, so we must ignore the new velocities calculated by the solver:
-			if (Application.isPlaying && (unityRigidbody.isKinematic || !kinematicForParticles))
+			if (Application.isPlaying && !(unityRigidbody.isKinematic || kinematicForParticles))
             {
-
-                Oni.GetRigidbodyVelocity(OniRigidbody,ref oniVelocities);
-                unityRigidbody.velocity += oniVelocities.linearVelocity - velocity;
-                unityRigidbody.angularVelocity += oniVelocities.angularVelocity - angularVelocity;
-			}
-		}
+                unityRigidbody.velocity += linearDelta;
+                unityRigidbody.angularVelocity += angularDelta;
+            }
+        }
 	}
 }
 

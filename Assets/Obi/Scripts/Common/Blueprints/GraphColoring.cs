@@ -1,8 +1,5 @@
-using UnityEngine;
 using System;
-using System.Linq;
-using System.Collections;
-using System.Collections.Generic;
+using UnityEngine;
 
 namespace Obi
 {
@@ -20,27 +17,26 @@ namespace Obi
 
         public static int[] Colorize(int[] particleIndices, int[] constraintIndices)
         {
-            int constrainCount = constraintIndices.Length - 1;
-            if (constrainCount == 0)
+            int constraintCount = Mathf.Max(0,constraintIndices.Length - 1);
+            if (constraintCount == 0)
                 return new int[0];
 
-            int[] colors = new int[constrainCount];
-            bool[] availability = new bool[constrainCount];
+            int[] colors = new int[constraintCount];
+            bool[] availability = new bool[constraintCount];
 
-            for (int i = 0; i < constrainCount; ++i)
+            for (int i = 0; i < constraintCount; ++i)
             {
                 // Sort particle indices for all constraints. This allows for efficient neighbour checks.
                 Array.Sort(particleIndices, constraintIndices[i], constraintIndices[i + 1] - constraintIndices[i]);
-                //particleIndices.Sort(constraintIndices[i], constraintIndices[i+1] - constraintIndices[i], Comparer<int>.Default);
                 colors[i] = -1;
                 availability[i] = true;
             }
                 
             // For each constraint:
-            for (int i = 0; i < constrainCount; ++i)
+            for (int i = 0; i < constraintCount; ++i)
             {
                 // Iterate over all other constraints:
-                for (int j = 0; j < constrainCount; ++j)
+                for (int j = 0; j < constraintCount; ++j)
                 {
                     if (i == j) continue;
 
@@ -67,12 +63,12 @@ namespace Obi
                 }
 
                 // Assign the first available color:
-                for (colors[i] = 0; colors[i] < constrainCount; ++colors[i])
+                for (colors[i] = 0; colors[i] < constraintCount; ++colors[i])
                     if (availability[colors[i]])
                         break;
 
                 // Reset availability flags:
-                for (int j = 0; j < constrainCount; ++j)
+                for (int j = 0; j < constraintCount; ++j)
                     availability[j] = true;
             }
 

@@ -1,26 +1,32 @@
-using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-
 namespace Obi
 {
-    public class ObiSelectBrushMode : ObiBrushMode
+    public class ObiSelectBrushMode : IObiBrushMode
     {
-        public ObiSelectBrushMode(ObiBlueprintSelected property) : base(property) { }
+        ObiBlueprintSelected property;
+        string customName;
 
-        public override string name
+        public ObiSelectBrushMode(ObiBlueprintSelected property, string customName = "Select")
         {
-            get { return "Select"; }
+            this.property = property;
+            this.customName = customName;
         }
 
-        public override void ApplyStamps(ObiBrushBase brush, bool modified)
+        public string name
         {
-            var selectedProperty = (ObiBlueprintSelected)property;
+            get { return customName; }
+        }
 
+        public bool needsInputValue
+        {
+            get { return true; }
+        }
+
+        public void ApplyStamps(ObiBrushBase brush, bool modified)
+        {
             for (int i = 0; i < brush.weights.Length; ++i)
             {
                 if (brush.weights[i] > 0 && !property.Masked(i))
-                    selectedProperty.Set(i,!modified);
+                    property.Set(i,!modified);
             }
         }
     }

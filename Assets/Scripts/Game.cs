@@ -34,12 +34,18 @@ public class Game : MonoBehaviour
     [SerializeField] CompositeObject[] composites;
     [SerializeField] GameObject _coinPrefab;
     [SerializeField] GameObject firework;
+    [SerializeField] private Transform sink;
 
-    Obi.ObiSolver _solver;
+    [SerializeField] Obi.ObiSolver _solver;
 
     private int maxDrops;
     private int joinedDrops;
     private int processedComposites;
+
+    private void Awake()
+    {
+        Application.targetFrameRate = 60;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -72,9 +78,9 @@ public class Game : MonoBehaviour
         }
     }
 
-    private void OnFlush(Vector3 point)
+    private void OnFlush()
     {
-        CoinBank.Withdraw(point);
+        CoinBank.Withdraw(sink.position);
     }
     
     private void PrepareScene()
@@ -106,7 +112,10 @@ public class Game : MonoBehaviour
 
     private void StartFlushStep()
     {
-        UpdateStatus(GameStates.Flush);
+       // var g = _solver.gravity;
+       // _solver.gravity = Vector3.zero;
+       //_solver.parameters.sleepThreshold = 1;
+       UpdateStatus(GameStates.Flush);
         _endPlatform.transform.rotation = _beginPlatform.transform.rotation;
         _beginPlatform.gameObject.SetActive(false);
         _endPlatform.gameObject.SetActive(true);

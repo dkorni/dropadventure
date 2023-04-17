@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEditor;
-using System.Collections;
 
 namespace Obi
 {
@@ -35,7 +34,8 @@ namespace Obi
 
         public override Color ToColor(int index)
         {
-            return ObiUtils.colorAlphabet[Get(index) % ObiUtils.colorAlphabet.Length];
+            int colorIndex = Get(index) % ObiUtils.colorAlphabet.Length;
+            return ObiUtils.colorAlphabet[colorIndex];
         }
     }
 }

@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEditor;
-using System.Collections;
 
 namespace Obi
 {
@@ -10,7 +8,8 @@ namespace Obi
         public ObiBlueprintRadius(ObiActorBlueprintEditor editor) : base(editor,0.0000001f) 
         { 
             brushModes.Add(new ObiFloatPaintBrushMode(this)); 
-            brushModes.Add(new ObiFloatAddBrushMode(this)); 
+            brushModes.Add(new ObiFloatAddBrushMode(this));
+            brushModes.Add(new ObiFloatCopyBrushMode(this, this));
             brushModes.Add(new ObiFloatSmoothBrushMode(this)); 
         }
 
@@ -21,13 +20,13 @@ namespace Obi
 
         public override float Get(int index)
         {
-            return editor.Blueprint.principalRadii[index][0];
+            return editor.blueprint.principalRadii[index][0];
         }
         public override void Set(int index, float value)
         {
             value = Mathf.Max(0.0000001f, value);
             float ratio = value / Get(index);
-            editor.Blueprint.principalRadii[index] = editor.Blueprint.principalRadii[index] * ratio;
+            editor.blueprint.principalRadii[index] = editor.blueprint.principalRadii[index] * ratio;
         }
         public override bool Masked(int index)
         {

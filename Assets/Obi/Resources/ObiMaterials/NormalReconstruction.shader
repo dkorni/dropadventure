@@ -39,6 +39,8 @@ Shader "Hidden/NormalReconstruction"
 				return o;
 			}
 
+            TEXTURE2D_FLOAT(_MainTex);
+            SAMPLER(sampler_MainTex);
 			float4 _MainTex_TexelSize;
 
 			float3 NormalFromEyePos(float2 uv, float3 eyePos)
@@ -51,11 +53,11 @@ Shader "Hidden/NormalReconstruction"
 				float2 sy2 = uv - float2(0,_MainTex_TexelSize.y);
 
 				// get eye space from depth at these coords, and compute derivatives:
-				float3 dx = EyePosFromDepth(sx,tex2D(_MainTex, sx).x) - eyePos;
-				float3 dy = EyePosFromDepth(sy,tex2D(_MainTex, sy).x) - eyePos;
+				float3 dx = EyePosFromDepth(sx,SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex, sx).x) - eyePos;
+				float3 dy = EyePosFromDepth(sy,SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex, sy).x) - eyePos;
 
-				float3 dx2 = eyePos - EyePosFromDepth(sx2,tex2D(_MainTex, sx2).x);
-				float3 dy2 = eyePos - EyePosFromDepth(sy2,tex2D(_MainTex, sy2).x);
+				float3 dx2 = eyePos - EyePosFromDepth(sx2,SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex, sx2).x);
+				float3 dy2 = eyePos - EyePosFromDepth(sy2,SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex, sy2).x);
 
 				if (abs(dx.z) > abs(dx2.z))
 					dx = dx2;
@@ -66,9 +68,9 @@ Shader "Hidden/NormalReconstruction"
 				return normalize(cross(dx,dy));
 			}	
 
-			fixed4 frag (v2f i) : SV_Target
+			half4 frag (v2f i) : SV_Target
 			{			
-				float depth = tex2D(_MainTex, i.uv).r;
+				float depth = SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,i.uv).r;
 
 				// reconstruct eye space position from frustum corner and camera depth:
 				float3 eyePos = EyePosFromDepth(i.uv,depth);
@@ -76,7 +78,7 @@ Shader "Hidden/NormalReconstruction"
 				// reconstruct normal from eye space position:
 				float3 n = NormalFromEyePos(i.uv,eyePos);
 
-				return fixed4(n*0.5+0.5,1);
+				return half4(n*0.5+0.5,1);
 			}
 			ENDCG
 		}

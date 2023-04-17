@@ -1,6 +1,140 @@
 # Change Log
 All notable changes to “Obi - Advanced fluids for Unity” will be documented in this file.
 
+## [6.4]
+
+### Added
+- Support for configurable enter play mode (domain and scene reload disabling).
+- Support for in-editor hot reloading.
+
+### Changed
+- Introduced a job handle pool to avoid runtime allocation of handles by both Burst and Oni backends.
+- Constraint padding array in Burst solver has been turned into a member variable instead of allocating anew it every frame.
+- Collision and friction batches are pooled instead of allocated every frame.
+
+### Fixed
+- InvalidOperationException when performing certain spatial queries with jobs debugger enabled in the Burst backend.
+
+## [6.3]
+
+###Added
+- Built-in support for applying solver gravity in world-space.
+
+### Fixed
+- Collision filter settings weren't working correctly with ObiEmitters.
+- Slight reduction in solver memory allocation.
+- Object disposed exception when using contact callbacks with a non-visible solver.
+
+## [6.2]
+
+#IMPORTANT: If updating from an older version, you’ll need to readjust collision filtering in your scenes.
+Phase-based collision filtering has been replaced by mask/categroy based system.
+
+### Added
+- New spatial query API, that allows to perform efficient distance, overlap and raycast queries.
+- New FluidOverlapQuery sample scene showcasing the spatial query API
+
+### Changed
+- Collision phase filtering has been replaced by a category/mask system. If you upgrade existing projects to Obi 6.2, you will have to set up categories and masks appropiately.
+
+### Fixed
+- Added a minimum anisotropy threshold so that particles with very spare neighborhoods are not clipped.
+
+## [6.1]
+
+### Added
+- WhiskeyBottle sample scene, shows how to use burst emission mode and voxel emitters to instantly fill a bottle with fluid.
+
+### Fixed
+- Bug in Oni backend: collision stickiness resulted in rapid particle separation from the collision surface.
+- Fixed: "Shader error in 'Hidden/ScreenSpaceCurvatureFlow': undeclared identifier 'sampler_MainTex' at line 57 (on gles3)"
+- Bug that caused NaN velocity assignments to rigidbodies after removing all actors from a solver.
+
+### Changed
+- Decreased minimum error in distance fields to 1e-07
+
+
+## [6.0.1]
+
+### Fixed
+- Bug in Burst backend, resulting in InvalidOperationException when enabling Burst safety checks.
+- Bug in ObiSolver that caused particleToActor array entries to be null.
+
+## [6.0]
+
+### Added
+- Predictive variable-step constraint solving that makes syncing Unity's physics no longer necessary when using substeps.
+- Amount of CCD is now adjustable per-solver.
+- Collision margin is now adjustable per-solver.
+- Bend and bend/twist constraints now support plasticity.
+
+### Changed
+- Contacts "particle" and "other" have been renamed to "bodyA" and "bodyB". bodyB might be a simplex or collider index, depending on the contact type. To access
+particle indices from simplex indices, use the solver.simplices array.
+
+## [5.6.2]
+
+### Fixed
+- Missed collisions using certain meshes for MeshColliders, due to a bug in bounding interval hierarchy generation.
+
+## [5.6.1]
+
+### Fixed
+- Bug in Burst backend: solver bounding box size was typically underestimated.
+- Bug in Burst backend: when using volume constraints: "InvalidOperationException: The NativeContainer ApplyVolumeConstraintsBatchJob.particleIndices has not been assigned or constructed"
+- Bug in Burst backend: not releasing native arrays when empty solvers -with zero actors in them- are present in the scene.
+- Bug in Oni backend: volume constraints not working properly when multiple actors are present in the solver.
+- Fixed crash when using ObiLateUpdater or ObiLateFixedUpdater with the Burst backend.
+- Reduced GC allocation in dynamic particle attachments.
+- Fixed bug in Skin constraints, that caused them to fail restricting particle movement in certain circumstances.
+
+### Changed
+- Updated Oni iOS library to XCode 12.1. Make sure to use XCode 12.1 or up to build for iOS when using the Oni backend.
+- ObiKinematicVelocities component has been removed. Its functionality is now built into the engine, and automatically used for kinematic rigidbodies.
+
+### Added
+- Sample ObiContactDispatcher component, that will call custom enter/stay/exit contact events.
+- Support for multiple solvers in sample script in ObiContactGrabber.
+- Added util LookAroundCamera component.
+
+## [5.6]
+
+### Added
+- Particle blending mode for fluid renderer.
+- Faster SDF generation.
+- New sample scene.
+
+### Fixed
+- 'Undefined identifier sampler2D_half/float' in fluid renderer shaders in URP under D3D11.
+- Bug that causes out of bounds access when dinamically adding/removing colliders at runtime.
+- Bug that caused dead particles to be considered for collision detection under some cirumstances.
+
+### Changed
+- Constraint batches of multiple actors are now merged together. This greatly reduces the amount of dispatched jobs and improves performance on both backends.
+- Colliders no longer have a "use distance fields" boolean value, they will always use the SDF as long as they have one.
+
+
+## [5.5]
+
+### Added
+- Backend system: abstracts the underlying particle-based physics engine used. To the native, built-in engine (Oni), we have added a Burst-based implementation that
+will run on all platforms supported by Burst.
+- New voxel-based emitter shape: ObiEmitterShapeMesh.
+
+### Changed
+- ObiFluidRenderer and ObiSimpleFluidRenderer have been unified. ObiFluidRenderer is now a modular, scalable renderer.
+- Production-ready support for URP fluid rendering.
+
+## [5.4]
+
+### Fixed
+- Bug that caused a crash when using Obi in conjunction with Mirror networking system (NetworkIdentity component).
+- Bug that could cause a crash when disabling an actor under a disabled solver.
+
+### Changed
+- Recompiled iOS libraries using XCode 11.3.1, to circumvent bitcode compatibility issues now that XCode 11.4 and up have a bug that cause linking against Obi to fail. 
+
+
 ## [5.3]
 
 ### Added

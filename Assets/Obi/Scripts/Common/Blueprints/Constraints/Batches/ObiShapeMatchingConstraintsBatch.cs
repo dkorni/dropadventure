@@ -1,50 +1,74 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 namespace Obi
 {
-    [System.Serializable]
+    [Serializable]
     public class ObiShapeMatchingConstraintsBatch : ObiConstraintsBatch
     {
-        
-        public ObiNativeIntList firstIndex = new ObiNativeIntList();
-        public ObiNativeIntList numIndices = new ObiNativeIntList();
-        public ObiNativeIntList explicitGroup = new ObiNativeIntList(); /**< whether the constraint is implicit (0) or explicit (>0).*/
-        public ObiNativeFloatList materialParameters = new ObiNativeFloatList(); /**< 5 floats per constraint: stiffness, plastic yield, creep, recovery and max deformation.*/
+        protected IShapeMatchingConstraintsBatchImpl m_BatchImpl;  
 
-        public ObiNativeVector4List restComs = new ObiNativeVector4List();
-        public ObiNativeVector4List coms = new ObiNativeVector4List();
+        /// <summary>
+        /// index of the first particle in each constraint.
+        /// </summary>
+        public ObiNativeIntList firstIndex = new ObiNativeIntList();           
+
+        /// <summary>
+        /// amount of particles in each constraint.
+        /// </summary>
+        public ObiNativeIntList numIndices = new ObiNativeIntList();            
+
+        /// <summary>
+        /// whether the constraint is implicit (0) or explicit (>0).
+        /// </summary>
+        public ObiNativeIntList explicitGroup = new ObiNativeIntList();         
+
+        /// <summary>
+        /// 5 floats per constraint: stiffness, plastic yield, creep, recovery and max deformation.
+        /// </summary>
+        public ObiNativeFloatList materialParameters = new ObiNativeFloatList(); 
+
+
+        /// <summary>
+        /// rest center of mass for each constraint.
+        /// </summary>
+        public ObiNativeVector4List restComs = new ObiNativeVector4List();      
+
+        /// <summary>
+        /// current center of mass for each constraint.
+        /// </summary>
+        public ObiNativeVector4List coms = new ObiNativeVector4List();       
+
+        /// <summary>
+        /// current best-match orientation for each constraint.
+        /// </summary>
         public ObiNativeQuaternionList orientations = new ObiNativeQuaternionList();
+
+        /// <summary>
+        /// current best-match linear transform for each constraint.
+        /// </summary>
+        public ObiNativeMatrix4x4List linearTransforms = new ObiNativeMatrix4x4List();
+
+        /// <summary>
+        /// current plastic deformation for each constraint.
+        /// </summary>
+        public ObiNativeMatrix4x4List plasticDeformations = new ObiNativeMatrix4x4List();
+
 
         public override Oni.ConstraintType constraintType
         {
             get { return Oni.ConstraintType.ShapeMatching; }
         }
 
-        public ObiShapeMatchingConstraintsBatch(ObiShapeMatchingConstraintsBatch source = null) : base(source) { }
-
-        public override IObiConstraintsBatch Clone()
+        public override IConstraintsBatchImpl implementation
         {
-            var clone = new ObiShapeMatchingConstraintsBatch(this);
+            get { return m_BatchImpl; }
+        }
 
-            clone.particleIndices.ResizeUninitialized(particleIndices.count);
-            clone.firstIndex.ResizeUninitialized(firstIndex.count);
-            clone.numIndices.ResizeUninitialized(numIndices.count);
-            clone.explicitGroup.ResizeUninitialized(explicitGroup.count);
-            clone.materialParameters.ResizeUninitialized(materialParameters.count);
-
-            clone.particleIndices.CopyFrom(particleIndices);
-            clone.firstIndex.CopyFrom(firstIndex);
-            clone.numIndices.CopyFrom(numIndices);
-            clone.explicitGroup.CopyFrom(explicitGroup);
-            clone.materialParameters.CopyFrom(materialParameters);
-
-            clone.restComs.ResizeUninitialized(constraintCount);
-            clone.coms.ResizeUninitialized(constraintCount);
-            clone.orientations.ResizeUninitialized(constraintCount);
-
-            return clone;
+        public ObiShapeMatchingConstraintsBatch(ObiShapeMatchingConstraintsData constraints = null) : base()
+        {
         }
 
         public void AddConstraint(int[] indices, bool isExplicit)
@@ -76,6 +100,29 @@ namespace Obi
                 particles.Add(particleIndices[i]);
         }
 
+        public void RemoveParticleFromConstraint(int constraintIndex, int particleIndex)
+        {
+            int first = firstIndex[constraintIndex];
+            int num = numIndices[constraintIndex];
+
+            int found = 0;
+            for (int i = first + num - 1; i >= first; --i)
+            {
+                if (particleIndices[i] == particleIndex)
+                {
+                    found++;
+                    particleIndices.RemoveAt(i);
+                }
+            }
+
+            // update num indices of the current constraint:
+            numIndices[constraintIndex] -= found;
+
+            // update firstIndex of following constraints:
+            for (int i = constraintIndex + 1; i < constraintCount; ++i)
+                firstIndex[i] -= found;
+        }
+
         protected override void SwapConstraints(int sourceIndex, int destIndex)
         {
             firstIndex.Swap(sourceIndex, destIndex);
@@ -88,37 +135,88 @@ namespace Obi
             restComs.Swap(sourceIndex, destIndex);
             coms.Swap(sourceIndex, destIndex);
             orientations.Swap(sourceIndex, destIndex);
+            linearTransforms.Swap(sourceIndex, destIndex);
+            plasticDeformations.Swap(sourceIndex, destIndex);
         }
 
-        protected override void OnAddToSolver(IObiConstraints constraints)
+        public override void Merge(ObiActor actor, IObiConstraintsBatch other)
         {
-            for (int i = 0; i < particleIndices.count; i++)
+            var batch = other as ObiShapeMatchingConstraintsBatch;
+            var user = actor as IShapeMatchingConstraintsUser;
+
+            if (batch != null && user != null)
             {
-                particleIndices[i] = constraints.GetActor().solverIndices[source.particleIndices[i]];
+                if (!user.shapeMatchingConstraintsEnabled)
+                    return;
+
+                int initialIndexCount = particleIndices.count;
+
+                // shape matching constraint particle indices are not reordered when deactivating constraints,
+                // so instead of using batch.activeConstraintCount, batch.constraintCount. We need all of them.
+                int numActiveIndices = 0;
+                for (int i = 0; i < batch.constraintCount; ++i) 
+                    numActiveIndices += batch.numIndices[i];
+
+                particleIndices.ResizeUninitialized(initialIndexCount + numActiveIndices);
+                firstIndex.ResizeUninitialized(m_ActiveConstraintCount + batch.activeConstraintCount);
+                numIndices.ResizeUninitialized(m_ActiveConstraintCount + batch.activeConstraintCount);
+                explicitGroup.ResizeUninitialized(m_ActiveConstraintCount + batch.activeConstraintCount);
+                materialParameters.ResizeUninitialized((m_ActiveConstraintCount + batch.activeConstraintCount) * 5);
+
+                restComs.ResizeUninitialized(m_ActiveConstraintCount + batch.activeConstraintCount);
+                coms.ResizeUninitialized(m_ActiveConstraintCount + batch.activeConstraintCount);
+                orientations.ResizeUninitialized(m_ActiveConstraintCount + batch.activeConstraintCount);
+                linearTransforms.ResizeUninitialized(m_ActiveConstraintCount + batch.activeConstraintCount);
+                plasticDeformations.ResizeInitialized(m_ActiveConstraintCount + batch.activeConstraintCount, Matrix4x4.identity);
+
+                lambdas.ResizeInitialized(m_ActiveConstraintCount + batch.activeConstraintCount);
+
+                numIndices.CopyFrom(batch.numIndices, 0, m_ActiveConstraintCount, batch.activeConstraintCount);
+                explicitGroup.CopyFrom(batch.explicitGroup, 0, m_ActiveConstraintCount, batch.activeConstraintCount);
+                orientations.CopyReplicate(actor.actorLocalToSolverMatrix.rotation, m_ActiveConstraintCount, batch.activeConstraintCount);
+
+                for (int i = 0; i < numActiveIndices; ++i)
+                    particleIndices[initialIndexCount + i] = actor.solverIndices[batch.particleIndices[i]];
+
+                for (int i = 0; i < batch.activeConstraintCount; ++i)
+                {
+                    firstIndex[m_ActiveConstraintCount + i] = batch.firstIndex[i] + initialIndexCount;
+                    materialParameters[(m_ActiveConstraintCount + i) * 5] = batch.materialParameters[i * 5] * user.deformationResistance;
+                    materialParameters[(m_ActiveConstraintCount + i) * 5 + 1] = batch.materialParameters[i * 5 + 1] * user.plasticYield;
+                    materialParameters[(m_ActiveConstraintCount + i) * 5 + 2] = batch.materialParameters[i * 5 + 2] * user.plasticCreep;
+                    materialParameters[(m_ActiveConstraintCount + i) * 5 + 3] = batch.materialParameters[i * 5 + 3] * user.plasticRecovery;
+                    materialParameters[(m_ActiveConstraintCount + i) * 5 + 4] = batch.materialParameters[i * 5 + 4] * user.maxDeformation;
+                }
+
+                base.Merge(actor, other);
             }
-
-            for (int i = 0; i < orientations.count; i++)
-                orientations[i] = constraints.GetActor().actorLocalToSolverMatrix.rotation;
-
-            // pass constraint data arrays to the solver:
-            Oni.SetShapeMatchingConstraints(batch, particleIndices.GetIntPtr(), firstIndex.GetIntPtr(), numIndices.GetIntPtr(), explicitGroup.GetIntPtr(),
-                                            materialParameters.GetIntPtr(), restComs.GetIntPtr(), coms.GetIntPtr(), orientations.GetIntPtr(), m_ConstraintCount);
-            Oni.SetActiveConstraints(batch, m_ActiveConstraintCount);
-
-            Oni.CalculateRestShapeMatching(constraints.GetActor().solver.OniSolver, batch);
         }
 
-        public void SetParameters(float stiffness, float yield, float creep, float recovery, float maxDeformation)
+        public override void AddToSolver(ObiSolver solver)
         {
-            for (int i = 0; i < explicitGroup.count; i++)
+            // Create distance constraints batch directly.
+            m_BatchImpl = solver.implementation.CreateConstraintsBatch(constraintType) as IShapeMatchingConstraintsBatchImpl;
+
+            if (m_BatchImpl != null)
             {
-                materialParameters[i * 5] = stiffness;
-                materialParameters[i * 5 + 1] = yield;
-                materialParameters[i * 5 + 2] = creep;
-                materialParameters[i * 5 + 3] = recovery;
-                materialParameters[i * 5 + 4] = maxDeformation;
+                m_BatchImpl.SetShapeMatchingConstraints(particleIndices, firstIndex, numIndices, explicitGroup,
+                                                        materialParameters, restComs, coms, orientations, linearTransforms, plasticDeformations,
+                                                        lambdas, m_ActiveConstraintCount);
+
+                m_BatchImpl.CalculateRestShapeMatching();
             }
         }
 
+        public override void RemoveFromSolver(ObiSolver solver)
+        {
+            //Remove batch:
+            solver.implementation.DestroyConstraintsBatch(m_BatchImpl as IConstraintsBatchImpl);
+        }
+
+        public void RecalculateRestShapeMatching()
+        {
+            if (m_BatchImpl != null)
+                m_BatchImpl.CalculateRestShapeMatching();
+        }
     }
 }

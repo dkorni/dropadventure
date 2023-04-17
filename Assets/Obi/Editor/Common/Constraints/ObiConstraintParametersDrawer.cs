@@ -14,9 +14,6 @@ namespace Obi
 		{
 			float propHeight = EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
 
-			// Remove the "Constraint Parameters" trailing in the label:
-			string shortenedLabel = label.text.Remove(label.text.Length-22);
-
 			EditorGUI.BeginProperty(position, label, property);
 
 			SerializedProperty enabled = property.FindPropertyRelative("enabled");
@@ -28,7 +25,7 @@ namespace Obi
 			GUI.enabled = true;
 
 			// Draw main constraint toggle:
-            enabled.boolValue = EditorGUI.ToggleLeft(contRect, shortenedLabel, enabled.boolValue, EditorStyles.boldLabel);
+            enabled.boolValue = EditorGUI.ToggleLeft(contRect, label.text, enabled.boolValue, EditorStyles.boldLabel);
 
 			if (enabled.boolValue){
 	

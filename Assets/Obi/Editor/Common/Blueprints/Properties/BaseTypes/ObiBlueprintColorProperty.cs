@@ -25,7 +25,7 @@ namespace Obi
 
         public override Color ToColor(int index)
         {
-            return editor.Blueprint.colors[index];
+            return editor.blueprint.colors[index];
         }
     }
 }

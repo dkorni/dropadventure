@@ -20,7 +20,7 @@ namespace Obi
 
             using (new Handles.DrawingScope(Color.green, Matrix4x4.identity))
             {
-                var constraints = editor.Blueprint.GetConstraintsByType(Oni.ConstraintType.Distance) as ObiConstraints<ObiDistanceConstraintsBatch>;
+                var constraints = editor.blueprint.GetConstraintsByType(Oni.ConstraintType.Distance) as ObiConstraints<ObiDistanceConstraintsBatch>;
                 if (constraints != null)
                 {
                     Vector3[] lines = new Vector3[constraints.GetActiveConstraintCount() * 2];
@@ -30,8 +30,8 @@ namespace Obi
                     {
                         for (int i = 0; i < batch.activeConstraintCount; ++i)
                         {
-                            lines[lineIndex++] = editor.Blueprint.GetParticlePosition(batch.particleIndices[i * 2]);
-                            lines[lineIndex++] = editor.Blueprint.GetParticlePosition(batch.particleIndices[i * 2 + 1]); 
+                            lines[lineIndex++] = editor.blueprint.GetParticlePosition(batch.particleIndices[i * 2]);
+                            lines[lineIndex++] = editor.blueprint.GetParticlePosition(batch.particleIndices[i * 2 + 1]); 
                         }
                     }
 

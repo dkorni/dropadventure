@@ -59,7 +59,6 @@ namespace Obi
 						for (int j = 0; j < steps; ++j){
 							Vector3 pos = new Vector3(r * Mathf.Cos(angleIncrement*j), r * Mathf.Sin(angleIncrement*j),0);
 							distribution.Add(new ObiEmitterShape.DistributionPoint(pos,Vector3.forward));
-							//distribution.Add(new ObiEmitterShape.DistributionPoint(pos,Vector3.forward * (radius/pos.magnitude)));
 						}
 					}
 				}

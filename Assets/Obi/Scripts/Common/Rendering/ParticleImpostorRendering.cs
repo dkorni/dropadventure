@@ -52,7 +52,7 @@ namespace Obi
             meshes.Clear();
         }
 
-        public void UpdateMeshes(IObiParticleCollection collection)
+        public void UpdateMeshes(IObiParticleCollection collection, bool[] visible = null, Color[] tint = null)
         {
             using (m_ParticlesToMeshPerfMarker.Auto())
             {
@@ -84,6 +84,9 @@ namespace Obi
                 Vector4 basis3 = new Vector4(0, 0, 1, 0);
                 Color color;
 
+                int visibleLength = visible != null ? visible.Length : 0;
+                int tintLength = tint != null ? tint.Length : 0;
+
                 //Convert particle data to mesh geometry:
                 for (int i = 0; i < drawcallCount; i++)
                 {
@@ -102,10 +105,16 @@ namespace Obi
 
                     for (int j = i * particlesPerDrawcall; j < limit; ++j)
                     {
+                        if (j < visibleLength && !visible[j])
+                            continue;
+
                         int runtimeIndex = collection.GetParticleRuntimeIndex(j);
                         position = collection.GetParticlePosition(runtimeIndex);
                         collection.GetParticleAnisotropy(runtimeIndex, ref basis1, ref basis2, ref basis3);
                         color = collection.GetParticleColor(runtimeIndex);
+
+                        if (j < tintLength)
+                            color *= tint[j];
 
                         vertices.Add(position);
                         vertices.Add(position);

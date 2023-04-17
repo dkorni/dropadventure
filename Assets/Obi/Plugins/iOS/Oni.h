@@ -13,6 +13,7 @@
 #include "Solver.h"
 #include "HalfEdgeMesh.h"
 #include "ParticleGrid.h"
+#include "ColliderGrid.h"
 
 #if defined(__APPLE__) || defined(ANDROID) || defined(__linux__)
     #define EXPORT __attribute__((visibility("default")))
@@ -25,18 +26,18 @@ namespace Oni
     
     struct ConstraintGroupParameters;
     class ConstraintBatchBase;
-    class Collider;
-    class Rigidbody;
+    struct Collider;
+    struct Rigidbody;
     class TriangleSkinMap;
     class DistanceField;
-    struct SphereShape;
-    struct BoxShape;
-    struct CapsuleShape;
-    struct HeightmapShape;
-    struct TriangleMeshShape;
     struct CollisionMaterial;
     struct ProfileInfo;
     struct DFNode;
+    struct TriangleMeshHeader;
+    struct EdgeMeshHeader;
+    struct BIHNode;
+    struct Triangle;
+    struct Edge;
     
     template<class T>
     struct ObjHandle
@@ -57,34 +58,24 @@ namespace Oni
     
         typedef ObjHandle<ConstraintBatchBase> ConstraintBatchHandle;
         typedef ObjHandle<Collider> ColliderHandle;
-        typedef ObjHandle<Shape> ShapeHandle;
         typedef ObjHandle<Rigidbody> RigidbodyHandle;
         typedef ObjHandle<CollisionMaterial> CollisionMaterialHandle;
         typedef ObjHandle<DistanceField> DistanceFieldHandle;
         typedef ObjHandle<Task> TaskHandle;
         
         // Colliders ********************:
+        EXPORT void UpdateColliderGrid(float dt);
         
-        EXPORT ColliderHandle* CreateCollider();
-        EXPORT void DestroyCollider(ColliderHandle* collider);
+        EXPORT void SetColliders(Collider* shapes, Bounds* bounds, Transform* transforms, int count);
         
-        EXPORT ShapeHandle* CreateShape(const ShapeType shape);
-        EXPORT void DestroyShape(ShapeHandle* shape);
-        
-        EXPORT RigidbodyHandle* CreateRigidbody();
-        EXPORT void DestroyRigidbody(RigidbodyHandle* rigidbody);
-        
-        EXPORT void UpdateCollider(ColliderHandle* collider, const ColliderAdaptor& adaptor);
-        EXPORT void UpdateShape(ShapeHandle* shape, const ShapeAdaptor& adaptor);
-        EXPORT void UpdateRigidbody(RigidbodyHandle* rigidbody, const RigidbodyAdaptor& adaptor);
-        
-        EXPORT void SetShapeDistanceField(ShapeHandle* shape, DistanceFieldHandle* distance_field);
-        
-        EXPORT void SetColliderShape(ColliderHandle* collider, ShapeHandle* shape);
-        EXPORT void SetColliderRigidbody(ColliderHandle* collider, RigidbodyHandle* rigidbody);
-        EXPORT void SetColliderMaterial(ColliderHandle* collider, CollisionMaterialHandle* material);
-        
-        EXPORT void GetRigidbodyVelocity(RigidbodyHandle* rigidbody, RigidbodyVelocityDelta& delta);
+        EXPORT void SetRigidbodies(Rigidbody* rigidbodies);
+    
+        EXPORT void SetCollisionMaterials(CollisionMaterial* materials);
+    
+        EXPORT void SetTriangleMeshData(TriangleMeshHeader* headers, BIHNode* nodes, Triangle* triangles, Eigen::Vector3f* vertices);
+        EXPORT void SetEdgeMeshData(EdgeMeshHeader* headers, BIHNode* nodes, Edge* edges, Eigen::Vector2f* vertices);
+        EXPORT void SetDistanceFieldData(DistanceFieldHeader* headers, DFNode* nodes);
+        EXPORT void SetHeightFieldData(HeightFieldHeader* hf_headers, float* hf_samples);
         
         // Distance fields ********************:
 
@@ -122,37 +113,44 @@ namespace Oni
         EXPORT void UpdateFrame(Solver* solver,const Vector4fUnaligned& position, const Vector4fUnaligned& scale, const QuaternionfUnaligned& rotation, float dt);
         EXPORT void ApplyFrame(Solver* solver, float linear_velocity_scale, float angular_velocity_scale, float linear_inertia_scale,float angular_inertia_scale, float dt);
         
-        EXPORT void AddCollider(ColliderHandle* collider);
-        EXPORT void RemoveCollider(ColliderHandle* collider);
-        
 		EXPORT void GetBounds(Solver* solver, Eigen::Vector3f& min, Eigen::Vector3f& max);
         EXPORT int GetParticleGridSize(Solver* solver);
-        EXPORT void GetParticleGrid(Solver* solver, ParticleGrid::GridCell* cells);
+        EXPORT void GetParticleGrid(Solver* solver, Bounds* cells);
         
 		EXPORT void SetSolverParameters(Solver* solver, const SolverParameters* parameters);
 		EXPORT void GetSolverParameters(Solver* solver, SolverParameters* parameters);
         
-        EXPORT TaskHandle* CollisionDetection(Solver* solver, const float delta_seconds);
-		EXPORT TaskHandle* Step(Solver* solver, const float delta_seconds);
+        EXPORT TaskHandle* CollisionDetection(Solver* solver, float step_time);
+		EXPORT TaskHandle* Step(Solver* solver, float step_time, float substep_time, int substeps);
+    
+        EXPORT int SpatialQuery(Solver* solver, QueryShape* shapes, Transform* transforms, int shape_count);
+        EXPORT void GetQueryResults(Solver* solver, QueryResult* results, int num);
         
 		EXPORT void ApplyPositionInterpolation(Solver* solver,
                                                Eigen::Vector4f* start_positions,
                                                Eigen::Quaternionf* start_orientations,
-                                               const float delta_seconds,
-                                               const float unsimulated_time);
+                                               float step_time,
+                                               float unsimulated_time);
         
         EXPORT void UpdateSkeletalAnimation(Solver* solver);
         
         EXPORT void RecalculateInertiaTensors(Solver* solver);
         
         EXPORT void ResetForces(Solver* solver);
+    
+        EXPORT void SetRigidbodyLinearDeltas(Solver* solver, Eigen::Vector4f* linear_deltas);
+        EXPORT void SetRigidbodyAngularDeltas(Solver* solver, Eigen::Vector4f* angular_deltas);
+    
 
 		EXPORT int GetConstraintCount(Solver* solver, const Solver::ConstraintType type);
-        EXPORT void GetActiveConstraintIndices(Solver* solver, int* indices, int num, const Solver::ConstraintType type);
         
 		EXPORT int SetActiveParticles(Solver* solver, const int* active, int num);
         
+        EXPORT void SetParticleCollisionMaterials(Solver* solver, int* material_indices);
+    
 		EXPORT void SetParticlePhases(Solver* solver, int* phases);
+    
+        EXPORT void SetParticleFilters(Solver* solver, int* filters);
         
 		EXPORT void SetParticlePositions(Solver* solver, Eigen::Vector4f* positions);
         
@@ -193,6 +191,9 @@ namespace Oni
         EXPORT void SetParticleNormals(Solver* solver, Eigen::Vector4f* normals);
         
         EXPORT void SetParticleInverseInertiaTensors(Solver* solver, Eigen::Vector4f* tensors);
+    
+        EXPORT int SetSimplices(Solver* solver, const int* simplices, int point_count, int edge_count, int triangle_count);
+    
         
         EXPORT int GetDeformableTriangleCount(Solver* solver);
         
@@ -234,62 +235,14 @@ namespace Oni
         
 		EXPORT void GetConstraintGroupParameters(Solver* solver, const Solver::ConstraintType type, ConstraintGroupParameters* parameters);
         
-		EXPORT void SetCollisionMaterials(Solver* solver, const CollisionMaterialHandle** materials, int* indices, int num);
-        
         EXPORT void SetRestPositions(Solver* solver, Eigen::Vector4f* rest_positions);
         
         EXPORT void SetRestOrientations(Solver* solver, Eigen::Quaternionf* rest_orientations);
         
-        // Meshes ********************:
-        
-        EXPORT Mesh* CreateDeformableMesh(Solver* solver,
-                                          HalfEdgeMesh* half_edge,
-                                          ConstraintBatchHandle* skin_batch,
-                                          float world_to_local[16],
-                                          const int* particle_indices,
-                                          int vertex_capacity,
-                                          int vertex_count);
-        
-        EXPORT void DestroyDeformableMesh(Solver* solver,Mesh* mesh);
-        
-        EXPORT bool TearDeformableMeshAtVertex(Mesh* mesh,int vertex_index,
-                                                          const Eigen::Vector3f* plane_point,
-                                                          const Eigen::Vector3f* plane_normal,
-                                                          int* updated_edges,
-                                                          int& num_edges);
-        
-        EXPORT void SetDeformableMeshTBNUpdate(Mesh* mesh, const Mesh::NormalUpdate normal_update, bool skin_tangents);
-        
-        EXPORT void SetDeformableMeshTransform(Mesh* mesh,float world_to_local[16]);
-        
-        EXPORT void SetDeformableMeshSkinMap(Mesh* mesh, Mesh* source_mesh, TriangleSkinMap* map);
-        
-        EXPORT void SetDeformableMeshParticleIndices(Mesh* mesh,const int* indices);
-        
-        EXPORT void SetDeformableMeshData(Mesh* mesh,int* triangles,
-                                                     Eigen::Vector3f* vertices,
-                                                     Eigen::Vector3f* normals,
-                                                     Vector4fUnaligned* tangents,
-                                                     Vector4fUnaligned* colors,
-                                                     Vector2fUnaligned* uv1,
-                                                     Vector2fUnaligned* uv2,
-                                                     Vector2fUnaligned* uv3,
-                                                     Vector2fUnaligned* uv4);
-        
-        EXPORT void SetDeformableMeshAnimationData(Mesh* mesh,
-                                                   float* bind_poses,
-                                                   Mesh::BoneWeight* bone_weights,
-                                                   int num_bones);
-        
-        EXPORT void SetDeformableMeshBoneTransforms(Mesh* mesh,float* bone_transforms);
-        
-        EXPORT void ForceDeformableMeshSkeletalSkinning(Mesh* mesh);
         
         // Batches ********************:
         
         EXPORT ConstraintBatchHandle* CreateBatch(const Solver::ConstraintType type);
-        
-        EXPORT void SetDependency(ConstraintBatchHandle* batch, ConstraintBatchHandle* dependency);
         
         EXPORT void DestroyBatch(ConstraintBatchHandle* batch);
         
@@ -299,26 +252,27 @@ namespace Oni
         
         EXPORT void EnableBatch(ConstraintBatchHandle* batch, bool enabled);
         
-        EXPORT int GetBatchConstraintCount(ConstraintBatchHandle* batch);
-        
         EXPORT int GetBatchConstraintForces(ConstraintBatchHandle* batch, float* forces, int num, int source_offset);
         
         // Constraints ********************:
         
-        EXPORT void SetActiveConstraints(ConstraintBatchHandle* batch, int num);
-        
-        EXPORT void SetConstraintCount(ConstraintBatchHandle* batch, int num);
+        EXPORT void SetBatchConstraintCount(ConstraintBatchHandle* batch, int num);
+    
+        EXPORT int GetBatchConstraintCount(ConstraintBatchHandle* batch);
         
 		EXPORT void SetDistanceConstraints(ConstraintBatchHandle* batch,
                                       int* indices,
                                       float* restLengths,
                                       float* stiffnesses,
+                                      float* lambdas,
                                      int num);
     
 		EXPORT void SetBendingConstraints(ConstraintBatchHandle* batch,
                                           int* indices,
                                           float* rest_bends,
                                           float* bending_stiffnesses,
+                                          float* plasticity,
+                                          float* lambdas,
                                           int num);
         
 		EXPORT void SetSkinConstraints(ConstraintBatchHandle* batch,
@@ -327,6 +281,7 @@ namespace Oni
                                        Eigen::Vector4f* skin_normals,
                                        float* radii_backstops,
                                        float* stiffnesses,
+                                       float* lambdas,
                                        int num);
         
 		EXPORT void SetAerodynamicConstraints(ConstraintBatchHandle* batch,
@@ -337,8 +292,10 @@ namespace Oni
 		EXPORT  void SetVolumeConstraints(ConstraintBatchHandle* batch,
                                           int* triangle_indices,
                                           int* first_triangle,
+                                          int* num_triangles,
                                           float* rest_volumes,
                                           float* pressure_stiffnesses,
+                                          float* lambdas,
                                           int num);
         
         EXPORT  void SetShapeMatchingConstraints(ConstraintBatchHandle* batch,
@@ -350,6 +307,8 @@ namespace Oni
                                                  Eigen::Vector4f* rest_coms,
                                                  Eigen::Vector4f* coms,
                                                  Eigen::Quaternionf* orientations,
+                                                 Eigen::Matrix4f* linear_transforms,
+                                                 Eigen::Matrix4f* plastic_deformations,
                                                  int num);
         
         EXPORT  void CalculateRestShapeMatching(Solver* solver, ConstraintBatchHandle* batch);
@@ -360,31 +319,37 @@ namespace Oni
                                                 float* rest_lengths,
                                                 Eigen::Quaternionf* rest_orientations,
                                                 Eigen::Vector3f* stiffnesses,
+                                                Eigen::Vector3f* lambdas,
                                                 int num);
         
         EXPORT void SetBendTwistConstraints(ConstraintBatchHandle* batch,
                                                  int* orientation_indices,
                                                  Eigen::Quaternionf* rest_darboux,
                                                  Eigen::Vector3f* stiffnesses,
+                                                 float* plasticity,
+                                                 Eigen::Vector3f* lambdas,
                                                  int num);
         
         EXPORT void SetTetherConstraints(ConstraintBatchHandle* batch,
                                          int* indices,
                                          float* max_lenght_scales,
                                          float* stiffnesses,
+                                         float* lambdas,
                                          int num);
         
         EXPORT void SetPinConstraints(ConstraintBatchHandle* batch,
                                       int* indices,
                                       Vector4f* pin_offsets,
                                       Quaternionf* rest_darboux,
-                                      const ColliderHandle** colliders,
+                                      int* colliders,
                                       float* stiffnesses,
+                                      Eigen::Vector4f* lambdas,
                                       int num);
         
         EXPORT void SetStitchConstraints(ConstraintBatchHandle* batch,
                                          int* indices,
                                          float* stiffnesses,
+                                         float* lambdas,
                                          int num);
         
         EXPORT void SetChainConstraints(ConstraintBatchHandle* batch,
