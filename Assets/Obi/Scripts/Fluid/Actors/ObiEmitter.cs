@@ -90,7 +90,10 @@ namespace Obi
         /// <summary>  
         /// Per particle remaining life (in seconds).
         /// </summary>
-        [HideInInspector] public float[] life;     
+        [HideInInspector] public float[] life;
+
+        public bool IsRespawnable;
+        private bool _wasSpawned;
 
         private float unemittedBursts = 0;
         private bool m_IsEmitting = false;
@@ -490,7 +493,7 @@ namespace Obi
                 }
                 else
                 { // burst emission:
-
+                    
                     if (activeParticleCount == 0)
                     {
                         for (int i = 0; i < emissionPoints; ++i)
