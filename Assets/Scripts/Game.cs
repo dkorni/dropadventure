@@ -72,6 +72,7 @@ public class Game : MonoBehaviour
     private void IncreementDrops()
     {
         joinedDrops++;
+        // todo rewrite
         if(joinedDrops == maxDrops)
         {
             StartFlushStep();
