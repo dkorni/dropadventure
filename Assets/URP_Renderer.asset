@@ -72,16 +72,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 1
   settings:
-    blendSource: 5
+    blendSource: 2
     blendDestination: 10
     particleBlendSource: 2
     particleBlendDestination: 4
     particleZWrite: 0
     thicknessCutoff: 1.2
-    thicknessDownsample: 2
-    generateSurface: 1
+    thicknessDownsample: 4
+    generateSurface: 0
     blurRadius: 0.02
-    surfaceDownsample: 1
+    surfaceDownsample: 4
     lighting: 1
     smoothness: 0.8
     metalness: 0
@@ -92,6 +92,6 @@ MonoBehaviour:
     transparency: 1
     absorption: 5
     refraction: 0.01
-    refractionDownsample: 1
-    generateFoam: 1
-    foamDownsample: 1
+    refractionDownsample: 4
+    generateFoam: 0
+    foamDownsample: 4
