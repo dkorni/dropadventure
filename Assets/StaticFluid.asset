@@ -25053,8 +25053,8 @@ MonoBehaviour:
   volumeConstraintsData:
     batches: []
   groups: []
-  capacity: 0
-  resolution: 1
+  capacity: 1000
+  resolution: 0.2
   restDensity: 5
   smoothing: 4
   viscosity: 0.6
