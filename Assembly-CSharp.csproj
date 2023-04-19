@@ -74,7 +74,6 @@
      <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ObjectLimit.cs" />
      <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/Melt.cs" />
      <Compile Include="Assets/Scripts/Coin.cs" />
-     <Compile Include="Assets/Scripts/Render.cs" />
      <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/MoveAndRotate.cs" />
      <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ColorFromPhase.cs" />
      <Compile Include="Assets/Joystick Pack/Scripts/Joysticks/DynamicJoystick.cs" />
@@ -85,6 +84,7 @@
      <Compile Include="Assets/Joystick Pack/Scripts/Base/Joystick.cs" />
      <Compile Include="Assets/Scripts/CoinBank.cs" />
      <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ActorSpawner.cs" />
+     <Compile Include="Assets/Levels/$Data/LevelData.cs" />
      <Compile Include="Assets/Scripts/CSJ/CSG.cs" />
      <Compile Include="Assets/Joystick Pack/Examples/JoystickSetterExample.cs" />
      <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ColorRandomizer.cs" />
@@ -172,6 +172,7 @@
      <None Include="Assets/Graphy - Ultimate Stats Monitor/Shaders/GraphMobile.shader" />
      <None Include="Assets/Obi/Resources/ObiMaterials/StandardVertexColors.shader" />
      <Folder Include="Assets/1.1 - FREE CASUAL PACK SFX/COUNTDOWN" />
+     <Folder Include="Assets/Resources" />
      <Folder Include="Assets/Fonts" />
      <Folder Include="Assets/Joystick Pack/Scripts" />
      <Folder Include="Assets/Graphy - Ultimate Stats Monitor/Font/Roboto" />
@@ -253,6 +254,7 @@
      <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Masking.shader" />
      <Folder Include="Assets/1.1 - FREE CASUAL PACK SFX/ESPECIAL COLLECT" />
      <Folder Include="Assets/Scripts" />
+     <Folder Include="Assets/Levels/$Data" />
      <Folder Include="Assets/1.1 - FREE CASUAL PACK SFX/POWERUP" />
      <None Include="Assets/1.1 - FREE CASUAL PACK SFX/(README) WELCOME_FREE CASUAL PACK SFX.txt" />
      <Folder Include="Assets/Obi/Plugins/Android" />
