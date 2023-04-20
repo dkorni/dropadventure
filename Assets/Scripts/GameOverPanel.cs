@@ -1,18 +1,18 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using Zenject;
 
 public class GameOverPanel : MonoBehaviour
 {
-    [Inject] private Game _game;
+    [SerializeField] private GameContext _gameContext;
 
-    // Start is called before the first frame update
     void Start()
     {
-        _game.OnStateChanged += OnStateChanged;
+        _gameContext.OnStateChanged += OnStateChanged;
         gameObject.SetActive(false);
     }
 
-    private void OnStateChanged(object sender, GameStates e)
+    private void OnStateChanged(GameStates e)
     {
        if(e == GameStates.GameOver)
            gameObject.SetActive(true);
@@ -20,6 +20,6 @@ public class GameOverPanel : MonoBehaviour
 
     public void Retry()
     {
-        _game.Retry();
+        //_game.Retry();
     }
 }

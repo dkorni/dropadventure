@@ -57,6 +57,7 @@
      <Compile Include="Assets/Scripts/CSJ/Classes/Polygon.cs" />
      <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ActorCOMTransform.cs" />
      <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/SlowmoToggler.cs" />
+     <Compile Include="Assets/Scripts/SceneManager.cs" />
      <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/DebugParticleFrames.cs" />
      <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/MazeManager.cs" />
      <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/CharacterController/SampleCharacterController.cs" />
@@ -73,7 +74,8 @@
      <Compile Include="Assets/Joystick Pack/Examples/JoystickPlayerExample.cs" />
      <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ObjectLimit.cs" />
      <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/Melt.cs" />
-     <Compile Include="Assets/Scripts/Coin.cs" />
+     <Compile Include="Assets/Scripts/Coins/Coin.cs" />
+     <Compile Include="Assets/Scripts/Installers/DependencyInstaller.cs" />
      <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/MoveAndRotate.cs" />
      <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ColorFromPhase.cs" />
      <Compile Include="Assets/Joystick Pack/Scripts/Joysticks/DynamicJoystick.cs" />
@@ -82,9 +84,9 @@
      <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/EmitOnKeyPress.cs" />
      <Compile Include="Assets/Scripts/UI/DropletSliderController.cs" />
      <Compile Include="Assets/Joystick Pack/Scripts/Base/Joystick.cs" />
-     <Compile Include="Assets/Scripts/CoinBank.cs" />
+     <Compile Include="Assets/Scripts/Coins/CoinBank.cs" />
      <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ActorSpawner.cs" />
-     <Compile Include="Assets/Levels/$Data/LevelData.cs" />
+     <Compile Include="Assets/Scripts/LevelData.cs" />
      <Compile Include="Assets/Scripts/CSJ/CSG.cs" />
      <Compile Include="Assets/Joystick Pack/Examples/JoystickSetterExample.cs" />
      <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ColorRandomizer.cs" />
@@ -104,9 +106,11 @@
      <Compile Include="Assets/3DPart/GradientSky/Scripts/GradientSkyCamera.cs" />
      <Compile Include="Assets/Scripts/CSJ/Classes/Plane.cs" />
      <Compile Include="Assets/Scripts/GameOverPanel.cs" />
-     <Compile Include="Assets/Scripts/Game.cs" />
+     <Compile Include="Assets/Scripts/GameManager.cs" />
      <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/OverlapTest.cs" />
+     <Compile Include="Assets/Scripts/Coins/CoinFactory.cs" />
      <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/WorldSpaceGravity.cs" />
+     <Compile Include="Assets/Scripts/GameContext.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/test" />
      <Folder Include="Assets/1.1 - FREE CASUAL PACK SFX/CAMERA CLICKS" />
@@ -127,6 +131,7 @@
      <None Include="Assets/Obi/Resources/ObiMaterials/FluidThickness.shader" />
      <Folder Include="Assets/Graphy - Ultimate Stats Monitor/Shaders" />
      <Folder Include="Assets/1.1 - FREE CASUAL PACK SFX/HORN" />
+     <Folder Include="Assets/Scripts/Installers" />
      <Folder Include="Assets/Obi/Samples/Common/SampleResources/Models" />
      <Folder Include="Assets/Obi/Plugins/libOni.bundle/Contents/_CodeSignature" />
      <Folder Include="Assets/TextMesh Pro/Resources/Sprite Assets" />
@@ -189,6 +194,7 @@
      <None Include="Assets/Obi/Resources/ObiMaterials/URP/ParticleShaderURP.shader" />
      <Folder Include="Assets/Prefabs" />
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
+     <Folder Include="Assets/Scripts/Coins" />
      <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
      <Folder Include="Assets/Obi/Samples/Common/SampleResources/Textures" />
      <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_SDF.shader" />
@@ -205,6 +211,7 @@
      <Folder Include="Assets/1.1 - FREE CASUAL PACK SFX/CARDS" />
      <Folder Include="Assets/3DPart/Liquid-Simulation-master/Liquid-Simulation-master/Assets/Scenes" />
      <Folder Include="Assets/3DPart/Liquid-Simulation-master/Liquid-Simulation-master/Assets/Shaders" />
+     <Folder Include="Assets/ScriptableObjects" />
      <Folder Include="Assets/SplashMenu" />
      <Folder Include="Assets/1.1 - FREE CASUAL PACK SFX/OTHERS" />
      <Folder Include="Assets/Obi/Plugins/libOni.bundle/Contents/Resources" />
@@ -254,7 +261,6 @@
      <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Masking.shader" />
      <Folder Include="Assets/1.1 - FREE CASUAL PACK SFX/ESPECIAL COLLECT" />
      <Folder Include="Assets/Scripts" />
-     <Folder Include="Assets/Levels/$Data" />
      <Folder Include="Assets/1.1 - FREE CASUAL PACK SFX/POWERUP" />
      <None Include="Assets/1.1 - FREE CASUAL PACK SFX/(README) WELCOME_FREE CASUAL PACK SFX.txt" />
      <Folder Include="Assets/Obi/Plugins/Android" />

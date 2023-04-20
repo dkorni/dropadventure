@@ -48,7 +48,5 @@ public class PlaneController : MonoBehaviour
     {
         _horizontal = dynamicJoystick.Horizontal * -1;
         _vertical = dynamicJoystick.Vertical;
-
-       
     }
 }

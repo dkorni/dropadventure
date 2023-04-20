@@ -43,9 +43,11 @@
   <ItemGroup>
      <Compile Include="Assets/Joystick Pack/Scripts/Editor/VariableJoystickEditor.cs" />
      <Compile Include="Assets/Joystick Pack/Scripts/Editor/DynamicJoystickEditor.cs" />
+     <Compile Include="Assets/Scripts/Editor/SceneManagerEditor.cs" />
      <Compile Include="Assets/Joystick Pack/Scripts/Editor/FloatingJoystickEditor.cs" />
      <Compile Include="Assets/Joystick Pack/Scripts/Editor/JoystickEditor.cs" />
      <Folder Include="Assets/Joystick Pack/Scripts/Editor" />
+     <Folder Include="Assets/Scripts/Editor" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>

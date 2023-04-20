@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Obi;
 using UnityEngine;
 
@@ -9,9 +8,10 @@ public class DropletController : MonoBehaviour
     public event Action OnDied;
     public event Action OnJoin;
     public event Action OnWashedAway;
-    public Action<int> OnMaxHealthUpdate;
-    public Action<int> OnHealthUpdate;
-    public Action OnFlush;
+    public event Action OnFlush;
+
+    public event Action<int> OnMaxHealthUpdate;
+    public event Action<int> OnHealthUpdate;
 
     [SerializeField] protected ObiEmitter _emitter;
     [SerializeField] protected ObiParticleRenderer _renderer;
@@ -26,6 +26,9 @@ public class DropletController : MonoBehaviour
     public int MaxHealth;
     
     private ObiEmitter[] emitters;
+
+    private HashSet<Puddle> JoinedPuddles = new HashSet<Puddle>();
+    private object lockObject = new object();
 
     // Start is called before the first frame update
     void Start()
@@ -76,17 +79,25 @@ public class DropletController : MonoBehaviour
                             OnDied?.Invoke();
                     }
 
-                    if (collider.tag == "Connectable")
+                    else if (collider.tag == "Connectable")
                     {
+                        // lock (gameObject)
+                        // {
+                        //   
+                        // }
                         var puddle = collider.GetComponent<Puddle>();
+                        // if(JoinedPuddles.Contains(puddle))
+                        //     continue;
+
                         var activeCount = puddle.GetComponent<ObiEmitter>().activeParticleCount;
                         UpdateHealth(activeCount);
                         puddle.Join(_emitter, _renderer, _disk.particleSize);
+                        // JoinedPuddles.Add(puddle);
                         _source.PlayOneShot(_source.clip);
                         OnJoin?.Invoke();
                     }
 
-                    if(collider.tag == "FlushTrigger")
+                    else if(collider.tag == "FlushTrigger")
                     {
                         emitter.life[pa.indexInActor] = 0;
                         emitter.OnKillParticle += (e, i) =>
@@ -96,10 +107,8 @@ public class DropletController : MonoBehaviour
                             if (e.activeParticleCount == 1)
                                 e.isRespawnable = false;
                             
-                            if (IsDied)
-                            {
+                            if(IsDied)
                                 OnWashedAway?.Invoke();
-                            }
                         };
                     }
                 }

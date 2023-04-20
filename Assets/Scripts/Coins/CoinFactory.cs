@@ -1,12 +1,13 @@
-﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using ModestTree;
 using UnityEngine;
-using UnityEngine.UIElements;
+using Zenject;
 
-public class CoinBank : MonoBehaviour
+public class CoinFactory : MonoBehaviour
 {
+    [Inject] private CoinBank Bank;
+    
     [SerializeField]
     private GameObject coinPrefab;
 
@@ -14,22 +15,14 @@ public class CoinBank : MonoBehaviour
     private float withdrawDelay = 1.2f;
 
     private Queue<GameObject> coins = new Queue<GameObject>();
-    public int Amount;
-
-    public Action<int> OnBalanceUpdated;
-
+    
     private int increement = 1;
     private int witdrawed;
     private int maxCoins;
     private int devider;
 
     private object lockObject = new object();
-    private void Start()
-    {
-        if (PlayerPrefs.HasKey("balance"))
-            Amount = PlayerPrefs.GetInt("balance");
-    }
-
+    
     public void InitializeCoins(int count)
     {
         maxCoins = UnityEngine.Random.Range(3, 5);
@@ -50,13 +43,7 @@ public class CoinBank : MonoBehaviour
             StartCoroutine(WithdrawCoroutine(position));
         }
     }
-
-    private void UpdateBalance(int amount)
-    {
-        this.Amount += amount;
-        PlayerPrefs.SetInt("balance", this.Amount);
-    }
-
+    
     private IEnumerator WithdrawCoroutine(Vector3 position)
     {
         increement++;
@@ -70,8 +57,7 @@ public class CoinBank : MonoBehaviour
             var coin = coins.Dequeue();
             coin.SetActive(true);
             coin.transform.position = position;
-            UpdateBalance(1);
-            OnBalanceUpdated?.Invoke(Amount);
+            Bank.UpdateBalance(1);
         }
     }
 }

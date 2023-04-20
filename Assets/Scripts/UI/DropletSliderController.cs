@@ -9,15 +9,14 @@ using Zenject;
 public class DropletSliderController : MonoBehaviour
 {
     [SerializeField] private Slider slider;
-    private DropletController dropletController;
-
-    // Start is called before the first frame update
+    
     [Inject]
-    void Inject(DropletController dropletController)
+    private GameContext gameContext;
+    
+    void Start()
     {
-        this.dropletController = dropletController;
-        dropletController.OnMaxHealthUpdate += UpdateMax;
-        dropletController.OnHealthUpdate += UpdateSlider;
+        gameContext.OnMaxHealthUpdate += UpdateMax;
+        gameContext.OnHealthUpdate += UpdateSlider;
     }
     
     void UpdateSlider(int value)
@@ -32,7 +31,7 @@ public class DropletSliderController : MonoBehaviour
 
     private void OnDisable()
     {
-        dropletController.OnMaxHealthUpdate -= UpdateMax;
-        dropletController.OnHealthUpdate -= UpdateSlider;
+        gameContext.OnMaxHealthUpdate -= UpdateMax;
+        gameContext.OnHealthUpdate -= UpdateSlider;
     }
 }
