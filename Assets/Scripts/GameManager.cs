@@ -58,8 +58,8 @@ public class GameManager : MonoBehaviour
         _context.UpdateStatus(GameStates.Preparing);
         _context.UpdateLevel(_levelData);
         _context.UpdateMaxDropCount(maxDrops);
-        _dropletController.OnMaxHealthUpdate += _context.OnMaxHealthUpdate;
-        _dropletController.OnHealthUpdate += _context.OnHealthUpdate;
+        _dropletController.OnMaxHealthUpdate += _context.UpdateMaxHealth;
+        _dropletController.OnHealthUpdate += _context.UpdateHealth;
 
         foreach (var c in composites)
             c.OnFinished += OnCompositeFinished;

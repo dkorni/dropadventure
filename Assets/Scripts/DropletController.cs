@@ -25,6 +25,7 @@ public class DropletController : MonoBehaviour
 
     public int MaxHealth;
     
+    [SerializeField]
     private ObiEmitter[] emitters;
 
     private HashSet<Puddle> JoinedPuddles = new HashSet<Puddle>();
@@ -38,8 +39,7 @@ public class DropletController : MonoBehaviour
         var maxHealth = health;
      
        _emitter.OnKillParticle += (obiEmitter, index) => UpdateHealth(-1); 
-
-       emitters = FindObjectsOfType<ObiEmitter>();
+       
        foreach (var emitter in emitters)
        {
            if(emitter == _emitter)
