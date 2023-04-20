@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aed5c52f7fa544358ffa980af2c4925, type: 3}
   m_Name: Level 4
   m_EditorClassIdentifier: 
-  DropLeftSliderColor: {r: 0.9490196, g: 0.26666668, b: 0.019607844, a: 1}
-  HealthSliderColor: {r: 0.9490196, g: 0.7176471, b: 0.019607844, a: 1}
+  DropLeftSliderColor: {r: 0.12941177, g: 0.54509807, b: 0.909804, a: 1}
+  HealthSliderColor: {r: 0.9490196, g: 0.29411766, b: 0.05882353, a: 1}
