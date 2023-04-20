@@ -23,15 +23,11 @@ public class GameManager : MonoBehaviour
     private int joinedDrops;
     private int processedComposites;
     
-    [Inject] private GameContext _context;
+    [SerializeField] private GameContext _context;
     
     private void Awake()
     {
         Application.targetFrameRate = 60;
-    }
-    
-    private void Start()
-    {
         _dropletController.OnJoin += IncreementDrops;
         _dropletController.OnFlush += OnFlush;
         _dropletController.OnDied += GameOver;
@@ -58,7 +54,11 @@ public class GameManager : MonoBehaviour
         _context.UpdateStatus(GameStates.Preparing);
         _context.UpdateLevel(_levelData);
         _context.UpdateMaxDropCount(maxDrops);
-        _dropletController.OnMaxHealthUpdate += _context.UpdateMaxHealth;
+        _dropletController.OnMaxHealthUpdate += (x) =>
+        {
+            _context.UpdateMaxHealth(x);
+            _coinFactory.InitializeCoins(x);
+        };
         _dropletController.OnHealthUpdate += _context.UpdateHealth;
 
         foreach (var c in composites)
@@ -66,7 +66,6 @@ public class GameManager : MonoBehaviour
 
         _beginPlatform.gameObject.SetActive(true);
         _endPlatform.gameObject.SetActive(true);
-        _coinFactory.InitializeCoins(_dropletController.MaxHealth);
     }
 
     private void OnCompositeFinished()
