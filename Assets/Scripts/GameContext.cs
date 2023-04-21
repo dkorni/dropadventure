@@ -19,6 +19,7 @@ public class GameContext : ScriptableObject
     public Action<int> OnHealthUpdate;
     public Action<int> OnMaxHealthUpdate;
     public Action<int> OnDropCountCollectedUpdate;
+    public Action<int> OnMaxDropCountUpdate;
     public Action<LevelData> OnLevelUpdated;
 
     private DropletController _dropletController;
@@ -35,6 +36,6 @@ public class GameContext : ScriptableObject
     public void UpdateHealth(int value) => OnHealthUpdate?.Invoke(value);
     public void UpdateMaxHealth(int value) => OnMaxHealthUpdate?.Invoke(value);
     public void UpdateDropCount(int value) => OnDropCountCollectedUpdate?.Invoke(value);
-    public void UpdateMaxDropCount(int value) => OnDropCountCollectedUpdate?.Invoke(value);
+    public void UpdateMaxDropCount(int value) => OnMaxDropCountUpdate?.Invoke(value);
     public void UpdateLevel(LevelData level) => OnLevelUpdated?.Invoke(level);
 }

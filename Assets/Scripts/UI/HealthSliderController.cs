@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-public class DropletSliderController : MonoBehaviour
+public class HealthSliderController : MonoBehaviour
 {
     [SerializeField] private Slider slider;
     [SerializeField] private Image fill;
@@ -16,15 +16,14 @@ public class DropletSliderController : MonoBehaviour
     
     void Awake()
     {
-        gameContext.OnMaxDropCountUpdate += UpdateMax;
-        gameContext.OnDropCountCollectedUpdate += UpdateSlider;
+        gameContext.OnMaxHealthUpdate += UpdateMax;
+        gameContext.OnHealthUpdate += UpdateSlider;
         gameContext.OnLevelUpdated += OnLevelUpdated;
     }
 
     private void OnLevelUpdated(LevelData obj)
     {
-        slider.value = 0;
-        fill.color = obj.DropLeftSliderColor;
+        fill.color = obj.HealthSliderColor;
     }
 
     void UpdateSlider(int value)
@@ -39,8 +38,8 @@ public class DropletSliderController : MonoBehaviour
 
     private void OnDisable()
     {
-        gameContext.OnMaxDropCountUpdate -= UpdateMax;
-        gameContext.OnDropCountCollectedUpdate -= UpdateSlider;
+        gameContext.OnMaxHealthUpdate -= UpdateMax;
+        gameContext.OnHealthUpdate -= UpdateSlider;
         gameContext.OnLevelUpdated -= OnLevelUpdated;
     }
 }

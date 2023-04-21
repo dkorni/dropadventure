@@ -39,7 +39,8 @@ public class GameManager : MonoBehaviour
     {
         joinedDrops++;
         _context.UpdateDropCount(joinedDrops);
-        if (joinedDrops == maxDrops) StartFlushStep();
+        if (joinedDrops == maxDrops && _dropletController.health > _levelData.MinHealth) 
+            StartFlushStep();
     }
 
     private void OnFlush()

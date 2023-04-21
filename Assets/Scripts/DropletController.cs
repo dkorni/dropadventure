@@ -21,7 +21,7 @@ public class DropletController : MonoBehaviour
     [SerializeField]
     private ObiSolver _obiSolver;
 
-    private int health;
+    public int health;
 
     public int MaxHealth;
     
@@ -81,18 +81,11 @@ public class DropletController : MonoBehaviour
 
                     else if (collider.tag == "Connectable")
                     {
-                        // lock (gameObject)
-                        // {
-                        //   
-                        // }
                         var puddle = collider.GetComponent<Puddle>();
-                        // if(JoinedPuddles.Contains(puddle))
-                        //     continue;
 
                         var activeCount = puddle.GetComponent<ObiEmitter>().activeParticleCount;
                         UpdateHealth(activeCount);
                         puddle.Join(_emitter, _renderer, _disk.particleSize);
-                        // JoinedPuddles.Add(puddle);
                         _source.PlayOneShot(_source.clip);
                         OnJoin?.Invoke();
                     }

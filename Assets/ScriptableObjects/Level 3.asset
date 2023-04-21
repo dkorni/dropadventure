@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aed5c52f7fa544358ffa980af2c4925, type: 3}
   m_Name: Level 3
   m_EditorClassIdentifier: 
+  Index: 3
   DropLeftSliderColor: {r: 0.909804, g: 0.8980393, b: 0.6862745, a: 1}
   HealthSliderColor: {r: 0.34509805, g: 0.34509805, b: 0.34509805, a: 1}
