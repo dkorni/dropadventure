@@ -19,13 +19,13 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private CoinFactory _coinFactory;
     
-    private int maxDrops;
-    private int joinedDrops;
+    [SerializeField] private int maxDrops;
+    [SerializeField] private int joinedDrops;
     private int processedComposites;
     
     [SerializeField] private GameContext _context;
     
-    private void Awake()
+    private void Start()
     {
         Application.targetFrameRate = 60;
         _dropletController.OnJoin += IncreementDrops;
@@ -53,12 +53,12 @@ public class GameManager : MonoBehaviour
         maxDrops = FindObjectsOfType<Puddle>().Length;
 
         _context.UpdateStatus(GameStates.Preparing);
-        _context.UpdateLevel(_levelData);
         _context.UpdateMaxDropCount(maxDrops);
         _dropletController.OnMaxHealthUpdate += (x) =>
         {
             _context.UpdateMaxHealth(x);
             _coinFactory.InitializeCoins(x);
+            _context.UpdateLevel(_levelData);
         };
         _dropletController.OnHealthUpdate += _context.UpdateHealth;
 
@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
             c.OnFinished += OnCompositeFinished;
 
         _beginPlatform.gameObject.SetActive(true);
-        _endPlatform.gameObject.SetActive(true);
+        _endPlatform.gameObject.SetActive(false);
     }
 
     private void OnCompositeFinished()

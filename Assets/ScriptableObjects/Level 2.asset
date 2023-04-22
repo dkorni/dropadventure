@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Level 2
   m_EditorClassIdentifier: 
   Index: 2
-  DropLeftSliderColor: {r: 0.9490196, g: 0.26666668, b: 0.019607844, a: 1}
-  HealthSliderColor: {r: 0.9490196, g: 0.7176471, b: 0.019607844, a: 1}
+  MinHealth: 154
+  DropLeftSliderColor: {r: 0.69411767, g: 0.48627454, b: 0.13333334, a: 1}
+  HealthSliderColor: {r: 0.098039225, g: 0.5137255, b: 0.5019608, a: 1}

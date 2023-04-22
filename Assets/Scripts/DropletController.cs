@@ -38,7 +38,12 @@ public class DropletController : MonoBehaviour
         var health = _emitter.GetDistributionPointsCount();
         var maxHealth = health;
      
-       _emitter.OnKillParticle += (obiEmitter, index) => UpdateHealth(-1); 
+       _emitter.OnKillParticle += (obiEmitter, index) =>
+       {
+           if (obiEmitter.activeParticleCount == 1)
+               obiEmitter.isRespawnable = false;
+           UpdateHealth(-1);
+       }; 
        
        foreach (var emitter in emitters)
        {
@@ -46,7 +51,12 @@ public class DropletController : MonoBehaviour
                continue;
 
            maxHealth += emitter.GetDistributionPointsCount();
-           emitter.OnKillParticle += (obiEmitter, index) => UpdateHealth(-1);
+           emitter.OnKillParticle += (obiEmitter, index) =>
+           {
+               if (obiEmitter.activeParticleCount == 1)
+                   obiEmitter.isRespawnable = false;
+               UpdateHealth(-1);
+           };
        }
 
         UpdateMaxHealth(maxHealth);
@@ -96,10 +106,7 @@ public class DropletController : MonoBehaviour
                         emitter.OnKillParticle += (e, i) =>
                         {
                             OnFlush?.Invoke();
-                            
-                            if (e.activeParticleCount == 1)
-                                e.isRespawnable = false;
-                            
+
                             if(IsDied)
                                 OnWashedAway?.Invoke();
                         };

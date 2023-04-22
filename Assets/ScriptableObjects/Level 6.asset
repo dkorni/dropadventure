@@ -9,14 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b9c84cdb747944209b1c8753933c5db, type: 3}
-  m_Name: VerySticky
+  m_Script: {fileID: 11500000, guid: 0aed5c52f7fa544358ffa980af2c4925, type: 3}
+  m_Name: Level 6
   m_EditorClassIdentifier: 
-  dynamicFriction: 2
-  staticFriction: 1
-  stickiness: 1
-  stickDistance: 1
-  frictionCombine: 3
-  stickinessCombine: 3
-  rollingContacts: 0
-  rollingFriction: 0
+  Index: 6
+  MinHealth: 160
+  DropLeftSliderColor: {r: 0.12941177, g: 0.54509807, b: 0.909804, a: 1}
+  HealthSliderColor: {r: 0.9490196, g: 0.29411766, b: 0.05882353, a: 1}

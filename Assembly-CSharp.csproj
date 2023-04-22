@@ -70,6 +70,7 @@
      <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/FluidJetController.cs" />
      <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ObiActorTeleport.cs" />
      <Compile Include="Assets/Scripts/CSJ/Classes/Node.cs" />
+     <Compile Include="Assets/Scripts/UI/ProgressController.cs" />
      <Compile Include="Assets/Scripts/CSJ/Classes/VertexUtility.cs" />
      <Compile Include="Assets/Joystick Pack/Examples/JoystickPlayerExample.cs" />
      <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ObjectLimit.cs" />
@@ -112,7 +113,7 @@
      <Compile Include="Assets/Scripts/Coins/CoinFactory.cs" />
      <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/WorldSpaceGravity.cs" />
      <Compile Include="Assets/Scripts/GameContext.cs" />
-     <Compile Include="Assets/Scripts/UI/ProgressController.cs" />
+     <Compile Include="Assets/Scripts/UI/MinHealthSliderController.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/test" />
      <Folder Include="Assets/1.1 - FREE CASUAL PACK SFX/CAMERA CLICKS" />

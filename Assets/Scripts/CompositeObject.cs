@@ -47,20 +47,13 @@ public class CompositeObject : MonoBehaviour
 
     private GameObject Substruct(GameObject lg, GameObject rg)
     {
-        var leftDuplicate = GameObject.Instantiate(lg);
-        var rightDuplicate = GameObject.Instantiate(rg);
-        
         // create new GameObject with location and rotation of left
         var go = new GameObject();
         
         var goNewPos = go.transform.InverseTransformPoint(lg.transform.position);
         var goNewRot = go.transform.InverseTransformVector(lg.transform.eulerAngles);
-        leftDuplicate.transform.position = goNewPos;
-        leftDuplicate.transform.rotation = Quaternion.Euler(goNewRot);
-        rightDuplicate.transform.position = go.transform.InverseTransformPoint(rg.transform.position);
-        rightDuplicate.transform.rotation = Quaternion.Euler(go.transform.InverseTransformVector(rg.transform.eulerAngles));
-        
-        var result = CSG.Subtract(leftDuplicate, rightDuplicate);
+
+        var result = CSG.Subtract(lg, rg);
             
         go.transform.rotation = Quaternion.Euler(goNewRot);
         go.transform.position = goNewPos;
@@ -84,23 +77,6 @@ public class CompositeObject : MonoBehaviour
 
         Destroy(go);
 
-        // cleaning
-        if (!Application.isPlaying)
-        {
-            #if UNITY_EDITOR
-            UnityEditor.EditorApplication.delayCall+=()=>
-            {
-                DestroyImmediate(leftDuplicate);
-                DestroyImmediate(rightDuplicate);
-            };
-            #endif
-        }
-        else
-        {
-            Destroy(leftDuplicate);
-            Destroy(rightDuplicate);
-        }
-        
         rg.SetActive(false);
 
         return go;
