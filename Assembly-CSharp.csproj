@@ -103,6 +103,7 @@
      <Compile Include="Assets/Scripts/WinController.cs" />
      <Compile Include="Assets/Scripts/Bucket.cs" />
      <Compile Include="Assets/Joystick Pack/Scripts/Joysticks/FloatingJoystick.cs" />
+     <Compile Include="Assets/Scripts/Piece.cs" />
      <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/FluidColorizer.cs" />
      <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/MazeScoreFormatter.cs" />
      <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/WaveGenerator.cs" />
@@ -117,7 +118,6 @@
      <Compile Include="Assets/Scripts/Coins/CoinFactory.cs" />
      <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/WorldSpaceGravity.cs" />
      <Compile Include="Assets/Scripts/GameContext.cs" />
-     <Compile Include="Assets/Scripts/Piece.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/test" />
      <Folder Include="Assets/1.1 - FREE CASUAL PACK SFX/CAMERA CLICKS" />
