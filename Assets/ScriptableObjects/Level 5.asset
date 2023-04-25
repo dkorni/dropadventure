@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Index: 5
   MinHealth: 250
-  DropLeftSliderColor: {r: 0.9490196, g: 0.26666668, b: 0.019607844, a: 1}
-  HealthSliderColor: {r: 0.9490196, g: 0.7176471, b: 0.019607844, a: 1}
+  DropLeftSliderColor: {r: 0.69411767, g: 0.08627451, b: 0.5921569, a: 1}
+  HealthSliderColor: {r: 0.023529414, g: 0.43529415, b: 0.7803922, a: 1}

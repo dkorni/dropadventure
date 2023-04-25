@@ -68,6 +68,7 @@
      <Compile Include="Assets/Scripts/CSJ/Classes/Vertex.cs" />
      <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/SolidifyOnContact.cs" />
      <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/FluidJetController.cs" />
+     <Compile Include="Assets/Scripts/UI/MinHealthSliderController.cs" />
      <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ObiActorTeleport.cs" />
      <Compile Include="Assets/Scripts/CSJ/Classes/Node.cs" />
      <Compile Include="Assets/Scripts/UI/ProgressController.cs" />
@@ -86,9 +87,11 @@
      <Compile Include="Assets/Scripts/UI/DropletSliderController.cs" />
      <Compile Include="Assets/Joystick Pack/Scripts/Base/Joystick.cs" />
      <Compile Include="Assets/Scripts/Coins/CoinBank.cs" />
+     <Compile Include="Assets/Scripts/Impulse.cs" />
      <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ActorSpawner.cs" />
      <Compile Include="Assets/Scripts/LevelData.cs" />
      <Compile Include="Assets/Scripts/CSJ/CSG.cs" />
+     <Compile Include="Assets/Scripts/Blade.cs" />
      <Compile Include="Assets/Scripts/UI/HealthSliderController.cs" />
      <Compile Include="Assets/Joystick Pack/Examples/JoystickSetterExample.cs" />
      <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ColorRandomizer.cs" />
@@ -98,6 +101,7 @@
      <Compile Include="Assets/PlaneController.cs" />
      <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/Blinker.cs" />
      <Compile Include="Assets/Scripts/WinController.cs" />
+     <Compile Include="Assets/Scripts/Bucket.cs" />
      <Compile Include="Assets/Joystick Pack/Scripts/Joysticks/FloatingJoystick.cs" />
      <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/FluidColorizer.cs" />
      <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/MazeScoreFormatter.cs" />
@@ -113,7 +117,7 @@
      <Compile Include="Assets/Scripts/Coins/CoinFactory.cs" />
      <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/WorldSpaceGravity.cs" />
      <Compile Include="Assets/Scripts/GameContext.cs" />
-     <Compile Include="Assets/Scripts/UI/MinHealthSliderController.cs" />
+     <Compile Include="Assets/Scripts/Piece.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/test" />
      <Folder Include="Assets/1.1 - FREE CASUAL PACK SFX/CAMERA CLICKS" />
@@ -188,6 +192,7 @@
      <Folder Include="Assets/1.1 - FREE CASUAL PACK SFX/COIN" />
      <None Include="Assets/Obi/Resources/ObiMaterials/SimpleParticleShader.shader" />
      <Folder Include="Assets/3DPart/EpicVictoryEffects/Prefabs" />
+     <Folder Include="Assets/Low Poly Fire" />
      <Folder Include="Assets/Obi/Samples/Common/SampleResources/Materials" />
      <Folder Include="Assets/Obi/Samples/Fluid/SampleResources/Materials" />
      <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface.shader" />
@@ -196,6 +201,7 @@
      <Folder Include="Assets/Obi/Plugins/libOni.bundle" />
      <None Include="Assets/Obi/Resources/ObiMaterials/URP/ParticleShaderURP.shader" />
      <Folder Include="Assets/Prefabs" />
+     <Folder Include="Assets/Low Poly Fire/Materials" />
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
      <Folder Include="Assets/Scripts/Coins" />
      <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
@@ -209,6 +215,7 @@
      <Folder Include="Assets/1.1 - FREE CASUAL PACK SFX/WEAPONS/KNIFE" />
      <Folder Include="Assets/Graphy - Ultimate Stats Monitor/Materials" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
+     <Folder Include="Assets/Obi/Samples/Fluid/SampleResources/Models/Materials" />
      <Folder Include="Assets/Materials" />
      <None Include="Assets/TextMesh Pro/Resources/Shaders/TMPro_Properties.cginc" />
      <Folder Include="Assets/1.1 - FREE CASUAL PACK SFX/CARDS" />
@@ -220,6 +227,7 @@
      <Folder Include="Assets/Obi/Plugins/libOni.bundle/Contents/Resources" />
      <Folder Include="Assets/TextMesh Pro/Resources/Shaders" />
      <None Include="Assets/TextMesh Pro/Resources/Shaders/TMPro_Surface.cginc" />
+     <Folder Include="Assets/Low Poly Fire/Models" />
      <None Include="Assets/Obi/CHANGELOG_fluid.txt" />
      <Folder Include="Assets/1.1 - FREE CASUAL PACK SFX/FIREWORKS" />
      <Folder Include="Assets/3DPart/Liquid-Simulation-master" />
@@ -233,8 +241,10 @@
      <Folder Include="Assets/3DPart/EpicVictoryEffects" />
      <Folder Include="Assets/3DPart/EpicVictoryEffects/Textures" />
      <Folder Include="Assets/TextMesh Pro/Fonts" />
+     <Folder Include="Assets/Low Poly Fire/Scenes/Demo_Profiles" />
      <None Include="Assets/3DPart/GradientSky/Shaders/VertexColorObject.shader" />
      <Folder Include="Assets/Obi" />
+     <Folder Include="Assets/Low Poly Fire/Scenes" />
      <Folder Include="Assets/1.1 - FREE CASUAL PACK SFX/SPECIAL POPS" />
      <Folder Include="Assets/Obi/Samples/Fluid/SampleResources/Models" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
@@ -255,6 +265,7 @@
      <Folder Include="Assets/Obi/Samples/Common/SampleResources" />
      <None Include="Assets/Graphy - Ultimate Stats Monitor/Font/Roboto/LICENSE.txt" />
      <Folder Include="Assets/3DPart/GradientSky/Scripts" />
+     <Folder Include="Assets/Low Poly Fire/Prefabs" />
      <None Include="Assets/3DPart/Liquid-Simulation-master/Liquid-Simulation-master/Assets/Shaders/UnlitTransparent.shader" />
      <Folder Include="Assets/Joystick Pack/Sprites/All Axis Backgrounds" />
      <None Include="Assets/Obi/Resources/ObiMaterials/FluidColorsBlend.shader" />

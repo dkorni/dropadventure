@@ -40,6 +40,7 @@ namespace Obi
         SerializedProperty randomVelocity;
         SerializedProperty useShapeColor;
         SerializedProperty isRespawnable;
+        SerializedProperty IterationCount;
 
 		[MenuItem("GameObject/3D Object/Obi/Obi Emitter",false,200)]
         static void CreateObiCloth(MenuCommand menuCommand)
@@ -72,6 +73,7 @@ namespace Obi
             randomVelocity = serializedObject.FindProperty("randomVelocity");
             useShapeColor = serializedObject.FindProperty("useShapeColor");
             isRespawnable = serializedObject.FindProperty("isRespawnable");
+            IterationCount = serializedObject.FindProperty("InterationCount");
 		}
 
 		public override void OnInspectorGUI() 
@@ -115,6 +117,7 @@ namespace Obi
             EditorGUILayout.PropertyField(randomVelocity, new GUIContent("Random velocity"));
             EditorGUILayout.PropertyField(useShapeColor, new GUIContent("Use shape color"));
             EditorGUILayout.PropertyField(isRespawnable, new GUIContent("Is Respawnable"));
+            EditorGUILayout.PropertyField(IterationCount, new GUIContent("IterationCount"));
 			
 			// Apply changes to the serializedProperty
 			if (GUI.changed){
