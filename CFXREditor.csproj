@@ -56,10 +56,10 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Editor\CFXR_ExpressionParser.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Editor\CFXR_BuildShaderPreprocessor.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Editor\CFXR_Styles.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Editor\CFXR_MaterialInspector.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Editor\CFXR_ExpressionParser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Editor\CFXR Editor.asmdef" />
@@ -761,11 +761,11 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.TestRunner">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

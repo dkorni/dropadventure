@@ -2,35 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 public class Blade : MonoBehaviour
 {
     private bool isCutting;
-    public Camera Camera;
     public float MaxDistance = 1000;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.touchCount == 0)
-            return;
-        
-        var touch = Input.GetTouch(0);
-        if (touch.phase == TouchPhase.Began)
-        {
-            // Debug.Log("Touch began");
-            StartCutting();
-        }
-        else if (touch.phase == TouchPhase.Ended)
-        {
-            // Debug.Log("Touch ended");
-            StopCutting();
-        }
+    [Inject] GameContext gameContext;
+    private AudioSource audioSource;
 
-        if (isCutting)
-        {
-            UpdateCutting(touch.position);
-        }
+    private void Start()
+    {
+        gameContext.OnStartCut += StartCutting;
+        gameContext.OnStopCut += StopCutting;
+        gameContext.OnUpdateCut += UpdateCutting;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void StartCutting()
@@ -45,7 +32,7 @@ public class Blade : MonoBehaviour
 
     private void UpdateCutting(Vector3 position)
     {
-        var ray = Camera.ScreenPointToRay(position);
+        var ray = Camera.main.ScreenPointToRay(position);
         if (Physics.Raycast(ray, out var hit, MaxDistance))
         {
             if (hit.transform.CompareTag("Chain"))
@@ -53,9 +40,17 @@ public class Blade : MonoBehaviour
                 var joint = hit.transform.GetComponent<HingeJoint>();
                 if (joint != null)
                 {
-                    Destroy(joint);   
+                    Destroy(joint);
+                    audioSource.Play();
                 }
             }
         }
+    }
+
+    public void OnDisable()
+    {
+        gameContext.OnStartCut -= StartCutting;
+        gameContext.OnStopCut -= StopCutting;
+        gameContext.OnUpdateCut -= UpdateCutting;
     }
 }

@@ -21,12 +21,15 @@ public class GameContext : ScriptableObject
     public Action<int> OnDropCountCollectedUpdate;
     public Action<int> OnMaxDropCountUpdate;
     public Action<LevelData> OnLevelUpdated;
+    public Action OnStartCut;
+    public Action OnStopCut;
+    public Action<Vector3> OnUpdateCut;
 
     private DropletController _dropletController;
-    
+
     public void UpdateStatus(GameStates newState)
     {
-        if(CurrentState == newState)
+        if (CurrentState == newState)
             return;
 
         CurrentState = newState;
@@ -38,4 +41,8 @@ public class GameContext : ScriptableObject
     public void UpdateDropCount(int value) => OnDropCountCollectedUpdate?.Invoke(value);
     public void UpdateMaxDropCount(int value) => OnMaxDropCountUpdate?.Invoke(value);
     public void UpdateLevel(LevelData level) => OnLevelUpdated?.Invoke(level);
+
+    public void StartCut() => OnStartCut?.Invoke();
+    public void StopCut() => OnStopCut?.Invoke();
+    public void UpdateCut(Vector3 position) => OnUpdateCut?.Invoke(position);
 }

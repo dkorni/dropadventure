@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Assets.Scripts.Extensions;
 using Obi;
 using UnityEngine;
 
@@ -35,7 +36,7 @@ public class DropletController : MonoBehaviour
     void Start()
     {
        _obiSolver.OnCollision += ObiSolverOnOnCollision;
-        var health = _emitter.GetDistributionPointsCount();
+        var health = _emitter.GetMaxPoints();
         var maxHealth = health;
      
        _emitter.OnKillParticle += (obiEmitter, index) =>
@@ -50,7 +51,7 @@ public class DropletController : MonoBehaviour
            if(emitter == _emitter)
                continue;
 
-           maxHealth += emitter.GetDistributionPointsCount();
+           maxHealth += emitter.GetMaxPoints();
            emitter.OnKillParticle += (obiEmitter, index) =>
            {
                if (obiEmitter.activeParticleCount == 1)

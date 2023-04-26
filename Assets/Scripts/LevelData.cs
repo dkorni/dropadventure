@@ -10,4 +10,5 @@ public class LevelData : ScriptableObject
     public int MinHealth;
     public Color DropLeftSliderColor;
     public Color HealthSliderColor;
+    public bool IsCutNeeded;
 }

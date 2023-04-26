@@ -24,9 +24,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private int joinedDrops;
     private int processedComposites;
-    
+
     [SerializeField] private GameContext _context;
-    
+
     private void Start()
     {
         Application.targetFrameRate = 60;
@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
     {
         joinedDrops++;
         _context.UpdateDropCount(joinedDrops);
-        if (joinedDrops == maxDrops && _dropletController.health > _levelData.MinHealth) 
+        if (joinedDrops == maxDrops && _dropletController.health > _levelData.MinHealth)
             StartFlushStep();
     }
 
