@@ -5,12 +5,9 @@ using UnityEngine;
 
 public class Piece : MonoBehaviour
 {
-    private ParticleSystem _particleSystem;
+    [SerializeField] private Vector3 _offset;
 
-    private void Start()
-    {
-        _particleSystem = GetComponentInChildren<ParticleSystem>();
-    }
+    [SerializeField] private ParticleSystem _particleSystem;
     
     public void OnCollisionEnter(Collision collision)
     {
@@ -18,10 +15,12 @@ public class Piece : MonoBehaviour
         {
             if (_particleSystem != null)
             {
-                _particleSystem.Stop();
+                _particleSystem.gameObject.SetActive(true);
                 _particleSystem.transform.parent = null;
+                _particleSystem.transform.position = collision.contacts[0].point + _offset;
             }
            
+            //Destroy(gameObject);
             gameObject.SetActive(false);
         }
     }

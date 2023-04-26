@@ -11,6 +11,6 @@ public class Impulse : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Rb.AddForce(Vector3.forward * Velocity, ForceMode.Impulse);
+        Rb.AddForce(transform.forward * Velocity, ForceMode.Impulse);
     }
 }

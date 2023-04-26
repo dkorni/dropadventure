@@ -14,12 +14,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Transform sink;
 
     [SerializeField] private LevelData _levelData;
-    
     [SerializeField] private DropletController _dropletController;
 
     [SerializeField] private CoinFactory _coinFactory;
-    
+
+    [SerializeField] private Puddle[] puddles;
+
     [SerializeField] private int maxDrops;
+
     [SerializeField] private int joinedDrops;
     private int processedComposites;
     
@@ -50,8 +52,7 @@ public class GameManager : MonoBehaviour
 
     private void PrepareScene()
     {
-        maxDrops = FindObjectsOfType<Puddle>().Length;
-
+        maxDrops = puddles.Length;
         _context.UpdateStatus(GameStates.Preparing);
         _context.UpdateMaxDropCount(maxDrops);
         _dropletController.OnMaxHealthUpdate += (x) =>
