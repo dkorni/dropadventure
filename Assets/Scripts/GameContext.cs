@@ -24,6 +24,7 @@ public class GameContext : ScriptableObject
     public Action OnStartCut;
     public Action OnStopCut;
     public Action<Vector3> OnUpdateCut;
+    public Action OnReload;
 
     private DropletController _dropletController;
 
@@ -45,4 +46,9 @@ public class GameContext : ScriptableObject
     public void StartCut() => OnStartCut?.Invoke();
     public void StopCut() => OnStopCut?.Invoke();
     public void UpdateCut(Vector3 position) => OnUpdateCut?.Invoke(position);
+
+    public void Reload()
+    {
+        OnReload?.Invoke();
+    }
 }

@@ -1032,12 +1032,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8637292925985830193}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -98, y: -102}
-  m_SizeDelta: {x: 160.35205, y: 160}
+  m_AnchoredPosition: {x: -99, y: -85.627}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2441491918224006537
 CanvasRenderer:
@@ -1121,9 +1121,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Restart
+      - m_Target: {fileID: 11400000, guid: 281aac73853804ff1930cc6c57b56eb7, type: 2}
+        m_TargetAssemblyTypeName: GameContext, Assembly-CSharp
+        m_MethodName: Reload
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1753,7 +1753,7 @@ RectTransform:
   - {fileID: 2441491918511871384}
   - {fileID: 2441491918972919985}
   m_Father: {fileID: 8637292925985830193}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1831,6 +1831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameContext: {fileID: 11400000, guid: 281aac73853804ff1930cc6c57b56eb7, type: 2}
+  animator: {fileID: 2441491918897922254}
 --- !u!82 &2441491918897922250
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2125,7 +2126,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2441491918897922251}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: GameOverPanel, Assembly-CSharp
         m_MethodName: Retry
         m_Mode: 1
         m_Arguments:
@@ -2247,8 +2248,8 @@ RectTransform:
   - {fileID: 2441491917826919946}
   - {fileID: 2441491918591663218}
   - {fileID: 2441491918373361024}
-  - {fileID: 2441491918897922255}
   - {fileID: 2441491918224006540}
+  - {fileID: 2441491918897922255}
   - {fileID: 4397337808516572466}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2275,7 +2276,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -2455,6 +2456,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cut
+      objectReference: {fileID: 0}
+    - target: {fileID: 2082792260664726848, guid: acd6ac6905b879d44ba3d80f01b4da24,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2082792260664726849, guid: acd6ac6905b879d44ba3d80f01b4da24,
         type: 3}

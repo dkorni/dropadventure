@@ -18,7 +18,7 @@ public class CutUIController : MonoBehaviour, IDragHandler, IBeginDragHandler, I
 
     private void OnDisable()
     {
-        gameContext.OnLevelUpdated -= OnLevelUpdated;
+       // gameContext.OnLevelUpdated -= OnLevelUpdated;
     }
 
     private void Start()

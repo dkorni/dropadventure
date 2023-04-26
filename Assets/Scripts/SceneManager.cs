@@ -27,6 +27,8 @@ public class SceneManager : MonoBehaviour
         
         LoadLevel(_currentLevel);
         _context.OnStateChanged += OnStateChanged;
+        _context.OnReload += OnReload;
+
     }
 
     private void OnStateChanged(GameStates state)
@@ -60,5 +62,16 @@ public class SceneManager : MonoBehaviour
         PlayerPrefs.SetInt("level", _currentLevel);
         yield return new WaitForSeconds(_timeoutBeforeNextLevel);
         LoadLevel(_currentLevel);
+    }
+
+    private void OnReload()
+    {
+        LoadLevel(_currentLevel);
+    }
+
+    private void OnDisable()
+    {
+        _context.OnStateChanged -= OnStateChanged;
+        _context.OnReload -= OnReload;
     }
 }
