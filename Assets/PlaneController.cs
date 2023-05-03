@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class PlaneController : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class PlaneController : MonoBehaviour
     private float angleVelocity;
 
     [SerializeField] private Rigidbody _rigidbody;
-    [SerializeField] private DynamicJoystick dynamicJoystick;
+    [Inject] private DynamicJoystick dynamicJoystick;
 
     private float _horizontal;
     private float _vertical;
@@ -48,7 +49,5 @@ public class PlaneController : MonoBehaviour
     {
         _horizontal = dynamicJoystick.Horizontal * -1;
         _vertical = dynamicJoystick.Vertical;
-
-       
     }
 }

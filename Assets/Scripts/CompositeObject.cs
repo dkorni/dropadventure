@@ -47,20 +47,13 @@ public class CompositeObject : MonoBehaviour
 
     private GameObject Substruct(GameObject lg, GameObject rg)
     {
-        var leftDuplicate = GameObject.Instantiate(lg);
-        var rightDuplicate = GameObject.Instantiate(rg);
-        
         // create new GameObject with location and rotation of left
         var go = new GameObject();
         
         var goNewPos = go.transform.InverseTransformPoint(lg.transform.position);
         var goNewRot = go.transform.InverseTransformVector(lg.transform.eulerAngles);
-        leftDuplicate.transform.position = goNewPos;
-        leftDuplicate.transform.rotation = Quaternion.Euler(goNewRot);
-        rightDuplicate.transform.position = go.transform.InverseTransformPoint(rg.transform.position);
-        rightDuplicate.transform.rotation = Quaternion.Euler(go.transform.InverseTransformVector(rg.transform.eulerAngles));
-        
-        var result = CSG.Subtract(leftDuplicate, rightDuplicate);
+
+        var result = CSG.Subtract(lg, rg);
             
         go.transform.rotation = Quaternion.Euler(goNewRot);
         go.transform.position = goNewPos;
@@ -84,23 +77,6 @@ public class CompositeObject : MonoBehaviour
 
         Destroy(go);
 
-        // cleaning
-        if (!Application.isPlaying)
-        {
-            #if UNITY_EDITOR
-            UnityEditor.EditorApplication.delayCall+=()=>
-            {
-                DestroyImmediate(leftDuplicate);
-                DestroyImmediate(rightDuplicate);
-            };
-            #endif
-        }
-        else
-        {
-            Destroy(leftDuplicate);
-            Destroy(rightDuplicate);
-        }
-        
         rg.SetActive(false);
 
         return go;
@@ -112,79 +88,12 @@ public class CompositeObject : MonoBehaviour
     /// <param name="lg"></param>
     /// <param name="rg"></param>
     /// <returns></returns>
-       private GameObject Substruct(GameObject lg, GameObject[] rg)
+    private void Substruct(GameObject lg, GameObject[] rg)
     {
-        var leftDuplicate = GameObject.Instantiate(lg);
-        GameObject[] rightDuplicates = rg.Select(x => Instantiate(x)).ToArray();
-
-        // create new GameObject with location and rotation of left
-        var go = new GameObject();
-        
-        var goNewPos = go.transform.InverseTransformPoint(lg.transform.position);
-        var goNewRot = go.transform.InverseTransformVector(lg.transform.eulerAngles);
-        leftDuplicate.transform.position = goNewPos;
-        leftDuplicate.transform.rotation = Quaternion.Euler(goNewRot);
-
-        for (int i = 0; i < rg.Length; i++)
+        foreach(var r in rg)
         {
-            rightDuplicates[i].transform.position = go.transform.InverseTransformPoint(rg[i].transform.position);
-            rightDuplicates[i].transform.rotation = Quaternion.Euler(go.transform.InverseTransformVector(rg[i].transform.eulerAngles));
+            Substruct(lg, r);
         }
-
-        var result = CSG.Subtract(leftDuplicate, rightDuplicates);
-            
-        go.transform.rotation = Quaternion.Euler(goNewRot);
-        go.transform.position = goNewPos;
-        
-        // translate vertices, normals, tangents relatively to the new GameObject
-        var mesh = new Mesh();
-        mesh.vertices = TransformVertices(result.mesh.vertices, go.transform);
-        mesh.triangles = result.mesh.triangles;
-        mesh.normals = TransformVectors(result.mesh.normals, go.transform);
-        mesh.colors = result.mesh.colors;
-        mesh.uv = result.mesh.uv;
-        mesh.subMeshCount = result.mesh.subMeshCount;
-        mesh.tangents = TransformDirections(result.mesh.tangents,go.transform);
-
-        
-        go.AddComponent<MeshFilter>().sharedMesh = mesh;
-        go.AddComponent<MeshRenderer>().sharedMaterials = result.materials.ToArray();
-        
-        go.transform.parent = transform;
-        go.tag = "composite";
-
-        // cleaning
-        if (!Application.isPlaying)
-        {
-#if UNITY_EDITOR
-            UnityEditor.EditorApplication.delayCall+=()=>
-            {
-                DestroyImmediate(leftDuplicate);
-                for (int i = 0; i < rg.Length; i++)
-                {
-                    DestroyImmediate(rightDuplicates[i]);
-                }
-              
-            };
-#endif
-        }
-        else
-        {
-            Destroy(leftDuplicate);
-            for (int i = 0; i < rg.Length; i++)
-            {
-                DestroyImmediate(rightDuplicates[i]);
-            }
-        }
-        
-     
-        lg.SetActive(false);
-        for (int i = 0; i < rg.Length; i++)
-        {
-           rightDuplicates[i].SetActive(false);
-        }
-
-        return go;
     }
     
     private Vector3[] TransformVertices(Vector3[] vertices, Transform target)

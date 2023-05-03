@@ -43,9 +43,11 @@
   <ItemGroup>
      <Compile Include="Assets/Joystick Pack/Scripts/Editor/VariableJoystickEditor.cs" />
      <Compile Include="Assets/Joystick Pack/Scripts/Editor/DynamicJoystickEditor.cs" />
+     <Compile Include="Assets/Scripts/Editor/SceneManagerEditor.cs" />
      <Compile Include="Assets/Joystick Pack/Scripts/Editor/FloatingJoystickEditor.cs" />
      <Compile Include="Assets/Joystick Pack/Scripts/Editor/JoystickEditor.cs" />
      <Folder Include="Assets/Joystick Pack/Scripts/Editor" />
+     <Folder Include="Assets/Scripts/Editor" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
@@ -884,6 +886,30 @@
     <ProjectReference Include="Tayx.Graphy.csproj">
       <Project>{3eff6969-d337-0ed6-53d3-038b5c474286}</Project>
       <Name>Tayx.Graphy</Name>
+    </ProjectReference>
+    <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
+      <Project>{0b67bdc4-44b2-7b87-c9ba-618feac0a011}</Project>
+      <Name>ToonyColorsPro.Demo.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXREditor.csproj">
+      <Project>{c4e43276-f031-e8c5-8921-0f37b26aa791}</Project>
+      <Name>CFXREditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXR.WelcomeScreen.csproj">
+      <Project>{e7c3b825-6457-aa8f-0eca-8582f1b4ba4f}</Project>
+      <Name>CFXR.WelcomeScreen</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRRuntime.csproj">
+      <Project>{a30c150e-8fb0-a797-9bd1-2d9d96b10060}</Project>
+      <Name>CFXRRuntime</Name>
+    </ProjectReference>
+    <ProjectReference Include="KinoBloom.Runtime.csproj">
+      <Project>{cb073f58-f46e-b8bb-36e1-11313c753b16}</Project>
+      <Name>KinoBloom.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRDemo.csproj">
+      <Project>{8dae745c-24f4-e7ea-36d1-5b6406cf9e77}</Project>
+      <Name>CFXRDemo</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -3,16 +3,16 @@ using Zenject;
 
 public class WinController : MonoBehaviour
 {
-    [Inject] private Game _game;
+    [SerializeField] private GameContext _context;
 
     // Start is called before the first frame update
     void Start()
     {
-        _game.OnStateChanged += OnStateChanged;
+        _context.OnStateChanged += OnStateChanged;
         gameObject.SetActive(false);
     }
 
-    private void OnStateChanged(object sender, GameStates e)
+    private void OnStateChanged(GameStates e)
     {
         if (e == GameStates.Win)
             gameObject.SetActive(true);
@@ -20,6 +20,6 @@ public class WinController : MonoBehaviour
 
     public void Next()
     {
-        _game.NextLevel();
+        //_game.NextLevel();
     }
 }

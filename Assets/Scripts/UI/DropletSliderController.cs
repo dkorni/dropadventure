@@ -9,17 +9,24 @@ using Zenject;
 public class DropletSliderController : MonoBehaviour
 {
     [SerializeField] private Slider slider;
-    private DropletController dropletController;
-
-    // Start is called before the first frame update
-    [Inject]
-    void Inject(DropletController dropletController)
-    {
-        this.dropletController = dropletController;
-        dropletController.OnMaxHealthUpdate += UpdateMax;
-        dropletController.OnHealthUpdate += UpdateSlider;
-    }
+    [SerializeField] private Image fill;
     
+    [Inject]
+    private GameContext gameContext;
+    
+    void Awake()
+    {
+        gameContext.OnMaxDropCountUpdate += UpdateMax;
+        gameContext.OnDropCountCollectedUpdate += UpdateSlider;
+        gameContext.OnLevelUpdated += OnLevelUpdated;
+    }
+
+    private void OnLevelUpdated(LevelData obj)
+    {
+        slider.value = 0;
+        fill.color = obj.DropLeftSliderColor;
+    }
+
     void UpdateSlider(int value)
     {
         slider.value = value;
@@ -32,7 +39,8 @@ public class DropletSliderController : MonoBehaviour
 
     private void OnDisable()
     {
-        dropletController.OnMaxHealthUpdate -= UpdateMax;
-        dropletController.OnHealthUpdate -= UpdateSlider;
+        gameContext.OnMaxDropCountUpdate -= UpdateMax;
+        gameContext.OnDropCountCollectedUpdate -= UpdateSlider;
+        gameContext.OnLevelUpdated -= OnLevelUpdated;
     }
 }

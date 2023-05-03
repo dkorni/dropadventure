@@ -56,6 +56,10 @@ namespace Obi
         [Range(0, 1)]
         public float minPoolSize = 0.5f;
 
+        [Range(1, 10)] public int InterationCount;
+
+        private int count;
+
         /// <summary>  
         /// Speed (in meters/second) at which fluid is emitter.
         /// </summary>
@@ -483,15 +487,19 @@ namespace Obi
                     // Emit new particles:
                     unemittedBursts += burstCount;
                     int burst = 0;
-                    while (unemittedBursts > 0)
+                    while (unemittedBursts > 0 && count < InterationCount)
                     {
                         for (int i = 0; i < emissionPoints; ++i)
                         {
                             EmitParticle(burst / burstCount, stepTime);
                         }
+
                         unemittedBursts -= 1;
                         burst++;
+                        count++;
                     }
+
+                   
                 }
                 else
                 { // burst emission:
