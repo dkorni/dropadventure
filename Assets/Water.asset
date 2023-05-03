@@ -25057,7 +25057,7 @@ MonoBehaviour:
   resolution: 0.2
   restDensity: 0.001
   smoothing: 2.5
-  viscosity: 4
+  viscosity: 0.5
   surfaceTension: 1
   buoyancy: -1
   atmosphericDrag: 0
