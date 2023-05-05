@@ -25054,9 +25054,9 @@ MonoBehaviour:
     batches: []
   groups: []
   capacity: 0
-  resolution: 0.2
+  resolution: 0.05
   restDensity: 0.001
-  smoothing: 2.5
+  smoothing: 1.5
   viscosity: 0.5
   surfaceTension: 1
   buoyancy: -1
