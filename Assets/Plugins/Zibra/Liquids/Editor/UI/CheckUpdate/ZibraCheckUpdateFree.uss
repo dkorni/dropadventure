@@ -1,0 +1,11 @@
+.free-only {
+    display: flex;
+}
+
+.paid-only {
+    display: none;
+}
+
+.pro-only {
+    display: none;
+}

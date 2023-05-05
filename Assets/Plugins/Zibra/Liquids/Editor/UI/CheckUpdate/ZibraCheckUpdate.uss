@@ -1,0 +1,81 @@
+.root {
+    background-color: rgb(0, 0, 0);
+}
+
+.Main {
+    height: 42px;
+    padding-left: 12px;
+}
+
+.ContentCenter {
+    height: 42px;
+    padding-left: 12px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.ButtonRadius {
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.hyperlink {
+    background-color: initial;
+    border-width: 0;
+    margin: 0;
+    width: auto;
+    flex-shrink: 0;
+    flex-direction: row;
+    margin-top: 2px;
+}
+
+.hyperlink:hover Label {
+    -unity-background-image-tint-color: cornflowerblue;
+    border-color: cornflowerblue;
+    color: cornflowerblue;
+    cursor: link;
+}
+
+.hyperlink:hover VisualElement {
+    -unity-background-image-tint-color: cornflowerblue;
+    border-color: cornflowerblue;
+    color: cornflowerblue;
+    cursor: link;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    margin-right: 3px;
+}
+
+.icon-hyperlink {
+    background-image: url('project://database/Assets/Plugins/Zibra/Liquids/Editor/UI/WelcomeWindow/Icons/website.png?fileID=2800000&guid=49a914e428282d5499df5b3d67c9e6c1&type=3#website');
+}
+
+.image {
+    width: 480px;
+    height: 160px;
+    flex-shrink: 0;
+}
+
+.image-paid {
+    background-image: url('project://database/Assets/Plugins/Zibra/Liquids/Editor/UI/CheckUpdate/Icons/Paid.png?fileID=2800000&guid=33d5a13ab5db9ca48a092b579ebd07fa&type=3#Paid');
+}
+
+.image-pro {
+    background-image: url('project://database/Assets/Plugins/Zibra/Liquids/Editor/UI/CheckUpdate/Icons/Pro.png?fileID=2800000&guid=97f7da7acb9528a45b3b223e9c2ca78e&type=3#Pro');
+}
+
+.image-free {
+    background-image: url('project://database/Assets/Plugins/Zibra/Liquids/Editor/UI/CheckUpdate/Icons/Free.png?fileID=2800000&guid=d5aa07620ef167f4884db8e666190012&type=3#Free');
+}
