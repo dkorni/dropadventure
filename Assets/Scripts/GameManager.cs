@@ -27,9 +27,14 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameContext _context;
 
+    private void Awake()
+    {
+        Application.targetFrameRate = 30;
+    }
+
     private void Start()
     {
-        Application.targetFrameRate = 60;
+       
         _dropletController.OnJoin += IncreementDrops;
         _dropletController.OnFlush += OnFlush;
         _dropletController.OnDied += GameOver;

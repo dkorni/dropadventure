@@ -25056,7 +25056,7 @@ MonoBehaviour:
   capacity: 0
   resolution: 0.05
   restDensity: 0.001
-  smoothing: 1.5
+  smoothing: 4
   viscosity: 0.6
   surfaceTension: 3
   buoyancy: -1

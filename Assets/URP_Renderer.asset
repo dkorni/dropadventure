@@ -73,11 +73,11 @@ MonoBehaviour:
   m_Active: 1
   settings:
     blendSource: 2
-    blendDestination: 10
-    particleBlendSource: 2
-    particleBlendDestination: 4
+    blendDestination: 0
+    particleBlendSource: 3
+    particleBlendDestination: 3
     particleZWrite: 0
-    thicknessCutoff: 1.2
+    thicknessCutoff: 0.33
     thicknessDownsample: 4
     generateSurface: 0
     blurRadius: 0.02

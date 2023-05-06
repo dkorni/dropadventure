@@ -13,7 +13,12 @@ public class Bucket : MonoBehaviour
     public float ExplosionRadius = 2.0f;
     public GameObject Puddle;
     public HingeJoint HingeJoint;
-    
+
+    public void Awake()
+    {
+        Puddle.SetActive(false);
+    }
+
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.CompareTag("Platform") || collision.transform.CompareTag("GameOverTrigger"))
