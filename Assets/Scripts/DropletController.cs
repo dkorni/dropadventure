@@ -1,8 +1,14 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Assets.Scripts.Extensions;
 using Obi;
+using Unity.Burst;
+using Unity.Collections;
+using Unity.Jobs;
+using Unity.Mathematics;
 using UnityEngine;
+using Zenject;
 
 public class DropletController : MonoBehaviour
 {
@@ -25,17 +31,25 @@ public class DropletController : MonoBehaviour
     public int health;
 
     public int MaxHealth;
+
+    public float Speed;
+
+    public float DelayTimeToStart;
+
+    private bool isStarted;
+    private float currentSpeed;
     
     [SerializeField]
     private ObiEmitter[] emitters;
 
-    private HashSet<Puddle> JoinedPuddles = new HashSet<Puddle>();
-    private object lockObject = new object();
+    [Inject]
+    private DynamicJoystick joystick;
 
     // Start is called before the first frame update
     void Start()
     {
        _obiSolver.OnCollision += ObiSolverOnOnCollision;
+        _emitter.solver.OnBeginStep += Solver_OnBeginStep;
         var health = _emitter.GetMaxPoints();
         var maxHealth = health;
      
@@ -62,6 +76,12 @@ public class DropletController : MonoBehaviour
 
         UpdateMaxHealth(maxHealth);
         UpdateHealth(health);
+        StartCoroutine(StartWithDelay());
+    }
+
+    public void OnDestroy()
+    {
+        _emitter.solver.OnBeginStep -= Solver_OnBeginStep;
     }
 
     private void ObiSolverOnOnCollision(ObiSolver solver, ObiSolver.ObiCollisionEventArgs contacts)
@@ -131,4 +151,44 @@ public class DropletController : MonoBehaviour
     }
 
     private bool IsDied => health <= 0;
+
+    private void Solver_OnBeginStep(ObiSolver solver, float stepTime)
+    {
+        var indices = new NativeArray<int>(_emitter.solverIndices, Allocator.TempJob);
+
+        var job = new CustomGravityJob
+        {
+            indices = indices,
+            velocities = _emitter.solver.velocities.AsNativeArray<float4>(),
+            speed = currentSpeed
+        };
+
+        job.Schedule(indices.Length, 128).Complete();
+    }
+
+    private IEnumerator StartWithDelay()
+    {
+        while(joystick.Horizontal == 0 && joystick.Vertical == 0)
+        {
+            yield return null;
+        }
+        currentSpeed = Speed;
+    }
+
+    [BurstCompile]
+    struct CustomGravityJob : IJobParallelFor
+    {
+        [ReadOnly][DeallocateOnJobCompletion] public NativeArray<int> indices;
+        public NativeArray<float4> velocities;
+
+        [ReadOnly] public float speed;
+
+        public void Execute(int i)
+        {
+            var index = indices[i];
+            var vel = velocities[index];
+            vel.xyz = vel.xyz * speed;
+            velocities[index] = vel;
+        }
+    }
 }
