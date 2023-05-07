@@ -90,14 +90,15 @@ public class DropletController : MonoBehaviour
                             OnDied?.Invoke();
                     }
 
-                    else if (collider.tag == "Connectable")
+                    else if (collider.tag == "DropCollider")
                     {
-                        var puddle = collider.GetComponent<Puddle>();
+                        var puddle = collider.GetComponent<DropCollider>().Drop;
 
                         var activeCount = puddle.GetComponent<ObiEmitter>().activeParticleCount;
                         UpdateHealth(activeCount);
                         puddle.Join(_emitter, _renderer, _disk.particleSize);
                         _source.PlayOneShot(_source.clip);
+                        collider.gameObject.SetActive(false);
                         OnJoin?.Invoke();
                     }
 
