@@ -32,6 +32,8 @@ public class DropletController : MonoBehaviour
 
     public int MaxHealth;
 
+    public int FlushedParticles;
+
     private float Speed = 1.02f;
 
     public float DelayTimeToStart;
@@ -58,6 +60,7 @@ public class DropletController : MonoBehaviour
            if (obiEmitter.activeParticleCount == 1)
                obiEmitter.isRespawnable = false;
            UpdateHealth(-1);
+           FlushedParticles++;
        }; 
        
        foreach (var emitter in emitters)
@@ -71,6 +74,7 @@ public class DropletController : MonoBehaviour
                if (obiEmitter.activeParticleCount == 1)
                    obiEmitter.isRespawnable = false;
                UpdateHealth(-1);
+               FlushedParticles++;
            };
        }
 
@@ -127,7 +131,6 @@ public class DropletController : MonoBehaviour
                         emitter.OnKillParticle += (e, i) =>
                         {
                             OnFlush?.Invoke();
-
                             if(IsDied)
                                 OnWashedAway?.Invoke();
                         };

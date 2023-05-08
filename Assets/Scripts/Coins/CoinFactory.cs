@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
+using Assets.Scripts.Analytics;
 using ModestTree;
 using UnityEngine;
 using Zenject;
@@ -7,6 +9,7 @@ using Zenject;
 public class CoinFactory : MonoBehaviour
 {
     [Inject] private CoinBank Bank;
+    [Inject] private GameAnalyticManager analyticManager;
     
     [SerializeField]
     private GameObject coinPrefab;
@@ -17,11 +20,11 @@ public class CoinFactory : MonoBehaviour
     private Queue<GameObject> coins = new Queue<GameObject>();
     
     private int increement = 1;
-    private int witdrawed;
+    public int witdrawed;
     private int maxCoins;
     private int devider;
 
-    private object lockObject = new object();
+    private bool IsWithdrawing;
     
     public void InitializeCoins(int count)
     {
@@ -38,26 +41,30 @@ public class CoinFactory : MonoBehaviour
 
     public void Withdraw(Vector3 position)
     {
-        lock (lockObject)
-        {
-            StartCoroutine(WithdrawCoroutine(position));
-        }
+        StartCoroutine(WithdrawCoroutine(position));
     }
     
     private IEnumerator WithdrawCoroutine(Vector3 position)
     {
-        increement++;
-        if (increement%devider == 0)
+        while (IsWithdrawing)
         {
-            witdrawed++;
-            yield return new WaitForSeconds(withdrawDelay * witdrawed);
-            if (coins.IsEmpty())
-                yield break;
-                
-            var coin = coins.Dequeue();
-            coin.SetActive(true);
-            coin.transform.position = position;
-            Bank.UpdateBalance(1);
+            yield return null;
         }
+
+        IsWithdrawing = true;
+
+        if (coins.IsEmpty())
+            yield break;
+
+        witdrawed++;
+        yield return new WaitForSeconds(withdrawDelay * witdrawed);
+
+
+        var coin = coins.Dequeue();
+        coin.SetActive(true);
+        coin.transform.position = position;
+        Bank.UpdateBalance(1);
+        IsWithdrawing = false;
+
     }
 }
