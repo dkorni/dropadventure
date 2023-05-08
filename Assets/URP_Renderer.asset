@@ -72,13 +72,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 1
   settings:
-    blendSource: 2
-    blendDestination: 10
-    particleBlendSource: 2
-    particleBlendDestination: 4
+    blendSource: 3
+    blendDestination: 8
+    particleBlendSource: 5
+    particleBlendDestination: 0
     particleZWrite: 0
-    thicknessCutoff: 1.2
-    thicknessDownsample: 4
+    thicknessCutoff: 0.28
+    thicknessDownsample: 2
     generateSurface: 0
     blurRadius: 0.02
     surfaceDownsample: 4

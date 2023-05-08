@@ -17,8 +17,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private DropletController _dropletController;
 
     [SerializeField] private CoinFactory _coinFactory;
-
-    [SerializeField] private Puddle[] puddles;
+    private Puddle[] puddles;
 
     [SerializeField] private int maxDrops;
 
@@ -27,9 +26,14 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameContext _context;
 
+    private void Awake()
+    {
+        Application.targetFrameRate = 30;
+    }
+
     private void Start()
     {
-        Application.targetFrameRate = 60;
+        puddles = FindObjectsOfType<Puddle>();
         _dropletController.OnJoin += IncreementDrops;
         _dropletController.OnFlush += OnFlush;
         _dropletController.OnDied += GameOver;

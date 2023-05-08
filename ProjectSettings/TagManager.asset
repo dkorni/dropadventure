@@ -11,6 +11,8 @@ TagManager:
   - Effects
   - Chain
   - Platform
+  - FxTemporaire
+  - DropCollider
   layers:
   - Default
   - TransparentFX
