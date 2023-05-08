@@ -95,8 +95,8 @@
     <Compile Include="Assets\Plugins\Zenject\Source\Install\Contexts\Context.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Factories\IFactory.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Util\ValidationUtil.cs" />
-    <Compile Include="Assets\Plugins\Zenject\Source\Runtime\AnimatorInterfaces\IAnimatorMoveHandler.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Util\ZenjectStateMachineBehaviourAutoInjecter.cs" />
+    <Compile Include="Assets\Plugins\Zenject\Source\Runtime\AnimatorInterfaces\IAnimatorMoveHandler.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryFromBinder\FactoryFromBinder3.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Internal\PreserveAttribute.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Factories\Pooling\MonoPoolableMemoryPool.cs" />
