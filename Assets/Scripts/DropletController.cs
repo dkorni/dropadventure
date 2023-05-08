@@ -32,14 +32,13 @@ public class DropletController : MonoBehaviour
 
     public int MaxHealth;
 
-    public float Speed;
+    private float Speed = 1.02f;
 
     public float DelayTimeToStart;
 
     private bool isStarted;
     private float currentSpeed;
     
-    [SerializeField]
     private ObiEmitter[] emitters;
 
     [Inject]
@@ -48,7 +47,8 @@ public class DropletController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       _obiSolver.OnCollision += ObiSolverOnOnCollision;
+        emitters = FindObjectsOfType<ObiEmitter>();
+        _obiSolver.OnCollision += ObiSolverOnOnCollision;
         _emitter.solver.OnBeginStep += Solver_OnBeginStep;
         var health = _emitter.GetMaxPoints();
         var maxHealth = health;
@@ -112,13 +112,12 @@ public class DropletController : MonoBehaviour
 
                     else if (collider.tag == "DropCollider")
                     {
-                        var puddle = collider.GetComponent<DropCollider>().Drop;
+                        var puddle = collider.GetComponent<Puddle>();
 
                         var activeCount = puddle.GetComponent<ObiEmitter>().activeParticleCount;
                         UpdateHealth(activeCount);
                         puddle.Join(_emitter, _renderer, _disk.particleSize);
                         _source.PlayOneShot(_source.clip);
-                        collider.gameObject.SetActive(false);
                         OnJoin?.Invoke();
                     }
 

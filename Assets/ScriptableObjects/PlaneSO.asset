@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25125b89a708ed84eb64ec8d6dcdfaf5, type: 3}
   m_Name: PlaneSO
   m_EditorClassIdentifier: 
-  XAngleConstraint: 5
-  ZAngleConstraint: 5
+  XAngleConstraint: 3
+  ZAngleConstraint: 3
   AngleVelocity: 2

@@ -124,6 +124,7 @@
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
     <Compile Include="Assets\Scripts\CompositeObject.cs" />
     <Compile Include="Assets\Scripts\Extensions\ObiEmitterExtensions.cs" />
+    <Compile Include="Assets\Scripts\DropCollider.cs" />
     <Compile Include="Assets\PlaneController.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\Blinker.cs" />
     <Compile Include="Assets\Scripts\WinController.cs" />
@@ -148,7 +149,6 @@
     <Compile Include="Assets\Scripts\Coins\CoinFactory.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\WorldSpaceGravity.cs" />
     <Compile Include="Assets\Scripts\GameContext.cs" />
-    <Compile Include="Assets\Scripts\DropCollider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Obi\Samples\Fluid\SampleResources\Materials\StandardPerInstanceColor.shader" />

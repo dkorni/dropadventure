@@ -316,6 +316,8 @@ struct ExecuteJobFunction_t2A91C4914E48632C10A6694A7A164647C717BF90;
 struct ExecuteJobFunction_t4694746F3141D45C8433E71ABDE206E7E90574FA;
 // Unity.Jobs.IJobExtensions/JobStruct`1/ExecuteJobFunction<UnityEngine.Rendering.Universal.Internal.DeferredLights/CullLightsJob>
 struct ExecuteJobFunction_tB072DD949B2BA23156F2AFB17DDB5971DDD72BB3;
+// Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1/ExecuteJobFunction<DropletController/CustomGravityJob>
+struct ExecuteJobFunction_t6E0FB87E2DDE137FC59D63876A52DB0FE7CDB822;
 // Unity.Jobs.IJobExtensions/JobStruct`1/ExecuteJobFunction<Unity.Collections.NativeStream/ConstructJob>
 struct ExecuteJobFunction_t9001D08D7F640B4D461381CFB1E786AE300EC5C5;
 // Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1/ExecuteJobFunction<Obi.ParticleGrid/CalculateCellCoords>
@@ -10042,6 +10044,17 @@ struct DrawCallJob_t3EA2ABC822AD5DF50675A5B437DAB927DB95215D
 	NativeArray_1_tA833EB7E3E1C9AF82C37976AD964B8D4BAC38B2C ___subCallCount_19;
 };
 
+// DropletController/CustomGravityJob
+struct CustomGravityJob_t88082ABE705404E56E20716F252751946BC05B72 
+{
+	// Unity.Collections.NativeArray`1<System.Int32> DropletController/CustomGravityJob::indices
+	NativeArray_1_tA833EB7E3E1C9AF82C37976AD964B8D4BAC38B2C ___indices_0;
+	// Unity.Collections.NativeArray`1<Unity.Mathematics.float4> DropletController/CustomGravityJob::velocities
+	NativeArray_1_tB5EA234C6ABA1F626A4BEF4053D06783E15A3881 ___velocities_1;
+	// System.Single DropletController/CustomGravityJob::speed
+	float ___speed_2;
+};
+
 // Oni/SolverParameters
 struct SolverParameters_tBD26C92968F7FB3CC9C9927B5233F6A930E98040 
 {
@@ -11271,6 +11284,11 @@ struct ExecuteJobFunction_t4694746F3141D45C8433E71ABDE206E7E90574FA  : public Mu
 
 // Unity.Jobs.IJobExtensions/JobStruct`1/ExecuteJobFunction<UnityEngine.Rendering.Universal.Internal.DeferredLights/CullLightsJob>
 struct ExecuteJobFunction_tB072DD949B2BA23156F2AFB17DDB5971DDD72BB3  : public MulticastDelegate_t
+{
+};
+
+// Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1/ExecuteJobFunction<DropletController/CustomGravityJob>
+struct ExecuteJobFunction_t6E0FB87E2DDE137FC59D63876A52DB0FE7CDB822  : public MulticastDelegate_t
 {
 };
 
@@ -13598,6 +13616,10 @@ struct quaternion_tD6BCBECAF088B9EBAE2345EC8534C7A1A4C910D4_StaticFields
 
 // UnityEngine.Rendering.Universal.DecalCreateDrawCallSystem/DrawCallJob
 
+// DropletController/CustomGravityJob
+
+// DropletController/CustomGravityJob
+
 // Oni/SolverParameters
 
 // Oni/SolverParameters
@@ -14161,6 +14183,10 @@ struct UpdateTransformsJob_t7CF957169E8C6560084F48A51BC15A447F3002C7_StaticField
 // Unity.Jobs.IJobExtensions/JobStruct`1/ExecuteJobFunction<UnityEngine.Rendering.Universal.Internal.DeferredLights/CullLightsJob>
 
 // Unity.Jobs.IJobExtensions/JobStruct`1/ExecuteJobFunction<UnityEngine.Rendering.Universal.Internal.DeferredLights/CullLightsJob>
+
+// Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1/ExecuteJobFunction<DropletController/CustomGravityJob>
+
+// Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1/ExecuteJobFunction<DropletController/CustomGravityJob>
 
 // Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1/ExecuteJobFunction<Obi.ParticleGrid/CalculateCellCoords>
 
@@ -22092,6 +22118,92 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExecuteJobFunction__ctor_mB917B2EEE6D7AE
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExecuteJobFunction_Invoke_mF17A18724EBE378D2CD77404C960738FF090AFD3_gshared (ExecuteJobFunction_tB072DD949B2BA23156F2AFB17DDB5971DDD72BB3* __this, CullLightsJob_t12E24FFF641BA4E7E15F02538D2FB6AB656423DE* ___0_data, intptr_t ___1_additionalPtr, intptr_t ___2_bufferRangePatchData, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3* ___3_ranges, int32_t ___4_jobIndex, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, CullLightsJob_t12E24FFF641BA4E7E15F02538D2FB6AB656423DE*, intptr_t, intptr_t, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3*, int32_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl_1)((Il2CppObject*)__this->___method_code_6, ___0_data, ___1_additionalPtr, ___2_bufferRangePatchData, ___3_ranges, ___4_jobIndex, reinterpret_cast<RuntimeMethod*>(__this->___method_3));
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void ExecuteJobFunction_Invoke_mF54EC21CEF4020F04DCDCE6DE2A424C77B5BE511_Multicast(ExecuteJobFunction_t6E0FB87E2DDE137FC59D63876A52DB0FE7CDB822* __this, CustomGravityJob_t88082ABE705404E56E20716F252751946BC05B72* ___0_data, intptr_t ___1_additionalPtr, intptr_t ___2_bufferRangePatchData, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3* ___3_ranges, int32_t ___4_jobIndex, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates_13->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates_13->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		ExecuteJobFunction_t6E0FB87E2DDE137FC59D63876A52DB0FE7CDB822* currentDelegate = reinterpret_cast<ExecuteJobFunction_t6E0FB87E2DDE137FC59D63876A52DB0FE7CDB822*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, CustomGravityJob_t88082ABE705404E56E20716F252751946BC05B72*, intptr_t, intptr_t, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3*, int32_t, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl_1)((Il2CppObject*)currentDelegate->___method_code_6, ___0_data, ___1_additionalPtr, ___2_bufferRangePatchData, ___3_ranges, ___4_jobIndex, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method_3));
+	}
+}
+void ExecuteJobFunction_Invoke_mF54EC21CEF4020F04DCDCE6DE2A424C77B5BE511_OpenInst(ExecuteJobFunction_t6E0FB87E2DDE137FC59D63876A52DB0FE7CDB822* __this, CustomGravityJob_t88082ABE705404E56E20716F252751946BC05B72* ___0_data, intptr_t ___1_additionalPtr, intptr_t ___2_bufferRangePatchData, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3* ___3_ranges, int32_t ___4_jobIndex, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (CustomGravityJob_t88082ABE705404E56E20716F252751946BC05B72*, intptr_t, intptr_t, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3*, int32_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr_0)(___0_data, ___1_additionalPtr, ___2_bufferRangePatchData, ___3_ranges, ___4_jobIndex, method);
+}
+void ExecuteJobFunction_Invoke_mF54EC21CEF4020F04DCDCE6DE2A424C77B5BE511_OpenStatic(ExecuteJobFunction_t6E0FB87E2DDE137FC59D63876A52DB0FE7CDB822* __this, CustomGravityJob_t88082ABE705404E56E20716F252751946BC05B72* ___0_data, intptr_t ___1_additionalPtr, intptr_t ___2_bufferRangePatchData, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3* ___3_ranges, int32_t ___4_jobIndex, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (CustomGravityJob_t88082ABE705404E56E20716F252751946BC05B72*, intptr_t, intptr_t, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3*, int32_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr_0)(___0_data, ___1_additionalPtr, ___2_bufferRangePatchData, ___3_ranges, ___4_jobIndex, method);
+}
+void ExecuteJobFunction_Invoke_mF54EC21CEF4020F04DCDCE6DE2A424C77B5BE511_OpenStaticInvoker(ExecuteJobFunction_t6E0FB87E2DDE137FC59D63876A52DB0FE7CDB822* __this, CustomGravityJob_t88082ABE705404E56E20716F252751946BC05B72* ___0_data, intptr_t ___1_additionalPtr, intptr_t ___2_bufferRangePatchData, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3* ___3_ranges, int32_t ___4_jobIndex, const RuntimeMethod* method)
+{
+	InvokerActionInvoker5< CustomGravityJob_t88082ABE705404E56E20716F252751946BC05B72*, intptr_t, intptr_t, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3*, int32_t >::Invoke(__this->___method_ptr_0, method, NULL, ___0_data, ___1_additionalPtr, ___2_bufferRangePatchData, ___3_ranges, ___4_jobIndex);
+}
+void ExecuteJobFunction_Invoke_mF54EC21CEF4020F04DCDCE6DE2A424C77B5BE511_ClosedStaticInvoker(ExecuteJobFunction_t6E0FB87E2DDE137FC59D63876A52DB0FE7CDB822* __this, CustomGravityJob_t88082ABE705404E56E20716F252751946BC05B72* ___0_data, intptr_t ___1_additionalPtr, intptr_t ___2_bufferRangePatchData, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3* ___3_ranges, int32_t ___4_jobIndex, const RuntimeMethod* method)
+{
+	InvokerActionInvoker6< RuntimeObject*, CustomGravityJob_t88082ABE705404E56E20716F252751946BC05B72*, intptr_t, intptr_t, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3*, int32_t >::Invoke(__this->___method_ptr_0, method, NULL, __this->___m_target_2, ___0_data, ___1_additionalPtr, ___2_bufferRangePatchData, ___3_ranges, ___4_jobIndex);
+}
+// System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1/ExecuteJobFunction<DropletController/CustomGravityJob>::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExecuteJobFunction__ctor_m301367DDD526B098E88898DDF894445CDDE301FA_gshared (ExecuteJobFunction_t6E0FB87E2DDE137FC59D63876A52DB0FE7CDB822* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr_0 = il2cpp_codegen_get_virtual_call_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method_3 = ___1_method;
+	__this->___m_target_2 = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target_2), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code_6 = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 5;
+		if (il2cpp_codegen_call_method_via_invoker((RuntimeMethod*)___1_method))
+			if (isOpen)
+				__this->___invoke_impl_1 = (intptr_t)&ExecuteJobFunction_Invoke_mF54EC21CEF4020F04DCDCE6DE2A424C77B5BE511_OpenStaticInvoker;
+			else
+				__this->___invoke_impl_1 = (intptr_t)&ExecuteJobFunction_Invoke_mF54EC21CEF4020F04DCDCE6DE2A424C77B5BE511_ClosedStaticInvoker;
+		else
+			if (isOpen)
+				__this->___invoke_impl_1 = (intptr_t)&ExecuteJobFunction_Invoke_mF54EC21CEF4020F04DCDCE6DE2A424C77B5BE511_OpenStatic;
+			else
+				{
+					__this->___invoke_impl_1 = (intptr_t)__this->___method_ptr_0;
+					__this->___method_code_6 = (intptr_t)__this->___m_target_2;
+				}
+	}
+	else
+	{
+		bool isOpen = parameterCount == 4;
+		if (isOpen)
+		{
+			__this->___invoke_impl_1 = (intptr_t)&ExecuteJobFunction_Invoke_mF54EC21CEF4020F04DCDCE6DE2A424C77B5BE511_OpenInst;
+		}
+		else
+		{
+			if (___0_object == NULL)
+				il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+			__this->___invoke_impl_1 = (intptr_t)__this->___method_ptr_0;
+			__this->___method_code_6 = (intptr_t)__this->___m_target_2;
+		}
+	}
+	__this->___extra_arg_5 = (intptr_t)&ExecuteJobFunction_Invoke_mF54EC21CEF4020F04DCDCE6DE2A424C77B5BE511_Multicast;
+}
+// System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1/ExecuteJobFunction<DropletController/CustomGravityJob>::Invoke(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExecuteJobFunction_Invoke_mF54EC21CEF4020F04DCDCE6DE2A424C77B5BE511_gshared (ExecuteJobFunction_t6E0FB87E2DDE137FC59D63876A52DB0FE7CDB822* __this, CustomGravityJob_t88082ABE705404E56E20716F252751946BC05B72* ___0_data, intptr_t ___1_additionalPtr, intptr_t ___2_bufferRangePatchData, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3* ___3_ranges, int32_t ___4_jobIndex, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, CustomGravityJob_t88082ABE705404E56E20716F252751946BC05B72*, intptr_t, intptr_t, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3*, int32_t, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl_1)((Il2CppObject*)__this->___method_code_6, ___0_data, ___1_additionalPtr, ___2_bufferRangePatchData, ___3_ranges, ___4_jobIndex, reinterpret_cast<RuntimeMethod*>(__this->___method_3));
 }
 #ifdef __clang__

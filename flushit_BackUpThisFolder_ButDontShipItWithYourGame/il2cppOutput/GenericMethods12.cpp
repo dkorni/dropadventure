@@ -5041,6 +5041,18 @@ struct ParallelForJobStruct_1_t7CCAB4635687B86C49A2A69E80C98AA43CCCBFF5
 	};
 };
 
+// Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<DropletController/CustomGravityJob>
+struct ParallelForJobStruct_1_t3031CFA039BB5BE8846664D048DBAD68D32D0C15 
+{
+	union
+	{
+		struct
+		{
+		};
+		uint8_t ParallelForJobStruct_1_t277DDAD81DFA4925045DD195910B21852EFA3EF1__padding[1];
+	};
+};
+
 // Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<Obi.ParticleGrid/CalculateCellCoords>
 struct ParallelForJobStruct_1_tDF556BB86D862432AE594C1E528791E656F85537 
 {
@@ -12091,6 +12103,17 @@ struct DrawCallJob_t3EA2ABC822AD5DF50675A5B437DAB927DB95215D
 	NativeArray_1_tA833EB7E3E1C9AF82C37976AD964B8D4BAC38B2C ___subCallCount_19;
 };
 
+// DropletController/CustomGravityJob
+struct CustomGravityJob_t88082ABE705404E56E20716F252751946BC05B72 
+{
+	// Unity.Collections.NativeArray`1<System.Int32> DropletController/CustomGravityJob::indices
+	NativeArray_1_tA833EB7E3E1C9AF82C37976AD964B8D4BAC38B2C ___indices_0;
+	// Unity.Collections.NativeArray`1<Unity.Mathematics.float4> DropletController/CustomGravityJob::velocities
+	NativeArray_1_tB5EA234C6ABA1F626A4BEF4053D06783E15A3881 ___velocities_1;
+	// System.Single DropletController/CustomGravityJob::speed
+	float ___speed_2;
+};
+
 // UnityEngine.Rendering.Universal.LightUtility/LightMeshVertex
 struct LightMeshVertex_t5E886C7928458EB522BEB49D43C67ACC09EC7DCB 
 {
@@ -16922,6 +16945,15 @@ struct ParallelForJobStruct_1_t7CCAB4635687B86C49A2A69E80C98AA43CCCBFF5_StaticFi
 
 // Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<Obi.BurstVolumeConstraintsBatch/VolumeConstraintsBatchJob>
 
+// Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<DropletController/CustomGravityJob>
+struct ParallelForJobStruct_1_t3031CFA039BB5BE8846664D048DBAD68D32D0C15_StaticFields
+{
+	// System.IntPtr Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1::jobReflectionData
+	intptr_t ___jobReflectionData_0;
+};
+
+// Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<DropletController/CustomGravityJob>
+
 // Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<Obi.ParticleGrid/CalculateCellCoords>
 struct ParallelForJobStruct_1_tDF556BB86D862432AE594C1E528791E656F85537_StaticFields
 {
@@ -17365,6 +17397,10 @@ struct quaternion_tD6BCBECAF088B9EBAE2345EC8534C7A1A4C910D4_StaticFields
 // UnityEngine.Rendering.Universal.DecalCreateDrawCallSystem/DrawCallJob
 
 // UnityEngine.Rendering.Universal.DecalCreateDrawCallSystem/DrawCallJob
+
+// DropletController/CustomGravityJob
+
+// DropletController/CustomGravityJob
 
 // UnityEngine.Rendering.Universal.LightUtility/LightMeshVertex
 struct LightMeshVertex_t5E886C7928458EB522BEB49D43C67ACC09EC7DCB_StaticFields
@@ -31905,6 +31941,34 @@ IL_0022:
 		return L_6;
 	}
 }
+// Unity.Jobs.JobHandle Unity.Jobs.IJobParallelForExtensions::Schedule<DropletController/CustomGravityJob>(T,System.Int32,System.Int32,Unity.Jobs.JobHandle)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 IJobParallelForExtensions_Schedule_TisCustomGravityJob_t88082ABE705404E56E20716F252751946BC05B72_mA3654C046CC6ED747D04828C4E77CB42396DACF2_gshared (CustomGravityJob_t88082ABE705404E56E20716F252751946BC05B72 ___0_jobData, int32_t ___1_arrayLength, int32_t ___2_innerloopBatchCount, JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 ___3_dependsOn, const RuntimeMethod* method) 
+{
+	JobScheduleParameters_tBA5415DA68E52ABC80373CD13D66C9AFAF8F542B V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	{
+		void* L_0;
+		L_0 = il2cpp_codegen_unsafe_cast((&___0_jobData));
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->rgctx_data, 0));
+		intptr_t L_1 = ((ParallelForJobStruct_1_t3031CFA039BB5BE8846664D048DBAD68D32D0C15_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->rgctx_data, 0)))->___jobReflectionData_0;
+		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_2 = ___3_dependsOn;
+		JobScheduleParameters__ctor_m5FFED3B28A1FA2C3EC7D1C50A7D7E788C411CE04((&V_0), L_0, L_1, L_2, (int32_t)1, NULL);
+		int32_t L_3 = ___1_arrayLength;
+		int32_t L_4 = ___2_innerloopBatchCount;
+		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_5;
+		L_5 = JobsUtility_ScheduleParallelFor_mEF775B0FF09686D0525DDFA9ED95A72EEDEC995C((&V_0), L_3, L_4, NULL);
+		V_1 = L_5;
+		goto IL_0022;
+	}
+
+IL_0022:
+	{
+		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_6 = V_1;
+		return L_6;
+	}
+}
 // Unity.Jobs.JobHandle Unity.Jobs.IJobParallelForExtensions::Schedule<Obi.ParticleGrid/CalculateCellCoords>(T,System.Int32,System.Int32,Unity.Jobs.JobHandle)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 IJobParallelForExtensions_Schedule_TisCalculateCellCoords_t1746CDC22665ABFF3253E55AEB04E82ECEEEC80C_m725AEE31AD0E0F41996BB39F45961E28119E47AC_gshared (CalculateCellCoords_t1746CDC22665ABFF3253E55AEB04E82ECEEEC80C ___0_jobData, int32_t ___1_arrayLength, int32_t ___2_innerloopBatchCount, JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 ___3_dependsOn, const RuntimeMethod* method) 
 {
@@ -41682,57 +41746,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* NativeArrayUnsafeUtility_GetUnsafeReadO
 	void* V_0 = NULL;
 	{
 		NativeArray_1_t3848EE4B6647317212A754634DE6DBC90B99FBEF L_0 = ___0_nativeArray;
-		void* L_1 = (void*)L_0.___m_Buffer_0;
-		V_0 = L_1;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		void* L_2 = V_0;
-		return L_2;
-	}
-}
-// System.Void* Unity.Collections.LowLevel.Unsafe.NativeArrayUnsafeUtility::GetUnsafeReadOnlyPtr<Obi.Triangle>(Unity.Collections.NativeArray`1<T>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* NativeArrayUnsafeUtility_GetUnsafeReadOnlyPtr_TisTriangle_tB206B9AC4F874AF72F8EC09954D5C5101FD02295_mC1CE08B87D282D3C59EBC98E9B2FA8F733D9974B_gshared (NativeArray_1_t339B8D033EE23C5FE6322A9538E6CF66F9806687 ___0_nativeArray, const RuntimeMethod* method) 
-{
-	void* V_0 = NULL;
-	{
-		NativeArray_1_t339B8D033EE23C5FE6322A9538E6CF66F9806687 L_0 = ___0_nativeArray;
-		void* L_1 = (void*)L_0.___m_Buffer_0;
-		V_0 = L_1;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		void* L_2 = V_0;
-		return L_2;
-	}
-}
-// System.Void* Unity.Collections.LowLevel.Unsafe.NativeArrayUnsafeUtility::GetUnsafeReadOnlyPtr<Obi.TriangleMeshHeader>(Unity.Collections.NativeArray`1<T>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* NativeArrayUnsafeUtility_GetUnsafeReadOnlyPtr_TisTriangleMeshHeader_t9C1274CD0B4787DE22916F84126CB9165B005BE6_mF1DE4AFDA096A7F0D935B589A170878FBA2FF236_gshared (NativeArray_1_t14E977B25D22DEB8A9072AA92FAFBB2F50DB95F4 ___0_nativeArray, const RuntimeMethod* method) 
-{
-	void* V_0 = NULL;
-	{
-		NativeArray_1_t14E977B25D22DEB8A9072AA92FAFBB2F50DB95F4 L_0 = ___0_nativeArray;
-		void* L_1 = (void*)L_0.___m_Buffer_0;
-		V_0 = L_1;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		void* L_2 = V_0;
-		return L_2;
-	}
-}
-// System.Void* Unity.Collections.LowLevel.Unsafe.NativeArrayUnsafeUtility::GetUnsafeReadOnlyPtr<System.UInt16>(Unity.Collections.NativeArray`1<T>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* NativeArrayUnsafeUtility_GetUnsafeReadOnlyPtr_TisUInt16_tF4C148C876015C212FD72652D0B6ED8CC247A455_m8E5335741788115AF07635B3B9C543C6BA1F2D3C_gshared (NativeArray_1_t275C00CC374DEA66C69B3BB3992116F315A8E934 ___0_nativeArray, const RuntimeMethod* method) 
-{
-	void* V_0 = NULL;
-	{
-		NativeArray_1_t275C00CC374DEA66C69B3BB3992116F315A8E934 L_0 = ___0_nativeArray;
 		void* L_1 = (void*)L_0.___m_Buffer_0;
 		V_0 = L_1;
 		goto IL_000a;

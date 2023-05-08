@@ -14,7 +14,7 @@ public class Bucket : MonoBehaviour
     public GameObject Puddle;
     public HingeJoint HingeJoint;
 
-    public void Awake()
+    public void Start()
     {
         Puddle.SetActive(false);
     }

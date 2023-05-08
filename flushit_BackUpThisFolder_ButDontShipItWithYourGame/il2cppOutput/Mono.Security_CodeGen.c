@@ -87,12 +87,12 @@ static const int32_t s_InvokerIndices[19] =
 	518,
 	4845,
 	6780,
-	11777,
-	11682,
-	11780,
-	11768,
-	11777,
-	11780,
+	11778,
+	11683,
+	11781,
+	11769,
+	11778,
+	11781,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Mono_Security_CodeGenModule;
 const Il2CppCodeGenModule g_Mono_Security_CodeGenModule = 
