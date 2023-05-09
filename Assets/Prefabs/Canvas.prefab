@@ -2333,7 +2333,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8637292925985830093}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c80e6d63202cef44ca3ffdaccec693be, type: 3}
   m_Name: 
@@ -2382,7 +2382,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8637292925985830093}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb8428f1f208dcc49b6c04976d44cbc9, type: 3}
   m_Name: 
@@ -2417,6 +2417,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AUDIO - Module
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023949359398975867, guid: 78081648e28527242bb334a6bdf7bfce,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8023949359419186811, guid: 78081648e28527242bb334a6bdf7bfce,
         type: 3}
@@ -2648,6 +2653,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RAM - Module
       objectReference: {fileID: 0}
+    - target: {fileID: 824167088398773255, guid: 6387d68cbe02d2d4fb8912f794606585,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6387d68cbe02d2d4fb8912f794606585, type: 3}
 --- !u!224 &2035067661941518823 stripped
@@ -2667,6 +2677,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ADVANCED - Module
+      objectReference: {fileID: 0}
+    - target: {fileID: 3842867399166853360, guid: 8e60b58e9eec36e46ba32caf55a802f4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3912740604931392962, guid: 8e60b58e9eec36e46ba32caf55a802f4,
         type: 3}
@@ -3152,6 +3167,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FPS - Module
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365662255711835907, guid: fed2d45066a6d2a4191aa0c744a03147,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fed2d45066a6d2a4191aa0c744a03147, type: 3}
