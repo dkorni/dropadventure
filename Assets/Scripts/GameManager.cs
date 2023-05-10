@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Assets.Scripts.Analytics;
+using System;
+using System.Diagnostics;
 using UnityEngine;
 using Zenject;
 
@@ -26,6 +28,10 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameContext _context;
 
+    [Inject] private GameAnalyticManager _analyticManager;
+
+    private Stopwatch stopwatch;
+
     private void Awake()
     {
         Application.targetFrameRate = 30;
@@ -38,6 +44,8 @@ public class GameManager : MonoBehaviour
         _dropletController.OnFlush += OnFlush;
         _dropletController.OnDied += GameOver;
         _dropletController.OnWashedAway += Win;
+        _context.OnReload += SilentGameOver;
+        stopwatch = new Stopwatch();
         PrepareScene();
     }
 
@@ -56,9 +64,13 @@ public class GameManager : MonoBehaviour
 
     private void PrepareScene()
     {
+        stopwatch.Start();
+        _analyticManager.StartLevel(_context.CurrentLevel);
+        
         maxDrops = puddles.Length;
         _context.UpdateStatus(GameStates.Preparing);
         _context.UpdateMaxDropCount(maxDrops);
+        
         _dropletController.OnMaxHealthUpdate += (x) =>
         {
             _context.UpdateMaxHealth(x);
@@ -95,15 +107,37 @@ public class GameManager : MonoBehaviour
         _endPlatform.gameObject.SetActive(true);
     }
 
+    private void SilentGameOver()
+    {
+        stopwatch.Stop();
+        var seconds = stopwatch.Elapsed.Seconds;
+        _analyticManager.FailLevel(_context.CurrentLevel, _dropletController.health, seconds);
+    }
+
     private void GameOver()
     {
+        if (_context.CurrentState == GameStates.GameOver)
+            return;
+
+        stopwatch.Stop();
+        var seconds = stopwatch.Elapsed.Seconds;
+
         _context.UpdateStatus(GameStates.GameOver);
+
+        _analyticManager.FailLevel(_context.CurrentLevel, _dropletController.health, seconds);
     }
 
     private void Win()
     {
+        if (_context.CurrentState == GameStates.Win)
+            return;
+
+        stopwatch.Stop();
+        var seconds = stopwatch.Elapsed.Seconds;
         _context.UpdateStatus(GameStates.Win);
         firework.SetActive(true);
+        _analyticManager.CompleteLevel(_context.CurrentLevel, _dropletController.FlushedParticles, seconds);
+        _analyticManager.AddCoins(_coinFactory.witdrawed, _context.CurrentLevel);
     }
 
     private void OnDisable()
@@ -111,6 +145,7 @@ public class GameManager : MonoBehaviour
         _dropletController.OnJoin -= IncreementDrops;
         _dropletController.OnDied -= GameOver;
         _dropletController.OnDied -= Win;
+        _context.OnReload -= SilentGameOver;
 
         foreach (var c in composites)
             c.OnFinished -= OnCompositeFinished;

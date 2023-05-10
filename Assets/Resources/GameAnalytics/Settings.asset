@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78192cec1344d83a177ac5e6139ab3, type: 3}
+  m_Name: Settings
+  m_EditorClassIdentifier: 
+  TotalMessagesSubmitted: 0
+  TotalMessagesFailed: 0
+  DesignMessagesSubmitted: 0
+  DesignMessagesFailed: 0
+  QualityMessagesSubmitted: 0
+  QualityMessagesFailed: 0
+  ErrorMessagesSubmitted: 0
+  ErrorMessagesFailed: 0
+  BusinessMessagesSubmitted: 0
+  BusinessMessagesFailed: 0
+  UserMessagesSubmitted: 0
+  UserMessagesFailed: 0
+  CustomArea: 
+  gameKey:
+  - fefa7fe8763e44fb0afa8b07f5b11ddc
+  - e9d1b14f2a913d54361894519efcf488
+  secretKey:
+  - 299619b6c812d025ae7ab54ebffdd6e1ea4d37ff
+  - e05526305ec68af03e03fef76c57df3fa721007f
+  Build:
+  - 1.1.2
+  - 1.1.2
+  SelectedPlatformOrganization:
+  - Pink Vynil Studio
+  - Pink Vynil Studio
+  SelectedPlatformStudio:
+  - Pink Vinil Studio Europe
+  - Pink Vinil Studio Europe
+  SelectedPlatformGame:
+  - Flush It! (Android)
+  - Flush it! (iOS)
+  SelectedPlatformGameID: 93ca0300a2ca0300
+  SelectedOrganization: 0100000001000000
+  SelectedStudio: 0100000001000000
+  SelectedGame: 0200000001000000
+  NewVersion: 
+  Changes: 
+  SignUpOpen: 1
+  StudioName: denys.korniienko
+  GameName: Flush It!
+  OrganizationName: 
+  OrganizationIdentifier: 
+  EmailGA: denys.korniienko.dev@gmail.com
+  IntroScreen: 0
+  InfoLogEditor: 1
+  InfoLogBuild: 1
+  VerboseLogBuild: 0
+  UseManualSessionHandling: 0
+  SendExampleGameDataToMyGame: 0
+  InternetConnectivity: 0
+  CustomDimensions01: []
+  CustomDimensions02: []
+  CustomDimensions03: []
+  ResourceItemTypes:
+  - Reward
+  ResourceCurrencies:
+  - Coins
+  LastCreatedGamePlatform: -1
+  Platforms: 0b00000008000000
+  CurrentInspectorState: 1
+  ClosedHints: 
+  DisplayHints: 0
+  DisplayHintsScrollState: {x: 0, y: 0}
+  Logo: {fileID: 2800000, guid: 98df8f9c5678a4e5d964caa1244e8958, type: 3}
+  UpdateIcon: {fileID: 2800000, guid: 810bbb19deed24f3cb7b854f9bafde26, type: 3}
+  InfoIcon: {fileID: 2800000, guid: 1b4dd779aadd54ac88856975af0d3c0a, type: 3}
+  DeleteIcon: {fileID: 2800000, guid: 85a626f1668244d30a4e9f616991a793, type: 3}
+  GameIcon: {fileID: 2800000, guid: a9ac7103fc40b4e00923bf8c2cb5d30f, type: 3}
+  HomeIcon: {fileID: 2800000, guid: fe7e2ecc9b2fe447bafe90f6395d4709, type: 3}
+  InstrumentIcon: {fileID: 2800000, guid: 2ba470b4dffd848c6b267c34770cc63e, type: 3}
+  QuestionIcon: {fileID: 2800000, guid: f8ea67e311b0c4b2ea05718e90fd3b5b, type: 3}
+  UserIcon: {fileID: 2800000, guid: f49ef75333ff247cfb5dad4dab0d4dac, type: 3}
+  AmazonIcon: {fileID: 0}
+  GooglePlayIcon: {fileID: 0}
+  iosIcon: {fileID: 0}
+  macIcon: {fileID: 0}
+  windowsPhoneIcon: {fileID: 0}
+  UsePlayerSettingsBuildNumber: 0
+  SubmitErrors: 1
+  NativeErrorReporting: 0
+  MaxErrorCount: 10
+  SubmitFpsAverage: 1
+  SubmitFpsCritical: 1
+  IncludeGooglePlay: 1
+  FpsCriticalThreshold: 20
+  FpsCirticalSubmitInterval: 1
+  PlatformFoldOut: 0101
+  CustomDimensions01FoldOut: 0
+  CustomDimensions02FoldOut: 0
+  CustomDimensions03FoldOut: 0
+  ResourceItemTypesFoldOut: 1
+  ResourceCurrenciesFoldOut: 1

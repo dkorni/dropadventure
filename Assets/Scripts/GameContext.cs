@@ -14,6 +14,7 @@ public enum GameStates
 public class GameContext : ScriptableObject
 {
     public GameStates CurrentState;
+    public int CurrentLevel;
 
     public Action<GameStates> OnStateChanged;
     public Action<int> OnHealthUpdate;
@@ -25,8 +26,6 @@ public class GameContext : ScriptableObject
     public Action OnStopCut;
     public Action<Vector3> OnUpdateCut;
     public Action OnReload;
-
-    private DropletController _dropletController;
 
     public void UpdateStatus(GameStates newState)
     {

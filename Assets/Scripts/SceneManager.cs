@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,6 @@ using Zenject;
 
 public class SceneManager : MonoBehaviour
 {
-    private int _currentLevel;
     private int _loadedLevel = -1;
     
     [SerializeField]
@@ -18,14 +18,14 @@ public class SceneManager : MonoBehaviour
     void Start()
     {
         if (PlayerPrefs.HasKey("level"))
-            _currentLevel = PlayerPrefs.GetInt("level");
+            _context.CurrentLevel = PlayerPrefs.GetInt("level");
         else
         {
-            _currentLevel = 1;
-            PlayerPrefs.SetInt("level", _currentLevel);
+            _context.CurrentLevel = 1;
+            PlayerPrefs.SetInt("level", _context.CurrentLevel);
         }
         
-        LoadLevel(_currentLevel);
+        LoadLevel(_context.CurrentLevel);
         _context.OnStateChanged += OnStateChanged;
         _context.OnReload += OnReload;
 
@@ -41,32 +41,43 @@ public class SceneManager : MonoBehaviour
         }
     }
 
-    private void LoadLevel(int level)
+    private AsyncOperation LoadLevel(int level)
     {
         if (_loadedLevel != -1)
         {
             UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(_loadedLevel);
         }
         
-        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(level, LoadSceneMode.Additive);
         _loadedLevel = level;
+        var op = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(level, LoadSceneMode.Additive);
+        op.completed += op => SceneManager_completed(op, ()=>_loadedLevel = level);
+        return op;
     }
 
     private IEnumerator LoadNextLevelCoroutine()
     {
-        _currentLevel++;
-        
-        if (_currentLevel == UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings)
-            _currentLevel = 1;
-        
-        PlayerPrefs.SetInt("level", _currentLevel);
+        var nextLevel = _context.CurrentLevel + 1;
         yield return new WaitForSeconds(_timeoutBeforeNextLevel);
-        LoadLevel(_currentLevel);
+        LoadLevel(nextLevel).completed += op=>SceneManager_completed(op, () =>
+        {
+            _context.CurrentLevel++;
+            if (_context.CurrentLevel == UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings)
+                _context.CurrentLevel = 1;
+            PlayerPrefs.SetInt("level", _context.CurrentLevel);
+        });       
+    }
+
+    private void SceneManager_completed(AsyncOperation obj, Action action)
+    {
+        if (obj.isDone)
+        {
+            action();
+        }
     }
 
     private void OnReload()
     {
-        LoadLevel(_currentLevel);
+        LoadLevel(_context.CurrentLevel);
     }
 
     private void OnDisable()
