@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
     private void PrepareScene()
     {
         stopwatch.Start();
-        _analyticManager.StartLevel(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+        _analyticManager.StartLevel(_context.CurrentLevel);
         
         maxDrops = puddles.Length;
         _context.UpdateStatus(GameStates.Preparing);
@@ -111,7 +111,7 @@ public class GameManager : MonoBehaviour
     {
         stopwatch.Stop();
         var seconds = stopwatch.Elapsed.Seconds;
-        _analyticManager.FailLevel(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex, _dropletController.health, seconds);
+        _analyticManager.FailLevel(_context.CurrentLevel, _dropletController.health, seconds);
     }
 
     private void GameOver()
@@ -124,7 +124,7 @@ public class GameManager : MonoBehaviour
 
         _context.UpdateStatus(GameStates.GameOver);
 
-        _analyticManager.FailLevel(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex, _dropletController.health, seconds);
+        _analyticManager.FailLevel(_context.CurrentLevel, _dropletController.health, seconds);
     }
 
     private void Win()
@@ -136,8 +136,8 @@ public class GameManager : MonoBehaviour
         var seconds = stopwatch.Elapsed.Seconds;
         _context.UpdateStatus(GameStates.Win);
         firework.SetActive(true);
-        _analyticManager.CompleteLevel(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex, _dropletController.FlushedParticles, seconds);
-        _analyticManager.AddCoins(_coinFactory.witdrawed, UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+        _analyticManager.CompleteLevel(_context.CurrentLevel, _dropletController.FlushedParticles, seconds);
+        _analyticManager.AddCoins(_coinFactory.witdrawed, _context.CurrentLevel);
     }
 
     private void OnDisable()
