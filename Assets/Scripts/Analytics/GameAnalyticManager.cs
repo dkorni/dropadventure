@@ -37,6 +37,7 @@ namespace Assets.Scripts.Analytics
         public void StartLevel(int levelId)
         {
             GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, $"Level_{levelId}");
+            YsoCorp.GameUtils.YCManager.instance.OnGameStarted(levelId);
         }
 
         public void CompleteLevel(int levelId, int health, int seconds)
@@ -44,6 +45,9 @@ namespace Assets.Scripts.Analytics
             GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, $"Level_{levelId}");
             GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, $"Level_{levelId}", "Health", health);
             GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, $"Level_{levelId}", "Time", seconds);
+
+            var hasWon = true;
+            YsoCorp.GameUtils.YCManager.instance.OnGameFinished(hasWon);
         }
 
         public void FailLevel(int levelId, int health, int seconds)
@@ -51,6 +55,9 @@ namespace Assets.Scripts.Analytics
             GameAnalytics.NewProgressionEvent(GAProgressionStatus.Fail, $"Level_{levelId}");
             GameAnalytics.NewProgressionEvent(GAProgressionStatus.Fail, $"Level_{levelId}", "Health", health);
             GameAnalytics.NewProgressionEvent(GAProgressionStatus.Fail, $"Level_{levelId}", "Time", seconds);
+
+            var hasWon = false;
+            YsoCorp.GameUtils.YCManager.instance.OnGameFinished(hasWon);
         }
 
         public void AddCoins(int coins, int levelId)
