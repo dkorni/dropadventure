@@ -59,12 +59,14 @@ namespace Flushfluids.SceneManagement
         private IEnumerator LoadNextLevelCoroutine()
         {
             var nextLevel = _context.CurrentLevel + 1;
+            if (nextLevel == UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings)
+                nextLevel = 1;
+
             yield return new WaitForSeconds(_timeoutBeforeNextLevel);
+
             LoadLevel(nextLevel).completed += op => SceneManager_completed(op, () =>
             {
-                _context.CurrentLevel++;
-                if (_context.CurrentLevel == UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings)
-                    _context.CurrentLevel = 1;
+                _context.CurrentLevel = nextLevel;
                 PlayerPrefs.SetInt("level", _context.CurrentLevel);
             });
         }
@@ -87,5 +89,5 @@ namespace Flushfluids.SceneManagement
             _context.OnStateChanged -= OnStateChanged;
             _context.OnReload -= OnReload;
         }
-    }
+    } 
 }

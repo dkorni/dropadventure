@@ -210,6 +210,7 @@
     <Compile Include="Assets\GameUtils\External\Adjust\ExampleGUI\ExampleGUI.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendDesignEvent.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Design.cs" />
+    <Compile Include="Assets\Scripts\Installers\GameUtilsInstaller.cs" />
     <Compile Include="Assets\PlaneController.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\Blinker.cs" />
     <Compile Include="Assets\GameUtils\Scripts\Utils\YCXmlHandler.cs" />
@@ -261,7 +262,6 @@
     <Compile Include="Assets\Scripts\Coins\CoinFactory.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\WorldSpaceGravity.cs" />
     <Compile Include="Assets\Scripts\GameContext.cs" />
-    <Compile Include="Assets\Scripts\Installers\GameUtilsInstaller.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\GameAnalytics\Readme.txt" />
