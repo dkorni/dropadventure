@@ -3,6 +3,7 @@
   <supports-screens android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true" android:anyDensity="true" />
   <!-- Permissions needed by the Adjust SDK. -->
   <!-- For more information, check: https://github.com/adjust/unity_sdk#post-build-android -->
+  <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
