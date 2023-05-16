@@ -23,11 +23,11 @@ Material:
   m_Name: RedHalftone_shadowPattern
   m_Shader: {fileID: -6465566751694194690, guid: 2c3c6a46626419c4f8bbdeab2ec2afbd,
     type: 3}
-  m_ValidKeywords:
-  - _HAFTONESHAPES_DOT
-  - _SPECULARHIGHTLIGHTS_ON
+  m_ValidKeywords: []
   m_InvalidKeywords:
+  - _HAFTONESHAPES_DOT
   - _SPECULARHIGHTLIGHTS
+  - _SPECULARHIGHTLIGHTS_ON
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0

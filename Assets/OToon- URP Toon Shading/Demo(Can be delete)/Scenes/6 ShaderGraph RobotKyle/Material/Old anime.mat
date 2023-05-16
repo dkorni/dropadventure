@@ -10,9 +10,9 @@ Material:
   m_Name: Old anime
   m_Shader: {fileID: -6465566751694194690, guid: 2c3c6a46626419c4f8bbdeab2ec2afbd,
     type: 3}
-  m_ValidKeywords:
-  - _HAFTONESHAPES_STRIPE
+  m_ValidKeywords: []
   m_InvalidKeywords:
+  - _HAFTONESHAPES_STRIPE
   - _HALFTONESHAPE_STRIPE
   - _OUTLINE
   - _RECEIVE_SHADOWS_OFF
