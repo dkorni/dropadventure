@@ -56,8 +56,8 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\MaxSdk\Scripts\Editor\MaxPostProcessBuildiOS.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\Editor\MaxPostProcessBuildAndroid.cs" />
+    <Compile Include="Assets\MaxSdk\Scripts\Editor\MaxPostProcessBuildiOS.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\Editor\MaxInitialization.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -394,11 +394,11 @@
     <Reference Include="Google.VersionHandlerImpl">
       <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.VersionHandlerImpl.dll</HintPath>
     </Reference>
-    <Reference Include="Google.JarResolver">
-      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.JarResolver.dll</HintPath>
-    </Reference>
     <Reference Include="WinWsInterface">
       <HintPath>Assets\GameUtils\External\Adjust\Windows\Stubs\WinWsInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.JarResolver">
+      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.JarResolver.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@1.11.4\Mono.Cecil.dll</HintPath>

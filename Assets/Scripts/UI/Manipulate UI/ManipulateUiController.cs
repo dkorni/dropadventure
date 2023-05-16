@@ -4,28 +4,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using Zenject;
 
-public class CutUIController : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
+public abstract class ManipulateUiController : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
-    [Inject] GameContext gameContext;
+    [Inject] protected GameContext gameContext;
     
     private Vector3 startPosition;
     private Coroutine Coroutine;
-
-    private void OnLevelUpdated(LevelData levelData)
-    {
-        gameObject.SetActive(levelData.IsCutNeeded);
-    }
-
-    private void OnDisable()
-    {
-       // gameContext.OnLevelUpdated -= OnLevelUpdated;
-    }
-
-    private void Start()
-    {
-        startPosition = transform.position;
-        gameContext.OnLevelUpdated += OnLevelUpdated;
-    }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -33,19 +17,34 @@ public class CutUIController : MonoBehaviour, IDragHandler, IBeginDragHandler, I
         {
             StopCoroutine(Coroutine);
         }
-        gameContext.StartCut();
+        BeginDrag(eventData);
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         transform.position = eventData.position;
-        gameContext.UpdateCut(eventData.position);
+        Drag(eventData);
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        gameContext.StopCut();
         Coroutine = StartCoroutine(Return());
+        EndDrag(eventData);
+    }
+
+    protected abstract void BeginDrag(PointerEventData eventData);
+
+    protected abstract void Drag(PointerEventData eventData);
+
+    protected abstract void EndDrag(PointerEventData eventData);
+
+    protected abstract void OnLevelUpdated(LevelData levelData);
+
+
+    private void Start()
+    {
+        startPosition = transform.position;
+        gameContext.OnLevelUpdated += OnLevelUpdated;
     }
 
     private IEnumerator Return()

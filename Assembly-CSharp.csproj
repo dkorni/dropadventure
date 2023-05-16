@@ -56,156 +56,81 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\AddRandomVelocity.cs" />
     <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustSessionSuccess.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\FPSDisplay.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ObjectDragger.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightIntensityFade.cs" />
-    <Compile Include="Assets\Scripts\UI\BalanceLabel.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\GameAnalytics.cs" />
     <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustSessionFailure.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Enums.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_tvOSWrapper.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\Mmp\MmpManager.cs" />
-    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\TenjinMopubIntegration.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ObiParticleCounter.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_WebGLWrapper.cs" />
     <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustEventFailure.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ColorFromViscosity.cs" />
     <Compile Include="Assets\GameUtils\Scripts\ConditionalAttribute\YcBoolHideAttribute.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Utilities\GA_MiniJson.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Scripts\CameraController.cs" />
     <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustUtils.cs" />
-    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\DebugTenjin.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ColliderHighlighter.cs" />
-    <Compile Include="Assets\Scripts\CSJ\Classes\VertexAttributes.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoRotate.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_AndroidWrapper.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Debug.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\CollisionEventHandler.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ILRD\AdMob\GAAdMobIntegration.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendAdEvent.cs" />
-    <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Plugins\SprintBone\SpringBone.cs" />
     <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\Tenjin.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\GetABTestingVariantId.cs" />
-    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\ObiFluidPropertyColorizer.cs" />
     <Compile Include="Assets\GameUtils\Scripts\Mmp\TenjinManager.cs" />
-    <Compile Include="Assets\Scripts\CSJ\Classes\Polygon.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
     <Compile Include="Assets\GameUtils\Scripts\Mmp\MmpBaseManager.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ActorCOMTransform.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\SlowmoToggler.cs" />
     <Compile Include="Assets\GameUtils\Scripts\NoInternetManager.cs" />
-    <Compile Include="Assets\Scripts\Installers\CanvasInstaller.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\Unity\Adjust.cs" />
     <Compile Include="Assets\Scripts\SceneManager.cs" />
     <Compile Include="Assets\GameUtils\Scripts\Mmp\AdjustManager.cs" />
     <Compile Include="Assets\GameUtils\Scripts\FirebaseManager.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendProgressionEvent.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_MonoWrapper.cs" />
     <Compile Include="Assets\GameUtils\Scripts\YCDataManager.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\DebugParticleFrames.cs" />
     <Compile Include="Assets\GameUtils\External\Adjust\3rd Party\SimpleJSON.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_iOSWrapper.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\Abstracts\AResourcesManager.cs" />
-    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\MazeManager.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\CharacterController\SampleCharacterController.cs" />
     <Compile Include="Assets\GameUtils\Scripts\Ads.cs" />
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\BucketController.cs" />
-    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\TenjinHyperBidIntegration.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ILRD\GameAnalyticsILRD.cs" />
+    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\TenjinHyperBidIntegration.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDir.cs" />
-    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\TenjinAdMobIntegration.cs" />
-    <Compile Include="Assets\Scripts\Puddle.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\Utils\YCEditorUtils.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\CharacterController\ObiCharacter.cs" />
-    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\TenjinAppLovinIntegration.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\LookAroundCamera.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\GetRemoteConfigsValueAsString.cs" />
-    <Compile Include="Assets\Scripts\CutUIController.cs" />
     <Compile Include="Assets\Scripts\Installers\DynamicJoystickInstaller.cs" />
-    <Compile Include="Assets\Scripts\CSJ\Classes\Vertex.cs" />
-    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\SolidifyOnContact.cs" />
-    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\FluidJetController.cs" />
     <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustPlayStoreSubscription.cs" />
     <Compile Include="Assets\GameUtils\Scripts\ConditionalAttribute\YcBoolHidePropertyDrawer.cs" />
     <Compile Include="Assets\Scripts\UI\MinHealthSliderController.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ObiActorTeleport.cs" />
     <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\AndroidTenjin.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Error.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ILRD\HyperBid\GAHyperBidIntegration.cs" />
     <Compile Include="Assets\Scripts\CSJ\Classes\Node.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_SpecialEvents.cs" />
-    <Compile Include="Assets\Scripts\UI\ProgressController.cs" />
     <Compile Include="Assets\Scripts\CSJ\Classes\VertexUtility.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
-    <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Scenes\2 NPRStyles RobotKyle\Scripts\DemoController.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ObjectLimit.cs" />
     <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustConfig.cs" />
-    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\Melt.cs" />
     <Compile Include="Assets\Scripts\Coins\Coin.cs" />
-    <Compile Include="Assets\Scripts\Installers\DependencyInstaller.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\GAInitialize.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoDestructShuriken.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustEnvironment.cs" />
     <Compile Include="Assets\GameUtils\Scripts\SettingManager.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ILRD\Fyber\GAFyberIntegration.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\MoveAndRotate.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendBusinessEvent.cs" />
     <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustAppStoreSubscription.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\Abstracts\ADataManager.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ColorFromPhase.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ILRD\IronSource\GAIronSourceIntegration.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendErrorEvent.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustEventSuccess.cs" />
-    <Compile Include="Assets\3DPart\GradientSky\Scripts\GradientSkyObject.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ColorFromVelocity.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ILRD\TopOn\GATopOnIntegration.cs" />
-    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\EmitOnKeyPress.cs" />
     <Compile Include="Assets\Scripts\UI\DropletSliderController.cs" />
-    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\BaseTenjin.cs" />
     <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustLogLevel.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\ConditionalAttribute\YcEnumShowAttribute.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\RequestManager.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RotateCamera.cs" />
     <Compile Include="Assets\GameUtils\Scripts\YCManager.cs" />
     <Compile Include="Assets\Scripts\Coins\CoinBank.cs" />
     <Compile Include="Assets\GameUtils\Scripts\BaseManager.cs" />
-    <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Scripts\ShowcaseDemoController.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Setup.cs" />
-    <Compile Include="Assets\Scripts\Impulse.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustEvent.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\ConditionalAttribute\YcEnumShowPropertyDrawer.cs" />
     <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\IosTenjin.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustAttribution.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Ads.cs" />
-    <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Scripts\SceneHintController.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ActorSpawner.cs" />
-    <Compile Include="Assets\Scripts\LevelData.cs" />
     <Compile Include="Assets\Scripts\CSJ\CSG.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\AnalyticsManager.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GAValidator.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\YCConfig.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\ABTestingManager.cs" />
-    <Compile Include="Assets\Scripts\Blade.cs" />
     <Compile Include="Assets\Scripts\UI\HealthSliderController.cs" />
     <Compile Include="Assets\GameUtils\External\Adjust\iOS\AdjustiOS.cs" />
     <Compile Include="Assets\GameUtils\Scripts\FBManager.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Resource.cs" />
-    <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\IsRemoteConfigsReady.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_UWPWrapper.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ColorRandomizer.cs" />
     <Compile Include="Assets\GameUtils\Scripts\GdprManager.cs" />
-    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\AppStoreType.cs" />
     <Compile Include="Assets\Scripts\DropletController.cs" />
-    <Compile Include="Assets\Scripts\CSJ\Classes\Model.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PlaneSO.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ILRD\Max\GAMaxIntegration.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\IGameAnalyticsATTListener.cs" />
     <Compile Include="Assets\Scripts\CompositeObject.cs" />
@@ -215,27 +140,116 @@
     <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Scripts\DitherByCameraDistance.cs" />
     <Compile Include="Assets\GameUtils\External\Adjust\ExampleGUI\ExampleGUI.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendDesignEvent.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Design.cs" />
     <Compile Include="Assets\Scripts\Installers\GameUtilsInstaller.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
+    <Compile Include="Assets\GameUtils\Scripts\YCManagerEditor.cs" />
+    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\FluidColorizer.cs" />
+    <Compile Include="Assets\GameUtils\Scripts\InAppManager.cs" />
+    <Compile Include="Assets\Scripts\Analytics\GameAnalyticManager.cs" />
+    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\WaveGenerator.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Business.cs" />
+    <Compile Include="Assets\3DPart\GradientSky\Scripts\Common\GradientSkyCommon.cs" />
+    <Compile Include="Assets\GameUtils\Scripts\UtilsAds.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendResourceEvent.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_New.cs" />
+    <Compile Include="Assets\GameUtils\Scripts\I18n\I18nElement.cs" />
+    <Compile Include="Assets\GameUtils\External\Adjust\Android\AdjustAndroid.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Progression.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ATT\GameAnalyticsATTClient.cs" />
+    <Compile Include="Assets\Scripts\CSJ\Classes\Plane.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightFlicker.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_TizenWrapper.cs" />
+    <Compile Include="Assets\GameUtils\Scripts\ConditionalAttribute\YcReadOnly.cs" />
+    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\TenjinIronSourceIntegration.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ATT\GameAnalyticsATTObjCBridge.cs" />
+    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\OverlapTest.cs" />
+    <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Scripts\PingPongMove.cs" />
+    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\AddRandomVelocity.cs" />
+    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ObjectDragger.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightIntensityFade.cs" />
+    <Compile Include="Assets\Scripts\UI\BalanceLabel.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\GameAnalytics.cs" />
+    <Compile Include="Assets\GameUtils\Scripts\Mmp\MmpManager.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_tvOSWrapper.cs" />
+    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\TenjinMopubIntegration.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
+    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ColorFromViscosity.cs" />
+    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\DebugTenjin.cs" />
+    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ColliderHighlighter.cs" />
+    <Compile Include="Assets\Scripts\CSJ\Classes\VertexAttributes.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Debug.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ILRD\AdMob\GAAdMobIntegration.cs" />
+    <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Plugins\SprintBone\SpringBone.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\GetABTestingVariantId.cs" />
+    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\ObiFluidPropertyColorizer.cs" />
+    <Compile Include="Assets\Scripts\CSJ\Classes\Polygon.cs" />
+    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ActorCOMTransform.cs" />
+    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\SlowmoToggler.cs" />
+    <Compile Include="Assets\Scripts\Installers\CanvasInstaller.cs" />
+    <Compile Include="Assets\GameUtils\External\Adjust\Unity\Adjust.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendProgressionEvent.cs" />
+    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\DebugParticleFrames.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_iOSWrapper.cs" />
+    <Compile Include="Assets\GameUtils\Scripts\Abstracts\AResourcesManager.cs" />
+    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\MazeManager.cs" />
+    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\TenjinAdMobIntegration.cs" />
+    <Compile Include="Assets\Scripts\Puddle.cs" />
+    <Compile Include="Assets\GameUtils\Scripts\Utils\YCEditorUtils.cs" />
+    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\CharacterController\ObiCharacter.cs" />
+    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\TenjinAppLovinIntegration.cs" />
+    <Compile Include="Assets\Scripts\UI\Manipulate UI\ManipulateUiController.cs" />
+    <Compile Include="Assets\Scripts\CSJ\Classes\Vertex.cs" />
+    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\SolidifyOnContact.cs" />
+    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\FluidJetController.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Error.cs" />
+    <Compile Include="Assets\Scripts\UI\ProgressController.cs" />
+    <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Scenes\2 NPRStyles RobotKyle\Scripts\DemoController.cs" />
+    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\Melt.cs" />
+    <Compile Include="Assets\Scripts\Installers\DependencyInstaller.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\GAInitialize.cs" />
+    <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustEnvironment.cs" />
+    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\MoveAndRotate.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendBusinessEvent.cs" />
+    <Compile Include="Assets\GameUtils\Scripts\Abstracts\ADataManager.cs" />
+    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ColorFromPhase.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ILRD\IronSource\GAIronSourceIntegration.cs" />
+    <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustEventSuccess.cs" />
+    <Compile Include="Assets\3DPart\GradientSky\Scripts\GradientSkyObject.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ILRD\TopOn\GATopOnIntegration.cs" />
+    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\EmitOnKeyPress.cs" />
+    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\BaseTenjin.cs" />
+    <Compile Include="Assets\GameUtils\Scripts\ConditionalAttribute\YcEnumShowAttribute.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
+    <Compile Include="Assets\GameUtils\Scripts\RequestManager.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RotateCamera.cs" />
+    <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Scripts\ShowcaseDemoController.cs" />
+    <Compile Include="Assets\Scripts\Impulse.cs" />
+    <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustEvent.cs" />
+    <Compile Include="Assets\GameUtils\Scripts\ConditionalAttribute\YcEnumShowPropertyDrawer.cs" />
+    <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustAttribution.cs" />
+    <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Scripts\SceneHintController.cs" />
+    <Compile Include="Assets\Scripts\LevelData.cs" />
+    <Compile Include="Assets\GameUtils\Scripts\AnalyticsManager.cs" />
+    <Compile Include="Assets\GameUtils\Scripts\YCConfig.cs" />
+    <Compile Include="Assets\GameUtils\Scripts\ABTestingManager.cs" />
+    <Compile Include="Assets\Scripts\Blade.cs" />
+    <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_UWPWrapper.cs" />
+    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ColorRandomizer.cs" />
+    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\AppStoreType.cs" />
+    <Compile Include="Assets\Scripts\CSJ\Classes\Model.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ILRD\Max\GAMaxIntegration.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Design.cs" />
     <Compile Include="Assets\PlaneController.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\Blinker.cs" />
     <Compile Include="Assets\GameUtils\Scripts\Utils\YCXmlHandler.cs" />
     <Compile Include="Assets\Scripts\WinController.cs" />
     <Compile Include="Assets\Scripts\Bucket.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Setup\Settings.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\YCManagerEditor.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_Translate.cs" />
     <Compile Include="Assets\Scripts\Piece.cs" />
-    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\FluidColorizer.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\InAppManager.cs" />
     <Compile Include="Assets\Scripts\Installers\GameAnalyticInstaller.cs" />
-    <Compile Include="Assets\Scripts\Analytics\GameAnalyticManager.cs" />
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\MazeScoreFormatter.cs" />
-    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\WaveGenerator.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Business.cs" />
-    <Compile Include="Assets\3DPart\GradientSky\Scripts\Common\GradientSkyCommon.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\UtilsAds.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ILRD\Mopub\GAMopubIntegration.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\GetABTestingId.cs" />
     <Compile Include="Assets\GameUtils\Scripts\AdsManager.cs" />
@@ -244,32 +258,22 @@
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ExtrapolationCamera.cs" />
     <Compile Include="Assets\3DPart\Liquid-Simulation-master\Liquid-Simulation-master\Assets\Scripts\BlurController.cs" />
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\ViscositySurfTensionToUserData.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendResourceEvent.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\I18n\I18nElement.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_New.cs" />
     <Compile Include="Assets\3DPart\GradientSky\Scripts\GradientSkyCamera.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\Android\AdjustAndroid.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Progression.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SetCustomDimension.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ATT\GameAnalyticsATTClient.cs" />
-    <Compile Include="Assets\Scripts\CSJ\Classes\Plane.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightFlicker.cs" />
     <Compile Include="Assets\Scripts\GameOverPanel.cs" />
     <Compile Include="Assets\GameUtils\Scripts\I18n\I18nResourcesManager.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_Wrapper.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_TizenWrapper.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\ConditionalAttribute\YcReadOnly.cs" />
     <Compile Include="Assets\GameUtils\External\Adjust\Windows\AdjustWindows.cs" />
-    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\TenjinIronSourceIntegration.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ATT\GameAnalyticsATTObjCBridge.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\State\GAState.cs" />
-    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\OverlapTest.cs" />
     <Compile Include="Assets\GameUtils\Scripts\I18n\I18nManager.cs" />
-    <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Scripts\PingPongMove.cs" />
     <Compile Include="Assets\Scripts\Coins\CoinFactory.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\WorldSpaceGravity.cs" />
     <Compile Include="Assets\Scripts\GameContext.cs" />
+    <Compile Include="Assets\Scripts\UI\Manipulate UI\CutUiController.cs" />
+    <Compile Include="Assets\Scripts\UI\Manipulate UI\LaserUiController.cs" />
+    <Compile Include="Assets\Scripts\Laser.cs" />
+    <Compile Include="Assets\Scripts\IceCream.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\GameAnalytics\Readme.txt" />
@@ -1135,6 +1139,9 @@
     <Reference Include="Unity.Recorder">
       <HintPath>Library\ScriptAssemblies\Unity.Recorder.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualEffectGraph.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Recorder.Base">
       <HintPath>Library\ScriptAssemblies\Unity.Recorder.Base.dll</HintPath>
     </Reference>
@@ -1149,6 +1156,9 @@
     </Reference>
     <Reference Include="Unity.Services.Analytics.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Analytics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualEffectGraph.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -1216,6 +1226,10 @@
       <Project>{C6F116B4-EAC3-B3C9-AB43-8EAB5BC7C4E0}</Project>
       <Name>Zenject-Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="OtoonEditor.csproj">
+      <Project>{B96893CC-3BD9-B382-26BA-ECD6197358D5}</Project>
+      <Name>OtoonEditor</Name>
+    </ProjectReference>
     <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
       <Project>{B14B4029-FF98-06D9-A7F6-3198D07DBB3C}</Project>
       <Name>Zenject-ReflectionBaking-Editor</Name>
@@ -1267,10 +1281,6 @@
     <ProjectReference Include="MaxSdk.Scripts.csproj">
       <Project>{3A4B6622-B309-123B-86FA-5B72C8041263}</Project>
       <Name>MaxSdk.Scripts</Name>
-    </ProjectReference>
-    <ProjectReference Include="OtoonEditor.csproj">
-      <Project>{B96893CC-3BD9-B382-26BA-ECD6197358D5}</Project>
-      <Name>OtoonEditor</Name>
     </ProjectReference>
     <ProjectReference Include="OtoonShader.csproj">
       <Project>{E181AD92-7F5E-5314-EB23-BD8246DC4673}</Project>

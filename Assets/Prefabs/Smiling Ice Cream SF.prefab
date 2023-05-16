@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5332477720108439017}
   - component: {fileID: 8276583979681831993}
+  - component: {fileID: 924407089}
+  - component: {fileID: 924407090}
   m_Layer: 0
   m_Name: Smiling Ice Cream SF
-  m_TagString: Untagged
+  m_TagString: IceCream
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4704876875784114003}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -1.81, y: 0.387, z: 1.71}
   m_LocalScale: {x: 0.25998935, y: 0.25998935, z: 0.25998935}
   m_ConstrainProportionsScale: 0
@@ -96,3 +98,31 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.11902553, y: 1.3069444, z: -0.2213965}
     m_Extent: {x: 1.9169343, y: 3.1764755, z: 1.8460047}
   m_DirtyAABB: 0
+--- !u!114 &924407089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4704876875784114003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85f1f66216007f45aa9f92226ab7f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Puddle: {fileID: 0}
+  MeltSpeed: 0.2
+  SkinnedMeshRenderer: {fileID: 8276583979681831993}
+--- !u!65 &924407090
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4704876875784114003}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.8338685, y: 6.352951, z: 3.6920094}
+  m_Center: {x: -0.11902553, y: 1.3069444, z: -0.2213965}

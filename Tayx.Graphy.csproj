@@ -57,28 +57,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Util\G_ExtensionMethods.cs" />
-    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Fps\G_FpsMonitor.cs" />
-    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Fps\G_FpsText.cs" />
     <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Fps\G_FpsManager.cs" />
-    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Fps\G_FpsGraph.cs" />
     <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Ram\G_RamMonitor.cs" />
     <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Audio\G_AudioGraph.cs" />
-    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Util\G_Singleton.cs" />
     <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Shader\G_GraphShader.cs" />
     <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\GraphyManager.cs" />
-    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Ram\G_RamManager.cs" />
     <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Ram\G_RamGraph.cs" />
     <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\UI\IModifiableState.cs" />
     <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Ram\G_RamText.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\GraphyDebugger.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Util\G_Intstring.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Graph\G_Graph.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\UI\IMovable.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Fps\G_FpsMonitor.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Fps\G_FpsText.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Fps\G_FpsGraph.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Util\G_Singleton.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Ram\G_RamManager.cs" />
     <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Audio\G_AudioMonitor.cs" />
     <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Audio\G_AudioText.cs" />
     <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Util\G_FloatString.cs" />
-    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\GraphyDebugger.cs" />
-    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Util\G_Intstring.cs" />
     <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Advanced\G_AdvancedData.cs" />
-    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Graph\G_Graph.cs" />
     <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Audio\G_AudioManager.cs" />
-    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\UI\IMovable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Tayx.Graphy.asmdef" />
@@ -411,11 +411,11 @@
     <Reference Include="Google.VersionHandlerImpl">
       <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.VersionHandlerImpl.dll</HintPath>
     </Reference>
-    <Reference Include="Google.JarResolver">
-      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.JarResolver.dll</HintPath>
-    </Reference>
     <Reference Include="WinWsInterface">
       <HintPath>Assets\GameUtils\External\Adjust\Windows\Stubs\WinWsInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.JarResolver">
+      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.JarResolver.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@1.11.4\Mono.Cecil.dll</HintPath>

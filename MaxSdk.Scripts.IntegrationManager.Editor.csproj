@@ -60,14 +60,14 @@
     <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinCommandLine.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinIntegrationManager.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinIntegrationManagerWindow.cs" />
-    <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinProcessGradleBuildFile.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinPostProcessAndroidGradle.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinPreProcessAndroid.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinInternalSettings.cs" />
+    <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinMenuItems.cs" />
+    <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinProcessGradleBuildFile.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinAutoUpdater.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinDownloadHandler.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinPostProcessiOS.cs" />
-    <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinMenuItems.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinSettings.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -404,11 +404,11 @@
     <Reference Include="Google.VersionHandlerImpl">
       <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.VersionHandlerImpl.dll</HintPath>
     </Reference>
-    <Reference Include="Google.JarResolver">
-      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.JarResolver.dll</HintPath>
-    </Reference>
     <Reference Include="WinWsInterface">
       <HintPath>Assets\GameUtils\External\Adjust\Windows\Stubs\WinWsInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.JarResolver">
+      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.JarResolver.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@1.11.4\Mono.Cecil.dll</HintPath>

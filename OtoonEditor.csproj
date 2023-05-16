@@ -56,21 +56,21 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\OToon- URP Toon Shading\Shaders\Editor\SavedParameter.cs" />
-    <Compile Include="Assets\OToon- URP Toon Shading\Shaders\Editor\SplitDrawer.cs" />
     <Compile Include="Assets\OToon- URP Toon Shading\Shaders\Editor\GradientSettingsManager.cs" />
     <Compile Include="Assets\OToon- URP Toon Shading\Shaders\Editor\OtoonTooltip.cs" />
     <Compile Include="Assets\OToon- URP Toon Shading\Shaders\Editor\OtoonShaderGraph.cs" />
     <Compile Include="Assets\OToon- URP Toon Shading\Shaders\Editor\StandardBaseShaderGUI.cs" />
+    <Compile Include="Assets\OToon- URP Toon Shading\Shaders\Editor\MinMaxDrawer.cs" />
+    <Compile Include="Assets\OToon- URP Toon Shading\Shaders\Editor\GradientSettingsManagerEditor.cs" />
+    <Compile Include="Assets\OToon- URP Toon Shading\Shaders\Editor\GradientExDrawer.cs" />
+    <Compile Include="Assets\OToon- URP Toon Shading\Shaders\Editor\SavedParameter.cs" />
+    <Compile Include="Assets\OToon- URP Toon Shading\Shaders\Editor\SplitDrawer.cs" />
     <Compile Include="Assets\OToon- URP Toon Shading\Shaders\Editor\AssetSingleton.cs" />
     <Compile Include="Assets\OToon- URP Toon Shading\Shaders\Editor\URPSetupHelper.cs" />
     <Compile Include="Assets\OToon- URP Toon Shading\Shaders\Editor\OtoonLitShader.cs" />
     <Compile Include="Assets\OToon- URP Toon Shading\Shaders\Editor\ToggleExDrawer.cs" />
     <Compile Include="Assets\OToon- URP Toon Shading\Shaders\Editor\LegacyGradientDataTransferWizard.cs" />
-    <Compile Include="Assets\OToon- URP Toon Shading\Shaders\Editor\MinMaxDrawer.cs" />
-    <Compile Include="Assets\OToon- URP Toon Shading\Shaders\Editor\GradientSettingsManagerEditor.cs" />
     <Compile Include="Assets\OToon- URP Toon Shading\Shaders\Editor\OtoonUpdateHelper.cs" />
-    <Compile Include="Assets\OToon- URP Toon Shading\Shaders\Editor\GradientExDrawer.cs" />
     <Compile Include="Assets\OToon- URP Toon Shading\Shaders\Editor\OtoonCustomLitShader.cs" />
     <Compile Include="Assets\OToon- URP Toon Shading\Shaders\Editor\EditorGUIhelper.cs" />
   </ItemGroup>
@@ -408,11 +408,11 @@
     <Reference Include="Google.VersionHandlerImpl">
       <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.VersionHandlerImpl.dll</HintPath>
     </Reference>
-    <Reference Include="Google.JarResolver">
-      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.JarResolver.dll</HintPath>
-    </Reference>
     <Reference Include="WinWsInterface">
       <HintPath>Assets\GameUtils\External\Adjust\Windows\Stubs\WinWsInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.JarResolver">
+      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.JarResolver.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@1.11.4\Mono.Cecil.dll</HintPath>
