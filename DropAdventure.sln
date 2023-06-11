@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{2B3CD19A-E278-43D5-7F50-8A9BE0469C9E}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject", "Zenject.csproj", "{A06FDC85-855A-B070-E9B7-2E57DC5B17A6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Obi", "Obi.csproj", "{04969B3D-3761-A14F-470D-08F5E09B4A7A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tayx.Graphy", "Tayx.Graphy.csproj", "{6969FF3E-37D3-D60E-53D3-038B5C474286}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{2B3CD19A-E278-43D5-7F50-8A9BE0469C9E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFXRDemo", "CFXRDemo.csproj", "{5C74AE8D-F424-EAE7-36D1-5B6406CF9E77}"
 EndProject
@@ -51,6 +51,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B3CD19A-E278-43D5-7F50-8A9BE0469C9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B3CD19A-E278-43D5-7F50-8A9BE0469C9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B3CD19A-E278-43D5-7F50-8A9BE0469C9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B3CD19A-E278-43D5-7F50-8A9BE0469C9E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A06FDC85-855A-B070-E9B7-2E57DC5B17A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A06FDC85-855A-B070-E9B7-2E57DC5B17A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A06FDC85-855A-B070-E9B7-2E57DC5B17A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -63,10 +67,6 @@ Global
 		{6969FF3E-37D3-D60E-53D3-038B5C474286}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6969FF3E-37D3-D60E-53D3-038B5C474286}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6969FF3E-37D3-D60E-53D3-038B5C474286}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2B3CD19A-E278-43D5-7F50-8A9BE0469C9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2B3CD19A-E278-43D5-7F50-8A9BE0469C9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2B3CD19A-E278-43D5-7F50-8A9BE0469C9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2B3CD19A-E278-43D5-7F50-8A9BE0469C9E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5C74AE8D-F424-EAE7-36D1-5B6406CF9E77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5C74AE8D-F424-EAE7-36D1-5B6406CF9E77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C74AE8D-F424-EAE7-36D1-5B6406CF9E77}.Release|Any CPU.ActiveCfg = Release|Any CPU

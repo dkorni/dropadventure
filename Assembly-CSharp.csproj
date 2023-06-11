@@ -56,6 +56,7 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\UI\Manipulate UI\CutUiController.cs" />
     <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustSessionSuccess.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\FPSDisplay.cs" />
     <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustSessionFailure.cs" />
@@ -164,6 +165,7 @@
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ATT\GameAnalyticsATTObjCBridge.cs" />
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\OverlapTest.cs" />
     <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Scripts\PingPongMove.cs" />
+    <Compile Include="Assets\Scripts\IceCream.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\AddRandomVelocity.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ObjectDragger.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightIntensityFade.cs" />
@@ -185,6 +187,7 @@
     <Compile Include="Assets\Scripts\CSJ\Classes\Polygon.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ActorCOMTransform.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\SlowmoToggler.cs" />
+    <Compile Include="Assets\Scripts\UI\Manipulate UI\LaserUiController.cs" />
     <Compile Include="Assets\Scripts\Installers\CanvasInstaller.cs" />
     <Compile Include="Assets\GameUtils\External\Adjust\Unity\Adjust.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendProgressionEvent.cs" />
@@ -249,6 +252,7 @@
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_Translate.cs" />
     <Compile Include="Assets\Scripts\Piece.cs" />
     <Compile Include="Assets\Scripts\Installers\GameAnalyticInstaller.cs" />
+    <Compile Include="Assets\Scripts\Laser.cs" />
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\MazeScoreFormatter.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ILRD\Mopub\GAMopubIntegration.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\GetABTestingId.cs" />
@@ -270,10 +274,6 @@
     <Compile Include="Assets\Scripts\Coins\CoinFactory.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\WorldSpaceGravity.cs" />
     <Compile Include="Assets\Scripts\GameContext.cs" />
-    <Compile Include="Assets\Scripts\UI\Manipulate UI\CutUiController.cs" />
-    <Compile Include="Assets\Scripts\UI\Manipulate UI\LaserUiController.cs" />
-    <Compile Include="Assets\Scripts\Laser.cs" />
-    <Compile Include="Assets\Scripts\IceCream.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\GameAnalytics\Readme.txt" />
