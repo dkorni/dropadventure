@@ -12,6 +12,11 @@ public class IceCream : MonoBehaviour
 
     private bool canMelt = true;
 
+    private void Start()
+    {
+        Puddle.SetActive(false);
+    }
+
     public void Melt()
     {
         if (!canMelt)
@@ -24,6 +29,17 @@ public class IceCream : MonoBehaviour
     {
         canMelt = false;
         var meltingValue = SkinnedMeshRenderer.GetBlendShapeWeight(0);
+
+        if(meltingValue == 100)
+        {
+            if (gameObject.activeSelf)
+            {
+                gameObject.SetActive(false);
+            }
+            Puddle.SetActive(true);
+            yield break;
+        }
+
         meltingValue = Mathf.Min(meltingValue + MeltSpeed, 100);
         SkinnedMeshRenderer.SetBlendShapeWeight(0, meltingValue);
         yield return null;

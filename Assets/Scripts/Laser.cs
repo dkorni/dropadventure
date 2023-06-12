@@ -12,6 +12,8 @@ public class Laser : MonoBehaviour
     [Inject] GameContext gameContext;
     [SerializeField] VisualEffect visualEffect;
 
+    public Transform smoke;
+
     private Vector3 position;
     private Coroutine coroutine;
 
@@ -31,6 +33,7 @@ public class Laser : MonoBehaviour
 
     private void StartLaser()
     {
+        smoke.gameObject.SetActive(true);
         coroutine = StartCoroutine(UpdateLaserCoroutine());
     }
 
@@ -38,6 +41,7 @@ public class Laser : MonoBehaviour
     {
         visualEffect.enabled = false;
         StopCoroutine(coroutine);
+        smoke.gameObject.SetActive(false);
     }
 
     private void UpdateLasser(Vector3 position)
@@ -52,6 +56,7 @@ public class Laser : MonoBehaviour
             var ray = Camera.main.ScreenPointToRay(this.position);
             if (Physics.Raycast(ray, out var hit, MaxDistance))
             {
+                smoke.transform.position = hit.point;
                 visualEffect.enabled = true;
                 transform.LookAt(hit.point);
                 transform.position = new Vector3(hit.point.x, transform.position.y, transform.position.z);
@@ -61,6 +66,8 @@ public class Laser : MonoBehaviour
                     iceCream.Melt();
                 }
             }
+               
+
             yield return null;
         }
     }
