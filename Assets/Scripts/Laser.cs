@@ -19,6 +19,7 @@ public class Laser : MonoBehaviour
 
     private void Start()
     {
+        smoke.parent = null;
         gameContext.OnStartLaser += StartLaser;
         gameContext.OnUpdateLaser += UpdateLasser;
         gameContext.OnStopLaser += StopLaser;
@@ -60,6 +61,7 @@ public class Laser : MonoBehaviour
                 visualEffect.enabled = true;
                 transform.LookAt(hit.point);
                 transform.position = new Vector3(hit.point.x, transform.position.y, transform.position.z);
+                Debug.Log("Hitted: " + hit.transform.name);
                 if (hit.transform.CompareTag("IceCream"))
                 {
                     var iceCream = hit.transform.GetComponent<IceCream>();

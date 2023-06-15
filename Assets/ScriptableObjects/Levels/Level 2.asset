@@ -15,5 +15,6 @@ MonoBehaviour:
   Index: 2
   MinHealth: 98
   DropLeftSliderColor: {r: 0.69411767, g: 0.48627454, b: 0.13333334, a: 1}
-  HealthSliderColor: {r: 0.098039225, g: 0.5137255, b: 0.5019608, a: 1}
+  HealthSliderColor: {r: 1, g: 0.9490196, b: 0.3647059, a: 1}
   IsCutNeeded: 0
+  IsLaserNeeded: 1

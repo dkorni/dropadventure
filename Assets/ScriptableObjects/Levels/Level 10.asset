@@ -17,3 +17,4 @@ MonoBehaviour:
   DropLeftSliderColor: {r: 0.9490196, g: 0.34117648, b: 0.45490196, a: 1}
   HealthSliderColor: {r: 0.050980393, g: 0.9490196, b: 0.019607844, a: 1}
   IsCutNeeded: 1
+  IsLaserNeeded: 1

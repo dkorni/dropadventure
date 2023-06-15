@@ -29,6 +29,6 @@ public class LaserUiController : ManipulateUiController
 
     protected override void OnLevelUpdated(LevelData levelData)
     {
-       // todo disabling logic on start
+        gameObject.SetActive(levelData.IsLaserNeeded);
     }
 }
