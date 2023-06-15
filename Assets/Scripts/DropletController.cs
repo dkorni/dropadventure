@@ -135,6 +135,12 @@ public class DropletController : MonoBehaviour
                                 OnWashedAway?.Invoke();
                         };
                     }
+
+                    else if (collider.tag == "Bomb")
+                    {
+                       var bomb = collider.GetComponent<Bomb>();
+                       bomb.Detonate();
+                    }
                 }
             }
         }

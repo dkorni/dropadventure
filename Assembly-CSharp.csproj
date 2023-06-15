@@ -277,6 +277,7 @@
     <Compile Include="Assets\Scripts\FromToMover.cs" />
     <Compile Include="Assets\Scripts\Rotator.cs" />
     <Compile Include="Assets\Scripts\Interfaces\ISmashable.cs" />
+    <Compile Include="Assets\Scripts\Bomb.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\GameAnalytics\Readme.txt" />
