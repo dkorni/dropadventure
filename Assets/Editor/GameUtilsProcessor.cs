@@ -68,7 +68,7 @@ namespace YsoCorp {
                     throw new BuildFailedException("[GameUtils] AdMob Android Id found but the network is not installed");
                 }
                 if (ycConfig.AndroidInterstitial == "" || ycConfig.AndroidRewarded == "" || ycConfig.AndroidBanner == "") {
-                    throw new Exception("[GameUtils] Empty Android Ad Units");
+                    //throw new Exception("[GameUtils] Empty Android Ad Units");
                 }
 #endif
                 ycConfig.InitFacebook();

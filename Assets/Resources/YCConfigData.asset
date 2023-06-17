@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameYcId: 1f6dd5
   InAppRemoveAds: 
-  InAppRemoveAdsCanRemoveInBanner: 1
+  InAppRemoveAdsCanRemoveInBanner: 0
   InappDebug: 1
   ABVersion: 1
   ABForcedSample: 
@@ -23,7 +23,7 @@ MonoBehaviour:
   BannerDisplayOnInit: 1
   BannerDisplayOnInitEditor: 1
   InterstitialInterval: 20
-  activeLogs: 1
+  activeLogs: 0
   Name: Flush fluid!
   FbAppId: 1587209988412402
   FbClientToken: 709010f2f1195a54ce19473174939cce

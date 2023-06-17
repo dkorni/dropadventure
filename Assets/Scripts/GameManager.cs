@@ -3,7 +3,7 @@ using System;
 using System.Diagnostics;
 using UnityEngine;
 using Zenject;
-
+using System.Linq;
 
 
 public class GameManager : MonoBehaviour
@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
 
     private Stopwatch stopwatch;
 
+    private Bomb[] bombs;
+
     private void Awake()
     {
         Application.targetFrameRate = 30;
@@ -39,6 +41,20 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        bombs = FindObjectsOfType<Bomb>();
+        
+        if(bombs.Length > 0)
+        {
+            var subscribers = FindObjectsOfType<MonoBehaviour>().OfType<IDetonationSubscriber>().ToArray();
+            foreach (var bomb in bombs)
+            {
+                foreach (var subscriber in subscribers)
+                {
+                    bomb.OnDetonated += subscriber.OnDetonated;
+                }
+            }
+        }
+
         puddles = FindObjectsOfType<Puddle>();
         _dropletController.OnJoin += IncreementDrops;
         _dropletController.OnFlush += OnFlush;
