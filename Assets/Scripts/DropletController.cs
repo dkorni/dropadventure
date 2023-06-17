@@ -34,7 +34,7 @@ public class DropletController : MonoBehaviour, IDetonationSubscriber
 
     public int FlushedParticles;
 
-    public float Speed = 1.02f;
+    private float Speed = 1.02f;
 
     public float DelayTimeToStart;
 
