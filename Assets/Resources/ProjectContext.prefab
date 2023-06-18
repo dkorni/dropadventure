@@ -83,6 +83,8 @@ MonoBehaviour:
   Context: {fileID: 11400000, guid: 281aac73853804ff1930cc6c57b56eb7, type: 2}
   CoinBank: {fileID: 11400000, guid: 0727e229d09024139be7790110a0657d, type: 2}
   PlaneSO: {fileID: 11400000, guid: d96ddd747cbc7174d957e4628e71c353, type: 2}
+  LaserPrefab: {fileID: 9006082896550765089, guid: eeae8d2506499c440a46c43ccfd09db3,
+    type: 3}
 --- !u!114 &2484571404902169660
 MonoBehaviour:
   m_ObjectHideFlags: 0

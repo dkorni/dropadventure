@@ -150,7 +150,7 @@ namespace Imphenzia
         /// Check if the gradient values and cached gradient values are different - if they are, recreate the mesh to update the gradient.
         /// Checks if camera values and cached camera values are different - if they are, rescale the mesh to ensure it covers the entire screen.
         /// </summary>
-        void Update()
+        void LateUpdate()
         {
 
             // If the field of view has changed for the camera, the size of the mesh needs updating

@@ -10,7 +10,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using Zenject;
 
-public class DropletController : MonoBehaviour
+public class DropletController : MonoBehaviour, IDetonationSubscriber
 {
     public event Action OnDied;
     public event Action OnJoin;
@@ -135,6 +135,12 @@ public class DropletController : MonoBehaviour
                                 OnWashedAway?.Invoke();
                         };
                     }
+
+                    else if (collider.tag == "Bomb")
+                    {
+                       var bomb = collider.GetComponent<Bomb>();
+                       bomb.Detonate();
+                    }
                 }
             }
         }
@@ -175,6 +181,21 @@ public class DropletController : MonoBehaviour
             yield return null;
         }
         currentSpeed = Speed;
+    }
+
+    public void OnDetonated()
+    {
+        _obiSolver.OnCollision -= ObiSolverOnOnCollision;
+        _emitter.solver.OnBeginStep -= Solver_OnBeginStep;
+        _emitter.AddForce(_emitter.transform.up * 0.01f, ForceMode.Impulse);
+        StartCoroutine(KillAllAfterExplosion());
+    }
+
+    private IEnumerator KillAllAfterExplosion()
+    { 
+        yield return new WaitForSeconds(3.1f);
+        _emitter.KillAll();
+        OnDied?.Invoke();
     }
 
     [BurstCompile]

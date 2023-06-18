@@ -25,6 +25,9 @@ public class GameContext : ScriptableObject
     public Action OnStartCut;
     public Action OnStopCut;
     public Action<Vector3> OnUpdateCut;
+    public Action OnStartLaser;
+    public Action OnStopLaser;
+    public Action<Vector3> OnUpdateLaser;
     public Action OnReload;
 
     public void UpdateStatus(GameStates newState)
@@ -45,6 +48,10 @@ public class GameContext : ScriptableObject
     public void StartCut() => OnStartCut?.Invoke();
     public void StopCut() => OnStopCut?.Invoke();
     public void UpdateCut(Vector3 position) => OnUpdateCut?.Invoke(position);
+
+    public void StartLaser() => OnStartLaser?.Invoke();
+    public void StopLaser() => OnStopLaser?.Invoke();
+    public void UpdateLaser(Vector3 position) => OnUpdateLaser?.Invoke(position);
 
     public void Reload()
     {

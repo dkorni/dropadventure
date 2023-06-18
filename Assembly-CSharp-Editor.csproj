@@ -56,42 +56,43 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Joystick Pack\Scripts\Editor\VariableJoystickEditor.cs" />
-    <Compile Include="Assets\GameAnalytics\Editor\GA_PostprocessBuild.cs" />
-    <Compile Include="Assets\GameUtils\Editor\Utils\YCPackageManager.cs" />
     <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\Editor\TenjinPackager.cs" />
-    <Compile Include="Assets\GameUtils\Editor\CustomWindows\YCMaxUpgradeWindow.cs" />
-    <Compile Include="Assets\GameUtils\Editor\CustomWindows\YCReplaceObjectsWindow.cs" />
     <Compile Include="Assets\GameAnalytics\Editor\GA_AutoRun.cs" />
     <Compile Include="Assets\Editor\DisableBitcode.cs" />
     <Compile Include="Assets\GameUtils\Editor\CustomWindows\YCDebugWindow.cs" />
     <Compile Include="Assets\GameAnalytics\Editor\GA_AssetPostprocessor.cs" />
     <Compile Include="Assets\Editor\BuildPostProcessor.cs" />
-    <Compile Include="Assets\GameAnalytics\Editor\GA_ContinuationManager.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\Editor\AdjustSettings.cs" />
-    <Compile Include="Assets\GameUtils\Editor\Utils\YCEditorCoroutine.cs" />
     <Compile Include="Assets\GameAnalytics\Editor\GA_Menu.cs" />
     <Compile Include="Assets\GameAnalytics\Editor\GameAnalyticsInspector.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Editor\DynamicJoystickEditor.cs" />
-    <Compile Include="Assets\Scripts\Editor\SceneManagerEditor.cs" />
     <Compile Include="Assets\GameUtils\Editor\CustomWindows\YCGameutilsUpdateWindow.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Editor\FloatingJoystickEditor.cs" />
-    <Compile Include="Assets\GameAnalytics\Editor\Playmaker\PlayMakerPresenceCheck.cs" />
-    <Compile Include="Assets\GameAnalytics\Editor\GA_EditorUtilities.cs" />
-    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\Editor\TenjinEditorPrefs.cs" />
-    <Compile Include="Assets\GameAnalytics\Editor\Playmaker\SendResourceEventActionEditor.cs" />
     <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\Editor\TenjinAssetSelector.cs" />
-    <Compile Include="Assets\GameAnalytics\Editor\Playmaker\SendProgressionEventActionEditor.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Editor\JoystickEditor.cs" />
     <Compile Include="Assets\GameAnalytics\Editor\GA_SettingsInspector.cs" />
     <Compile Include="Assets\GameUtils\Editor\CustomWindows\YCCustomWindow.cs" />
     <Compile Include="Assets\Editor\GameUtilsProcessor.cs" />
     <Compile Include="Assets\GameAnalytics\Editor\GA_SignUp.cs" />
     <Compile Include="Assets\GameAnalytics\Editor\GA_UpdateWindow.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\Editor\AdjustEditor.cs" />
     <Compile Include="Assets\GameUtils\Editor\Utils\YCUpdatesHandler.cs" />
-    <Compile Include="Assets\GameUtils\Editor\Utils\YCPackageDetection.cs" />
     <Compile Include="Assets\GameUtils\Editor\YCMenuItemManager.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Editor\VariableJoystickEditor.cs" />
+    <Compile Include="Assets\GameAnalytics\Editor\GA_PostprocessBuild.cs" />
+    <Compile Include="Assets\GameUtils\Editor\Utils\YCPackageManager.cs" />
+    <Compile Include="Assets\GameUtils\Editor\CustomWindows\YCMaxUpgradeWindow.cs" />
+    <Compile Include="Assets\GameUtils\Editor\CustomWindows\YCReplaceObjectsWindow.cs" />
+    <Compile Include="Assets\GameAnalytics\Editor\GA_ContinuationManager.cs" />
+    <Compile Include="Assets\GameUtils\External\Adjust\Editor\AdjustSettings.cs" />
+    <Compile Include="Assets\GameUtils\Editor\Utils\YCEditorCoroutine.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Editor\DynamicJoystickEditor.cs" />
+    <Compile Include="Assets\Scripts\Editor\SceneManagerEditor.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Editor\FloatingJoystickEditor.cs" />
+    <Compile Include="Assets\GameAnalytics\Editor\Playmaker\PlayMakerPresenceCheck.cs" />
+    <Compile Include="Assets\GameAnalytics\Editor\GA_EditorUtilities.cs" />
+    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\Editor\TenjinEditorPrefs.cs" />
+    <Compile Include="Assets\GameAnalytics\Editor\Playmaker\SendResourceEventActionEditor.cs" />
+    <Compile Include="Assets\GameAnalytics\Editor\Playmaker\SendProgressionEventActionEditor.cs" />
+    <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Plugins\SprintBone\Editor\SpringBoneEditor.cs" />
+    <Compile Include="Assets\GameUtils\External\Adjust\Editor\AdjustEditor.cs" />
+    <Compile Include="Assets\GameUtils\Editor\Utils\YCPackageDetection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\MaxSdk\Mediation\Mintegral\Editor\Dependencies.xml" />
@@ -913,6 +914,9 @@
     <Reference Include="Unity.Recorder">
       <HintPath>Library\ScriptAssemblies\Unity.Recorder.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualEffectGraph.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Recorder.Base">
       <HintPath>Library\ScriptAssemblies\Unity.Recorder.Base.dll</HintPath>
     </Reference>
@@ -927,6 +931,9 @@
     </Reference>
     <Reference Include="Unity.Services.Analytics.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Analytics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualEffectGraph.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -998,6 +1005,10 @@
       <Project>{C6F116B4-EAC3-B3C9-AB43-8EAB5BC7C4E0}</Project>
       <Name>Zenject-Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="OtoonEditor.csproj">
+      <Project>{B96893CC-3BD9-B382-26BA-ECD6197358D5}</Project>
+      <Name>OtoonEditor</Name>
+    </ProjectReference>
     <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
       <Project>{B14B4029-FF98-06D9-A7F6-3198D07DBB3C}</Project>
       <Name>Zenject-ReflectionBaking-Editor</Name>
@@ -1049,6 +1060,10 @@
     <ProjectReference Include="MaxSdk.Scripts.csproj">
       <Project>{3A4B6622-B309-123B-86FA-5B72C8041263}</Project>
       <Name>MaxSdk.Scripts</Name>
+    </ProjectReference>
+    <ProjectReference Include="OtoonShader.csproj">
+      <Project>{E181AD92-7F5E-5314-EB23-BD8246DC4673}</Project>
+      <Name>OtoonShader</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

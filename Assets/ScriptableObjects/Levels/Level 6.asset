@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Level 6
   m_EditorClassIdentifier: 
   Index: 6
-  MinHealth: 70
+  MinHealth: 50
   DropLeftSliderColor: {r: 0.14901961, g: 0.14901961, b: 0.14901961, a: 1}
   HealthSliderColor: {r: 0.9490196, g: 0.24313726, b: 0.18039216, a: 1}
   IsCutNeeded: 0
+  IsLaserNeeded: 0

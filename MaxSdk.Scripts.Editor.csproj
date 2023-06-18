@@ -56,8 +56,8 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\MaxSdk\Scripts\Editor\MaxPostProcessBuildiOS.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\Editor\MaxPostProcessBuildAndroid.cs" />
+    <Compile Include="Assets\MaxSdk\Scripts\Editor\MaxPostProcessBuildiOS.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\Editor\MaxInitialization.cs" />
   </ItemGroup>
   <ItemGroup>

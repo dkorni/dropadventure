@@ -1,3 +1,4 @@
+using Assets.Scripts.Interfaces;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,12 +12,18 @@ public class Bucket : MonoBehaviour
     public float ExplosionForce = 10.0f;
     public Rigidbody[] Pieces;
     public float ExplosionRadius = 2.0f;
-    public GameObject Puddle;
+    public GameObject Smashable;
     public HingeJoint HingeJoint;
+    public AudioClip PuddleAppearanceAudioClip;
+
+    private AudioSource audioSource;
+    private ISmashable smashable;
 
     public void Start()
     {
-        Puddle.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
+        smashable = Smashable.GetComponent<ISmashable>();
+        smashable.Prepare();
     }
 
     public void OnCollisionEnter(Collision collision)
@@ -34,8 +41,8 @@ public class Bucket : MonoBehaviour
                 piece.AddExplosionForce(ExplosionForce, transform.position, ExplosionRadius, 3.0f, ForceMode.Impulse);
             }
 
-            Puddle.transform.position = collision.contacts[0].point + new Vector3(0,0.52f,0);
-            Puddle.SetActive(true);
+            smashable.Smash(collision);
+            audioSource.PlayOneShot(PuddleAppearanceAudioClip);
         }
     }
 }
