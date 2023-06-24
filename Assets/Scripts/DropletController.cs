@@ -34,7 +34,7 @@ public class DropletController : MonoBehaviour, IDetonationSubscriber
 
     public int FlushedParticles;
 
-    private float Speed = 1.02f;
+    private float Speed = 1.035f;
 
     public float DelayTimeToStart;
 
@@ -54,7 +54,12 @@ public class DropletController : MonoBehaviour, IDetonationSubscriber
         _emitter.solver.OnBeginStep += Solver_OnBeginStep;
         var health = _emitter.GetMaxPoints();
         var maxHealth = health;
-     
+
+        OnDied += () =>
+        {
+            _emitter.solver.OnBeginStep -= Solver_OnBeginStep;
+        };
+
        _emitter.OnKillParticle += (obiEmitter, index) =>
        {
            if (obiEmitter.activeParticleCount == 1)
@@ -194,7 +199,7 @@ public class DropletController : MonoBehaviour, IDetonationSubscriber
     private IEnumerator KillAllAfterExplosion()
     { 
         yield return new WaitForSeconds(3.1f);
-        _emitter.KillAll();
+        
         OnDied?.Invoke();
     }
 
@@ -205,7 +210,7 @@ public class DropletController : MonoBehaviour, IDetonationSubscriber
         public NativeArray<float4> velocities;
 
         [ReadOnly] public float speed;
-
+        
         public void Execute(int i)
         {
             var index = indices[i];
