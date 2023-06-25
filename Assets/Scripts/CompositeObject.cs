@@ -36,6 +36,9 @@ public class CompositeObject : MonoBehaviour
             Substruct(left, right);
         }
 
+        if (rightMultipleObjects == null)
+            return;
+
         if (rightMultipleObjects.Length > 0)
         {
             Substruct(left, rightMultipleObjects);
