@@ -57,15 +57,32 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Obi\Editor\Common\Constraints\ObiConstraintParametersDrawer.cs" />
+    <Compile Include="Assets\Obi\Editor\Common\Solver\ObiSolverEditor.cs" />
     <Compile Include="Assets\Obi\Editor\Common\ObiAboutWindow.cs" />
+    <Compile Include="Assets\Obi\Editor\Common\Blueprints\RenderModes\ObiBlueprintRenderModeBendConstraints.cs" />
     <Compile Include="Assets\Obi\Editor\Common\Blueprints\RenderModes\ObiBlueprintRenderModeParticles.cs" />
+    <Compile Include="Assets\Obi\Editor\Common\Blueprints\Brushes\BrushModes\ObiFloatCopyBrushMode.cs" />
+    <Compile Include="Assets\Obi\Editor\Common\Blueprints\ObiMeshBasedActorBlueprintEditor.cs" />
+    <Compile Include="Assets\Obi\Editor\Common\Utils\PreviewHelpers.cs" />
     <Compile Include="Assets\Obi\Editor\Common\Blueprints\RenderModes\ObiBlueprintRenderModeMesh.cs" />
+    <Compile Include="Assets\Obi\Editor\Common\Blueprints\Properties\IObiPropertyEditableProvider.cs" />
+    <Compile Include="Assets\Obi\Editor\Common\Blueprints\Brushes\BrushModes\ObiColorSmoothBrushMode.cs" />
     <Compile Include="Assets\Obi\Editor\Fluid\Blueprints\ObiEmitterBlueprintEditor.cs" />
+    <Compile Include="Assets\Obi\Editor\Common\Blueprints\Properties\ObiBlueprintMass.cs" />
+    <Compile Include="Assets\Obi\Editor\Common\Utils\BooleanPreference.cs" />
+    <Compile Include="Assets\Obi\Editor\Common\Blueprints\Properties\ObiBlueprintSelected.cs" />
+    <Compile Include="Assets\Obi\Editor\Common\Blueprints\ObiMeshUtils.cs" />
     <Compile Include="Assets\Obi\Editor\Common\Blueprints\Brushes\BrushModes\ObiFloatPaintBrushMode.cs" />
     <Compile Include="Assets\Obi\Editor\Fluid\ObiFluidRendererSettingsDrawer.cs" />
     <Compile Include="Assets\Obi\Editor\Common\Blueprints\BlueprintEditorTools\ObiParticleSelectionEditorTool.cs" />
+    <Compile Include="Assets\Obi\Editor\Common\Blueprints\Properties\BaseTypes\ObiBlueprintBoolProperty.cs" />
     <Compile Include="Assets\Obi\Editor\Common\Blueprints\Brushes\BrushModes\ObiIntPaintBrushMode.cs" />
+    <Compile Include="Assets\Obi\Editor\Common\Blueprints\Properties\BaseTypes\ObiBlueprintIntProperty.cs" />
+    <Compile Include="Assets\Obi\Editor\Common\Collisions\ObiColliderEditor.cs" />
+    <Compile Include="Assets\Obi\Editor\Common\Blueprints\ObiParticleEditorDrawing.cs" />
     <Compile Include="Assets\Obi\Editor\Common\Utils\ObiRaycastHit.cs" />
+    <Compile Include="Assets\Obi\Editor\Common\Utils\ObiParticleAttachmentEditor.cs" />
+    <Compile Include="Assets\Obi\Editor\Common\Utils\ObiEditorUtils.cs" />
     <Compile Include="Assets\Obi\Editor\Common\Blueprints\Properties\BaseTypes\ObiBlueprintFloatProperty.cs" />
     <Compile Include="Assets\Obi\Editor\Common\Blueprints\Brushes\BrushModes\ObiSelectBrushMode.cs" />
     <Compile Include="Assets\Obi\Editor\ObiParticleSelection.cs" />
@@ -77,49 +94,32 @@
     <Compile Include="Assets\Obi\Editor\Common\Rendering\ObiParticleRendererEditor.cs" />
     <Compile Include="Assets\Obi\Editor\Common\Blueprints\RenderModes\ObiBlueprintRenderMode.cs" />
     <Compile Include="Assets\Obi\Editor\Common\Blueprints\Properties\ObiBlueprintColor.cs" />
+    <Compile Include="Assets\Obi\Editor\Common\Blueprints\RenderModes\ObiBlueprintRenderModeAerodynamicConstraints.cs" />
+    <Compile Include="Assets\Obi\Editor\Common\Blueprints\Properties\BaseTypes\ObiBlueprintColorProperty.cs" />
     <Compile Include="Assets\Obi\Editor\Common\Blueprints\Brushes\ObiRaycastBrush.cs" />
     <Compile Include="Assets\Obi\Editor\Common\Blueprints\Properties\ObiBlueprintFilterMask.cs" />
     <Compile Include="Assets\Obi\Editor\Common\Blueprints\Properties\ObiBlueprintFilterCategory.cs" />
     <Compile Include="Assets\Obi\Editor\Common\Blueprints\RenderModes\ObiBlueprintRenderModeDistanceConstraints.cs" />
+    <Compile Include="Assets\Obi\Editor\Fluid\ObiEmitterShapeEditor.cs" />
     <Compile Include="Assets\Obi\Editor\Common\Blueprints\Brushes\ObiScreenSpaceBrush.cs" />
     <Compile Include="Assets\Obi\Editor\Common\Blueprints\BlueprintEditorTools\ObiBlueprintEditorTool.cs" />
+    <Compile Include="Assets\Obi\Editor\Common\Blueprints\RenderModes\ObiBlueprintRenderModeTetherConstraints.cs" />
     <Compile Include="Assets\Obi\Editor\Common\Blueprints\ObiActorBlueprintEditor.cs" />
     <Compile Include="Assets\Obi\Editor\Common\Blueprints\Brushes\ObiBrushBase.cs" />
     <Compile Include="Assets\Obi\Editor\Common\Blueprints\RenderModes\ObiBlueprintRenderModeShapeMatchingConstraints.cs" />
+    <Compile Include="Assets\Obi\Editor\Common\Blueprints\Brushes\BrushModes\ObiFloatSmoothBrushMode.cs" />
+    <Compile Include="Assets\Obi\Editor\Common\Blueprints\BlueprintEditorTools\ObiTethersTool.cs" />
     <Compile Include="Assets\Obi\Editor\Common\Blueprints\Brushes\BrushModes\ObiFloatAddBrushMode.cs" />
     <Compile Include="Assets\Obi\Editor\Fluid\ObiEmitterEditor.cs" />
     <Compile Include="Assets\Obi\Editor\Common\ObiSettingsProvider.cs" />
+    <Compile Include="Assets\Obi\Editor\Common\Blueprints\Brushes\BrushModes\IObiBrushMode.cs" />
     <Compile Include="Assets\Obi\Editor\Common\Collisions\ObiDistanceFieldEditor.cs" />
     <Compile Include="Assets\Obi\Editor\Common\Blueprints\Brushes\BrushModes\ObiColorPaintBrushMode.cs" />
-    <Compile Include="Assets\Obi\Editor\Common\Blueprints\Brushes\ObiBrushMirrorSettings.cs" />
-    <Compile Include="Assets\Obi\Editor\Common\Blueprints\Properties\BaseTypes\ObiBlueprintProperty.cs" />
-    <Compile Include="Assets\Obi\Editor\Common\Solver\ObiSolverEditor.cs" />
-    <Compile Include="Assets\Obi\Editor\Common\Blueprints\RenderModes\ObiBlueprintRenderModeBendConstraints.cs" />
-    <Compile Include="Assets\Obi\Editor\Common\Blueprints\Brushes\BrushModes\ObiFloatCopyBrushMode.cs" />
-    <Compile Include="Assets\Obi\Editor\Common\Blueprints\ObiMeshBasedActorBlueprintEditor.cs" />
-    <Compile Include="Assets\Obi\Editor\Common\Utils\PreviewHelpers.cs" />
-    <Compile Include="Assets\Obi\Editor\Common\Blueprints\Properties\IObiPropertyEditableProvider.cs" />
-    <Compile Include="Assets\Obi\Editor\Common\Blueprints\Brushes\BrushModes\ObiColorSmoothBrushMode.cs" />
-    <Compile Include="Assets\Obi\Editor\Common\Blueprints\Properties\ObiBlueprintMass.cs" />
-    <Compile Include="Assets\Obi\Editor\Common\Utils\BooleanPreference.cs" />
-    <Compile Include="Assets\Obi\Editor\Common\Blueprints\Properties\ObiBlueprintSelected.cs" />
-    <Compile Include="Assets\Obi\Editor\Common\Blueprints\ObiMeshUtils.cs" />
-    <Compile Include="Assets\Obi\Editor\Common\Blueprints\Properties\BaseTypes\ObiBlueprintBoolProperty.cs" />
-    <Compile Include="Assets\Obi\Editor\Common\Blueprints\Properties\BaseTypes\ObiBlueprintIntProperty.cs" />
-    <Compile Include="Assets\Obi\Editor\Common\Collisions\ObiColliderEditor.cs" />
-    <Compile Include="Assets\Obi\Editor\Common\Blueprints\ObiParticleEditorDrawing.cs" />
-    <Compile Include="Assets\Obi\Editor\Common\Utils\ObiParticleAttachmentEditor.cs" />
-    <Compile Include="Assets\Obi\Editor\Common\Utils\ObiEditorUtils.cs" />
-    <Compile Include="Assets\Obi\Editor\Common\Blueprints\RenderModes\ObiBlueprintRenderModeAerodynamicConstraints.cs" />
-    <Compile Include="Assets\Obi\Editor\Common\Blueprints\Properties\BaseTypes\ObiBlueprintColorProperty.cs" />
-    <Compile Include="Assets\Obi\Editor\Fluid\ObiEmitterShapeEditor.cs" />
-    <Compile Include="Assets\Obi\Editor\Common\Blueprints\RenderModes\ObiBlueprintRenderModeTetherConstraints.cs" />
-    <Compile Include="Assets\Obi\Editor\Common\Blueprints\Brushes\BrushModes\ObiFloatSmoothBrushMode.cs" />
-    <Compile Include="Assets\Obi\Editor\Common\Blueprints\BlueprintEditorTools\ObiTethersTool.cs" />
-    <Compile Include="Assets\Obi\Editor\Common\Blueprints\Brushes\BrushModes\IObiBrushMode.cs" />
     <Compile Include="Assets\Obi\Editor\Common\ObiEditorSettings.cs" />
+    <Compile Include="Assets\Obi\Editor\Common\Blueprints\Brushes\ObiBrushMirrorSettings.cs" />
     <Compile Include="Assets\Obi\Editor\Common\Blueprints\BlueprintEditorTools\ObiPropertyTextureEditorTool.cs" />
     <Compile Include="Assets\Obi\Editor\ObiStitcherEditor.cs" />
+    <Compile Include="Assets\Obi\Editor\Common\Blueprints\Properties\BaseTypes\ObiBlueprintProperty.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Obi\Editor\Resources\EditorLineShader.shader" />
@@ -391,26 +391,11 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="log4netPlastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
-    </Reference>
-    <Reference Include="LibFBGManaged">
-      <HintPath>Assets\FacebookSDK\Plugins\Windows\LibFBGManaged.dll</HintPath>
-    </Reference>
-    <Reference Include="XInputDotNetPure">
-      <HintPath>Assets\FacebookSDK\Plugins\Windows\XInputDotNetPure.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Plastic.Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Plastic.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
-      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
       <HintPath>Library\PackageCache\com.unity.collections@1.4.0\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject-usage">
+      <HintPath>Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
     </Reference>
     <Reference Include="Google.PackageManagerResolver">
       <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.PackageManagerResolver.dll</HintPath>
@@ -418,20 +403,29 @@
     <Reference Include="Unity.Burst.Cecil.Pdb">
       <HintPath>Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
     </Reference>
+    <Reference Include="log4netPlastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.IOSResolver">
+      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.IOSResolver.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Facebook.Unity.Windows">
-      <HintPath>Assets\FacebookSDK\Plugins\Windows\Facebook.Unity.Windows.dll</HintPath>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
+      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
     </Reference>
-    <Reference Include="Facebook.Unity.Settings">
-      <HintPath>Assets\FacebookSDK\Plugins\Settings\Facebook.Unity.Settings.dll</HintPath>
+    <Reference Include="Unity.Plastic.Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
       <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
     </Reference>
-    <Reference Include="Win81Interface">
-      <HintPath>Assets\GameUtils\External\Adjust\Windows\Stubs\Win81Interface.dll</HintPath>
+    <Reference Include="Unity.Plastic.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.VersionHandlerImpl">
+      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.VersionHandlerImpl.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Mdb">
       <HintPath>Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
@@ -445,47 +439,20 @@
     <Reference Include="Unity.Burst.Cecil">
       <HintPath>Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
     </Reference>
+    <Reference Include="Google.JarResolver">
+      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.JarResolver.dll</HintPath>
+    </Reference>
     <Reference Include="Google.VersionHandler">
       <HintPath>Assets\ExternalDependencyManager\Editor\Google.VersionHandler.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Rocks">
       <HintPath>Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
     </Reference>
-    <Reference Include="Win10Interface">
-      <HintPath>Assets\GameUtils\External\Adjust\Windows\Stubs\Win10Interface.dll</HintPath>
-    </Reference>
-    <Reference Include="Zenject-usage">
-      <HintPath>Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.IOSResolver">
-      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.IOSResolver.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.VersionHandlerImpl">
-      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.VersionHandlerImpl.dll</HintPath>
-    </Reference>
-    <Reference Include="WinWsInterface">
-      <HintPath>Assets\GameUtils\External\Adjust\Windows\Stubs\WinWsInterface.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.JarResolver">
-      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.JarResolver.dll</HintPath>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
+      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@1.11.4\Mono.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="Facebook.Unity.Editor">
-      <HintPath>Assets\FacebookSDK\Plugins\Editor\Facebook.Unity.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Facebook.Unity.Android">
-      <HintPath>Assets\FacebookSDK\Plugins\Android\Facebook.Unity.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="Facebook.Unity.Canvas">
-      <HintPath>Assets\FacebookSDK\Plugins\Canvas\Facebook.Unity.Canvas.dll</HintPath>
-    </Reference>
-    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
-      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="Facebook.Unity">
-      <HintPath>Assets\FacebookSDK\Plugins\Facebook.Unity.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>

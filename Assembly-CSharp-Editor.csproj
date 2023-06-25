@@ -56,66 +56,21 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\Editor\TenjinPackager.cs" />
-    <Compile Include="Assets\GameAnalytics\Editor\GA_AutoRun.cs" />
-    <Compile Include="Assets\Editor\DisableBitcode.cs" />
-    <Compile Include="Assets\GameUtils\Editor\CustomWindows\YCDebugWindow.cs" />
-    <Compile Include="Assets\GameAnalytics\Editor\GA_AssetPostprocessor.cs" />
-    <Compile Include="Assets\Editor\BuildPostProcessor.cs" />
-    <Compile Include="Assets\GameAnalytics\Editor\GA_Menu.cs" />
-    <Compile Include="Assets\GameAnalytics\Editor\GameAnalyticsInspector.cs" />
-    <Compile Include="Assets\GameUtils\Editor\CustomWindows\YCGameutilsUpdateWindow.cs" />
-    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\Editor\TenjinAssetSelector.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Editor\JoystickEditor.cs" />
-    <Compile Include="Assets\GameAnalytics\Editor\GA_SettingsInspector.cs" />
-    <Compile Include="Assets\GameUtils\Editor\CustomWindows\YCCustomWindow.cs" />
-    <Compile Include="Assets\Editor\GameUtilsProcessor.cs" />
-    <Compile Include="Assets\GameAnalytics\Editor\GA_SignUp.cs" />
-    <Compile Include="Assets\GameAnalytics\Editor\GA_UpdateWindow.cs" />
-    <Compile Include="Assets\GameUtils\Editor\Utils\YCUpdatesHandler.cs" />
-    <Compile Include="Assets\GameUtils\Editor\YCMenuItemManager.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Editor\VariableJoystickEditor.cs" />
-    <Compile Include="Assets\GameAnalytics\Editor\GA_PostprocessBuild.cs" />
-    <Compile Include="Assets\GameUtils\Editor\Utils\YCPackageManager.cs" />
-    <Compile Include="Assets\GameUtils\Editor\CustomWindows\YCMaxUpgradeWindow.cs" />
-    <Compile Include="Assets\GameUtils\Editor\CustomWindows\YCReplaceObjectsWindow.cs" />
-    <Compile Include="Assets\GameAnalytics\Editor\GA_ContinuationManager.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\Editor\AdjustSettings.cs" />
-    <Compile Include="Assets\GameUtils\Editor\Utils\YCEditorCoroutine.cs" />
+    <Compile Include="Assets\Editor\DisableBitcode.cs" />
+    <Compile Include="Assets\Editor\BuildPostProcessor.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Editor\DynamicJoystickEditor.cs" />
     <Compile Include="Assets\Scripts\Editor\SceneManagerEditor.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Editor\FloatingJoystickEditor.cs" />
-    <Compile Include="Assets\GameAnalytics\Editor\Playmaker\PlayMakerPresenceCheck.cs" />
-    <Compile Include="Assets\GameAnalytics\Editor\GA_EditorUtilities.cs" />
-    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\Editor\TenjinEditorPrefs.cs" />
-    <Compile Include="Assets\GameAnalytics\Editor\Playmaker\SendResourceEventActionEditor.cs" />
-    <Compile Include="Assets\GameAnalytics\Editor\Playmaker\SendProgressionEventActionEditor.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Editor\JoystickEditor.cs" />
     <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Plugins\SprintBone\Editor\SpringBoneEditor.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\Editor\AdjustEditor.cs" />
-    <Compile Include="Assets\GameUtils\Editor\Utils\YCPackageDetection.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\MaxSdk\Mediation\Mintegral\Editor\Dependencies.xml" />
-    <None Include="Assets\MaxSdk\Mediation\Line\Editor\Dependencies.xml" />
-    <None Include="Assets\FacebookSDK\Plugins\Editor\Facebook.Unity.Editor.dll" />
-    <None Include="Assets\MaxSdk\Mediation\AdColony\Editor\Dependencies.xml" />
     <None Include="Assets\ExternalDependencyManager\Editor\Google.VersionHandler.dll" />
     <None Include="Assets\ExternalDependencyManager\Editor\1.2.175\Google.PackageManagerResolver.dll" />
-    <None Include="Assets\MaxSdk\AppLovin\Editor\Dependencies.xml" />
-    <None Include="Assets\GameAnalytics\Editor\Android\Dependencies.xml" />
-    <None Include="Assets\FacebookSDK\Plugins\Editor\Dependencies.xml" />
-    <None Include="Assets\MaxSdk\Mediation\ByteDance\Editor\Dependencies.xml" />
-    <None Include="Assets\MaxSdk\Mediation\IronSource\Editor\Dependencies.xml" />
-    <None Include="Assets\MaxSdk\Mediation\UnityAds\Editor\Dependencies.xml" />
     <None Include="Assets\ExternalDependencyManager\Editor\1.2.175\Google.IOSResolver.dll" />
-    <None Include="Assets\MaxSdk\Mediation\Verve\Editor\Dependencies.xml" />
-    <None Include="Assets\MaxSdk\Mediation\InMobi\Editor\Dependencies.xml" />
-    <None Include="Assets\MaxSdk\Mediation\Vungle\Editor\Dependencies.xml" />
     <None Include="Assets\ExternalDependencyManager\Editor\external-dependency-manager_version-1.2.175_manifest.txt" />
-    <None Include="Assets\MaxSdk\Mediation\Fyber\Editor\Dependencies.xml" />
     <None Include="Assets\ExternalDependencyManager\Editor\1.2.175\Google.VersionHandlerImpl.dll" />
-    <None Include="Assets\MaxSdk\Mediation\Facebook\Editor\Dependencies.xml" />
-    <None Include="Assets\MaxSdk\Mediation\MyTarget\Editor\Dependencies.xml" />
     <None Include="Assets\ExternalDependencyManager\Editor\1.2.175\Google.JarResolver.dll" />
   </ItemGroup>
   <ItemGroup>
@@ -377,26 +332,11 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="log4netPlastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
-    </Reference>
-    <Reference Include="LibFBGManaged">
-      <HintPath>Assets\FacebookSDK\Plugins\Windows\LibFBGManaged.dll</HintPath>
-    </Reference>
-    <Reference Include="XInputDotNetPure">
-      <HintPath>Assets\FacebookSDK\Plugins\Windows\XInputDotNetPure.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Plastic.Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Plastic.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
-      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
       <HintPath>Library\PackageCache\com.unity.collections@1.4.0\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject-usage">
+      <HintPath>Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
     </Reference>
     <Reference Include="Google.PackageManagerResolver">
       <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.PackageManagerResolver.dll</HintPath>
@@ -404,20 +344,29 @@
     <Reference Include="Unity.Burst.Cecil.Pdb">
       <HintPath>Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
     </Reference>
+    <Reference Include="log4netPlastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.IOSResolver">
+      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.IOSResolver.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Facebook.Unity.Windows">
-      <HintPath>Assets\FacebookSDK\Plugins\Windows\Facebook.Unity.Windows.dll</HintPath>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
+      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
     </Reference>
-    <Reference Include="Facebook.Unity.Settings">
-      <HintPath>Assets\FacebookSDK\Plugins\Settings\Facebook.Unity.Settings.dll</HintPath>
+    <Reference Include="Unity.Plastic.Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
       <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
     </Reference>
-    <Reference Include="Win81Interface">
-      <HintPath>Assets\GameUtils\External\Adjust\Windows\Stubs\Win81Interface.dll</HintPath>
+    <Reference Include="Unity.Plastic.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.VersionHandlerImpl">
+      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.VersionHandlerImpl.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Mdb">
       <HintPath>Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
@@ -431,47 +380,20 @@
     <Reference Include="Unity.Burst.Cecil">
       <HintPath>Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
     </Reference>
+    <Reference Include="Google.JarResolver">
+      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.JarResolver.dll</HintPath>
+    </Reference>
     <Reference Include="Google.VersionHandler">
       <HintPath>Assets\ExternalDependencyManager\Editor\Google.VersionHandler.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Rocks">
       <HintPath>Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
     </Reference>
-    <Reference Include="Win10Interface">
-      <HintPath>Assets\GameUtils\External\Adjust\Windows\Stubs\Win10Interface.dll</HintPath>
-    </Reference>
-    <Reference Include="Zenject-usage">
-      <HintPath>Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.IOSResolver">
-      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.IOSResolver.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.VersionHandlerImpl">
-      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.VersionHandlerImpl.dll</HintPath>
-    </Reference>
-    <Reference Include="WinWsInterface">
-      <HintPath>Assets\GameUtils\External\Adjust\Windows\Stubs\WinWsInterface.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.JarResolver">
-      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.175\Google.JarResolver.dll</HintPath>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
+      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@1.11.4\Mono.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="Facebook.Unity.Editor">
-      <HintPath>Assets\FacebookSDK\Plugins\Editor\Facebook.Unity.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Facebook.Unity.Android">
-      <HintPath>Assets\FacebookSDK\Plugins\Android\Facebook.Unity.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="Facebook.Unity.Canvas">
-      <HintPath>Assets\FacebookSDK\Plugins\Canvas\Facebook.Unity.Canvas.dll</HintPath>
-    </Reference>
-    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
-      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="Facebook.Unity">
-      <HintPath>Assets\FacebookSDK\Plugins\Facebook.Unity.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -1021,10 +943,6 @@
       <Project>{25B8C3E7-5764-8FAA-0ECA-8582F1B4BA4F}</Project>
       <Name>CFXR.WelcomeScreen</Name>
     </ProjectReference>
-    <ProjectReference Include="MaxSdk.Scripts.IntegrationManager.Editor.csproj">
-      <Project>{EB426C50-3DE7-8A9D-EF83-290D29E778E0}</Project>
-      <Name>MaxSdk.Scripts.IntegrationManager.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="CFXRRuntime.csproj">
       <Project>{0E150CA3-B08F-97A7-9BD1-2D9D96B10060}</Project>
       <Name>CFXRRuntime</Name>
@@ -1045,10 +963,6 @@
       <Project>{DF366BED-B63A-B084-9DB5-07B5502D960F}</Project>
       <Name>Zenject-PoolMonitor-Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="MaxSdk.Scripts.Editor.csproj">
-      <Project>{772DDD34-9F1D-972D-BCC0-C640F0DFA558}</Project>
-      <Name>MaxSdk.Scripts.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Tayx.Graphy.Editor.csproj">
       <Project>{DD8DA743-157B-E03D-DB0D-715F82E50150}</Project>
       <Name>Tayx.Graphy.Editor</Name>
@@ -1056,10 +970,6 @@
     <ProjectReference Include="Tayx.Graphy.csproj">
       <Project>{6969FF3E-37D3-D60E-53D3-038B5C474286}</Project>
       <Name>Tayx.Graphy</Name>
-    </ProjectReference>
-    <ProjectReference Include="MaxSdk.Scripts.csproj">
-      <Project>{3A4B6622-B309-123B-86FA-5B72C8041263}</Project>
-      <Name>MaxSdk.Scripts</Name>
     </ProjectReference>
     <ProjectReference Include="OtoonShader.csproj">
       <Project>{E181AD92-7F5E-5314-EB23-BD8246DC4673}</Project>

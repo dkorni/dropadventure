@@ -57,352 +57,188 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\UI\Manipulate UI\CutUiController.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustSessionSuccess.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\FPSDisplay.cs" />
-    <Compile Include="Assets\Scripts\Detonation\CameraDetonationBehaviour.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustSessionFailure.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Enums.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ObiParticleCounter.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_WebGLWrapper.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustEventFailure.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\ConditionalAttribute\YcBoolHideAttribute.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Utilities\GA_MiniJson.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
-    <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Scripts\CameraController.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustUtils.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoRotate.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_AndroidWrapper.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\CollisionEventHandler.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendAdEvent.cs" />
-    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\Tenjin.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\Mmp\TenjinManager.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\Mmp\MmpBaseManager.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\NoInternetManager.cs" />
-    <Compile Include="Assets\Scripts\SceneManager.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\Mmp\AdjustManager.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\FirebaseManager.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_MonoWrapper.cs" />
-    <Compile Include="Assets\Scripts\FromToMover.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\YCDataManager.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\3rd Party\SimpleJSON.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\CharacterController\SampleCharacterController.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\Ads.cs" />
-    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\BucketController.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ILRD\GameAnalyticsILRD.cs" />
-    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\TenjinHyperBidIntegration.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDir.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\LookAroundCamera.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\GetRemoteConfigsValueAsString.cs" />
-    <Compile Include="Assets\Scripts\Installers\DynamicJoystickInstaller.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustPlayStoreSubscription.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\ConditionalAttribute\YcBoolHidePropertyDrawer.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ObiActorTeleport.cs" />
-    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\AndroidTenjin.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ILRD\HyperBid\GAHyperBidIntegration.cs" />
-    <Compile Include="Assets\Scripts\CSJ\Classes\Node.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_SpecialEvents.cs" />
-    <Compile Include="Assets\Scripts\CSJ\Classes\VertexUtility.cs" />
-    <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ObjectLimit.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustConfig.cs" />
-    <Compile Include="Assets\Scripts\Coins\Coin.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoDestructShuriken.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\SettingManager.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ILRD\Fyber\GAFyberIntegration.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustAppStoreSubscription.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendErrorEvent.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ColorFromVelocity.cs" />
-    <Compile Include="Assets\Scripts\UI\DropletSliderController.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustLogLevel.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\YCManager.cs" />
-    <Compile Include="Assets\Scripts\Coins\CoinBank.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\BaseManager.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Setup.cs" />
-    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\IosTenjin.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Ads.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ActorSpawner.cs" />
-    <Compile Include="Assets\Scripts\CSJ\CSG.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GAValidator.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\iOS\AdjustiOS.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\FBManager.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Resource.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\IsRemoteConfigsReady.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\GdprManager.cs" />
-    <Compile Include="Assets\Scripts\DropletController.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\PlaneSO.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\IGameAnalyticsATTListener.cs" />
-    <Compile Include="Assets\Scripts\CompositeObject.cs" />
-    <Compile Include="Assets\Scripts\Extensions\ObiEmitterExtensions.cs" />
-    <Compile Include="Assets\Scripts\DropCollider.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ILRD\Aequus\GAAequusIntegration.cs" />
-    <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Scripts\DitherByCameraDistance.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\ExampleGUI\ExampleGUI.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendDesignEvent.cs" />
-    <Compile Include="Assets\Scripts\Installers\GameUtilsInstaller.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\YCManagerEditor.cs" />
-    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\FluidColorizer.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\InAppManager.cs" />
-    <Compile Include="Assets\Scripts\Analytics\GameAnalyticManager.cs" />
-    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\WaveGenerator.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Business.cs" />
-    <Compile Include="Assets\3DPart\GradientSky\Scripts\Common\GradientSkyCommon.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\UtilsAds.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendResourceEvent.cs" />
-    <Compile Include="Assets\Scripts\Interfaces\IDetonationSubscriber.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_New.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\I18n\I18nElement.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\Android\AdjustAndroid.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Progression.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ATT\GameAnalyticsATTClient.cs" />
-    <Compile Include="Assets\Scripts\CSJ\Classes\Plane.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightFlicker.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_TizenWrapper.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\ConditionalAttribute\YcReadOnly.cs" />
-    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\TenjinIronSourceIntegration.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ATT\GameAnalyticsATTObjCBridge.cs" />
-    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\OverlapTest.cs" />
-    <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Scripts\PingPongMove.cs" />
-    <Compile Include="Assets\Scripts\IceCream.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\AddRandomVelocity.cs" />
+    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\FPSDisplay.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ObjectDragger.cs" />
+    <Compile Include="Assets\Scripts\Detonation\CameraDetonationBehaviour.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightIntensityFade.cs" />
     <Compile Include="Assets\Scripts\UI\BalanceLabel.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\GameAnalytics.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\Mmp\MmpManager.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_tvOSWrapper.cs" />
-    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\TenjinMopubIntegration.cs" />
+    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ObiParticleCounter.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ColorFromViscosity.cs" />
-    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\DebugTenjin.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
+    <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Scripts\CameraController.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ColliderHighlighter.cs" />
     <Compile Include="Assets\Scripts\CSJ\Classes\VertexAttributes.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Debug.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ILRD\AdMob\GAAdMobIntegration.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoRotate.cs" />
+    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\CollisionEventHandler.cs" />
     <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Plugins\SprintBone\SpringBone.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\GetABTestingVariantId.cs" />
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\ObiFluidPropertyColorizer.cs" />
     <Compile Include="Assets\Scripts\CSJ\Classes\Polygon.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ActorCOMTransform.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\SlowmoToggler.cs" />
     <Compile Include="Assets\Scripts\UI\Manipulate UI\LaserUiController.cs" />
     <Compile Include="Assets\Scripts\Installers\CanvasInstaller.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\Unity\Adjust.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendProgressionEvent.cs" />
+    <Compile Include="Assets\Scripts\SceneManager.cs" />
+    <Compile Include="Assets\Scripts\FromToMover.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\DebugParticleFrames.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_iOSWrapper.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\Abstracts\AResourcesManager.cs" />
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\MazeManager.cs" />
-    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\TenjinAdMobIntegration.cs" />
+    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\CharacterController\SampleCharacterController.cs" />
+    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\BucketController.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDir.cs" />
     <Compile Include="Assets\Scripts\Puddle.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\Utils\YCEditorUtils.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\CharacterController\ObiCharacter.cs" />
-    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\TenjinAppLovinIntegration.cs" />
+    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\LookAroundCamera.cs" />
     <Compile Include="Assets\Scripts\UI\Manipulate UI\ManipulateUiController.cs" />
+    <Compile Include="Assets\Scripts\Installers\DynamicJoystickInstaller.cs" />
     <Compile Include="Assets\Scripts\CSJ\Classes\Vertex.cs" />
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\SolidifyOnContact.cs" />
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\FluidJetController.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Error.cs" />
+    <Compile Include="Assets\Scripts\Tips\Tip3D.cs" />
+    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ObiActorTeleport.cs" />
     <Compile Include="Assets\Scripts\Bomb.cs" />
+    <Compile Include="Assets\Scripts\CSJ\Classes\Node.cs" />
+    <Compile Include="Assets\Scripts\CSJ\Classes\VertexUtility.cs" />
     <Compile Include="Assets\Scripts\UI\ProgressController.cs" />
+    <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Scenes\2 NPRStyles RobotKyle\Scripts\DemoController.cs" />
+    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ObjectLimit.cs" />
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\Melt.cs" />
+    <Compile Include="Assets\Scripts\Coins\Coin.cs" />
     <Compile Include="Assets\Scripts\Installers\DependencyInstaller.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\GAInitialize.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustEnvironment.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoDestructShuriken.cs" />
     <Compile Include="Assets\Scripts\Rotator.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\MoveAndRotate.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendBusinessEvent.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\Abstracts\ADataManager.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ColorFromPhase.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ILRD\IronSource\GAIronSourceIntegration.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustEventSuccess.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
     <Compile Include="Assets\3DPart\GradientSky\Scripts\GradientSkyObject.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ILRD\TopOn\GATopOnIntegration.cs" />
+    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ColorFromVelocity.cs" />
+    <Compile Include="Assets\Scripts\Tips\CanvasTips.cs" />
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\EmitOnKeyPress.cs" />
-    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\BaseTenjin.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\ConditionalAttribute\YcEnumShowAttribute.cs" />
+    <Compile Include="Assets\Scripts\UI\DropletSliderController.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\RequestManager.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RotateCamera.cs" />
+    <Compile Include="Assets\Scripts\Coins\CoinBank.cs" />
     <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Scripts\ShowcaseDemoController.cs" />
     <Compile Include="Assets\Scripts\Impulse.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustEvent.cs" />
     <Compile Include="Assets\Scripts\Interfaces\ISmashable.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\ConditionalAttribute\YcEnumShowPropertyDrawer.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\Unity\AdjustAttribution.cs" />
     <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Scripts\SceneHintController.cs" />
+    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ActorSpawner.cs" />
     <Compile Include="Assets\Scripts\LevelData.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\AnalyticsManager.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\YCConfig.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\ABTestingManager.cs" />
+    <Compile Include="Assets\Scripts\CSJ\CSG.cs" />
     <Compile Include="Assets\Scripts\Blade.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_UWPWrapper.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ColorRandomizer.cs" />
-    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\AppStoreType.cs" />
+    <Compile Include="Assets\Scripts\DropletController.cs" />
     <Compile Include="Assets\Scripts\CSJ\Classes\Model.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ILRD\Max\GAMaxIntegration.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Design.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\PlaneSO.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
+    <Compile Include="Assets\Scripts\CompositeObject.cs" />
+    <Compile Include="Assets\Scripts\Extensions\ObiEmitterExtensions.cs" />
+    <Compile Include="Assets\Scripts\DropCollider.cs" />
+    <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Scripts\DitherByCameraDistance.cs" />
+    <Compile Include="Assets\Scripts\Installers\GameUtilsInstaller.cs" />
     <Compile Include="Assets\PlaneController.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\Blinker.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\Utils\YCXmlHandler.cs" />
     <Compile Include="Assets\Scripts\WinController.cs" />
     <Compile Include="Assets\Scripts\Bucket.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Setup\Settings.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_Translate.cs" />
     <Compile Include="Assets\Scripts\Piece.cs" />
+    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\FluidColorizer.cs" />
     <Compile Include="Assets\Scripts\Installers\GameAnalyticInstaller.cs" />
     <Compile Include="Assets\Scripts\Laser.cs" />
+    <Compile Include="Assets\Scripts\Analytics\GameAnalyticManager.cs" />
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\MazeScoreFormatter.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ILRD\Mopub\GAMopubIntegration.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\GetABTestingId.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\AdsManager.cs" />
+    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\WaveGenerator.cs" />
+    <Compile Include="Assets\3DPart\GradientSky\Scripts\Common\GradientSkyCommon.cs" />
     <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Scripts\Rotator.cs" />
-    <Compile Include="Assets\GameUtils\External\Tenjin\Scripts\TenjinTopOnIntegration.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ExtrapolationCamera.cs" />
     <Compile Include="Assets\3DPart\Liquid-Simulation-master\Liquid-Simulation-master\Assets\Scripts\BlurController.cs" />
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\ViscositySurfTensionToUserData.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IDetonationSubscriber.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_New.cs" />
     <Compile Include="Assets\3DPart\GradientSky\Scripts\GradientSkyCamera.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SetCustomDimension.cs" />
+    <Compile Include="Assets\Scripts\CSJ\Classes\Plane.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightFlicker.cs" />
     <Compile Include="Assets\Scripts\GameOverPanel.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\I18n\I18nResourcesManager.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_Wrapper.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\GameUtils\External\Adjust\Windows\AdjustWindows.cs" />
-    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\State\GAState.cs" />
-    <Compile Include="Assets\GameUtils\Scripts\I18n\I18nManager.cs" />
+    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\OverlapTest.cs" />
+    <Compile Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Scripts\PingPongMove.cs" />
+    <Compile Include="Assets\Scripts\IceCream.cs" />
     <Compile Include="Assets\Scripts\Coins\CoinFactory.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\WorldSpaceGravity.cs" />
     <Compile Include="Assets\Scripts\GameContext.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\GameAnalytics\Readme.txt" />
-    <None Include="Assets\GameAnalytics\Plugins\SamsungTV\Mono.Data.Sqlite.dll" />
-    <None Include="Assets\FacebookSDK\Plugins\Windows\x64\libcurl.dll" />
     <None Include="Assets\Obi\Samples\Fluid\SampleResources\Materials\StandardPerInstanceColor.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
-    <None Include="Assets\GameUtils\External\Adjust\Windows\WindowsUap.dll" />
-    <None Include="Assets\FacebookSDK\Plugins\Windows\x86\XInputInterface.dll" />
     <None Include="Assets\Obi\Resources\ObiMaterials\ParticleShader.shader" />
     <None Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Scenes\5 Stylized Character UnityChan\license.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\JMO Assets\Cartoon FX (legacy)\Shaders\CFX3 Multiply Color.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\FluidThickness.shader" />
-    <None Include="Assets\FacebookSDK\Plugins\Windows\x64\libcrypto-1_1-x64.dll" />
-    <None Include="Assets\FacebookSDK\Plugins\Windows\x64\LibFBGUI.dll" />
-    <None Include="Assets\FacebookSDK\link.xml" />
-    <None Include="Assets\FacebookSDK\Plugins\iOS\Facebook.Unity.IOS.dll" />
     <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Glow.shader" />
-    <None Include="Assets\GameUtils\External\Adjust\Android\AdjustAndroidManifest.xml" />
-    <None Include="Assets\GameAnalytics\Plugins\GameAnalytics.dll" />
     <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Ubershader.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\URP\FluidShaderURP.shader" />
     <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_SETTINGS.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\URP\ObiLightingURP.cginc" />
-    <None Include="Assets\GameAnalytics\Plugins\WSA\ARM\GameAnalytics.UWP.dll" />
     <None Include="Assets\Graphy - Ultimate Stats Monitor\Changelog.txt" />
     <None Include="Assets\JMO Assets\Cartoon FX (legacy)\CartoonFX Free.txt" />
-    <None Include="Assets\GameUtils\External\Adjust\Windows\W81\Win81Interface.dll" />
-    <None Include="Assets\GameUtils\README.txt" />
     <None Include="Assets\Obi\Plugins\x86_64\libOni.dll" />
-    <None Include="Assets\GameUtils\External\Adjust\Windows\WindowsPcl.dll" />
-    <None Include="Assets\FacebookSDK\Plugins\Windows\x86\LibFBGPlatform.dll" />
     <None Include="Assets\Obi\Resources\ObiMaterials\ObiLightingBuiltIn.cginc" />
-    <None Include="Assets\GameUtils\External\Adjust\Windows\Stubs\Win10Interface.dll" />
     <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR.cginc" />
     <None Include="Assets\3DPart\GradientSky\Shaders\VertexColorCamera.shader" />
-    <None Include="Assets\GameUtils\External\Adjust\Windows\WS\AdjustWS.dll" />
-    <None Include="Assets\GameUtils\External\Adjust\Windows\WU10\Win10Interface.dll" />
     <None Include="Assets\Obi\Resources\ObiMaterials\DistanceFieldSlice.shader" />
-    <None Include="Assets\FacebookSDK\Plugins\Settings\Facebook.Unity.Settings.dll" />
     <None Include="Assets\Obi\Resources\ObiMaterials\ObiParticles.cginc" />
-    <None Include="Assets\FacebookSDK\Plugins\Windows\x64\tinyxml2.dll" />
     <None Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Plugins\Shaders\GradientSkybox.shader" />
-    <None Include="Assets\GameAnalytics\Plugins\WSA\x86\GameAnalytics.UWP.dll" />
-    <None Include="Assets\GameUtils\External\Adjust\Windows\WS\WinWsInterface.dll" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets\FacebookSDK\Plugins\Windows\Facebook.Unity.Windows.dll" />
-    <None Include="Assets\FacebookSDK\Plugins\Windows\x64\libssl-1_1-x64.dll" />
-    <None Include="Assets\FacebookSDK\Plugins\Canvas\Facebook.Unity.Canvas.dll" />
-    <None Include="Assets\GameUtils\External\JsonDotNet\link.xml" />
-    <None Include="Assets\GameUtils\External\JsonDotNet\Assemblies\Windows\Newtonsoft.Json.XML" />
-    <None Include="Assets\FacebookSDK\Plugins\Windows\x86\cpprest_2_10.dll" />
     <None Include="Assets\Graphy - Ultimate Stats Monitor\Shaders\GraphMobile.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\StandardVertexColors.shader" />
-    <None Include="Assets\FacebookSDK\Plugins\Windows\x86\libssl-1_1.dll" />
-    <None Include="Assets\FacebookSDK\Plugins\Windows\x64\LibFBGPlatform.dll" />
-    <None Include="Assets\FacebookSDK\Plugins\Windows\x86\WebView2Loader.dll" />
     <None Include="Assets\Graphy - Ultimate Stats Monitor\Font\Northwest-Bold\ERIC-TIRADO-NORTHWEST-LICENSE.txt" />
     <None Include="Assets\Obi\Resources\ObiMaterials\SimpleParticleShader.shader" />
-    <None Include="Assets\FacebookSDK\Plugins\Windows\x64\zlib1.dll" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
-    <None Include="Assets\FacebookSDK\Plugins\Facebook.Unity.dll" />
     <None Include="Assets\Obi\Resources\ObiMaterials\ObiEllipsoids.cginc" />
     <None Include="Assets\Obi\Resources\ObiMaterials\URP\ParticleShaderURP.shader" />
-    <None Include="Assets\GameUtils\External\Adjust\Windows\Stubs\WinWsInterface.dll" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\JMO Assets\Cartoon FX Remaster\Readme Cartoon FX Remaster FREE.txt" />
-    <None Include="Assets\GameAnalytics\Plugins\Windows\x86\sqlite3.dll" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\URP\SimpleParticleShaderURP.shader" />
-    <None Include="Assets\FacebookSDK\Plugins\Windows\x86\libcrypto-1_1.dll" />
-    <None Include="Assets\GameAnalytics\Plugins\Windows\x64\sqlite3.dll" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\3DPart\Liquid-Simulation-master\Liquid-Simulation-master\Assets\Shaders\UnlitTransparent.shader" />
     <None Include="Assets\3DPart\Liquid-Simulation-master\Liquid-Simulation-master\Assets\Shaders\BlurEffect.shader" />
     <None Include="Assets\3DPart\Liquid-Simulation-master\Liquid-Simulation-master\ProjectSettings\ProjectVersion.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
-    <None Include="Assets\FacebookSDK\Plugins\Windows\x86\LibFBGUI.dll" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Texts\_Make your own text effect.txt" />
     <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_PASSES.cginc" />
     <None Include="Assets\Obi\CHANGELOG_fluid.txt" />
     <None Include="Assets\Obi\Resources\ObiMaterials\NormalReconstruction.shader" />
-    <None Include="Assets\FacebookSDK\Plugins\Windows\x64\XInputInterface.dll" />
-    <None Include="Assets\GameUtils\External\Adjust\Windows\Stubs\Win81Interface.dll" />
     <None Include="Assets\Obi\Resources\ObiMaterials\ScreenSpaceCurvatureFlow.shader" />
     <None Include="Assets\3DPart\GradientSky\Shaders\VertexColorObject.shader" />
-    <None Include="Assets\MaxSdk\Mediation\MediationAdapters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\GameUtils\External\Adjust\Windows\WU10\AdjustUAP10.dll" />
     <None Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Plugins\UnityChanSSU\license.txt" />
-    <None Include="Assets\FacebookSDK\Plugins\Windows\LibFBGManaged.dll" />
-    <None Include="Assets\GameAnalytics\Plugins\WSA\x64\GameAnalytics.UWP.dll" />
-    <None Include="Assets\GameUtils\External\JsonDotNet\Assemblies\Windows\Newtonsoft.Json.dll" />
-    <None Include="Assets\FacebookSDK\Plugins\Windows\XInputDotNetPure.dll" />
     <None Include="Assets\Graphy - Ultimate Stats Monitor\Font\Roboto\LICENSE.txt" />
     <None Include="Assets\Obi\Plugins\x86\libOni.dll" />
-    <None Include="Assets\FacebookSDK\Plugins\Android\Facebook.Unity.Android.dll" />
-    <None Include="Assets\FacebookSDK\Plugins\Windows\x86\libcurl.dll" />
-    <None Include="Assets\FacebookSDK\Plugins\Windows\x64\WebView2Loader.dll" />
     <None Include="Assets\Obi\Resources\ObiMaterials\FluidColorsBlend.shader" />
     <None Include="Assets\Graphy - Ultimate Stats Monitor\Shaders\GraphStandard.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\ObiFluids.cginc" />
     <None Include="Assets\JMO Assets\Cartoon FX (legacy)\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\OToon- URP Toon Shading\Demo(Can be delete)\Plugins\unity-chan!\license.txt" />
-    <None Include="Assets\FacebookSDK\Plugins\Windows\x86\tinyxml2.dll" />
     <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Procedural Ring.shader" />
     <None Include="Assets\1.1 - FREE CASUAL PACK SFX\(README) WELCOME_FREE CASUAL PACK SFX.txt" />
-    <None Include="Assets\FacebookSDK\Plugins\Windows\x64\cpprest_2_10.dll" />
     <None Include="Assets\Obi\Resources\ObiMaterials\FluidShader.shader" />
-    <None Include="Assets\GameUtils\External\Adjust\Windows\Newtonsoft.Json.dll" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
-    <None Include="Assets\GameUtils\External\Adjust\Windows\W81\AdjustWP81.dll" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_URP.cginc" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\Obi\Plugins\libOni.bundle\Contents\Resources\CMakeLists.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\ObiUtils.cginc" />
-    <None Include="Assets\GameAnalytics\Plugins\SamsungTV\GameAnalytics.SamsungTV.dll" />
-    <None Include="Assets\FacebookSDK\Plugins\Windows\x86\zlib1.dll" />
     <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Distortion.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\URP\ObiFluidsURP.cginc" />
@@ -645,17 +481,11 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
-    <Reference Include="LibFBGManaged">
-      <HintPath>Assets\FacebookSDK\Plugins\Windows\LibFBGManaged.dll</HintPath>
-    </Reference>
-    <Reference Include="XInputDotNetPure">
-      <HintPath>Assets\FacebookSDK\Plugins\Windows\XInputDotNetPure.dll</HintPath>
-    </Reference>
-    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
-      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
       <HintPath>Library\PackageCache\com.unity.collections@1.4.0\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject-usage">
+      <HintPath>Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Pdb">
       <HintPath>Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
@@ -663,17 +493,11 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Facebook.Unity.Windows">
-      <HintPath>Assets\FacebookSDK\Plugins\Windows\Facebook.Unity.Windows.dll</HintPath>
-    </Reference>
-    <Reference Include="Facebook.Unity.Settings">
-      <HintPath>Assets\FacebookSDK\Plugins\Settings\Facebook.Unity.Settings.dll</HintPath>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
+      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
       <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Win81Interface">
-      <HintPath>Assets\GameUtils\External\Adjust\Windows\Stubs\Win81Interface.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Mdb">
       <HintPath>Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
@@ -687,29 +511,11 @@
     <Reference Include="Unity.Burst.Cecil.Rocks">
       <HintPath>Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
     </Reference>
-    <Reference Include="Win10Interface">
-      <HintPath>Assets\GameUtils\External\Adjust\Windows\Stubs\Win10Interface.dll</HintPath>
-    </Reference>
-    <Reference Include="Zenject-usage">
-      <HintPath>Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
-    </Reference>
-    <Reference Include="WinWsInterface">
-      <HintPath>Assets\GameUtils\External\Adjust\Windows\Stubs\WinWsInterface.dll</HintPath>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
+      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@1.11.4\Mono.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="Facebook.Unity.Android">
-      <HintPath>Assets\FacebookSDK\Plugins\Android\Facebook.Unity.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="Facebook.Unity.Canvas">
-      <HintPath>Assets\FacebookSDK\Plugins\Canvas\Facebook.Unity.Canvas.dll</HintPath>
-    </Reference>
-    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
-      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="Facebook.Unity">
-      <HintPath>Assets\FacebookSDK\Plugins\Facebook.Unity.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -1237,10 +1043,6 @@
       <Project>{25B8C3E7-5764-8FAA-0ECA-8582F1B4BA4F}</Project>
       <Name>CFXR.WelcomeScreen</Name>
     </ProjectReference>
-    <ProjectReference Include="MaxSdk.Scripts.IntegrationManager.Editor.csproj">
-      <Project>{EB426C50-3DE7-8A9D-EF83-290D29E778E0}</Project>
-      <Name>MaxSdk.Scripts.IntegrationManager.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="CFXRRuntime.csproj">
       <Project>{0E150CA3-B08F-97A7-9BD1-2D9D96B10060}</Project>
       <Name>CFXRRuntime</Name>
@@ -1261,10 +1063,6 @@
       <Project>{DF366BED-B63A-B084-9DB5-07B5502D960F}</Project>
       <Name>Zenject-PoolMonitor-Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="MaxSdk.Scripts.Editor.csproj">
-      <Project>{772DDD34-9F1D-972D-BCC0-C640F0DFA558}</Project>
-      <Name>MaxSdk.Scripts.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Tayx.Graphy.Editor.csproj">
       <Project>{DD8DA743-157B-E03D-DB0D-715F82E50150}</Project>
       <Name>Tayx.Graphy.Editor</Name>
@@ -1272,10 +1070,6 @@
     <ProjectReference Include="Tayx.Graphy.csproj">
       <Project>{6969FF3E-37D3-D60E-53D3-038B5C474286}</Project>
       <Name>Tayx.Graphy</Name>
-    </ProjectReference>
-    <ProjectReference Include="MaxSdk.Scripts.csproj">
-      <Project>{3A4B6622-B309-123B-86FA-5B72C8041263}</Project>
-      <Name>MaxSdk.Scripts</Name>
     </ProjectReference>
     <ProjectReference Include="OtoonShader.csproj">
       <Project>{E181AD92-7F5E-5314-EB23-BD8246DC4673}</Project>

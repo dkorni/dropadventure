@@ -10,4 +10,7 @@ public class LevelData : ScriptableObject
     public Color DropLeftSliderColor;
     public bool IsCutNeeded;
     public bool IsLaserNeeded;
+
+    public bool IsCutTutorialNeeded;
+    public bool IsLaserTutorialNeeded;
 }

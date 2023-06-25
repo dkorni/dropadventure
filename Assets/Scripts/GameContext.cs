@@ -3,6 +3,7 @@ using UnityEngine;
 
 public enum GameStates
 {
+    None,
     Preparing,
     Match,
     Flush,
