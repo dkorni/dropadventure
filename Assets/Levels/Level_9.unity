@@ -4082,7 +4082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thickness: 0
+  thickness: 0.05
   material: {fileID: 0}
   filter: -65535
   m_SourceCollider: {fileID: 732447471}
@@ -4136,23 +4136,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kinematicForParticles: 0
---- !u!114 &732447485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 732447467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3a359e4eec70634dbfcd0021588e9f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  left: {fileID: 732447467}
-  right: {fileID: 0}
-  rightMultipleObjects:
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &814569447
 GameObject:
   m_ObjectHideFlags: 1
@@ -4220,7 +4203,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 814569447}
-  m_Mesh: {fileID: 1681930978}
+  m_Mesh: {fileID: 1763027289}
 --- !u!4 &814569450
 Transform:
   m_ObjectHideFlags: 1
@@ -17104,7 +17087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thickness: 0
+  thickness: 0.01
   material: {fileID: 0}
   filter: -65535
   m_SourceCollider: {fileID: 1162871495}
@@ -17141,7 +17124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thickness: 0
+  thickness: 0.01
   material: {fileID: 0}
   filter: -65535
   m_SourceCollider: {fileID: 1198170769}
@@ -30220,7 +30203,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99841a156e1386b44834a663b54a027d, type: 3}
---- !u!43 &1681930978
+--- !u!1 &1735095468 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6464134849449710683, guid: 99841a156e1386b44834a663b54a027d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1103679082}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1735095477 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6464134849449710680, guid: 99841a156e1386b44834a663b54a027d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1103679082}
+  m_PrefabAsset: {fileID: 0}
+--- !u!43 &1763027289
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -30384,18 +30379,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &1735095468 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6464134849449710683, guid: 99841a156e1386b44834a663b54a027d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1103679082}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1735095477 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6464134849449710680, guid: 99841a156e1386b44834a663b54a027d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1103679082}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1818139175 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6464134849449710680, guid: 99841a156e1386b44834a663b54a027d,
@@ -30894,7 +30877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thickness: 0
+  thickness: 0.05
   material: {fileID: 0}
   filter: -65535
   m_SourceCollider: {fileID: 1962517246}
@@ -30964,8 +30947,6 @@ MonoBehaviour:
   right: {fileID: 0}
   rightMultipleObjects:
   - {fileID: 869265396}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1001 &1978179079
 PrefabInstance:
   m_ObjectHideFlags: 0
