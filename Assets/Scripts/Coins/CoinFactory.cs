@@ -9,62 +9,43 @@ using Zenject;
 public class CoinFactory : MonoBehaviour
 {
     [Inject] private CoinBank Bank;
-    [Inject] private GameAnalyticManager analyticManager;
+    [Inject] private DropletController DropletController;
     
     [SerializeField]
     private GameObject coinPrefab;
 
     [SerializeField]
     private float withdrawDelay = 1.2f;
-
-    private Queue<GameObject> coins = new Queue<GameObject>();
     
-    private int increement = 1;
     public int witdrawed;
     private int maxCoins;
-    private int devider;
 
-    private bool IsWithdrawing;
-    
+    private List<int> steps;
+    private const int MaxPersantage = 100; 
+
+    private void Start()
+    {
+        steps = new List<int>();
+    }
+
     public void InitializeCoins(int count)
     {
-        maxCoins = UnityEngine.Random.Range(3, 5);
-        devider = count / maxCoins;
-
-        for (int a = 0; a < maxCoins; a++)
-        {
-            var g = Instantiate(coinPrefab);
-            coins.Enqueue(g);
-            g.SetActive(false);
-        }
+        maxCoins = Random.Range(3, 5);
+        int persantageStep = MaxPersantage / maxCoins;
+        for (int i = 1; i < maxCoins+1; i++) steps.Add(persantageStep*i);
+        steps.Reverse();
     }
 
     public void Withdraw(Vector3 position)
     {
-        StartCoroutine(WithdrawCoroutine(position));
-    }
-    
-    private IEnumerator WithdrawCoroutine(Vector3 position)
-    {
-        while (IsWithdrawing)
+        for (int i = 0; i < maxCoins; i++)
         {
-            yield return null;
+            if(DropletController.HealthPersantage < steps[i])
+            {
+                Instantiate(coinPrefab, position, Quaternion.identity);
+                steps[i] = -1;
+                Bank.UpdateBalance(1);
+            }
         }
-
-        IsWithdrawing = true;
-
-        if (coins.IsEmpty())
-            yield break;
-
-        witdrawed++;
-        yield return new WaitForSeconds(withdrawDelay * witdrawed);
-
-
-        var coin = coins.Dequeue();
-        coin.SetActive(true);
-        coin.transform.position = position;
-        Bank.UpdateBalance(1);
-        IsWithdrawing = false;
-
     }
 }
