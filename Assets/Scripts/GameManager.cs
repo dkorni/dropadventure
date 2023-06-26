@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameContext _context;
 
     [Inject] private GameAnalyticManager _analyticManager;
+    [Inject] private DynamicJoystick joystick;
 
     private Stopwatch stopwatch;
 
@@ -65,11 +66,17 @@ public class GameManager : MonoBehaviour
         PrepareScene();
     }
 
+    public void Update()
+    {
+        if(Input.touchCount > 0 && _context.CurrentState == GameStates.Preparing)
+            StartMatch();
+    }
+
     private void IncreementDrops()
     {
         joinedDrops++;
         _context.UpdateDropCount(joinedDrops);
-        if (joinedDrops == maxDrops && _dropletController.health > _levelData.MinHealth)
+        if (joinedDrops == maxDrops)
             StartFlushStep();
     }
 
@@ -105,7 +112,6 @@ public class GameManager : MonoBehaviour
     private void OnCompositeFinished()
     {
         processedComposites++;
-        if (processedComposites == composites.Length) StartMatch();
     }
 
     private void StartMatch()
@@ -162,7 +168,7 @@ public class GameManager : MonoBehaviour
         _dropletController.OnDied -= GameOver;
         _dropletController.OnDied -= Win;
         _context.OnReload -= SilentGameOver;
-
+        _context.UpdateStatus(GameStates.None);
         foreach (var c in composites)
             c.OnFinished -= OnCompositeFinished;
     }

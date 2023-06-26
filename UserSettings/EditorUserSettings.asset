@@ -6,34 +6,34 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedSceneGuid-0:
-      value: 5b0701525d045a08090b597640735a44134f1a7a7a79756279791f6abbb16d3e
-      flags: 0
-    RecentlyUsedSceneGuid-1:
       value: 02060c555006500959580f7b11775e414e154f78292d22602e711c60e4e2606f
       flags: 0
-    RecentlyUsedSceneGuid-2:
-      value: 570455055605510c585e597a44715a4414154c7c7d7070667a2f4f35b3b53261
-      flags: 0
-    RecentlyUsedSceneGuid-3:
-      value: 5557025707055c585b5d5a7742770a1544164e2b2f2c75687b794d32b2e3616e
-      flags: 0
-    RecentlyUsedSceneGuid-4:
-      value: 00050d50560d50095f57097514770a45404f1c2e7c7f726578781b37e3b16561
-      flags: 0
-    RecentlyUsedSceneGuid-5:
+    RecentlyUsedSceneGuid-1:
       value: 0204505406505c09590d5a274177081343164c7f2f7823697c794a63b0b7613b
       flags: 0
-    RecentlyUsedSceneGuid-6:
+    RecentlyUsedSceneGuid-2:
+      value: 00050d50560d50095f57097514770a45404f1c2e7c7f726578781b37e3b16561
+      flags: 0
+    RecentlyUsedSceneGuid-3:
+      value: 5a520c035207500b595b5f7b44770e161215487d2f297033782a1961e4b16139
+      flags: 0
+    RecentlyUsedSceneGuid-4:
       value: 050300565d040808580a5a7113770b49424e4a7f2f7825352e7e1e60b7e5676f
       flags: 0
-    RecentlyUsedSceneGuid-7:
+    RecentlyUsedSceneGuid-5:
+      value: 5303075e00040b5f595a557314775e1513161b7a7a7c27642c711e36b1b9636c
+      flags: 0
+    RecentlyUsedSceneGuid-6:
       value: 0652505f530c5a0a5d0a5c70417407444e161e7f7c2c7f327f7e1835e7b2366d
       flags: 0
-    RecentlyUsedSceneGuid-8:
+    RecentlyUsedSceneGuid-7:
       value: 0657505504535d0e5c595f2312760844104f487d7f792032797b196ab4e3666e
       flags: 0
+    RecentlyUsedSceneGuid-8:
+      value: 5557025707055c585b5d5a7742770a1544164e2b2f2c75687b794d32b2e3616e
+      flags: 0
     RecentlyUsedSceneGuid-9:
-      value: 5303075e00040b5f595a557314775e1513161b7a7a7c27642c711e36b1b9636c
+      value: 5b0701525d045a08090b597640735a44134f1a7a7a79756279791f6abbb16d3e
       flags: 0
     UnityRemoteDevice:
       value: 225f4d46245b0d4902070862342649191512

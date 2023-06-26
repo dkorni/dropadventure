@@ -7,9 +7,10 @@ using UnityEngine;
 public class LevelData : ScriptableObject
 {
     public int Index;
-    public int MinHealth;
     public Color DropLeftSliderColor;
-    public Color HealthSliderColor;
     public bool IsCutNeeded;
     public bool IsLaserNeeded;
+
+    public bool IsCutTutorialNeeded;
+    public bool IsLaserTutorialNeeded;
 }
