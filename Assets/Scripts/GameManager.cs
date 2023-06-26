@@ -1,5 +1,4 @@
-﻿using Assets.Scripts.Analytics;
-using System;
+﻿using System;
 using System.Diagnostics;
 using UnityEngine;
 using Zenject;
@@ -28,7 +27,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameContext _context;
 
-    [Inject] private GameAnalyticManager _analyticManager;
+    [Inject] private IAnalyticClient _analyticManager;
     [Inject] private DynamicJoystick joystick;
 
     private Stopwatch stopwatch;
@@ -133,7 +132,7 @@ public class GameManager : MonoBehaviour
     {
         stopwatch.Stop();
         var seconds = stopwatch.Elapsed.Seconds;
-        _analyticManager.FailLevel(_context.CurrentLevel, _dropletController.health, seconds);
+        _analyticManager.FailLevel(_context.CurrentLevel);
     }
 
     private void GameOver()
@@ -146,7 +145,7 @@ public class GameManager : MonoBehaviour
 
         _context.UpdateStatus(GameStates.GameOver);
 
-        _analyticManager.FailLevel(_context.CurrentLevel, _dropletController.health, seconds);
+        _analyticManager.FailLevel(_context.CurrentLevel);
     }
 
     private void Win()
@@ -158,8 +157,7 @@ public class GameManager : MonoBehaviour
         var seconds = stopwatch.Elapsed.Seconds;
         _context.UpdateStatus(GameStates.Win);
         firework.SetActive(true);
-        _analyticManager.CompleteLevel(_context.CurrentLevel, _dropletController.FlushedParticles, seconds);
-        _analyticManager.AddCoins(_coinFactory.witdrawed, _context.CurrentLevel);
+        _analyticManager.CompleteLevel(_context.CurrentLevel);
     }
 
     private void OnDisable()

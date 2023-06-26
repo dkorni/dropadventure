@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Assets.Scripts.Analytics;
 using ModestTree;
 using UnityEngine;
 using UnityEngine.UIElements;

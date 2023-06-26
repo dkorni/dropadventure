@@ -34,6 +34,8 @@ public class DropletController : MonoBehaviour, IDetonationSubscriber
 
     public int FlushedParticles;
 
+    public int HealthPersantage => health * 100 / MaxHealth;
+
     private float Speed = 1.035f;
 
     public float DelayTimeToStart;

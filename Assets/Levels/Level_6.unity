@@ -534,7 +534,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 320716326}
-  m_Mesh: {fileID: 1323646062}
+  m_Mesh: {fileID: 1340881190}
 --- !u!4 &320716329
 Transform:
   m_ObjectHideFlags: 1
@@ -38947,7 +38947,7 @@ MonoBehaviour:
   m_CollisionMaterial: {fileID: 11400000, guid: 7e318fd02475245f48f8f968e5ef09d5,
     type: 2}
   m_SurfaceCollisions: 0
-  emitterBlueprint: {fileID: 11400000, guid: 9244a950a4327354ba8b68f1b5dbee13, type: 2}
+  emitterBlueprint: {fileID: 11400000, guid: 7d694f1007f4c3242a40d75dd554c759, type: 2}
   filter: -65534
   emissionMethod: 1
   minPoolSize: 0
@@ -41660,7 +41660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thickness: 0
+  thickness: 0.05
   material: {fileID: 0}
   filter: -65535
   m_SourceCollider: {fileID: 732447471}
@@ -54646,7 +54646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thickness: 0
+  thickness: 0.01
   material: {fileID: 0}
   filter: -65535
   m_SourceCollider: {fileID: 1162871495}
@@ -67267,7 +67267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thickness: 0
+  thickness: 0.01
   material: {fileID: 0}
   filter: -65535
   m_SourceCollider: {fileID: 1198170769}
@@ -67453,7 +67453,7 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
---- !u!43 &1323646062
+--- !u!43 &1340881190
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68263,7 +68263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thickness: 0
+  thickness: 0.05
   material: {fileID: 0}
   filter: -65535
   m_SourceCollider: {fileID: 1962517246}
