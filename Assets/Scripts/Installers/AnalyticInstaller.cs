@@ -8,5 +8,6 @@ public class AnalyticInstaller : MonoInstaller
     public override void InstallBindings()
     {
         Container.Bind<IAnalyticClient>().To<ConsoleAnalyticClient>().AsSingle();
+        Container.Decorate<IAnalyticClient>().With<FacebookAnalyticDecorator>().AsSingle();
     }
 }

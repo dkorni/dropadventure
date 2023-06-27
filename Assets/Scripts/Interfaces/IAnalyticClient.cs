@@ -4,6 +4,10 @@ using UnityEngine;
 
 public interface IAnalyticClient 
 {
+    void Init();
+
+    void ActivateApp();
+
     void StartLevel(int level);
 
     void CompleteLevel(int level);
