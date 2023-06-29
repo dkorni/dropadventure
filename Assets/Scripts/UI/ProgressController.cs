@@ -3,13 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Zenject;
 
 public class ProgressController : MonoBehaviour
 {
     [Inject] private GameContext _context;
-    [SerializeField] private TMP_Text currentLevelText;
-    [SerializeField] private TMP_Text nextLevelText;
+    [SerializeField] private Text currentLevelText;
+    [SerializeField] private Text nextLevelText;
 
     void Awake()
     {

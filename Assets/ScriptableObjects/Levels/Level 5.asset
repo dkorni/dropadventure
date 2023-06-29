@@ -15,6 +15,6 @@ MonoBehaviour:
   Index: 5
   DropLeftSliderColor: {r: 0.79607844, g: 0.8039216, b: 0.47058824, a: 1}
   IsCutNeeded: 0
-  IsLaserNeeded: 0
+  IsLaserNeeded: 1
   IsCutTutorialNeeded: 0
   IsLaserTutorialNeeded: 0

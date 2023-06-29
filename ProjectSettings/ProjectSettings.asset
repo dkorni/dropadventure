@@ -136,7 +136,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.1.5
+  bundleVersion: 1.1.6
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -822,13 +822,14 @@ PlayerSettings:
   webGLDecompressionFallback: 0
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: CROSS_PLATFORM_INPUT;MOBILE_INPUT;OBI_ONI_SUPPORTED;gameanalytics_max_enabled;YC_IOS14_SUPPORT;tenjin_applovin_enabled
+    Android: CROSS_PLATFORM_INPUT;MOBILE_INPUT;OBI_ONI_SUPPORTED;YC_IOS14_SUPPORT;tenjin_applovin_enabled
     Standalone: CROSS_PLATFORM_INPUT;OBI_ONI_SUPPORTED;YC_IOS14_SUPPORT
     WebGL: CROSS_PLATFORM_INPUT
     Windows Store Apps: CROSS_PLATFORM_INPUT;MOBILE_INPUT
-    iPhone: CROSS_PLATFORM_INPUT;MOBILE_INPUT;OBI_ONI_SUPPORTED;gameanalytics_max_enabled;YC_IOS14_SUPPORT;tenjin_applovin_enabled
+    iPhone: VS_ATT;CROSS_PLATFORM_INPUT;MOBILE_INPUT;OBI_ONI_SUPPORTED;YC_IOS14_SUPPORT
   additionalCompilerArguments: {}
-  platformArchitecture: {}
+  platformArchitecture:
+    iPhone: 2
   scriptingBackend:
     Android: 1
   il2cppCompilerConfiguration: {}
