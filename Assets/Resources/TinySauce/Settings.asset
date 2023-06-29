@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faa11ec82e9746928e211e7f096812ca, type: 3}
   m_Name: Settings
   m_EditorClassIdentifier: 
-  gameAnalyticsIosGameKey: 
-  gameAnalyticsIosSecretKey: 
+  gameAnalyticsIosGameKey: eb0a66f81e7d87a929a7b47829bb9c65
+  gameAnalyticsIosSecretKey: a48a7b5f4265f790b63615cd70b75b7ccbd41f9b
   gameAnalyticsAndroidGameKey: 
   gameAnalyticsAndroidSecretKey: 
-  facebookAppId: 
-  facebookClientToken: 
-  adjustIOSToken: 
+  facebookAppId: 1681524638959671
+  facebookClientToken: 5c1bd96c8520d53918a1f072854fcce8
+  adjustIOSToken: 9svo4zoq9dz4
   adjustAndroidToken: 
-  EditorIdfa: 
+  EditorIdfa: b97a25fc-d3b9-436a-a306-4da3ce679a2b
   UseRemoteConfig: 0
   UseVoodooAnalytics: 1
-  companyName: 
-  privacyPolicyURL: 
-  developerContactEmail: 
+  companyName: Denys Korniienko
+  privacyPolicyURL: https://pinkvinyl.studio/privatepolicy.html
+  developerContactEmail: denys.korniienko.dev@gmail.com

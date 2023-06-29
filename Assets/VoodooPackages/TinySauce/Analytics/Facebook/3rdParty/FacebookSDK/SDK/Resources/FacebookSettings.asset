@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedAppIndex: 0
   clientTokens:
-  - 
+  - 5c1bd96c8520d53918a1f072854fcce8
   appIds:
-  - 0
+  - 1681524638959671
   appLabels:
-  - App Name
+  - Flush fluid!
   cookie: 1
   logging: 1
   status: 1
