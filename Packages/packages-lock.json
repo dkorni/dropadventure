@@ -1,5 +1,27 @@
 {
   "dependencies": {
+    "com.homagames.debug-console": {
+      "version": "file:com.homagames.debug-console",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.textmeshpro": "1.0.0"
+      }
+    },
+    "com.homagames.game-doctor-checks": {
+      "version": "file:com.homagames.game-doctor-checks",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.homagames.game-doctor-core": "1.0.0"
+      }
+    },
+    "com.homagames.game-doctor-core": {
+      "version": "file:com.homagames.game-doctor-core",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.ads.ios-support": {
       "version": "1.2.0",
       "depth": 0,

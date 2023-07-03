@@ -157,9 +157,9 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.denys.korniienko.FlushIt
+    Android: com.denys.korniienko.flushitdown
     Standalone: com.DefaultCompany.DropAdventure
-    iPhone: com.denys.korniienko.Flush-it-down
+    iPhone: com.denys.korniienko.flush-it-down
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -261,7 +261,7 @@ PlayerSettings:
   AndroidEnableTango: 0
   androidEnableBanner: 1
   androidUseLowAccuracyLocation: 0
-  androidUseCustomKeystore: 1
+  androidUseCustomKeystore: 0
   m_AndroidBanners:
   - width: 320
     height: 180
@@ -822,18 +822,20 @@ PlayerSettings:
   webGLDecompressionFallback: 0
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: CROSS_PLATFORM_INPUT;MOBILE_INPUT;OBI_ONI_SUPPORTED;YC_IOS14_SUPPORT;tenjin_applovin_enabled
+    Android: CROSS_PLATFORM_INPUT;MOBILE_INPUT;OBI_ONI_SUPPORTED;YC_IOS14_SUPPORT;tenjin_applovin_enabled;HOMA_DEVELOPMENT;HOMA_BELLY_DEBUG_CLASS_OVERRIDE_ENABLED;HOMA_BELLY_DEFAULT_ANALYTICS_ENABLED;HOMA_BELLY;homagames_gdpr_textmeshproavailable
     Standalone: CROSS_PLATFORM_INPUT;OBI_ONI_SUPPORTED;YC_IOS14_SUPPORT
     WebGL: CROSS_PLATFORM_INPUT
     Windows Store Apps: CROSS_PLATFORM_INPUT;MOBILE_INPUT
-    iPhone: VS_ATT;CROSS_PLATFORM_INPUT;MOBILE_INPUT;OBI_ONI_SUPPORTED;YC_IOS14_SUPPORT
+    iPhone: VS_ATT;CROSS_PLATFORM_INPUT;MOBILE_INPUT;OBI_ONI_SUPPORTED;YC_IOS14_SUPPORT;HOMA_DEVELOPMENT;HOMA_BELLY_DEBUG_CLASS_OVERRIDE_ENABLED;HOMA_BELLY_DEFAULT_ANALYTICS_ENABLED;HOMA_BELLY;homagames_gdpr_textmeshproavailable
   additionalCompilerArguments: {}
   platformArchitecture:
-    iPhone: 2
+    iPhone: 1
   scriptingBackend:
     Android: 1
   il2cppCompilerConfiguration: {}
-  managedStrippingLevel: {}
+  managedStrippingLevel:
+    Android: 1
+    iPhone: 1
   incrementalIl2cppBuild: {}
   suppressCommonWarnings: 1
   allowUnsafeCode: 0
@@ -845,7 +847,9 @@ PlayerSettings:
   gcIncremental: 0
   assemblyVersionValidation: 1
   gcWBarrierValidation: 0
-  apiCompatibilityLevelPerPlatform: {}
+  apiCompatibilityLevelPerPlatform:
+    Android: 3
+    iPhone: 3
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: Template_3D

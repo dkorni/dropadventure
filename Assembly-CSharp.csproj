@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\</OutputPath>
-    <DefineConstants>UNITY_2021_3_16;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_IOS;TEXTCORE_1_0_OR_NEWER;ENABLE_RUNTIME_GI;ENABLE_GAMECENTER;ENABLE_NETWORK;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_IOS_ON_DEMAND_RESOURCES;ENABLE_IOS_APP_SLICING;PLAYERCONNECTION_LISTENS_FIXED_PORT;DEBUGGER_LISTENS_FIXED_PORT;PLATFORM_SUPPORTS_ADS_ID;SUPPORT_ENVIRONMENT_VARIABLES;PLATFORM_SUPPORTS_PROFILER;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_ETC_COMPRESSION;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;UNITY_IOS;PLATFORM_IPHONE;UNITY_IPHONE;UNITY_IPHONE_API;UNITY_HAS_GOOGLEVR;ENABLE_SPATIALTRACKING;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;VS_ATT;CROSS_PLATFORM_INPUT;MOBILE_INPUT;OBI_ONI_SUPPORTED;YC_IOS14_SUPPORT;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_2021_3_16;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_IOS;TEXTCORE_1_0_OR_NEWER;ENABLE_RUNTIME_GI;ENABLE_GAMECENTER;ENABLE_NETWORK;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_IOS_ON_DEMAND_RESOURCES;ENABLE_IOS_APP_SLICING;PLAYERCONNECTION_LISTENS_FIXED_PORT;DEBUGGER_LISTENS_FIXED_PORT;PLATFORM_SUPPORTS_ADS_ID;SUPPORT_ENVIRONMENT_VARIABLES;PLATFORM_SUPPORTS_PROFILER;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_ETC_COMPRESSION;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;UNITY_IOS;PLATFORM_IPHONE;UNITY_IPHONE;UNITY_IPHONE_API;UNITY_HAS_GOOGLEVR;ENABLE_SPATIALTRACKING;ENABLE_MONO;NET_4_6;NET_UNITY_4_8;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;VS_ATT;CROSS_PLATFORM_INPUT;MOBILE_INPUT;OBI_ONI_SUPPORTED;YC_IOS14_SUPPORT;HOMA_DEVELOPMENT;HOMA_BELLY_DEBUG_CLASS_OVERRIDE_ENABLED;HOMA_BELLY_DEFAULT_ANALYTICS_ENABLED;HOMA_BELLY;homagames_gdpr_textmeshproavailable;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -57,386 +57,496 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Scripts/UI/Manipulate UI/CutUiController.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Analytics/HomaAnalytics/Runtime/HomaAnalyticsLogListener.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Utilities/Runtime/Analytics/AnalyticsHelper.cs" />
     <Compile Include="Assets/3DPart/Liquid-Simulation-master/Liquid-Simulation-master/Assets/Scripts/BlurController.cs" />
-    <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/AddRandomVelocity.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Unity/AdjustSessionSuccess.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Mediators/BannerSafeAreaHelper.cs" />
+    <Compile Include="Assets/Adjust/Unity/AdjustSessionSuccess.cs" />
     <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/FPSDisplay.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Common/Internal/Parameters/ResourceEventParameters.cs" />
-    <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ObjectDragger.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Internal/DebugUI/Scripts/Screens/TSDebugUIScreenABTest.cs" />
     <Compile Include="Assets/Scripts/Detonation/CameraDetonationBehaviour.cs" />
-    <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightIntensityFade.cs" />
-    <Compile Include="Assets/Scripts/UI/BalanceLabel.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/Internal/Events/GADesignEvent.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/GameAnalytics.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Unity/AdjustSessionFailure.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/VoodooAnalytics/3rdParty/Analytics/GlobalContext.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/Wrapper/GA_tvOSWrapper.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/Enums.cs" />
+    <Compile Include="Assets/Adjust/Unity/AdjustSessionFailure.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/CloudAndroid/Prefabs/PurchaseRowPrefab.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/Enums.cs" />
     <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ObiParticleCounter.cs" />
-    <Compile Include="Assets/Joystick Pack/Scripts/Joysticks/FixedJoystick.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/Wrapper/GA_WebGLWrapper.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Unity/AdjustEventFailure.cs" />
-    <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ColorFromViscosity.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/Utilities/GA_MiniJson.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Scripts/UI/DataPrivacyLoading.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Geryon/Runtime/Model/GeryonConfigurationModel.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Windows/FBWindowsA2UNotificationsManager.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Mediators/IMediatorWithInitializationCallback.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/Wrapper/GA_WebGLWrapper.cs" />
+    <Compile Include="Assets/Adjust/Unity/AdjustEventFailure.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/Utilities/GA_MiniJson.cs" />
     <Compile Include="Assets/Joystick Pack/Scripts/Joysticks/VariableJoystick.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Scripts/HomaBridge/DummyBridge/DummyRewardBehaviour.cs" />
     <Compile Include="Assets/OToon- URP Toon Shading/Demo(Can be delete)/Scripts/CameraController.cs" />
     <Compile Include="Assets/Scripts/Analytics/FacebookAnalyticDecorator.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Unity/AdjustUtils.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/Internal/Events/GameAnalyticsEvent.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Internal/DebugUI/Scripts/TSDebugUIManager.cs" />
-    <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ColliderHighlighter.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/VoodooAnalytics/Internal/VoodooAnalyticsConstants.cs" />
-    <Compile Include="Assets/Scripts/CSJ/Classes/VertexAttributes.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Scripts/DataPrivacyFlowNotifier.cs" />
+    <Compile Include="Assets/Adjust/Unity/AdjustUtils.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Windows/FBWindowsVirtualGamepadManager.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Analytics/HomaAnalytics/Runtime/Events Storage/EventStorageSlotStates.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Analytics/HomaAnalytics/Runtime/Events Storage/EventStorageSlot.cs" />
     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_AutoRotate.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/Wrapper/GA_AndroidWrapper.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/Events/GA_Debug.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/Internal/GameAnalyticsWrapper.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Common/IABTestManager.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Force Update Popup/Mobile-Dialog-Unity/Scripts/MobileDialog.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/Wrapper/GA_AndroidWrapper.cs" />
     <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/CollisionEventHandler.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Playmaker/SendAdEvent.cs" />
-    <Compile Include="Assets/OToon- URP Toon Shading/Demo(Can be delete)/Plugins/SprintBone/SpringBone.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Playmaker/GetABTestingVariantId.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Unity/AdjustUrlStrategy.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Common/Internal/Parameters/BusinessEventParameters.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/VoodooAnalytics/3rdParty/Analytics/VoodooAnalyticsManager.cs" />
-    <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/ObiFluidPropertyColorizer.cs" />
-    <Compile Include="Assets/Scripts/CSJ/Classes/Polygon.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Internal/Logging/VoodooLog.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Internal/idfaAuthorization/NativeWrapper/Models/IdfaAuthorizationConstants.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/VoodooAnalytics/Internal/VoodooAnalyticsWrapper.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Playmaker/SendAdEvent.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Mediators/MediatorBase.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Windows/FBWindowsGraphAPIManager.cs" />
     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_AutoStopLoopedEffect.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/VoodooAnalytics/Internal/VoodooAnalyticsConfig.cs" />
-    <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ActorCOMTransform.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Common/Internal/Helper/AnalyticsUserIdHelper.cs" />
-    <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/SlowmoToggler.cs" />
-    <Compile Include="Assets/Scripts/UI/Manipulate UI/LaserUiController.cs" />
-    <Compile Include="Assets/Scripts/Installers/CanvasInstaller.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Unity/Adjust.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Scripts/Views/IdfaView.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Scripts/InitializationStatus.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Utilities/TaskUtils.cs" />
     <Compile Include="Assets/Scripts/SceneManager.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Internal/DebugUI/Scripts/UIElements/CohortButton.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Playmaker/SendProgressionEvent.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Unity/AdjustAdRevenue.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/Wrapper/GA_MonoWrapper.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Windows/FBWindowsPurchaseManager.cs" />
+    <Compile Include="Assets/Adjust/Unity/AdjustAdRevenue.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Utilities/HomaGamesLog.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/Wrapper/GA_MonoWrapper.cs" />
     <Compile Include="Assets/Scripts/FromToMover.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Common/Internal/Helper/AnalyticsStorageHelper.cs" />
-    <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/DebugParticleFrames.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Internal/DebugUI/Scripts/Screens/TSDebugUIScreenEvents.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/3rd Party/SimpleJSON.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/Wrapper/GA_iOSWrapper.cs" />
-    <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/MazeManager.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Attributions/IAttribution.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Customer Support/CustomerSupportImplementation.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Scripts/HomaBridge/Dependencies/HomaBridgeDependenciesAnalytics.cs" />
+    <Compile Include="Assets/Adjust/3rd Party/SimpleJSON.cs" />
     <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/CharacterController/SampleCharacterController.cs" />
     <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/BucketController.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Scripts/UI/LoadingColorFromSettings.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/ILRD/GameAnalyticsILRD.cs" />
     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RandomDir.cs" />
-    <Compile Include="Assets/Scripts/Puddle.cs" />
-    <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/CharacterController/ObiCharacter.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Utilities/Runtime/Json/Json.cs" />
     <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/LookAroundCamera.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Playmaker/GetRemoteConfigsValueAsString.cs" />
-    <Compile Include="Assets/Scripts/UI/Manipulate UI/ManipulateUiController.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Playmaker/GetRemoteConfigsValueAsString.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Scripts/UI/ButtonColorFromSettings.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Mediators/VideoAd/VideoAdReward.cs" />
     <Compile Include="Assets/Scripts/Installers/DynamicJoystickInstaller.cs" />
-    <Compile Include="Assets/Scripts/CSJ/Classes/Vertex.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Common/BaseAnalyticsEvent.cs" />
-    <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/SolidifyOnContact.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/Internal/Events/GAAdEvent.cs" />
-    <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/FluidJetController.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Unity/AdjustPlayStoreSubscription.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Common/Internal/Parameters/GameFinishedParameters.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Utilities/Identifiers.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Windows/FBWindowsLoginManager.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Attributions/Adjust/Runtime/HomaBellyAdjustConstants.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Analytics/IAnalytics.cs" />
+    <Compile Include="Assets/Adjust/Unity/AdjustPlayStoreSubscription.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Force Update Popup/ForceUpdateConfigurationModel.cs" />
     <Compile Include="Assets/Scripts/Tips/Tip3D.cs" />
     <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ObiActorTeleport.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/VoodooAnalytics/3rdParty/Analytics/IConfig.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Preload/Scripts/TSSceneLoader.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Privacy/Scripts/PrivacyScreenBehaviour.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/Events/GA_Error.cs" />
-    <Compile Include="Assets/Scripts/Bomb.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Common/IAdTrackerWrapper.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/ILRD/HyperBid/GAHyperBidIntegration.cs" />
     <Compile Include="Assets/Scripts/CSJ/Classes/Node.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/Events/GA_SpecialEvents.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/VoodooAnalytics/3rdParty/Common/AnalyticsHttpLoggingClientHandler.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/Events/GA_SpecialEvents.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Analytics/HomaAnalytics/Runtime/HomaAnalyticsEventResponse.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Analytics/HomaAnalytics/Runtime/LogAnalyticsEvent.cs" />
     <Compile Include="Assets/Scripts/CSJ/Classes/VertexUtility.cs" />
-    <Compile Include="Assets/Scripts/UI/ProgressController.cs" />
     <Compile Include="Assets/Joystick Pack/Examples/JoystickPlayerExample.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Common/Utils/DeviceUtils.cs" />
-    <Compile Include="Assets/OToon- URP Toon Shading/Demo(Can be delete)/Scenes/2 NPRStyles RobotKyle/Scripts/DemoController.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Utilities/Localization/Localization.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Utilities/Runtime/API/EventApiQueryModel.cs" />
+    <Compile Include="Assets/Adjust/Unity/AdjustConfig.cs" />
     <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ObjectLimit.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/VoodooAnalytics/Internal/VoodooAnalyticsParameters.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Unity/AdjustConfig.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/VoodooAnalytics/3rdParty/Analytics/AnalyticsUtil.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Common/Internal/Models/AdEventAnalyticsInfo.cs" />
-    <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/Melt.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/Internal/FacebookTrackerWrapper.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/VoodooAnalytics/3rdParty/Analytics/AnalyticsParameters.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Scripts/UI/TextMeshProHyperlink.cs" />
     <Compile Include="Assets/Scripts/Coins/Coin.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Internal/Settings/TinySauceSettings.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Internal/DebugUI/Scripts/TSDebugUIBehaviour.cs" />
-    <Compile Include="Assets/Scripts/Installers/DependencyInstaller.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/AnalyticsManager.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Playmaker/GAInitialize.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Scripts/HomaBridge/IHomaBelly.cs" />
     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_AutoDestructShuriken.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Unity/AdjustEnvironment.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/Internal/Events/GAProgressionEvent.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/VoodooAnalytics/3rdParty/Analytics/VoodooWebProxy.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Internal/PrivacyHelpers/IdfaHelper.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Common/Internal/Logger/DebugAnalyticsLog.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Privacy/Scripts/PrivacyPartnersScreenBehaviour.cs" />
-    <Compile Include="Assets/Scripts/Rotator.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Common/Utils/UnityIosDevice.cs" />
-    <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/MoveAndRotate.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/Internal/Events/GAResourceEvent.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Playmaker/SendBusinessEvent.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Unity/AdjustAppStoreSubscription.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Common/IAnalyticsProvider.cs" />
-    <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ColorFromPhase.cs" />
-    <Compile Include="Assets/Scripts/Analytics/BaseAnalyticClientDecorator.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Scripts/Remote Configuration/UriHelper.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/ILRD/Fyber/GAFyberIntegration.cs" />
+    <Compile Include="Assets/Adjust/Unity/AdjustAppStoreSubscription.cs" />
     <Compile Include="Assets/Scripts/Analytics/AnalyticManager.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/VoodooAnalytics/Internal/VoodooAnalyticsProvider.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/VoodooAnalytics/3rdParty/Analytics/AnalyticsLog.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Cross Promotion/Scripts/CrossPromotionVideoDownloader.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Windows/FBWindowsInitManager.cs" />
     <Compile Include="Assets/Joystick Pack/Scripts/Joysticks/DynamicJoystick.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Playmaker/SendErrorEvent.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Unity/AdjustEventSuccess.cs" />
-    <Compile Include="Assets/3DPart/GradientSky/Scripts/GradientSkyObject.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Playmaker/SendErrorEvent.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Utilities/EventTask.cs" />
     <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ColorFromVelocity.cs" />
-    <Compile Include="Assets/Scripts/Tips/CanvasTips.cs" />
-    <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/EmitOnKeyPress.cs" />
     <Compile Include="Assets/Scripts/UI/DropletSliderController.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Common/Internal/Models/PerformanceMetricsAnalyticsInfo.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Internal/idfaAuthorization/Utils/IdfaAuthorizationUtils.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Unity/AdjustLogLevel.cs" />
-    <Compile Include="Assets/Joystick Pack/Scripts/Base/Joystick.cs" />
-    <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RotateCamera.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Common/Internal/Parameters/GameStartedParameters.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Utilities/Localization/LocalizationComponent.cs" />
+    <Compile Include="Assets/Adjust/Unity/AdjustLogLevel.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Scripts/UI/SafeAreaHelper.cs" />
     <Compile Include="Assets/Scripts/Coins/CoinBank.cs" />
-    <Compile Include="Assets/OToon- URP Toon Shading/Demo(Can be delete)/Scripts/ShowcaseDemoController.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/Events/GA_Setup.cs" />
-    <Compile Include="Assets/Scripts/Impulse.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Internal/AdjustTrackerWrapper.cs" />
-    <Compile Include="Assets/Scripts/Interfaces/ISmashable.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Unity/AdjustEvent.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Internal/DebugUI/Scripts/Screens/TSDebugUIScreenInfo.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Unity/AdjustAttribution.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/Events/GA_Ads.cs" />
-    <Compile Include="Assets/OToon- URP Toon Shading/Demo(Can be delete)/Scripts/SceneHintController.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Common/Internal/Models/PerformanceMetricsConfig.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/VoodooAnalytics/3rdParty/Analytics/Event.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Analytics/HomaAnalytics/Runtime/Analytics Tools/HomaAnalyticsFpsTool.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Utilities/Runtime/Json/JsonObject.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/Events/GA_Setup.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Scripts/HomaBridge/IHomaBellyBridge.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Analytics/HomaAnalytics/Runtime/InAppPurchaseAnalyticsEvent.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/BackwardCompatibility/PreserveAttribute.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Utilities/HomaBellyManifestConfiguration.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/Events/GA_Ads.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Utilities/Runtime/Analytics/DefaultAnalytics.cs" />
     <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ActorSpawner.cs" />
-    <Compile Include="Assets/Scripts/LevelData.cs" />
     <Compile Include="Assets/Scripts/Analytics/ConsoleAnalyticClient.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Common/Utils/ConvertUtils.cs" />
     <Compile Include="Assets/Scripts/CSJ/CSG.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/Events/GAValidator.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Privacy/Scripts/PrivacyManager.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Common/Internal/Models/AnalyticsConfig.cs" />
-    <Compile Include="Assets/Scripts/Blade.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Common/Internal/Logger/AnalyticsEventLoggerConstant.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Privacy/Scripts/SwitchToggle.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Common/Internal/PerformanceMetricsManager.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Privacy/Scripts/PrivacySettingsButton.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/iOS/AdjustiOS.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/Events/GA_Resource.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/Internal/GameAnalyticsProvider.cs" />
-    <Compile Include="Assets/Scripts/Analytics/TinySauceClientDecorator.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/VoodooAnalytics/Internal/VoodooAnalyticsLoggerEvent.cs" />
-    <Compile Include="Assets/Joystick Pack/Examples/JoystickSetterExample.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Playmaker/IsRemoteConfigsReady.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/Wrapper/GA_UWPWrapper.cs" />
-    <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ColorRandomizer.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Internal/EnvironmentSettings/Helpers/EnvironmentSettingsLocalStorage.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Privacy/Scripts/ConsentInfo.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/Events/GAValidator.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Force Update Popup/Mobile-Dialog-Unity/Scripts/MobileNative.cs" />
+    <Compile Include="Assets/Adjust/iOS/AdjustiOS.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Utilities/NetworkHelper.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/Events/GA_Resource.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Scripts/Views/DataPrivacySettings.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Windows/FBWindowsFriendsManager.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Windows/FBWindowsPhysicalGamepadManager.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Playmaker/IsRemoteConfigsReady.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Windows/FBWindowsADSManager.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Utilities/ResourcesUtils.cs" />
     <Compile Include="Assets/Scripts/DropletController.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Internal/EnvironmentSettings/Models/EnvironmentSettings.cs" />
-    <Compile Include="Assets/Scripts/CSJ/Classes/Model.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Scripts/AdRevenue/AdRevenueData.cs" />
     <Compile Include="Assets/Scripts/ScriptableObjects/PlaneSO.cs" />
     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RandomDirectionTranslate.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/IGameAnalyticsATTListener.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/IGameAnalyticsATTListener.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Force Update Popup/ForceUpdatePopupWakeUpProxy.cs" />
     <Compile Include="Assets/Scripts/CompositeObject.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Mediators/Banner/BannerPosition.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Analytics/HomaAnalytics/Runtime/Analytics Tools/HomaAnalyticsSceneChangeTool.cs" />
     <Compile Include="Assets/Scripts/Extensions/ObiEmitterExtensions.cs" />
     <Compile Include="Assets/Scripts/DropCollider.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Plugins/Android/AndroidDiskUtility.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/ILRD/Aequus/GAAequusIntegration.cs" />
     <Compile Include="Assets/OToon- URP Toon Shading/Demo(Can be delete)/Scripts/DitherByCameraDistance.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/ExampleGUI/ExampleGUI.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Playmaker/SendDesignEvent.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/Events/GA_Design.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/VoodooAnalytics/3rdParty/Analytics/EventName.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/VoodooAnalytics/3rdParty/Analytics/AnalyticsConstant.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Internal/idfaAuthorization/NativeWrapper/Scripts/NativeWrapper.cs" />
+    <Compile Include="Assets/Adjust/ExampleGUI/ExampleGUI.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/CloudAndroid/Scripts/Menu.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Playmaker/SendDesignEvent.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Analytics/HomaAnalytics/Runtime/Analytics Tools/PlaytimeTool.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Cross Promotion/Scripts/CrossPromotionPlayer.cs" />
+    <Compile Include="Assets/Joystick Pack/Scripts/Joysticks/FloatingJoystick.cs" />
+    <Compile Include="Assets/Scripts/Interfaces/IAnalyticClient.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Analytics/HomaAnalytics/Runtime/Events Storage/EventSlotManager.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Attributions/Adjust/Runtime/ReferralSystem.cs" />
+    <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/FluidColorizer.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Scripts/InitializationHelper.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Mediators/AdInfo.cs" />
+    <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/WaveGenerator.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/Events/GA_Business.cs" />
+    <Compile Include="Assets/3DPart/GradientSky/Scripts/Common/GradientSkyCommon.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/CloudAndroid/Scripts/LogScroller.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Scripts/DataPrivacyUtils.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Analytics/HomaAnalytics/Runtime/HomaAnalyticsOptions.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Attributions/Adjust/Runtime/AdjustAttributionAdapter.cs" />
+    <Compile Include="Assets/Scripts/Installers/AnalyticInstaller.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Playmaker/SendResourceEvent.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/CloudAndroid/Scripts/SavePage.cs" />
+    <Compile Include="Assets/Scripts/Interfaces/IDetonationSubscriber.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Utilities/Runtime/API/ApiQueryModel.cs" />
+    <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_New.cs" />
+    <Compile Include="Assets/Adjust/Android/AdjustAndroid.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/Events/GA_Progression.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/ATT/GameAnalyticsATTClient.cs" />
+    <Compile Include="Assets/Scripts/CSJ/Classes/Plane.cs" />
+    <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightFlicker.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Cross Promotion/Scripts/CrossPromotionManager.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/Wrapper/GA_TizenWrapper.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Scripts/UI/ProgressBarColorFromSettings.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/ATT/GameAnalyticsATTObjCBridge.cs" />
+    <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/OverlapTest.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Analytics/HomaBellyAnalyticsEnum.cs" />
+    <Compile Include="Assets/Adjust/Unity/AdjustThirdPartySharing.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/CloudAndroid/Prefabs/ProductRowPrefab.cs" />
+    <Compile Include="Assets/OToon- URP Toon Shading/Demo(Can be delete)/Scripts/PingPongMove.cs" />
+    <Compile Include="Assets/Scripts/IceCream.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Mediators/Banner/BannerSize.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Analytics/HomaAnalytics/Runtime/HomaAnalyticsAdapter.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Mobile/Scripts/SubMenus/AppEvents.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Analytics/ICustomDimensions.cs" />
+    <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/AddRandomVelocity.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Geryon/Runtime/Config.cs" />
+    <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ObjectDragger.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Utilities/Privacy/PrivacyResponse.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Mobile/Scripts/LogView.cs" />
+    <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightIntensityFade.cs" />
+    <Compile Include="Assets/Scripts/UI/BalanceLabel.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Utilities/TaskBase.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/GameAnalytics.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/Wrapper/GA_tvOSWrapper.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Scripts/Manager.cs" />
+    <Compile Include="Assets/Homa Games/Game Doctor Plugin/GameDoctorPluginConstants.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Scripts/AppTrackingTransparency.cs" />
+    <Compile Include="Assets/Joystick Pack/Scripts/Joysticks/FixedJoystick.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Windows/FBWindowsLogsManager.cs" />
+    <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ColorFromViscosity.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Utilities/Runtime/Constants/HomaBellyConstants.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Analytics/HomaAnalytics/Runtime/ResourceAnalyticsEvent.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Mobile/Scripts/UIInputHelper.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Utilities/ThreadUtils.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Scripts/Settings.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Scripts/HomaBridge/DummyBridge/DummyInterstitialBehaviour.cs" />
+    <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ColliderHighlighter.cs" />
+    <Compile Include="Assets/Scripts/CSJ/Classes/VertexAttributes.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Scripts/UI/TextColorFromSettings.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Mobile/Scripts/SubMenus/AppRequests.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/Events/GA_Debug.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/ILRD/AdMob/GAAdMobIntegration.cs" />
+    <Compile Include="Assets/OToon- URP Toon Shading/Demo(Can be delete)/Plugins/SprintBone/SpringBone.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Scripts/HomaBridge/Dependencies/HomaBridgeDependencies.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Playmaker/GetABTestingVariantId.cs" />
+    <Compile Include="Assets/Adjust/Unity/AdjustUrlStrategy.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Scripts/HomaBelly.cs" />
+    <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/ObiFluidPropertyColorizer.cs" />
+    <Compile Include="Assets/Scripts/CSJ/Classes/Polygon.cs" />
+    <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ActorCOMTransform.cs" />
+    <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/SlowmoToggler.cs" />
+    <Compile Include="Assets/Scripts/UI/Manipulate UI/LaserUiController.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Scripts/Views/GdprView.cs" />
+    <Compile Include="Assets/Scripts/Installers/CanvasInstaller.cs" />
+    <Compile Include="Assets/Adjust/Unity/Adjust.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Playmaker/SendProgressionEvent.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Mobile/Scripts/MenuBase.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Scripts/HomaBellyComponentProxy.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Analytics/HomaAnalytics/Runtime/ErrorAnalyticsEvent.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Analytics/HomaAnalytics/Runtime/AdAnalyticsEvent.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Utilities/UserAgent.cs" />
+    <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/DebugParticleFrames.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Mobile/Scripts/SubMenus/UploadToMediaLibrary.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/Wrapper/GA_iOSWrapper.cs" />
+    <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/MazeManager.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/CloudAndroid/Scripts/SettingsMenu.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Cross Promotion/Scripts/CrossPromotionItem.cs" />
+    <Compile Include="Assets/Scripts/Puddle.cs" />
+    <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/CharacterController/ObiCharacter.cs" />
+    <Compile Include="Assets/Scripts/UI/Manipulate UI/ManipulateUiController.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Analytics/HomaAnalytics/Runtime/AdRevenueAnalyticsEvent.cs" />
+    <Compile Include="Assets/Scripts/CSJ/Classes/Vertex.cs" />
+    <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/SolidifyOnContact.cs" />
+    <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/FluidJetController.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Mobile/Scripts/SubMenus/Subscription.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Mobile/Scripts/ConsoleBase.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Analytics/HomaAnalytics/Runtime/Analytics Tools/HomaAnalyticsEventRecorderDebugTool.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Scripts/CoreInitializer.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/Events/GA_Error.cs" />
+    <Compile Include="Assets/Scripts/Bomb.cs" />
+    <Compile Include="Assets/Scripts/UI/ProgressController.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/CloudAndroid/Scripts/PurchasePage.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Scripts/UI/InitialDataPrivacyLogic.cs" />
+    <Compile Include="Assets/OToon- URP Toon Shading/Demo(Can be delete)/Scenes/2 NPRStyles RobotKyle/Scripts/DemoController.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Analytics/HomaAnalytics/Runtime/HomaAnalytics.cs" />
+    <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/Melt.cs" />
+    <Compile Include="Assets/Scripts/Installers/DependencyInstaller.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Playmaker/GAInitialize.cs" />
+    <Compile Include="Assets/Adjust/Unity/AdjustEnvironment.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Scripts/UI/GraphicSettings.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Scripts/Events.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Utilities/Localization/LocalizationTMPComponent.cs" />
+    <Compile Include="Assets/Scripts/Rotator.cs" />
+    <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/MoveAndRotate.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Playmaker/SendBusinessEvent.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Cross Promotion/Scripts/CrossPromotionConfigurationModel.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Scripts/SystemConstants.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Analytics/IAnalyticsWithInitializationCallback.cs" />
+    <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ColorFromPhase.cs" />
+    <Compile Include="Assets/Scripts/Analytics/BaseAnalyticClientDecorator.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/ILRD/IronSource/GAIronSourceIntegration.cs" />
+    <Compile Include="Assets/Adjust/Unity/AdjustEventSuccess.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Mobile/Scripts/SubMenus/TournamentsMenu.cs" />
+    <Compile Include="Assets/3DPart/GradientSky/Scripts/GradientSkyObject.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Utilities/DebugOff.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/ILRD/TopOn/GATopOnIntegration.cs" />
+    <Compile Include="Assets/Scripts/Tips/CanvasTips.cs" />
+    <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/EmitOnKeyPress.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Attributions/Adjust/Runtime/ManifestAdjustConfig.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/BackwardCompatibility/GeryonUtils.cs" />
+    <Compile Include="Assets/Joystick Pack/Scripts/Base/Joystick.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Scripts/Remote Configuration/RemoteConfigurationConstants.cs" />
+    <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RotateCamera.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Geryon/Runtime/DynamicVariable.cs" />
+    <Compile Include="Assets/OToon- URP Toon Shading/Demo(Can be delete)/Scripts/ShowcaseDemoController.cs" />
+    <Compile Include="Assets/Scripts/Impulse.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Scripts/HomaBridge/Dependencies/HomaBridgeDependenciesMediators.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Utilities/FileUtilities.cs" />
+    <Compile Include="Assets/Adjust/Unity/AdjustEvent.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Mobile/Scripts/SubMenus/DialogShare.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Utilities/Constants.cs" />
+    <Compile Include="Assets/Scripts/Interfaces/ISmashable.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Windows/FBWindowsSoftKeyboardManager.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Analytics/Facebook/Scripts/FacebookImplementation.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Attributions/AttributionConfigurationModel.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Analytics/GameAnalytics/Scripts/GameAnalyticsImplementation.cs" />
+    <Compile Include="Assets/Adjust/Unity/AdjustAttribution.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/CloudAndroid/Scripts/UIState.cs" />
+    <Compile Include="Assets/OToon- URP Toon Shading/Demo(Can be delete)/Scripts/SceneHintController.cs" />
+    <Compile Include="Assets/Scripts/LevelData.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Geryon/Runtime/Utils/JSONUtils.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Analytics/HomaAnalytics/Runtime/PendingEvent.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Customer Support/CustomerSupport.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Scripts/HomaBridge/Dependencies/HomaBridgeDependenciesAttributions.cs" />
+    <Compile Include="Assets/Scripts/Blade.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Analytics/HomaAnalytics/Runtime/EventDispatcher.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Windows/FBWindowsReferralsManager.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Scripts/Remote Configuration/RemoteConfiguration.cs" />
+    <Compile Include="Assets/Scripts/Analytics/TinySauceClientDecorator.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/CloudAndroid/Scripts/MainPage.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Attributions/IAttributionWithInitializationCallback.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Utilities/HttpCaller.cs" />
+    <Compile Include="Assets/Joystick Pack/Examples/JoystickSetterExample.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/Wrapper/GA_UWPWrapper.cs" />
+    <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ColorRandomizer.cs" />
+    <Compile Include="Assets/Scripts/CSJ/Classes/Model.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/ILRD/Max/GAMaxIntegration.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Mediators/IMediator.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Geryon/Runtime/Utils/Persistence.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Scripts/HomaBridge/DummyBridge/HomaDummyBridge.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/Events/GA_Design.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/BackwardCompatibility/LegacyManager.cs" />
     <Compile Include="Assets/PlaneController.cs" />
     <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/Blinker.cs" />
     <Compile Include="Assets/Scripts/WinController.cs" />
     <Compile Include="Assets/Scripts/Bucket.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/Setup/Settings.cs" />
-    <Compile Include="Assets/Joystick Pack/Scripts/Joysticks/FloatingJoystick.cs" />
-    <Compile Include="Assets/Scripts/Interfaces/IAnalyticClient.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/Setup/Settings.cs" />
     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_Translate.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/VoodooAnalytics/3rdParty/Analytics/Tracker.cs" />
     <Compile Include="Assets/Scripts/Piece.cs" />
-    <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/FluidColorizer.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Windows/FBWindowsExampleTabsManager.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Analytics/HomaAnalytics/Runtime/TaskUtils.cs" />
     <Compile Include="Assets/Scripts/Laser.cs" />
     <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/MazeScoreFormatter.cs" />
-    <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/WaveGenerator.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/Events/GA_Business.cs" />
-    <Compile Include="Assets/3DPart/GradientSky/Scripts/Common/GradientSkyCommon.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Common/Internal/Models/AnalyticsEventTimer.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Playmaker/GetABTestingId.cs" />
+    <Compile Include="Assets/Scripts/Analytics/HomoDecorator.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/CloudAndroid/Scripts/Utility.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Force Update Popup/ForceUpdateLocale.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Scripts/HomaBridge/HomaBridge.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/ILRD/Mopub/GAMopubIntegration.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Playmaker/GetABTestingId.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Utilities/AsyncOperationUtils.cs" />
     <Compile Include="Assets/OToon- URP Toon Shading/Demo(Can be delete)/Scripts/Rotator.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Mobile/Scripts/SubMenus/GraphRequest.cs" />
     <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/ExtrapolationCamera.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Common/Utils/PlatformUtils.cs" />
-    <Compile Include="Assets/Scripts/Installers/AnalyticInstaller.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Scripts/HomaBridge/Dependencies/HomaBridgeDependenciesOldMediators.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Geryon/Runtime/Utils/Constants.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Mobile/Scripts/SubMenus/AccessTokenMenu.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Mobile/Scripts/SubMenus/AppLinks.cs" />
     <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/ViscositySurfTensionToUserData.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Internal/Scripts/TinySauceBehaviour.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Playmaker/SendResourceEvent.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Common/Internal/Logger/AnalyticsEventLogger.cs" />
-    <Compile Include="Assets/Scripts/Interfaces/IDetonationSubscriber.cs" />
-    <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_New.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/Internal/Events/GABusinessEvent.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Mobile/Scripts/SubMenus/MainMenu.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Force Update Popup/ForceUpdatePopup.cs" />
     <Compile Include="Assets/3DPart/GradientSky/Scripts/GradientSkyCamera.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Android/AdjustAndroid.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Internal/Android/Utils/ManifestUtils.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/VoodooAnalytics/3rdParty/Analytics/AnalyticsApi.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/Events/GA_Progression.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Playmaker/SetCustomDimension.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/ATT/GameAnalyticsATTClient.cs" />
-    <Compile Include="Assets/Scripts/CSJ/Classes/Plane.cs" />
-    <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightFlicker.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Analytics/IAnalyticsAdRevenue.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Playmaker/SetCustomDimension.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Scripts/UI/ToggleExtension.cs" />
     <Compile Include="Assets/Scripts/GameOverPanel.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Internal/Settings/EditorCustomAttributes/ReadOnlyAttribute.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/Wrapper/GA_Wrapper.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/Wrapper/GA_TizenWrapper.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Analytics/HomaAnalytics/Runtime/RuntimeAnalyticsEvent.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/CloudAndroid/Scripts/AdsPage.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Utilities/DiskUtility.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Mobile/Scripts/SubMenus/Pay.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Windows/FBWindowsShareManager.cs" />
+    <Compile Include="Assets/FacebookSDK/Examples/Windows/FBWindowsTournamentsManager.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/Wrapper/GA_Wrapper.cs" />
     <Compile Include="Assets/Scripts/GameManager.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Windows/AdjustWindows.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/ATT/GameAnalyticsATTObjCBridge.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Scripts/State/GAState.cs" />
-    <Compile Include="Assets/Obi/Samples/Fluid/SampleResources/Scripts/OverlapTest.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/TinySauce.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Internal/DebugUI/Scripts/Screens/TSDebugUIScreen.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Common/Internal/Helper/AnalyticsSessionHelper.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Unity/AdjustThirdPartySharing.cs" />
-    <Compile Include="Assets/OToon- URP Toon Shading/Demo(Can be delete)/Scripts/PingPongMove.cs" />
-    <Compile Include="Assets/Scripts/IceCream.cs" />
+    <Compile Include="Assets/Adjust/Windows/AdjustWindows.cs" />
+    <Compile Include="Assets/GameAnalytics/Plugins/Scripts/State/GAState.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Utilities/DamysusApiUtils.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Analytics/HomaAnalytics/Runtime/ProgressionAnalyticsEvent.cs" />
     <Compile Include="Assets/Scripts/Coins/CoinFactory.cs" />
     <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/WorldSpaceGravity.cs" />
     <Compile Include="Assets/Scripts/GameContext.cs" />
-    <Compile Include="Assets/VoodooPackages/TinySauce/Internal/idfaAuthorization/NativeWrapper/Models/IdfaAuthorizationStatus.cs" />
+    <Compile Include="Assets/Homa Games/Homa Belly/Core/Scripts/HomaBridge/Dependencies/HomaBridgeDependenciesCustomerSupport.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Readme.txt" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/SamsungTV/Mono.Data.Sqlite.dll" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Windows/x64/libcurl.dll" />
+    <None Include="Assets/GameAnalytics/Readme.txt" />
+    <None Include="Assets/GameAnalytics/Plugins/SamsungTV/Mono.Data.Sqlite.dll" />
     <None Include="Assets/Obi/Samples/Fluid/SampleResources/Materials/StandardPerInstanceColor.shader" />
     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMPro.cginc" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Windows/WindowsUap.dll" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Windows/x86/XInputInterface.dll" />
+    <None Include="Assets/Adjust/Windows/WindowsUap.dll" />
+    <None Include="Assets/FacebookSDK/Plugins/Windows/x86/XInputInterface.dll" />
     <None Include="Assets/Obi/Resources/ObiMaterials/ParticleShader.shader" />
     <None Include="Assets/OToon- URP Toon Shading/Demo(Can be delete)/Scenes/5 Stylized Character UnityChan/license.txt" />
     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets/JMO Assets/Cartoon FX (legacy)/Shaders/CFX3 Multiply Color.shader" />
     <None Include="Assets/Obi/Resources/ObiMaterials/FluidThickness.shader" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Windows/x64/libcrypto-1_1-x64.dll" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Windows/x64/LibFBGUI.dll" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/link.xml" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/iOS/Facebook.Unity.IOS.dll" />
+    <None Include="Assets/FacebookSDK/link.xml" />
+    <None Include="Assets/FacebookSDK/Plugins/iOS/Facebook.Unity.IOS.dll" />
     <None Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR Particle Glow.shader" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Android/AdjustAndroidManifest.xml" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/GameAnalytics.dll" />
+    <None Include="Assets/Adjust/Android/AdjustAndroidManifest.xml" />
+    <None Include="Assets/FacebookSDK/Plugins/Windows/x64/libssl-3-x64.dll" />
+    <None Include="Assets/FacebookSDK/Plugins/Windows/x86/zlib1.dll" />
+    <None Include="Assets/GameAnalytics/Plugins/GameAnalytics.dll" />
     <None Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR Particle Ubershader.shader" />
     <None Include="Assets/Obi/Resources/ObiMaterials/URP/FluidShaderURP.shader" />
     <None Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR_SETTINGS.cginc" />
+    <None Include="Assets/FacebookSDK/Plugins/Windows/x86/LibFBGPlatform.dll" />
     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap.shader" />
     <None Include="Assets/Obi/Resources/ObiMaterials/URP/ObiLightingURP.cginc" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/WSA/ARM/GameAnalytics.UWP.dll" />
+    <None Include="Assets/GameAnalytics/Plugins/WSA/ARM/GameAnalytics.UWP.dll" />
     <None Include="Assets/Graphy - Ultimate Stats Monitor/Changelog.txt" />
+    <None Include="Assets/FacebookSDK/Plugins/Windows/x64/LibFBGPlatform.dll" />
     <None Include="Assets/JMO Assets/Cartoon FX (legacy)/CartoonFX Free.txt" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Windows/W81/Win81Interface.dll" />
+    <None Include="Assets/Adjust/Windows/W81/Win81Interface.dll" />
+    <None Include="Assets/FacebookSDK/Plugins/Windows/x86/libcurl.dll" />
     <None Include="Assets/Obi/Plugins/x86_64/libOni.dll" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Windows/WindowsPcl.dll" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Windows/x86/LibFBGPlatform.dll" />
+    <None Include="Assets/Adjust/Windows/WindowsPcl.dll" />
     <None Include="Assets/Obi/Resources/ObiMaterials/ObiLightingBuiltIn.cginc" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Windows/Stubs/Win10Interface.dll" />
+    <None Include="Assets/Adjust/Windows/Stubs/Win10Interface.dll" />
+    <None Include="Assets/FacebookSDK/Plugins/Windows/LibFBGManaged.dll" />
     <None Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR.cginc" />
+    <None Include="Assets/FacebookSDK/Plugins/Windows/x64/tinyxml2.dll" />
     <None Include="Assets/3DPart/GradientSky/Shaders/VertexColorCamera.shader" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Windows/WS/AdjustWS.dll" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Windows/WU10/Win10Interface.dll" />
+    <None Include="Assets/Adjust/Windows/WS/AdjustWS.dll" />
+    <None Include="Assets/Homa Games/Homa Belly/Core/Force Update Popup/Mobile-Dialog-Unity/LICENSE.txt" />
+    <None Include="Assets/Adjust/Windows/WU10/Win10Interface.dll" />
     <None Include="Assets/Obi/Resources/ObiMaterials/DistanceFieldSlice.shader" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Settings/Facebook.Unity.Settings.dll" />
+    <None Include="Assets/FacebookSDK/Plugins/Settings/Facebook.Unity.Settings.dll" />
     <None Include="Assets/Obi/Resources/ObiMaterials/ObiParticles.cginc" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Windows/x64/tinyxml2.dll" />
     <None Include="Assets/OToon- URP Toon Shading/Demo(Can be delete)/Plugins/Shaders/GradientSkybox.shader" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/WSA/x86/GameAnalytics.UWP.dll" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Windows/WS/WinWsInterface.dll" />
+    <None Include="Assets/GameAnalytics/Plugins/WSA/x86/GameAnalytics.UWP.dll" />
+    <None Include="Assets/Adjust/Windows/WS/WinWsInterface.dll" />
     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Windows/Facebook.Unity.Windows.dll" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Windows/x64/libssl-1_1-x64.dll" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Canvas/Facebook.Unity.Canvas.dll" />
-    <None Include="Assets/VoodooPackages/TinySauce/Internal/EnvironmentSettings/SKAN/SkanIds.txt" />
+    <None Include="Assets/FacebookSDK/Plugins/Canvas/Facebook.Unity.Canvas.dll" />
     <None Include="Assets/3DPart/Liquid-Simulation-master/Liquid-Simulation-master/ProjectSettings/ProjectVersion.txt" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Windows/x86/cpprest_2_10.dll" />
     <None Include="Assets/Graphy - Ultimate Stats Monitor/Shaders/GraphMobile.shader" />
+    <None Include="Assets/Homa Games/Homa Belly/Core/link.xml" />
     <None Include="Assets/Obi/Resources/ObiMaterials/StandardVertexColors.shader" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Windows/x86/libssl-1_1.dll" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Windows/x64/LibFBGPlatform.dll" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Windows/x86/WebView2Loader.dll" />
+    <None Include="Assets/FacebookSDK/Plugins/Windows/x86/libssl-3.dll" />
+    <None Include="Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Fonts/Poppins/OFL.txt" />
     <None Include="Assets/Graphy - Ultimate Stats Monitor/Font/Northwest-Bold/ERIC-TIRADO-NORTHWEST-LICENSE.txt" />
+    <None Include="Assets/FacebookSDK/Plugins/Windows/x64/cpprest_2_10.dll" />
     <None Include="Assets/Obi/Resources/ObiMaterials/SimpleParticleShader.shader" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Windows/x64/zlib1.dll" />
     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface.shader" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Facebook.Unity.dll" />
+    <None Include="Assets/FacebookSDK/Plugins/Facebook.Unity.dll" />
     <None Include="Assets/Obi/Resources/ObiMaterials/ObiEllipsoids.cginc" />
     <None Include="Assets/Obi/Resources/ObiMaterials/URP/ParticleShaderURP.shader" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Windows/Stubs/WinWsInterface.dll" />
+    <None Include="Assets/Adjust/Windows/Stubs/WinWsInterface.dll" />
     <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets/JMO Assets/Cartoon FX Remaster/Readme Cartoon FX Remaster FREE.txt" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Windows/x86/sqlite3.dll" />
+    <None Include="Assets/GameAnalytics/Plugins/Windows/x86/sqlite3.dll" />
     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_SDF.shader" />
     <None Include="Assets/Obi/Resources/ObiMaterials/URP/SimpleParticleShaderURP.shader" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Windows/x86/libcrypto-1_1.dll" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/Windows/x64/sqlite3.dll" />
+    <None Include="Assets/GameAnalytics/Plugins/Windows/x64/sqlite3.dll" />
     <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
+    <None Include="Assets/Homa Games/Homa Belly/Plugin Manifest/HomaFileRegistry.txt" />
+    <None Include="Assets/FacebookSDK/Plugins/Windows/x86/cpprest_2_10.dll" />
     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMPro_Properties.cginc" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Windows/x86/LibFBGUI.dll" />
+    <None Include="Assets/FacebookSDK/Plugins/Windows/x64/LibFBGUI.dll" />
+    <None Include="Assets/FacebookSDK/Plugins/Windows/x86/WebView2Loader.dll" />
     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMPro_Surface.cginc" />
+    <None Include="Assets/FacebookSDK/Plugins/Windows/x64/libcurl.dll" />
+    <None Include="Assets/FacebookSDK/Plugins/Windows/x64/libcrypto-3-x64.dll" />
     <None Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Texts/_Make your own text effect.txt" />
     <None Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR_PASSES.cginc" />
     <None Include="Assets/Obi/CHANGELOG_fluid.txt" />
     <None Include="Assets/Obi/Resources/ObiMaterials/NormalReconstruction.shader" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Windows/x64/XInputInterface.dll" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Windows/Stubs/Win81Interface.dll" />
+    <None Include="Assets/FacebookSDK/Plugins/Windows/x64/XInputInterface.dll" />
+    <None Include="Assets/Adjust/Windows/Stubs/Win81Interface.dll" />
     <None Include="Assets/Obi/Resources/ObiMaterials/ScreenSpaceCurvatureFlow.shader" />
+    <None Include="Assets/FacebookSDK/Plugins/Windows/x86/tinyxml2.dll" />
     <None Include="Assets/3DPart/GradientSky/Shaders/VertexColorObject.shader" />
     <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Windows/WU10/AdjustUAP10.dll" />
+    <None Include="Assets/Adjust/Windows/WU10/AdjustUAP10.dll" />
     <None Include="Assets/OToon- URP Toon Shading/Demo(Can be delete)/Plugins/UnityChanSSU/license.txt" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Windows/LibFBGManaged.dll" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/WSA/x64/GameAnalytics.UWP.dll" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Windows/XInputDotNetPure.dll" />
+    <None Include="Assets/GameAnalytics/Plugins/WSA/x64/GameAnalytics.UWP.dll" />
+    <None Include="Assets/FacebookSDK/Plugins/Windows/XInputDotNetPure.dll" />
     <None Include="Assets/Graphy - Ultimate Stats Monitor/Font/Roboto/LICENSE.txt" />
     <None Include="Assets/Obi/Plugins/x86/libOni.dll" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Android/Facebook.Unity.Android.dll" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Windows/x86/libcurl.dll" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Windows/x64/WebView2Loader.dll" />
+    <None Include="Assets/FacebookSDK/Plugins/Android/Facebook.Unity.Android.dll" />
     <None Include="Assets/Obi/Resources/ObiMaterials/FluidColorsBlend.shader" />
     <None Include="Assets/Graphy - Ultimate Stats Monitor/Shaders/GraphStandard.shader" />
     <None Include="Assets/Obi/Resources/ObiMaterials/ObiFluids.cginc" />
     <None Include="Assets/JMO Assets/Cartoon FX (legacy)/Shaders/CFXM_MobileParticleAdd_Alpha8.shader" />
     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets/OToon- URP Toon Shading/Demo(Can be delete)/Plugins/unity-chan!/license.txt" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Windows/x86/tinyxml2.dll" />
+    <None Include="Assets/FacebookSDK/Plugins/Windows/x64/zlib1.dll" />
     <None Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR Particle Procedural Ring.shader" />
     <None Include="Assets/1.1 - FREE CASUAL PACK SFX/(README) WELCOME_FREE CASUAL PACK SFX.txt" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Windows/x64/cpprest_2_10.dll" />
+    <None Include="Assets/FacebookSDK/Plugins/Windows/x86/LibFBGUI.dll" />
     <None Include="Assets/Obi/Resources/ObiMaterials/FluidShader.shader" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Windows/Newtonsoft.Json.dll" />
+    <None Include="Assets/Adjust/Windows/Newtonsoft.Json.dll" />
     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_SDF Overlay.shader" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Adjust/Windows/W81/AdjustWP81.dll" />
+    <None Include="Assets/Adjust/Windows/W81/AdjustWP81.dll" />
     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Mobile.shader" />
     <None Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR_URP.cginc" />
     <None Include="Assets/3DPart/Liquid-Simulation-master/Liquid-Simulation-master/Assets/Shaders/UnlitTransparent.shader" />
     <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
     <None Include="Assets/3DPart/Liquid-Simulation-master/Liquid-Simulation-master/Assets/Shaders/BlurEffect.shader" />
     <None Include="Assets/Obi/Plugins/libOni.bundle/Contents/Resources/CMakeLists.txt" />
+    <None Include="Assets/FacebookSDK/Plugins/Windows/Facebook.Unity.Windows.dll" />
     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile.shader" />
     <None Include="Assets/Obi/Resources/ObiMaterials/ObiUtils.cginc" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/GameAnalytics/3rdParty/GameAnalytics/Plugins/SamsungTV/GameAnalytics.SamsungTV.dll" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Windows/x86/zlib1.dll" />
-    <None Include="Assets/VoodooPackages/TinySauce/Analytics/Facebook/link.xml" />
+    <None Include="Assets/GameAnalytics/Plugins/SamsungTV/GameAnalytics.SamsungTV.dll" />
+    <None Include="Assets/FacebookSDK/Plugins/Windows/x86/libcrypto-3.dll" />
     <None Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR Particle Distortion.shader" />
+    <None Include="Assets/FacebookSDK/Plugins/Windows/x64/WebView2Loader.dll" />
     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMP_Sprite.shader" />
     <None Include="Assets/Obi/Resources/ObiMaterials/URP/ObiFluidsURP.cginc" />
   </ItemGroup>
@@ -678,8 +788,14 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
+    <Reference Include="XInputDotNetPure">
+      <HintPath>Assets/FacebookSDK/Plugins/Windows/XInputDotNetPure.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook.Unity.Windows">
+      <HintPath>Assets/FacebookSDK/Plugins/Windows/Facebook.Unity.Windows.dll</HintPath>
+    </Reference>
     <Reference Include="LibFBGManaged">
-      <HintPath>Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Windows/LibFBGManaged.dll</HintPath>
+      <HintPath>Assets/FacebookSDK/Plugins/Windows/LibFBGManaged.dll</HintPath>
     </Reference>
     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
       <HintPath>Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
@@ -693,17 +809,14 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Facebook.Unity.Windows">
-      <HintPath>Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Windows/Facebook.Unity.Windows.dll</HintPath>
-    </Reference>
     <Reference Include="Facebook.Unity.Settings">
-      <HintPath>Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Settings/Facebook.Unity.Settings.dll</HintPath>
+      <HintPath>Assets/FacebookSDK/Plugins/Settings/Facebook.Unity.Settings.dll</HintPath>
     </Reference>
     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
       <HintPath>Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
     </Reference>
     <Reference Include="Win81Interface">
-      <HintPath>Assets/VoodooPackages/TinySauce/Analytics/Adjust/Windows/Stubs/Win81Interface.dll</HintPath>
+      <HintPath>Assets/Adjust/Windows/Stubs/Win81Interface.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Mdb">
       <HintPath>Library/PackageCache/com.unity.burst@1.8.2/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll</HintPath>
@@ -718,28 +831,28 @@
       <HintPath>Library/PackageCache/com.unity.burst@1.8.2/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="Win10Interface">
-      <HintPath>Assets/VoodooPackages/TinySauce/Analytics/Adjust/Windows/Stubs/Win10Interface.dll</HintPath>
+      <HintPath>Assets/Adjust/Windows/Stubs/Win10Interface.dll</HintPath>
     </Reference>
     <Reference Include="Zenject-usage">
       <HintPath>Assets/Plugins/Zenject/Source/Usage/Zenject-usage.dll</HintPath>
     </Reference>
     <Reference Include="WinWsInterface">
-      <HintPath>Assets/VoodooPackages/TinySauce/Analytics/Adjust/Windows/Stubs/WinWsInterface.dll</HintPath>
+      <HintPath>Assets/Adjust/Windows/Stubs/WinWsInterface.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library/PackageCache/com.unity.nuget.mono-cecil@1.11.4/Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="Facebook.Unity.Android">
-      <HintPath>Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Android/Facebook.Unity.Android.dll</HintPath>
+      <HintPath>Assets/FacebookSDK/Plugins/Android/Facebook.Unity.Android.dll</HintPath>
     </Reference>
     <Reference Include="Facebook.Unity.Canvas">
-      <HintPath>Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Canvas/Facebook.Unity.Canvas.dll</HintPath>
+      <HintPath>Assets/FacebookSDK/Plugins/Canvas/Facebook.Unity.Canvas.dll</HintPath>
     </Reference>
     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
       <HintPath>Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="Facebook.Unity">
-      <HintPath>Assets/VoodooPackages/TinySauce/Analytics/Facebook/3rdParty/FacebookSDK/Plugins/Facebook.Unity.dll</HintPath>
+      <HintPath>Assets/FacebookSDK/Plugins/Facebook.Unity.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -747,371 +860,380 @@
     <Reference Include="UnityEditor.iOS.Extensions.Common">
       <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
-    <Reference Include="netstandard">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/ref/2.1.0/netstandard.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Win32.Primitives">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/Microsoft.Win32.Primitives.dll</HintPath>
-    </Reference>
-    <Reference Include="System.AppContext">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.AppContext.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Buffers">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Buffers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Collections.Concurrent">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Collections.Concurrent.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Collections.NonGeneric">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Collections.NonGeneric.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Collections.Specialized">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Collections.Specialized.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Collections">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Collections.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ComponentModel.EventBasedAsync">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.ComponentModel.EventBasedAsync.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ComponentModel.Primitives">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.ComponentModel.Primitives.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ComponentModel.TypeConverter">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.ComponentModel.TypeConverter.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ComponentModel">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.ComponentModel.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Console">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Console.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Data.Common">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Data.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Diagnostics.Contracts">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Contracts.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Diagnostics.Debug">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Debug.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Diagnostics.FileVersionInfo">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.FileVersionInfo.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Diagnostics.Process">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Process.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Diagnostics.StackTrace">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.StackTrace.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Diagnostics.TextWriterTraceListener">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.TextWriterTraceListener.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Diagnostics.Tools">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Tools.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Diagnostics.TraceSource">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.TraceSource.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Diagnostics.Tracing">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Tracing.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Drawing.Primitives">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Drawing.Primitives.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Dynamic.Runtime">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Dynamic.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Globalization.Calendars">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Globalization.Calendars.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Globalization.Extensions">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Globalization.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Globalization">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Globalization.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.Compression.ZipFile">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.Compression.ZipFile.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.Compression">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.Compression.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.FileSystem.DriveInfo">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.FileSystem.DriveInfo.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.FileSystem.Primitives">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.FileSystem.Primitives.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.FileSystem.Watcher">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.FileSystem.Watcher.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.FileSystem">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.FileSystem.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.IsolatedStorage">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.IsolatedStorage.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.MemoryMappedFiles">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.MemoryMappedFiles.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.Pipes">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.Pipes.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.UnmanagedMemoryStream">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.UnmanagedMemoryStream.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Linq.Expressions">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Linq.Expressions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Linq.Parallel">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Linq.Parallel.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Linq.Queryable">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Linq.Queryable.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Linq">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Linq.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Memory">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Memory.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Http">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Http.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.NameResolution">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.NameResolution.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.NetworkInformation">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.NetworkInformation.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Ping">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Ping.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Primitives">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Primitives.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Requests">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Requests.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Security">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Security.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Sockets">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Sockets.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.WebHeaderCollection">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.WebHeaderCollection.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.WebSockets.Client">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.WebSockets.Client.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.WebSockets">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.WebSockets.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Numerics.Vectors">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Numerics.Vectors.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ObjectModel">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.ObjectModel.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reflection.DispatchProxy">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.DispatchProxy.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reflection.Emit.ILGeneration">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Emit.ILGeneration.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reflection.Emit.Lightweight">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Emit.Lightweight.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reflection.Emit">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Emit.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reflection.Extensions">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reflection.Primitives">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Primitives.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reflection">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Resources.Reader">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Resources.Reader.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Resources.ResourceManager">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Resources.ResourceManager.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Resources.Writer">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Resources.Writer.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.CompilerServices.VisualC">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.CompilerServices.VisualC.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Extensions">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Handles">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Handles.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.InteropServices">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.InteropServices.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Numerics">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Numerics.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization.Formatters">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Formatters.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization.Json">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization.Primitives">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Primitives.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization.Xml">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Xml.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Security.Claims">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Claims.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Security.Cryptography.Algorithms">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Algorithms.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Security.Cryptography.Csp">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Csp.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Security.Cryptography.Encoding">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Encoding.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Security.Cryptography.Primitives">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Primitives.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Security.Cryptography.X509Certificates">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.X509Certificates.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Security.Principal">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Principal.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Security.SecureString">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.SecureString.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Text.Encoding.Extensions">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Text.Encoding.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Text.Encoding">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Text.Encoding.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Text.RegularExpressions">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Text.RegularExpressions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.Overlapped">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Overlapped.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.Tasks.Extensions">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Tasks.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.Tasks.Parallel">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Tasks.Parallel.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.Tasks">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Tasks.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.Thread">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Thread.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.ThreadPool">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.ThreadPool.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.Timer">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Timer.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ValueTuple">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.ValueTuple.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.ReaderWriter">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.ReaderWriter.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.XDocument">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XDocument.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.XPath.XDocument">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XPath.XDocument.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.XPath">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XPath.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.XmlDocument">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XmlDocument.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.XmlSerializer">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XmlSerializer.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ComponentModel.Composition">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.ComponentModel.Composition.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Core">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Data">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Drawing">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Drawing.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.Compression.FileSystem">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.IO.Compression.FileSystem.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Net.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Numerics">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Numerics.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Runtime.Serialization.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ServiceModel.Web">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.ServiceModel.Web.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Transactions">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Transactions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Web.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Windows">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Windows.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.Linq">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Xml.Linq.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.Serialization">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Xml.dll</HintPath>
+    <Reference Include="mscorlib">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/mscorlib.dll</HintPath>
     </Reference>
     <Reference Include="System">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.dll</HintPath>
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/System.dll</HintPath>
     </Reference>
-    <Reference Include="mscorlib">
-      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll</HintPath>
+    <Reference Include="System.Core">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/System.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/System.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/System.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Microsoft.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/System.Data.DataSetExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/System.IO.Compression.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/System.ComponentModel.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/System.Transactions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.AppContext">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.AppContext.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Concurrent">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Collections.Concurrent.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.NonGeneric">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Collections.NonGeneric.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Specialized">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Collections.Specialized.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.EventBasedAsync">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.ComponentModel.EventBasedAsync.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.ComponentModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.TypeConverter">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.ComponentModel.TypeConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.ComponentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Console">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Common">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Data.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Contracts">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Diagnostics.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Debug">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Diagnostics.Debug.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.FileVersionInfo">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Diagnostics.FileVersionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Process">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Diagnostics.Process.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.StackTrace">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Diagnostics.StackTrace.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.TextWriterTraceListener">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Diagnostics.TextWriterTraceListener.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tools">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Diagnostics.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.TraceSource">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Diagnostics.TraceSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Drawing.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Dynamic.Runtime">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Dynamic.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Globalization.Calendars.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Extensions">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Globalization.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Globalization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.ZipFile">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.IO.Compression.ZipFile.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.DriveInfo">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.IO.FileSystem.DriveInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Watcher">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.IO.FileSystem.Watcher.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.IO.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.IsolatedStorage">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.IO.IsolatedStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.MemoryMappedFiles">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.IO.MemoryMappedFiles.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipes">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.IO.Pipes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.UnmanagedMemoryStream">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.IO.UnmanagedMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Expressions">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Linq.Expressions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Parallel">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Linq.Parallel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Queryable">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Linq.Queryable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Rtc">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Net.Http.Rtc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.NameResolution">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Net.NameResolution.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.NetworkInformation">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Net.NetworkInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Ping">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Net.Ping.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Net.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Requests">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Net.Requests.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Security">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Net.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Sockets">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Net.Sockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebHeaderCollection">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Net.WebHeaderCollection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebSockets.Client">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Net.WebSockets.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebSockets">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Net.WebSockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ObjectModel">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.ObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.DispatchProxy">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Reflection.DispatchProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.ILGeneration">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Reflection.Emit.ILGeneration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.Lightweight">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Reflection.Emit.Lightweight.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Emit">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Reflection.Emit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Extensions">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Reflection.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Reflection.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.Reader">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Resources.Reader.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.ResourceManager">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Resources.ResourceManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.Writer">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Resources.Writer.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.VisualC">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.CompilerServices.VisualC.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Handles">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.Handles.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.InteropServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Numerics">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.Serialization.Formatters.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Json">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.Serialization.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.Serialization.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Xml">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.Serialization.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Claims">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Security.Claims.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Csp">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Security.Cryptography.Csp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Security.Principal.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.SecureString">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Security.SecureString.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Duplex">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.ServiceModel.Duplex.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Http">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.ServiceModel.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.NetTcp">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.ServiceModel.NetTcp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.ServiceModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Security">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.ServiceModel.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.Extensions">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Text.Encoding.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Text.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Text.RegularExpressions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Overlapped">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Threading.Overlapped.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Parallel">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Threading.Tasks.Parallel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Thread">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Threading.Thread.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.ThreadPool">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Threading.ThreadPool.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Timer">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Threading.Timer.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.ReaderWriter">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Xml.ReaderWriter.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XDocument">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Xml.XDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XPath.XDocument">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XPath">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Xml.XPath.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XmlDocument">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Xml.XmlDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XmlSerializer">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Xml.XmlSerializer.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Recorder.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
@@ -1179,9 +1301,6 @@
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Services.Analytics.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.Services.Analytics.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VisualEffectGraph.Runtime">
       <HintPath>Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
     </Reference>
@@ -1193,6 +1312,9 @@
     </Reference>
     <Reference Include="Unity.Burst.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Analytics.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.Services.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Analytics">
       <HintPath>Library/ScriptAssemblies/Unity.Services.Analytics.dll</HintPath>
@@ -1255,6 +1377,14 @@
       <Project>{B96893CC-3BD9-B382-26BA-ECD6197358D5}</Project>
       <Name>OtoonEditor</Name>
     </ProjectReference>
+    <ProjectReference Include="HomaGames.HomaConsole.Editor.csproj">
+      <Project>{ECA160DA-62CB-128B-BFCC-C8C96DD64F61}</Project>
+      <Name>HomaGames.HomaConsole.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="HomaGames.GameDoctor.Checks.csproj">
+      <Project>{AD1DCBFD-DB4D-28DB-88CF-FA1CD1735280}</Project>
+      <Name>HomaGames.GameDoctor.Checks</Name>
+    </ProjectReference>
     <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
       <Project>{B14B4029-FF98-06D9-A7F6-3198D07DBB3C}</Project>
       <Name>Zenject-ReflectionBaking-Editor</Name>
@@ -1263,6 +1393,14 @@
       <Project>{A06FDC85-855A-B070-E9B7-2E57DC5B17A6}</Project>
       <Name>Zenject</Name>
     </ProjectReference>
+    <ProjectReference Include="HomaGames.HomaConsole.Attributes.csproj">
+      <Project>{49B06DFD-B50C-2099-547D-A27463C0226A}</Project>
+      <Name>HomaGames.HomaConsole.Attributes</Name>
+    </ProjectReference>
+    <ProjectReference Include="HomaGames.HomaConsole.csproj">
+      <Project>{E27ECA46-40A0-4FD7-36A6-C26317E7A983}</Project>
+      <Name>HomaGames.HomaConsole</Name>
+    </ProjectReference>
     <ProjectReference Include="CFXR.WelcomeScreen.csproj">
       <Project>{25B8C3E7-5764-8FAA-0ECA-8582F1B4BA4F}</Project>
       <Name>CFXR.WelcomeScreen</Name>
@@ -1270,6 +1408,14 @@
     <ProjectReference Include="CFXRRuntime.csproj">
       <Project>{0E150CA3-B08F-97A7-9BD1-2D9D96B10060}</Project>
       <Name>CFXRRuntime</Name>
+    </ProjectReference>
+    <ProjectReference Include="HomaGames.CodeAnalyzer.csproj">
+      <Project>{9871C70B-ABBF-42A7-3509-8AB55F63A2DC}</Project>
+      <Name>HomaGames.CodeAnalyzer</Name>
+    </ProjectReference>
+    <ProjectReference Include="HomaGames.HomaBelly.Installer.csproj">
+      <Project>{D624B204-85B0-E366-B94F-FD724605DB20}</Project>
+      <Name>HomaGames.HomaBelly.Installer</Name>
     </ProjectReference>
     <ProjectReference Include="Obi.Editor.csproj">
       <Project>{2BF5A217-C311-691B-052A-CADD9F30D9CD}</Project>
@@ -1294,6 +1440,10 @@
     <ProjectReference Include="Tayx.Graphy.csproj">
       <Project>{6969FF3E-37D3-D60E-53D3-038B5C474286}</Project>
       <Name>Tayx.Graphy</Name>
+    </ProjectReference>
+    <ProjectReference Include="HomaGames.GameDoctor.csproj">
+      <Project>{5FC05977-437D-7825-5D9E-C93CBBE8892B}</Project>
+      <Name>HomaGames.GameDoctor</Name>
     </ProjectReference>
     <ProjectReference Include="OtoonShader.csproj">
       <Project>{E181AD92-7F5E-5314-EB23-BD8246DC4673}</Project>

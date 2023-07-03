@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="LoadingBarRoot" style="align-items: center; justify-content: center; flex-shrink: 0; margin-left: 21px; margin-right: 20px;">
+        <ui:VisualElement name="LoadingBackground" style="border-left-color: rgb(69, 69, 71); border-right-color: rgb(69, 69, 71); border-top-color: rgb(69, 69, 71); border-bottom-color: rgb(69, 69, 71); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; background-color: rgb(69, 70, 71); height: 25px; width: 100%; justify-content: center; align-items: stretch; padding-left: 2px; padding-right: 2px; padding-top: 2px; padding-bottom: 2px;">
+            <ui:VisualElement name="LoadingBarProgress" style="border-left-color: rgba(0, 0, 0, 0); border-right-color: rgba(0, 0, 0, 0); border-top-color: rgba(0, 0, 0, 0); border-bottom-color: rgba(0, 0, 0, 0); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; width: 100%; height: 100%; background-color: rgb(224, 168, 231); align-items: center; justify-content: center; background-image: url(&apos;/Assets/Homa Games/Homa Belly/Plugin Manifest/Editor/Style/download.png&apos;);">
+                <ui:Label text="Packages" display-tooltip-when-elided="true" name="LoadingBarText" class="homa-label" style="flex-grow: 1; visibility: visible; overflow: visible; color: rgb(106, 106, 106); position: absolute; left: 75px; -unity-text-align: middle-left; -unity-font-style: bold;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

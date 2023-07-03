@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: flex-start; background-color: rgb(1, 97, 113);">
+        <ui:VisualElement name="PopupLogo" style="background-image: url(&apos;/Assets/Homa Games/Homa Belly/Plugin Manifest/Editor/Style/info.png&apos;); width: 32px; height: 32px; -unity-background-image-tint-color: rgb(1, 253, 255);" />
+        <ui:Label text="There is a new Homa Belly Installer version available. You can" display-tooltip-when-elided="true" name="PopupLabel" />
+        <ui:Button text="  download here." display-tooltip-when-elided="true" name="InstallerDownloadButton" style="background-color: rgba(0, 0, 0, 0); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-left-color: rgba(0, 0, 0, 0); border-right-color: rgba(0, 0, 0, 0); border-top-color: rgba(0, 0, 0, 0); border-bottom-color: rgba(0, 0, 0, 0); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; color: rgb(255, 78, 174); -unity-font-style: bold;" />
+    </ui:VisualElement>
+</ui:UXML>

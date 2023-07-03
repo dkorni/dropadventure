@@ -32,8 +32,8 @@ MonoBehaviour:
   - 299619b6c812d025ae7ab54ebffdd6e1ea4d37ff
   - e05526305ec68af03e03fef76c57df3fa721007f
   Build:
-  - 1.1.2
-  - 1.1.2
+  - 1.1.7
+  - 1.1.7
   SelectedPlatformOrganization:
   - Pink Vynil Studio
   - Pink Vynil Studio
@@ -47,8 +47,10 @@ MonoBehaviour:
   SelectedOrganization: 0100000001000000
   SelectedStudio: 0100000001000000
   SelectedGame: 0200000001000000
-  NewVersion: 
-  Changes: 
+  NewVersion: 7.3.24
+  Changes: '7.3.24
+
+    - fixed fps script for when pausing game'
   SignUpOpen: 1
   StudioName: denys.korniienko
   GameName: Flush It!
@@ -62,9 +64,69 @@ MonoBehaviour:
   UseManualSessionHandling: 0
   SendExampleGameDataToMyGame: 0
   InternetConnectivity: 0
-  CustomDimensions01: []
-  CustomDimensions02: []
-  CustomDimensions03: []
+  CustomDimensions01:
+  - 001
+  - 002
+  - 003
+  - 004
+  - 005
+  - 006
+  - 007
+  - 008
+  - 009
+  - 010
+  - 011
+  - 012
+  - 013
+  - 014
+  - 015
+  - 016
+  - 017
+  - 018
+  - 019
+  - 020
+  CustomDimensions02:
+  - Z
+  - A
+  - B
+  - C
+  - D
+  - E
+  - F
+  - G
+  - H
+  - I
+  - J
+  - K
+  - L
+  - M
+  - N
+  - O
+  - P
+  - Q
+  - R
+  - S
+  CustomDimensions03:
+  - V1
+  - V2
+  - V3
+  - V4
+  - V5
+  - V6
+  - V7
+  - V8
+  - V9
+  - V10
+  - V11
+  - V12
+  - V13
+  - V14
+  - V15
+  - V16
+  - V17
+  - V18
+  - V19
+  - V20
   ResourceItemTypes:
   - Reward
   ResourceCurrencies:
@@ -89,7 +151,7 @@ MonoBehaviour:
   iosIcon: {fileID: 0}
   macIcon: {fileID: 0}
   windowsPhoneIcon: {fileID: 0}
-  UsePlayerSettingsBuildNumber: 0
+  UsePlayerSettingsBuildNumber: 1
   SubmitErrors: 1
   NativeErrorReporting: 0
   MaxErrorCount: 10

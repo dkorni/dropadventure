@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="PackagesRow" style="flex-direction: row; align-items: center; justify-content: space-between; flex-grow: 0; margin-left: 50px; margin-right: 50px; margin-top: 5px; margin-bottom: 5px;">
+        <ui:VisualElement name="Column1" style="flex-direction: row; width: 40%;">
+            <ui:Label text="Homabelly_core" display-tooltip-when-elided="true" name="PackageName" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Column2" style="flex-direction: row; align-items: center; justify-content: flex-start; width: 40%;">
+            <ui:VisualElement name="StateIcon" style="background-image: url(&apos;/Assets/Homa Games/Homa Belly/Plugin Manifest/Editor/Style/check_circle_outlined.png&apos;); width: 16px; height: 16px; flex-shrink: 0;" />
+            <ui:Label text="1.7.2" display-tooltip-when-elided="true" name="PackageVersion" style="padding-left: 4px; padding-right: 4px;" />
+            <ui:Label text="1.7.3 available !" display-tooltip-when-elided="true" name="NewVersionAvailable" style="-unity-font-style: italic; color: rgb(252, 146, 251); font-size: 10px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Column3" style="justify-content: flex-end; flex-shrink: 0; flex-grow: 0; flex-direction: row; width: 20%;">
+            <ui:VisualElement name="Changelog" style="background-image: url(&apos;/Assets/Homa Games/Homa Belly/Plugin Manifest/Editor/Style/menu_book.png&apos;); width: 16px; height: 16px;" />
+            <ui:VisualElement name="Documentation" style="background-image: url(&apos;/Assets/Homa Games/Homa Belly/Plugin Manifest/Editor/Style/info.png&apos;); width: 16px; height: 16px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="Separator" style="background-color: rgba(255, 255, 255, 0.27); height: 2px; margin-left: 40px; margin-right: 40px; margin-top: 0; margin-bottom: 0; border-top-left-radius: 2px; border-bottom-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px;" />
+</ui:UXML>

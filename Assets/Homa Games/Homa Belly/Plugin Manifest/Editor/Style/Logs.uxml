@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="HomaBellyInstaller.uss" />
+    <ui:VisualElement name="Logs" style="align-items: center;">
+        <ui:VisualElement name="Main" style="flex-shrink: 0;">
+            <ui:Label text="Logs" display-tooltip-when-elided="true" name="Logs" class="homa-label" style="-unity-text-align: upper-center; -unity-font-style: bold; font-size: 20px; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; white-space: normal;" />
+        </ui:VisualElement>
+        <ui:ScrollView name="LogsList" show-vertical-scroller="true" style="width: 80%; background-color: rgb(255, 255, 255); border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; padding-left: 16px; padding-right: 16px; padding-top: 16px; padding-bottom: 16px;" />
+        <ui:Button text="Copy To Clipboard" display-tooltip-when-elided="true" name="CopyLogsButton" class="copy-to-clipboard" style="border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); margin-left: 26px; margin-right: 26px; margin-top: 26px; margin-bottom: 26px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 180px; height: 35px;" />
+        <ui:Button text="← Back" display-tooltip-when-elided="true" name="LogsBackButton" style="background-color: rgba(0, 0, 0, 0); border-left-color: rgba(0, 0, 0, 0); border-right-color: rgba(0, 0, 0, 0); border-top-color: rgba(0, 0, 0, 0); border-bottom-color: rgba(0, 0, 0, 0); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; -unity-font-style: bold; color: rgb(255, 145, 250); padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 20px; margin-bottom: 20px;" />
+    </ui:VisualElement>
+</ui:UXML>

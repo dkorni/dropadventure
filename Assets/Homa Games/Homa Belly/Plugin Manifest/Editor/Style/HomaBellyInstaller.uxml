@@ -1,0 +1,46 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="HomaBellyInstaller.uss" />
+    <ui:VisualElement name="Background" style="background-color: rgb(34, 36, 38); position: absolute; left: 0; top: 0; right: 0; bottom: 0;" />
+    <ui:VisualElement name="Header" style="flex-grow: 0; justify-content: space-between; flex-direction: row; margin-left: 40px; margin-right: 40px; margin-top: 40px; margin-bottom: 40px; flex-shrink: 0;">
+        <ui:VisualElement name="Logo" style="width: 162px; height: 59px; background-image: url(&apos;/Assets/Homa Games/Homa Belly/Plugin Manifest/Editor/Style/homabelly_logo.png&apos;); flex-shrink: 0;" />
+        <ui:VisualElement name="Options" style="flex-direction: row; align-items: center;">
+            <ui:Button text="Settings" display-tooltip-when-elided="true" name="Settings" class="simple-button homa-label" />
+            <ui:Button text="Logs" display-tooltip-when-elided="true" name="Logs" class="simple-button homa-label" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="Center" style="flex-grow: 1;">
+        <ui:VisualElement name="MainWindow" style="flex-grow: 1;">
+            <ui:VisualElement name="Main" style="flex-shrink: 0;">
+                <ui:Label text="Welcome to the Homa Belly Installer!" display-tooltip-when-elided="true" name="Title" class="homa-label" style="-unity-text-align: upper-center; -unity-font-style: bold; font-size: 20px; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; white-space: normal;" />
+                <ui:VisualElement name="Token" style="flex-direction: row; align-items: center; justify-content: center; margin-left: 10px; margin-right: 10px;">
+                    <ui:TextField picking-mode="Ignore" name="TokenInput" text="Enter Your App Token" class="big-input" style="flex-grow: 1; flex-basis: 0;" />
+                    <ui:Button text="Refresh Packages" display-tooltip-when-elided="true" name="RefreshButton" class="big-button homa-label" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="ErrorContainer" />
+            <ui:VisualElement name="Packages" style="margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px;">
+                <ui:VisualElement name="PackagesHeader" style="flex-direction: row; align-items: center; justify-content: center; flex-grow: 0; margin-left: 50px; margin-right: 50px; margin-top: 10px; margin-bottom: 10px; flex-shrink: 0;">
+                    <ui:Label text="Packages" display-tooltip-when-elided="true" class="homa-label" style="flex-grow: 1; width: 40%;" />
+                    <ui:Label text="Installed" display-tooltip-when-elided="true" style="flex-grow: 1; -unity-text-align: upper-left; width: 40%;" />
+                    <ui:Label text="Options" display-tooltip-when-elided="true" style="-unity-text-align: upper-right; width: 20%;" />
+                </ui:VisualElement>
+                <ui:ScrollView name="PackagesRoot" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="Footer" style="height: 80px; background-color: rgb(46, 40, 49); flex-direction: row; flex-shrink: 0; overflow: hidden; padding-left: 50px; padding-right: 50px;">
+        <ui:Label text="Bundle IDs" display-tooltip-when-elided="true" style="position: absolute; top: 15%; left: 50px; color: rgb(151, 149, 152);" />
+        <ui:VisualElement style="width: 50%; align-items: center; flex-direction: row;">
+            <ui:VisualElement style="flex-direction: row; height: 20px; align-items: center;">
+                <ui:VisualElement style="background-image: url(&apos;/Assets/Homa Games/Homa Belly/Plugin Manifest/Editor/Style/android.png&apos;); width: 16px; height: 16px; align-items: center; margin-right: 5px;" />
+                <ui:Label text="com.homa.game" display-tooltip-when-elided="true" name="AndroidId" style="color: rgba(252, 146, 251, 255);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement style="width: 50%; align-items: center; flex-direction: row;">
+            <ui:VisualElement style="flex-direction: row; height: 20px; align-items: center;">
+                <ui:VisualElement style="background-image: url(&apos;/Assets/Homa Games/Homa Belly/Plugin Manifest/Editor/Style/apple.png&apos;); width: 13px; height: 15px; align-items: center; margin-right: 5px;" />
+                <ui:Label text="com.homa.game" display-tooltip-when-elided="true" name="IOSId" style="color: rgba(252, 146, 251, 255);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
